@@ -139,7 +139,8 @@ def build() -> duckdb.DuckDBPyConnection:
     rows = [marche.assign(dataset="config/marche.csv")]
     if not eu.empty:
         eu2 = eu.rename(columns={"geo": "pays", "time": "annee", "value": "valeur"})
-        eu2["indicateur"] = "eurostat_" + eu2.indic_bt.astype(str) + "_" + eu2.nace_r2.astype(str) + "_" + eu2.unit.astype(str)
+        eu2["indicateur"] = ("eurostat_" + eu2.indic_bt.astype(str) + "_" + eu2.nace_r2.astype(str) + "_"
+                             + eu2.unit.astype(str) + "_" + eu2.s_adj.astype(str))
         eu2["unite"] = eu2.unit
         eu2["statut"] = "donnée sourcée"
         eu2["source"] = "Eurostat sts_trtu_a"
@@ -184,7 +185,8 @@ def build() -> duckdb.DuckDBPyConnection:
     con.execute("""
         CREATE VIEW v_indice_prix AS
         WITH last AS (
-          SELECT f.*, row_number() OVER (PARTITION BY produit_id, enseigne_id, pays ORDER BY date_id DESC) rn
+          SELECT f.*, row_number() OVER (PARTITION BY produit_id, enseigne_id, pays
+                                        ORDER BY date_id DESC, (source_type = 'scraping') DESC) rn
           FROM fact_prix f
         ), fr AS (SELECT produit_id, prix_ht_eur ht_fr, prix_ttc_eur ttc_fr FROM last
                   JOIN dim_enseigne USING (enseigne_id) WHERE rn=1 AND enseigne='LDLC' AND pays='FR'),
