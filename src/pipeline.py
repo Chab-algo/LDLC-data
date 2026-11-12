@@ -1,4 +1,4 @@
-"""Lance toute la chaîne : collecte, base en étoile, compte de résultat simulé, synthèse IA.
+"""Lance toute la chaîne : collecte, base en étoile, compte de résultat simulé, synthèse IA, dashboard.
 
 Usage : python -m src.pipeline            (tout)
         python -m src.pipeline --offline  (sans collecte, reconstruit la base depuis data/raw)
@@ -8,6 +8,7 @@ collecte précédente et l'erreur est écrite dans data/processed/journal_collec
 """
 from __future__ import annotations
 
+import importlib
 import sys
 import traceback
 
@@ -19,10 +20,20 @@ log = get_logger("pipeline")
 
 
 def main() -> None:
-    from src.analysis import pnl_pilote
-    from src.ai import synthese
     from src.collect import eurostat, osm_overpass, prix, routes
-    from src.transform import build_star
+
+    def optional(path: str):
+        """Les étapes en aval peuvent ne pas exister sur une branche qui ne contient que la collecte."""
+        try:
+            return importlib.import_module(path)
+        except ModuleNotFoundError:
+            log.warning("Module %s absent sur cette branche : étape ignorée", path)
+            return None
+
+    build_star = optional("src.transform.build_star")
+    pnl_pilote = optional("src.analysis.pnl_pilote")
+    synthese = optional("src.ai.synthese")
+    dashboard = optional("src.dashboard.build_dashboard")
 
     journal = []
     if "--offline" not in sys.argv:
@@ -35,19 +46,24 @@ def main() -> None:
                 log.error("Collecte %s en échec : %s", name, e)
                 traceback.print_exc()
                 journal.append((TODAY, name, "échec", str(e)[:300]))
-    build_star.build().close()
-    pnl_pilote.main()
-    try:
-        synthese.main()
-    except Exception as e:  # noqa: BLE001
-        log.error("Synthèse IA en échec : %s", e)
-        journal.append((TODAY, "synthese_ia", "échec", str(e)[:300]))
+    if build_star:
+        build_star.build().close()
+    if pnl_pilote:
+        pnl_pilote.main()
+    if synthese:
+        try:
+            synthese.main()
+        except Exception as e:  # noqa: BLE001
+            log.error("Synthèse IA en échec : %s", e)
+            journal.append((TODAY, "synthese_ia", "échec", str(e)[:300]))
     if journal:
         out = PROCESSED / "journal_collecte.csv"
         new = pd.DataFrame(journal, columns=["date", "etape", "statut", "detail"])
         if out.exists():
             new = pd.concat([pd.read_csv(out), new], ignore_index=True)
         new.to_csv(out, index=False)
+    if dashboard:
+        dashboard.main()
 
 
 if __name__ == "__main__":

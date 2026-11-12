@@ -34,7 +34,7 @@ Périmètre retenu : **la téléphonie (smartphones)**. Pays cible : **l'Espagne
 | 1 | Croissance du secteur | `fact_marche` (Eurostat `sts_trtu_a`, NACE G474) | collecté automatiquement |
 | 2 | Part de marché de LDLC en France | fiche entreprise | estimé, tous biens techniques |
 | 3 | Part de marché du leader espagnol | `config/marche.csv` (MediaMarkt 21,5 %) | sourcé |
-| 4 | Indice de prix Espagne / France | vue `v_indice_prix` | 85,8 (Apple 95,9, Android 68,2) |
+| 4 | Indice de prix Espagne / France | vue `v_indice_prix` | voir `data/processed/indice_synthese.csv` |
 | 5 | Marge brute post-taxe | `marge_si_alignement.csv` | simulé |
 | 6 | Densité concurrentielle | vue `v_densite_concurrentielle` (OpenStreetMap) | collecté automatiquement |
 | 7 | Coût au m² | `config/hypotheses_pnl.csv` | proxy (rue commerçante secondaire) |
@@ -87,6 +87,8 @@ src/collect/       un script par source (écrit dans data/raw/)
 src/transform/     build_star.py : construit la base en étoile et les vues KPI
 src/analysis/      pnl_pilote.py : point mort d'un magasin pilote, marge si alignement des prix
 src/ai/            synthese.py : synthèse Go/No-Go rédigée par l'API Claude
+src/dashboard/     build_dashboard.py : injecte data/processed/ dans dashboard/template.html
+dashboard/         index.html : le dashboard (ouvrable dans un navigateur)
 src/pipeline.py    enchaîne tout
 data/raw/          données brutes horodatées
 data/processed/    tables prêtes pour le dashboard
