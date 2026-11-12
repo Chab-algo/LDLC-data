@@ -1,0 +1,12 @@
+modele,famille,prix_ht_ldlc_fr,prix_ht_es,cout_achat_estime_ht,marge_si_alignement
+iPhone 17 256 Go,Apple,932.5,850.41,704.038,0.172
+iPhone 17 Pro 256 Go,Apple,1024.17,1007.44,773.248,0.232
+iPhone 17 Pro Max 256 Go,Apple,1149.17,1073.55,867.623,0.192
+iPhone 18 Pro 256 Go,Apple,1232.5,1180.99,930.538,0.212
+iPhone 18 Pro 512 Go,Apple,1440.83,1395.87,1087.827,0.221
+iPhone 18 Pro Max 256 Go,Apple,1357.5,1313.22,1024.912,0.22
+iPhone 18 Pro Max 512 Go,Apple,1565.83,1544.63,1182.202,0.235
+Galaxy S26 Ultra 12/256 Go,Android,1308.29,908.26,987.759,-0.088
+Galaxy A57 5G 8/256 Go,Android,549.96,355.36,415.22,-0.168
+Redmi Note 17 Pro 5G 6/256 Go,Android,333.29,250.26,251.634,-0.005
+Redmi Note 17 Pro Max 5G 8/256 Go,Android,499.96,319.17,377.47,-0.183
