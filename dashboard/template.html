@@ -4,228 +4,390 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LDLC en Espagne : Go ou No-Go ?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+/* Identité : encre marine + un accent bleu électrique. Série 1 = bleu (Espagne, Apple), série 2 = orange (France, Android).
+   Formes : panneaux 16px, contrôles 8px, pastilles et puces en capsule. Une seule règle, partout. */
 .viz-root{
   color-scheme:light;
-  --surface-0:#f4f3f0; --surface-1:#fcfcfb; --surface-2:#efeee9; --border:#dddcd6;
-  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#77766f;
-  --series-1:#2a78d6; --series-2:#eb6834; --grid:#e6e5df; --ref:#9b9a92;
-  --good:#1d7a33; --bad:#b3261e; --warn:#8a5a00; --accent:#2a78d6;
+  --bg:#f3f5f9; --panel:#ffffff; --panel-2:#eaeef6; --line:#dde3ee; --line-soft:#e9edf5;
+  --ink:#0b1426; --ink-2:#465067; --ink-3:#616b81;
+  --s1:#2147d6; --s2:#e8791a; --accent:#2147d6; --on-accent:#ffffff;
+  --good:#14804a; --good-bg:#e3f4ea; --bad:#c0262d; --bad-bg:#fbe6e7; --warn:#8f5a00; --warn-bg:#fcf0d6;
+  --mast:#0b1530; --mast-2:#14224a; --mast-ink:#f2f5ff; --mast-ink-2:#a9b8dc; --mast-line:#2a3a6b;
+  --mast-bad:#ff8f95; --mast-good:#5fd6a0; --mast-warn:#f6c56d;
+  --shadow:0 1px 2px rgba(11,20,38,.05),0 12px 32px -12px rgba(11,20,38,.14);
 }
 @media (prefers-color-scheme: dark){
   :root:where(:not([data-theme="light"])) .viz-root{
     color-scheme:dark;
-    --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#34332f;
-    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#99988f;
-    --series-1:#3987e5; --series-2:#d95926; --grid:#2c2c29; --ref:#77766f;
-    --good:#5cc47a; --bad:#ff8a80; --warn:#e0b04a; --accent:#3987e5;
+    --bg:#090f1f; --panel:#101a31; --panel-2:#17233f; --line:#243150; --line-soft:#1b2745;
+    --ink:#eef2ff; --ink-2:#b7c1db; --ink-3:#8e9ab9;
+    --s1:#6a8cff; --s2:#f39a4c; --accent:#6a8cff; --on-accent:#08112a;
+    --good:#52c78e; --good-bg:#12352a; --bad:#ff8087; --bad-bg:#3b1a1f; --warn:#e5b44f; --warn-bg:#382c10;
+    --mast:#060b1a; --mast-2:#101a38;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -12px rgba(0,0,0,.6);
   }
 }
 :root[data-theme="dark"] .viz-root{
   color-scheme:dark;
-  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#34332f;
-  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#99988f;
-  --series-1:#3987e5; --series-2:#d95926; --grid:#2c2c29; --ref:#77766f;
-  --good:#5cc47a; --bad:#ff8a80; --warn:#e0b04a; --accent:#3987e5;
+  --bg:#090f1f; --panel:#101a31; --panel-2:#17233f; --line:#243150; --line-soft:#1b2745;
+  --ink:#eef2ff; --ink-2:#b7c1db; --ink-3:#8e9ab9;
+  --s1:#6a8cff; --s2:#f39a4c; --accent:#6a8cff; --on-accent:#08112a;
+  --good:#52c78e; --good-bg:#12352a; --bad:#ff8087; --bad-bg:#3b1a1f; --warn:#e5b44f; --warn-bg:#382c10;
+  --mast:#060b1a; --mast-2:#101a38;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -12px rgba(0,0,0,.6);
 }
 *{box-sizing:border-box}
-body{margin:0}
-.viz-root{background:var(--surface-0);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
-.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
-header h1{font-size:28px;line-height:1.2;margin:0 0 6px}
-header p{margin:0;color:var(--text-secondary)}
-.meta{font-size:13px;color:var(--text-muted);margin-top:6px}
-nav{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}
-nav a{font-size:13px;color:var(--text-secondary);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:4px 10px;background:var(--surface-1)}
-nav a:hover{color:var(--text-primary);border-color:var(--text-muted)}
-section{margin-top:28px}
-h2{font-size:20px;margin:0 0 4px}
-.lede{color:var(--text-secondary);margin:0 0 14px;max-width:860px}
-.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px}
-.grid{display:grid;gap:12px}
-.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
-.tile .lab{font-size:13px;color:var(--text-secondary)}
-.tile .val{font-size:30px;font-weight:650;letter-spacing:-.01em;margin:4px 0 2px;font-variant-numeric:tabular-nums}
-.tile .sub{font-size:12.5px;color:var(--text-muted)}
-.tag{display:inline-block;font-size:11.5px;border-radius:6px;padding:1px 7px;border:1px solid var(--border);color:var(--text-secondary);white-space:nowrap}
-.tag.src{border-color:transparent;background:var(--surface-2)}
-.tag.hyp{border-style:dashed}
-.verdict{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
-.verdict .big{font-size:22px;font-weight:700}
-.checks{list-style:none;margin:8px 0 0;padding:0}
-.checks li{display:flex;gap:8px;padding:5px 0;border-top:1px solid var(--grid);font-size:14px}
-.checks li:first-child{border-top:0}
-.ok{color:var(--good);font-weight:700}.ko{color:var(--bad);font-weight:700}.na{color:var(--warn);font-weight:700}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:#f3f5f9}
+@media (prefers-color-scheme: dark){:root:where(:not([data-theme="light"])) body{background:#090f1f}}
+:root[data-theme="dark"] body{background:#090f1f}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+*{scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.viz-root{
+  background:var(--bg);color:var(--ink);min-height:100vh;
+  font:400 15px/1.55 "Geist",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;
+}
+.display{font-family:"Bricolage Grotesque","Geist",system-ui,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead ---------- */
+.mast{background:var(--mast);color:var(--mast-ink);padding-bottom:72px;position:relative;overflow:hidden}
+.mast::before{content:"";position:absolute;inset:auto -10% -55% 35%;height:120%;background:radial-gradient(closest-side,rgba(60,100,255,.32),transparent 70%);pointer-events:none}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--mast-line);position:relative}
+.brand{font-weight:600;letter-spacing:.01em;font-size:15px}
+.brand span{color:var(--mast-ink-2);font-weight:400;margin-left:10px}
+.team{font-size:13px;color:var(--mast-ink-2);text-align:right}
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:end;padding-top:64px;position:relative}
+.hero h1{font-family:"Bricolage Grotesque","Geist",system-ui,sans-serif;font-weight:800;font-size:clamp(40px,5.6vw,84px);line-height:.98;letter-spacing:-.035em;margin:0 0 22px;text-wrap:balance}
+.hero p{margin:0;color:var(--mast-ink-2);font-size:18px;line-height:1.5;max-width:46ch}
+.hero .meta{margin-top:20px;font-size:13px;color:var(--mast-ink-2)}
+.verdict{border:1px solid var(--mast-line);border-radius:16px;padding:28px 30px;background:linear-gradient(180deg,var(--mast-2),rgba(20,34,74,.35))}
+.verdict .word{font-family:"Bricolage Grotesque","Geist",system-ui,sans-serif;font-weight:800;font-size:clamp(48px,6.4vw,92px);line-height:1;letter-spacing:-.04em;margin:0 0 16px}
+.verdict .word.bad{color:var(--mast-bad)}.verdict .word.good{color:var(--mast-good)}.verdict .word.warn{color:var(--mast-warn)}
+.verdict .why{font-size:17px;line-height:1.45;color:var(--mast-ink);max-width:36ch}
+
+/* ---------- barre de navigation ---------- */
+.nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+.nav a{flex:none;font-size:13.5px;font-weight:500;color:var(--ink-2);text-decoration:none;padding:7px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--ink);background:var(--panel-2)}
+.nav a.on{background:var(--ink);color:var(--bg)}
+
+/* ---------- lecture des seuils ---------- */
+.lead{margin-top:40px;position:relative}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.lead .panel{border-color:transparent;box-shadow:var(--shadow)}
+.panel h3{margin:0 0 4px;font-size:16px;font-weight:600}
+.panel .cap{margin:0 0 14px;font-size:13px;color:var(--ink-3)}
+.gauges{display:grid;gap:0}
+.gauge{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) auto;gap:20px;align-items:center;padding:16px 0;border-top:1px solid var(--line-soft)}
+.gauge:first-child{border-top:0;padding-top:4px}
+.gauge .g-t{font-weight:600;font-size:15px}
+.gauge .g-s{font-size:13px;color:var(--ink-3);margin-top:2px}
+.gauge svg{display:block;width:100%;height:auto;overflow:visible}
+.chip{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 11px;border-radius:999px;white-space:nowrap}
+.chip.ok{background:var(--good-bg);color:var(--good)}
+.chip.ko{background:var(--bad-bg);color:var(--bad)}
+.chip.na{background:var(--warn-bg);color:var(--warn)}
+
+/* ---------- chiffres clés ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kpis .k{padding:22px 24px 22px 0}
+.kpis .k + .k{padding-left:24px;border-left:1px solid var(--line)}
+.k .lab{font-size:13.5px;color:var(--ink-2)}
+.k .val{font-family:"Bricolage Grotesque","Geist",system-ui,sans-serif;font-weight:700;font-size:clamp(32px,3.4vw,46px);line-height:1.05;letter-spacing:-.03em;margin:8px 0 6px}
+.k .sub{font-size:13px;color:var(--ink-3)}
+.k .val.bad{color:var(--bad)}.k .val.good{color:var(--good)}
+.kpis.small{margin-top:0;grid-template-columns:repeat(2,minmax(0,1fr));border:0}
+.kpis.small .k{padding:16px 18px;border:0;border-top:1px solid var(--line-soft)}
+.kpis.small .k:nth-child(-n+2){border-top:0}
+.kpis.small .k + .k{border-left:0}
+.kpis.small .k:nth-child(even){border-left:1px solid var(--line-soft)}
+.kpis.small .val{font-size:clamp(26px,2.6vw,34px)}
+
+/* ---------- sections ---------- */
+section.sec{margin-top:96px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;align-items:start}
+section.sec.flip{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+section.sec.flip .sec-head{order:2}
+section.sec.stack{display:block}
+section.sec.stack .sec-head{max-width:760px;margin-bottom:24px}
+h2{font-family:"Bricolage Grotesque","Geist",system-ui,sans-serif;font-weight:700;font-size:clamp(26px,2.8vw,36px);line-height:1.08;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.lede{color:var(--ink-2);margin:0;max-width:62ch;font-size:15.5px}
+.sec-head .key{margin-top:26px;padding-top:18px;border-top:1px solid var(--line)}
+.key .n{font-family:"Bricolage Grotesque","Geist",system-ui,sans-serif;font-weight:700;font-size:clamp(40px,4.4vw,60px);line-height:1;letter-spacing:-.035em}
+.key .n.s1{color:var(--s1)}.key .n.bad{color:var(--bad)}
+.key .t{font-size:13.5px;color:var(--ink-2);margin-top:8px;max-width:30ch}
+.sec-body{min-width:0}
+.block + .block{margin-top:16px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+
+.legend{display:flex;gap:18px;font-size:13px;color:var(--ink-2);margin:0 0 12px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:-1px}
 .chart{width:100%}
 .chart svg{display:block;width:100%;height:auto;overflow:visible}
-.axis text,.lbl{fill:var(--text-secondary);font-size:12px}
-.lbl.strong{fill:var(--text-primary)}
-.gridline{stroke:var(--grid)}
-.refline{stroke:var(--ref);stroke-dasharray:4 3}
-.legend{display:flex;gap:14px;font-size:13px;color:var(--text-secondary);margin:2px 0 8px;flex-wrap:wrap}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
-table{border-collapse:collapse;width:100%;font-size:13.5px}
-th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
-th{color:var(--text-secondary);font-weight:600;font-size:12.5px}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.axis text{fill:var(--ink-3);font-size:12px}
+.lbl{fill:var(--ink-2);font-size:12.5px}
+.lbl.strong{fill:var(--ink);font-weight:600;paint-order:stroke;stroke:var(--panel);stroke-width:5px;stroke-linejoin:round}
+.gridline{stroke:var(--line-soft)}
+.refline{stroke:var(--ink-3);stroke-dasharray:4 4}
+.refnote{fill:var(--ink-3);font-size:11.5px}
+.note{font-size:13px;color:var(--ink-3);margin:14px 0 0;max-width:70ch}
+.muted{color:var(--ink-3)}
+.small{font-size:13px}
+
+/* ---------- tableaux ---------- */
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{color:var(--ink-3);font-weight:500;font-size:12.5px;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:color-mix(in srgb,var(--panel-2) 55%,transparent)}
+td.num,th.num{text-align:right}
 .tablewrap{overflow-x:auto}
-.sim{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:16px}
-@media (max-width:760px){.sim{grid-template-columns:1fr}}
-.ctl{margin-bottom:12px}
-.ctl label{display:flex;justify-content:space-between;font-size:13.5px;gap:8px}
-.ctl label b{font-variant-numeric:tabular-nums}
-.ctl input[type=range]{width:100%;accent-color:var(--accent)}
-.ctl .note{font-size:11.5px;color:var(--text-muted);margin-top:2px}
+.tag{display:inline-block;font-size:12px;font-weight:500;border-radius:999px;padding:2px 10px;white-space:nowrap}
+.tag.good{background:var(--good-bg);color:var(--good)}
+.tag.warn{background:var(--warn-bg);color:var(--warn)}
+.lede .tag{white-space:normal}
+.tag.hyp{background:transparent;color:var(--ink-2);border:1px dashed var(--ink-3)}
+.tag.calc{background:var(--panel-2);color:var(--ink-2)}
+
+/* ---------- simulateur ---------- */
+.sim{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:32px}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+.ctl{margin-bottom:16px}
+.ctl label{display:flex;justify-content:space-between;font-size:14px;gap:8px;font-weight:500}
+.ctl label b{font-weight:600}
+.ctl .note{font-size:12px;color:var(--ink-3);margin-top:4px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:20px;background:transparent;margin:6px 0 0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:999px;background:var(--line)}
+input[type=range]::-moz-range-track{height:4px;border-radius:999px;background:var(--line)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);border:3px solid var(--panel);margin-top:-7px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--panel)}
 select,button{font:inherit}
-select{background:var(--surface-1);color:var(--text-primary);border:1px solid var(--border);border-radius:8px;padding:5px 8px}
-button.primary{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:9px 16px;font-weight:600;cursor:pointer}
+select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 12px;width:100%}
+.selrow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.selrow select{width:auto;min-width:160px}
+button.primary{background:var(--accent);color:var(--on-accent);border:0;border-radius:8px;padding:11px 20px;font-weight:600;cursor:pointer;transition:transform .15s}
+button.primary:active{transform:translateY(1px)}
 button.primary:disabled{opacity:.55;cursor:default}
-button.ghost{background:transparent;color:var(--text-secondary);border:1px solid var(--border);border-radius:8px;padding:6px 12px;cursor:pointer}
-.ia{white-space:pre-wrap;line-height:1.6;min-height:60px}
-.muted{color:var(--text-muted)}
-.small{font-size:12.5px}
-#tip{position:fixed;pointer-events:none;background:var(--surface-1);color:var(--text-primary);border:1px solid var(--border);border-radius:8px;padding:7px 9px;font-size:12.5px;box-shadow:0 4px 16px rgba(0,0,0,.12);opacity:0;transition:opacity .08s;max-width:260px;z-index:10}
+button.ghost{background:transparent;color:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer;transition:border-color .2s,color .2s}
+button.ghost:hover{color:var(--ink);border-color:var(--ink-3)}
+.ia{white-space:pre-wrap;line-height:1.65;min-height:60px;max-width:75ch}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:8px;padding:9px 12px;font-size:12.5px;line-height:1.5;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .1s;max-width:270px;z-index:30}
 #tip b{display:block;margin-bottom:2px}
-footer{margin-top:36px;font-size:12.5px;color:var(--text-muted)}
-footer a{color:var(--text-secondary)}
+footer{margin-top:112px;padding:28px 0 56px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3)}
+footer a{color:var(--ink-2)}
+
+/* ---------- mouvement : une entrée, un tracé ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
+  .hero > *:nth-child(2){animation-delay:.12s}
+  .js section.sec:not(.in) .bar{transform:scaleX(0)}
+  .bar{transition:transform .9s cubic-bezier(.16,1,.3,1)}
+  .js section.sec:not(.in) .draw{stroke-dashoffset:var(--len);stroke-dasharray:var(--len)}
+  .draw{transition:stroke-dashoffset 1.3s cubic-bezier(.16,1,.3,1)}
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ---------- mobile ---------- */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-top:40px}
+  .team{display:none}
+  section.sec,section.sec.flip{display:block;margin-top:72px}
+  section.sec .sec-head,section.sec.flip .sec-head{margin-bottom:22px}
+  .gauge{grid-template-columns:1fr;gap:10px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis .k:nth-child(3){border-left:0;padding-left:0}
+  .kpis .k:nth-child(n+3){border-top:1px solid var(--line)}
+  .wrap{padding:0 16px}
+  .panel{padding:18px}
+}
 </style>
 </head>
 <body>
 <div class="viz-root">
-<div class="wrap">
-<header>
-  <h1>LDLC en Espagne : Go ou No-Go ?</h1>
-  <p>Question du Comex : l'ouverture de magasins LDLC en Espagne, sur la téléphonie, est-elle réalisable et rentable ?</p>
-  <div class="meta" id="meta"></div>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">LDLC Espagne<span>Étude d'implantation, téléphonie</span></div>
+      <div class="team">Georges Do Xuan, Thomas Lefevbre, Benjamin Chabani, Rubens Le Scao</div>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>LDLC en Espagne : Go ou No-Go ?</h1>
+        <p>Question du Comex : l'ouverture de magasins LDLC en Espagne, sur la téléphonie, est-elle réalisable et rentable ?</p>
+        <div class="meta" id="meta"></div>
+      </div>
+      <div class="verdict" id="verdictBox">
+        <div class="word" id="verdictWord">…</div>
+        <div class="why" id="verdictText"></div>
+      </div>
+    </div>
+  </div>
 </header>
-<nav>
-  <a href="#verdict">Lecture</a><a href="#marche">Marché</a><a href="#prix">Prix</a><a href="#marge">Marge</a>
-  <a href="#concurrence">Concurrence et logistique</a><a href="#pilote">Magasin pilote</a>
-  <a href="#ia">Synthèse IA</a><a href="#kpis">KPIs et sources</a>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap" id="navlinks">
+    <a href="#verdict" class="on">Lecture</a><a href="#marche">Marché</a><a href="#prix">Prix</a><a href="#marge">Marge</a>
+    <a href="#concurrence">Concurrence</a><a href="#pilote">Magasin pilote</a><a href="#ia">Synthèse IA</a><a href="#kpis">KPIs et sources</a>
+  </div>
 </nav>
 
-<section id="verdict">
-  <div class="card verdict">
-    <div style="flex:1 1 320px">
-      <div class="lab small muted">Lecture des seuils fixés dans la fiche (section 19), à valider par l'équipe</div>
-      <div class="big" id="verdictText">…</div>
-      <ul class="checks" id="checks"></ul>
+<main class="wrap">
+  <div class="lead" id="verdict">
+    <div class="panel">
+      <h2 style="font-size:clamp(22px,2.2vw,28px);margin:0 0 6px">Trois seuils décident du Go</h2>
+      <p class="cap">Seuils fixés dans la fiche (section 19), à valider par l'équipe. Chaque ligne place nos chiffres face au seuil.</p>
+      <div class="gauges" id="checks"></div>
     </div>
   </div>
-  <div class="grid g4" style="margin-top:12px" id="tiles"></div>
-</section>
 
-<section id="marche">
-  <h2>Marché : le commerce high-tech espagnol croît deux fois plus vite</h2>
-  <p class="lede">Volume des ventes des magasins spécialisés en informatique et télécoms (Eurostat, NACE G474, corrigé des jours ouvrables), base 100 en 2021. Collecté automatiquement chaque semaine.</p>
-  <div class="card">
-    <div class="legend"><span><i style="background:var(--series-1)"></i>Espagne</span><span><i style="background:var(--series-2)"></i>France</span></div>
-    <div class="chart" id="chartMarche"></div>
-    <p class="small muted" id="marcheNote"></p>
-  </div>
-</section>
+  <div class="kpis" id="tiles"></div>
 
-<section id="prix">
-  <h2>Prix : l'Espagne est moins chère sur Android</h2>
-  <p class="lede">Indice = prix HT du concurrent espagnol / prix HT de LDLC France × 100, modèle par modèle (même marque, modèle, capacité, RAM). En dessous de 100, l'Espagne est moins chère.</p>
-  <div class="card">
-    <div class="legend"><span><i style="background:var(--series-1)"></i>Apple</span><span><i style="background:var(--series-2)"></i>Android</span><span class="muted">pointillé : parité (100)</span></div>
-    <div class="chart" id="chartIndice"></div>
-    <p class="small muted" id="prixNote"></p>
-  </div>
-</section>
-
-<section id="marge">
-  <h2>Marge : que reste-t-il si LDLC s'aligne ?</h2>
-  <p class="lede">Si LDLC vendait chaque modèle au prix du concurrent espagnol. Coût d'achat estimé = prix HT France × (1 − <span id="tauxMarge"></span>). <span class="tag hyp">hypothèse : marge brute du groupe appliquée à la téléphonie</span></p>
-  <div class="card">
-    <div class="legend"><span><i style="background:var(--series-1)"></i>Apple</span><span><i style="background:var(--series-2)"></i>Android</span><span class="muted">pointillé : marge normative 22 %</span></div>
-    <div class="chart" id="chartMarge"></div>
-  </div>
-</section>
-
-<section id="concurrence">
-  <h2>Concurrence et logistique par ville</h2>
-  <p class="lede">Points de vente téléphonie, électronique et informatique recensés dans OpenStreetMap, rapportés à la population de la commune. Distance routière depuis le hub LDLC le plus proche.</p>
-  <div class="grid g2">
-    <div class="card">
-      <div class="small muted" style="margin-bottom:6px">Points de vente pour 100 000 habitants</div>
-      <div class="chart" id="chartDensite"></div>
+  <section class="sec" id="marche">
+    <div class="sec-head">
+      <h2>Le commerce high-tech espagnol croît deux fois plus vite</h2>
+      <p class="lede">Volume des ventes des magasins spécialisés en informatique et télécoms (Eurostat, NACE G474, corrigé des jours ouvrables), base 100 en 2021. Collecté automatiquement chaque semaine.</p>
+      <div class="key" id="kMarche"></div>
     </div>
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px">
-        <span class="small muted">Enseignes présentes</span>
-        <select id="villeConc" aria-label="Ville"></select>
+    <div class="sec-body">
+      <div class="panel">
+        <div class="legend"><span><i style="background:var(--s1)"></i>Espagne</span><span><i style="background:var(--s2)"></i>France</span></div>
+        <div class="chart" id="chartMarche"></div>
+        <p class="note" id="marcheNote"></p>
       </div>
-      <div class="tablewrap"><table id="tabEnseignes"></table></div>
     </div>
-  </div>
-  <div class="card tablewrap" style="margin-top:12px"><table id="tabVilles"></table></div>
-</section>
+  </section>
 
-<section id="pilote">
-  <h2>Magasin pilote : quel chiffre d'affaires pour ne pas perdre d'argent ?</h2>
-  <p class="lede">On ne sait pas combien un magasin LDLC vendrait en Espagne. On calcule donc le CA minimum qui couvre le loyer et le personnel (point mort), puis la part du marché local de la téléphonie que ça représente. Faites varier les hypothèses.</p>
-  <div class="card sim">
-    <div id="controls"></div>
-    <div>
-      <div class="grid g4" id="simTiles"></div>
-      <div class="small muted" style="margin:14px 0 4px">CA au point mort selon le loyer (le point = vos réglages)</div>
-      <div class="chart" id="chartLoyer"></div>
-      <div class="tablewrap" style="margin-top:10px"><table id="tabPnl"></table></div>
+  <section class="sec flip" id="prix">
+    <div class="sec-head">
+      <h2>L'Espagne est moins chère, surtout sur Android</h2>
+      <p class="lede">Indice = prix HT du concurrent espagnol / prix HT de LDLC France × 100, modèle par modèle (même marque, modèle, capacité, RAM). En dessous de 100, l'Espagne est moins chère.</p>
+      <div class="key" id="kPrix"></div>
     </div>
-  </div>
-</section>
-
-<section id="ia">
-  <h2>Synthèse IA</h2>
-  <p class="lede">Claude lit les chiffres de ce dashboard, y compris vos réglages du magasin pilote, et rédige une synthèse Go/No-Go pour le Comex. Consigne : n'utiliser que ces chiffres et signaler les hypothèses.</p>
-  <div class="card">
-    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-      <button class="primary" id="btnIA">Générer la synthèse</button>
-      <button class="ghost" id="btnCopy" hidden>Copier</button>
-      <span class="small muted" id="iaStatus"></span>
+    <div class="sec-body">
+      <div class="panel">
+        <div class="legend"><span><i style="background:var(--s1)"></i>Apple</span><span><i style="background:var(--s2)"></i>Android</span></div>
+        <div class="chart" id="chartIndice"></div>
+        <p class="note" id="prixNote"></p>
+      </div>
     </div>
-    <div class="ia" id="iaOut" style="margin-top:12px"></div>
-  </div>
-</section>
+  </section>
 
-<section id="kpis">
-  <h2>Les 11 KPIs du cahier des charges</h2>
-  <div class="card tablewrap"><table id="tabKpis"></table></div>
-  <h2 style="margin-top:22px">Hypothèses et sources</h2>
-  <div class="card tablewrap"><table id="tabHyp"></table></div>
-  <div class="card tablewrap" style="margin-top:12px" id="journalWrap"><table id="tabJournal"></table></div>
-</section>
+  <section class="sec stack" id="marge">
+    <div class="sec-head">
+      <h2>Si LDLC s'aligne, la marge Android passe sous zéro</h2>
+      <p class="lede">Si LDLC vendait chaque modèle au prix du concurrent espagnol. Coût d'achat estimé = prix HT France × (1 − <span id="tauxMarge"></span>). <span class="tag hyp">hypothèse : marge brute du groupe appliquée à la téléphonie</span></p>
+    </div>
+    <div class="panel">
+      <div class="legend"><span><i style="background:var(--s1)"></i>Apple</span><span><i style="background:var(--s2)"></i>Android</span></div>
+      <div class="chart" id="chartMarge"></div>
+    </div>
+  </section>
 
-<footer>
-  Équipe : Georges Do Xuan, Thomas Lefevbre, Benjamin Chabani, Rubens Le Scao. MSc Eugenia School.
-  Code et données : <a href="https://github.com/Chab-algo/LDLC-data">github.com/Chab-algo/LDLC-data</a>.
-  Les chiffres viennent de data/processed/ du dépôt, régénérés par la collecte hebdomadaire.
-</footer>
-</div>
+  <section class="sec stack" id="concurrence">
+    <div class="sec-head">
+      <h2>Concurrence et logistique, ville par ville</h2>
+      <p class="lede">Points de vente téléphonie, électronique et informatique recensés dans OpenStreetMap, rapportés à la population de la commune. Distance routière depuis le hub LDLC le plus proche.</p>
+    </div>
+    <div class="grid2">
+      <div class="panel flat">
+        <h3>Points de vente pour 100 000 habitants</h3>
+        <p class="cap">Plus la barre est longue, plus la ville est saturée.</p>
+        <div class="chart" id="chartDensite"></div>
+      </div>
+      <div class="panel flat">
+        <div class="selrow"><h3 style="margin:0">Enseignes présentes</h3><select id="villeConc" aria-label="Ville"></select></div>
+        <div class="tablewrap"><table id="tabEnseignes"></table></div>
+      </div>
+    </div>
+    <div class="panel flat tablewrap block"><table id="tabVilles"></table></div>
+  </section>
+
+  <section class="sec stack" id="pilote">
+    <div class="sec-head">
+      <h2>Magasin pilote : quel chiffre d'affaires pour ne pas perdre d'argent ?</h2>
+      <p class="lede">On ne sait pas combien un magasin LDLC vendrait en Espagne. On calcule donc le CA minimum qui couvre le loyer et le personnel (point mort), puis la part du marché local de la téléphonie que cela représente. Faites varier les hypothèses.</p>
+    </div>
+    <div class="panel sim">
+      <div id="controls"></div>
+      <div>
+        <div class="kpis small" id="simTiles"></div>
+        <h3 style="margin:22px 0 4px">CA au point mort selon le loyer</h3>
+        <p class="cap">Le point correspond à vos réglages.</p>
+        <div class="chart" id="chartLoyer"></div>
+        <div class="tablewrap" style="margin-top:14px"><table id="tabPnl"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec stack" id="ia">
+    <div class="sec-head">
+      <h2>Synthèse IA pour le Comex</h2>
+      <p class="lede">Claude lit les chiffres de ce dashboard, y compris vos réglages du magasin pilote, et rédige une synthèse Go/No-Go. Consigne : n'utiliser que ces chiffres et signaler les hypothèses.</p>
+    </div>
+    <div class="panel">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <button class="primary" id="btnIA">Générer la synthèse</button>
+        <button class="ghost" id="btnCopy" hidden>Copier</button>
+        <span class="small muted" id="iaStatus"></span>
+      </div>
+      <div class="ia" id="iaOut" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="sec stack" id="kpis">
+    <div class="sec-head">
+      <h2>Les 11 KPIs du cahier des charges</h2>
+      <p class="lede">Chaque indicateur porte un statut : sourcé, collecté, estimé ou hypothèse. Rien n'est présenté comme mesuré s'il ne l'est pas.</p>
+    </div>
+    <div class="panel flat tablewrap"><table id="tabKpis"></table></div>
+    <h2 style="margin:56px 0 14px;font-size:clamp(22px,2.2vw,28px)">Hypothèses et sources</h2>
+    <div class="panel flat tablewrap"><table id="tabHyp"></table></div>
+    <div class="panel flat tablewrap block" id="journalWrap"><table id="tabJournal"></table></div>
+  </section>
+
+  <footer>
+    Équipe : Georges Do Xuan, Thomas Lefevbre, Benjamin Chabani, Rubens Le Scao, MSc Eugenia School.
+    Code et données : <a href="https://github.com/Chab-algo/LDLC-data">github.com/Chab-algo/LDLC-data</a>.
+    Les chiffres viennent de data/processed/ du dépôt, régénérés par la collecte hebdomadaire.
+  </footer>
+</main>
 <div id="tip" role="tooltip"></div>
 </div>
 
 <script>
+document.documentElement.classList.add("js");
 const DATA = /*__DATA__*/null;
 
 /* ---------- utilitaires ---------- */
 const $ = s => document.querySelector(s);
 const NS = "http://www.w3.org/2000/svg";
-const fmt0 = n => n == null || isNaN(n) ? "—" : Math.round(n).toLocaleString("fr-FR");
-const fmt1 = n => n == null || isNaN(n) ? "—" : n.toLocaleString("fr-FR",{minimumFractionDigits:1,maximumFractionDigits:1});
-const pct = (n,d=1) => n == null || isNaN(n) ? "—" : (n*100).toLocaleString("fr-FR",{minimumFractionDigits:d,maximumFractionDigits:d}) + " %";
-const eur = n => n == null || isNaN(n) ? "—" : (Math.abs(n) >= 1e6 ? fmt1(n/1e6).replace(/,0$/,"") + " M€" : fmt0(n) + " €");
+const ND = "n.d.";
+const fmt0 = n => n == null || isNaN(n) ? ND : Math.round(n).toLocaleString("fr-FR");
+const fmt1 = n => n == null || isNaN(n) ? ND : n.toLocaleString("fr-FR",{minimumFractionDigits:1,maximumFractionDigits:1});
+const pct = (n,d=1) => n == null || isNaN(n) ? ND : (n*100).toLocaleString("fr-FR",{minimumFractionDigits:d,maximumFractionDigits:d}) + " %";
+const eur = n => n == null || isNaN(n) ? ND : (Math.abs(n) >= 1e6 ? fmt1(n/1e6).replace(/,0$/,"") + " M€" : fmt0(n) + " €");
 const el = (tag, attrs={}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
 const h = (tag, props={}, kids=[]) => { const e = document.createElement(tag); Object.assign(e, props); for (const k of [].concat(kids)) if (k!=null) e.append(k); return e; };
-const css = v => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(v).trim();
-const famColor = f => f === "Apple" ? "var(--series-1)" : "var(--series-2)";
+const famColor = f => f === "Apple" ? "var(--s1)" : "var(--s2)";
 const tip = $("#tip");
 function showTip(ev, html){ tip.innerHTML = html; tip.style.opacity = 1; const r = tip.getBoundingClientRect(); let x = ev.clientX + 14, y = ev.clientY + 14; if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - 14; if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
 function hideTip(){ tip.style.opacity = 0; }
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function tagClass(st){
+  const s = String(st).toLowerCase();
+  if (s.startsWith("hypoth")) return "hyp";
+  if (s.startsWith("calcul")) return "calc";
+  if (/partiel|estim|proxy|simul|à refaire|à collecter|1 enseigne|en attente/.test(s)) return "warn";
+  return "good";
+}
 
 const M = {};
 for (const r of DATA.marche) { (M[r.indicateur] ??= {}); (M[r.indicateur][r.pays] ??= {}); M[r.indicateur][r.pays][r.annee] = r; }
@@ -238,36 +400,43 @@ const margeFam = f => avg(margeRows.filter(r => r.famille === f).map(r => r.marg
 const popES = last("population_1er_janvier","ES");
 const marcheTel = last("marche_telephonie","ES");
 
-$("#meta").textContent = `Données générées le ${new Date(DATA.genere_le).toLocaleDateString("fr-FR")} · prix relevés le ${DATA.indice_prix.length ? "12/11/2026" : "—"} · Groupe LDLC, périmètre téléphonie`;
+$("#meta").textContent = `Données générées le ${new Date(DATA.genere_le).toLocaleDateString("fr-FR")}, prix relevés le ${DATA.indice_prix.length ? "12/11/2026" : ND}. Groupe LDLC, périmètre téléphonie.`;
 $("#tauxMarge").textContent = pct(HYP.taux_marge_brute.valeur);
 
 /* ---------- graphiques ---------- */
 function hbar(container, rows, {label, value, color, domain, ref, fmt, tipHtml, refLabel}){
   const box = $(container); box.innerHTML = "";
   const W = Math.max(320, box.clientWidth || 600);
-  const lw = Math.min(210, W * 0.42), rh = 26, top = 8, bottom = 24, H = top + rows.length * rh + bottom, right = 44;
+  const narrow = W < 520, lab0 = label;
+  if (narrow) label = r => lab0(r).replace(/ 5G/, "").replace(/ Go$/, "");
+  const lw = Math.min(W * 0.46, Math.max(...rows.map(r => label(r).length)) * 6.9 + 20), rh = 32, top = 26, bottom = 26, H = top + rows.length * rh + bottom, right = 52;
   const svg = el("svg", {viewBox:`0 0 ${W} ${H}`, role:"img"}, box);
   const x = v => lw + (v - domain[0]) / (domain[1] - domain[0]) * (W - lw - right);
-  const ticks = []; const step = (domain[1]-domain[0]) / 4; for (let i=0;i<=4;i++) ticks.push(domain[0] + i*step);
+  const base = domain[0] < 0 ? 0 : domain[0];
+  const nt = narrow ? 2 : 4, ticks = []; const step = (domain[1]-domain[0]) / nt; for (let i=0;i<=nt;i++) ticks.push(domain[0] + i*step);
   const g = el("g", {class:"axis"}, svg);
-  for (const t of ticks){ el("line",{x1:x(t),x2:x(t),y1:top,y2:H-bottom,class:"gridline"},g); const tx = el("text",{x:x(t),y:H-6,"text-anchor":"middle"},g); tx.textContent = fmt(t); }
+  for (const t of ticks){ el("line",{x1:x(t),x2:x(t),y1:top,y2:H-bottom,class:"gridline"},g); const tx = el("text",{x:x(t),y:H-8,"text-anchor":"middle"},g); tx.textContent = fmt(t); }
   rows.forEach((r,i) => {
-    const y = top + i*rh, v = value(r), x0 = x(Math.max(domain[0], Math.min(0, domain[1])) < x(domain[0]) ? domain[0] : (domain[0] < 0 ? 0 : domain[0]));
-    const t = el("text",{x:lw-8,y:y+rh/2+4,"text-anchor":"end",class:"lbl"},svg); t.textContent = label(r);
+    const y = top + i*rh, v = value(r), x0 = x(base);
+    const t = el("text",{x:lw-12,y:y+rh/2+4,"text-anchor":"end",class:"lbl"},svg); t.textContent = label(r);
     const xa = Math.min(x0, x(v)), wa = Math.max(2, Math.abs(x(v) - x0));
-    const bar = el("rect",{x:xa,y:y+5,width:wa,height:rh-10,rx:4,fill:color(r)},svg);
-    const vt = el("text",{x:v >= (domain[0]<0?0:domain[0]) ? x(v)+5 : x(v)-5,y:y+rh/2+4,"text-anchor":v >= (domain[0]<0?0:domain[0]) ? "start":"end",class:"lbl strong"},svg); vt.textContent = fmt(v);
+    el("rect",{x:xa,y:y+6,width:wa,height:rh-12,rx:5,fill:color(r),class:"bar",style:`transform-origin:${x0}px 0`},svg);
+    const pos = v >= base;
+    const vt = el("text",{x:pos ? x(v)+8 : x(v)-8,y:y+rh/2+4,"text-anchor":pos ? "start":"end",class:"lbl strong"},svg); vt.textContent = fmt(v);
     const hit = el("rect",{x:0,y:y,width:W,height:rh,fill:"transparent"},svg);
     hit.addEventListener("mousemove", ev => showTip(ev, tipHtml(r))); hit.addEventListener("mouseleave", hideTip);
   });
-  if (ref != null){ el("line",{x1:x(ref),x2:x(ref),y1:top-4,y2:H-bottom,class:"refline"},svg); }
-  if (domain[0] < 0) el("line",{x1:x(0),x2:x(0),y1:top-4,y2:H-bottom,stroke:css("--text-muted")},svg);
+  if (ref != null){
+    el("line",{x1:x(ref),x2:x(ref),y1:top-6,y2:H-bottom,class:"refline"},svg);
+    if (refLabel){ const rt = el("text",{x:x(ref),y:top-12,"text-anchor":"middle",class:"refnote"},svg); rt.textContent = refLabel; }
+  }
+  if (domain[0] < 0) el("line",{x1:x(0),x2:x(0),y1:top-6,y2:H-bottom,stroke:"var(--ink-3)"},svg);
 }
 
 function drawIndice(){
   const rows = [...DATA.indice_prix].sort((a,b) => a.indice_es_vs_fr - b.indice_es_vs_fr);
   hbar("#chartIndice", rows, {
-    label: r => r.modele, value: r => r.indice_es_vs_fr, color: r => famColor(r.famille), domain:[0,120], ref:100, fmt: v => fmt0(v),
+    label: r => r.modele, value: r => r.indice_es_vs_fr, color: r => famColor(r.famille), domain:[0,120], ref:100, refLabel:"parité 100", fmt: v => fmt0(v),
     tipHtml: r => `<b>${esc(r.modele)}</b>LDLC France : ${fmt1(r.prix_ttc_ldlc_fr)} € TTC (${fmt1(r.prix_ht_ldlc_fr)} € HT)<br>${esc(r.concurrent_es)} : ${fmt1(r.prix_ttc_es)} € TTC (${fmt1(r.prix_ht_es)} € HT)<br>Indice : <b style="display:inline">${fmt1(r.indice_es_vs_fr)}</b>`
   });
   const conc = [...new Set(DATA.indice_prix.map(r => r.concurrent_es))].join(", ");
@@ -277,7 +446,7 @@ function drawMarge(){
   const rows = [...margeRows].sort((a,b) => a.marge_si_alignement - b.marge_si_alignement);
   const mn = Math.min(-0.25, ...rows.map(r=>r.marge_si_alignement)), mx = Math.max(0.3, ...rows.map(r=>r.marge_si_alignement));
   hbar("#chartMarge", rows, {
-    label: r => r.modele, value: r => r.marge_si_alignement, color: r => famColor(r.famille), domain:[-Math.max(0.3,Math.ceil(-mn*20)/20), Math.max(0.3,Math.ceil(mx*20)/20)], ref:0.22, fmt: v => pct(v,0),
+    label: r => r.modele, value: r => r.marge_si_alignement, color: r => famColor(r.famille), domain:[-Math.max(0.3,Math.ceil(-mn*20)/20), Math.max(0.3,Math.ceil(mx*20)/20)], ref:0.22, refLabel:"marge normative 22 %", fmt: v => pct(v,0),
     tipHtml: r => `<b>${esc(r.modele)}</b>Prix HT espagnol : ${fmt1(r.prix_ht_es)} €<br>Coût d'achat estimé : ${fmt1(r.cout_achat_estime_ht)} €<br>Marge si alignement : <b style="display:inline">${pct(r.marge_si_alignement)}</b>`
   });
 }
@@ -289,23 +458,27 @@ function drawMarche(){
   const box = $("#chartMarche"); box.innerHTML = "";
   const es = G474("ES").filter(r=>r.annee>=2021), fr = G474("FR").filter(r=>r.annee>=2021);
   if (!es.length){ box.innerHTML = '<p class="muted small">Série Eurostat pas encore collectée.</p>'; return; }
-  const W = Math.max(300, box.clientWidth || 600), H = 230, L = 40, R = 70, T = 12, B = 26;
+  const W = Math.max(300, box.clientWidth || 600), H = 300, L = 40, R = 96, T = 14, B = 30;
   const yrs = [...new Set([...es,...fr].map(r=>r.annee))].sort();
   const vals = [...es,...fr].map(r=>r.v), ymin = Math.floor(Math.min(90,...vals)/10)*10, ymax = Math.ceil(Math.max(...vals)/10)*10;
   const x = a => L + (a - yrs[0]) / Math.max(1, yrs[yrs.length-1]-yrs[0]) * (W-L-R), y = v => T + (1-(v-ymin)/(ymax-ymin))*(H-T-B);
   const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img"},box), g = el("g",{class:"axis"},svg);
-  for (let v = ymin; v <= ymax; v += Math.max(10, Math.round((ymax-ymin)/4/10)*10)){ el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"gridline"},g); const t = el("text",{x:L-6,y:y(v)+4,"text-anchor":"end"},g); t.textContent = v; }
-  for (const a of yrs){ const t = el("text",{x:x(a),y:H-6,"text-anchor":"middle"},g); t.textContent = a; }
-  for (const [ser, col, name] of [[es,"var(--series-1)","Espagne"],[fr,"var(--series-2)","France"]]){
-    el("path",{d:ser.map((r,i)=>(i?"L":"M")+x(r.annee)+","+y(r.v)).join(""),fill:"none",stroke:col,"stroke-width":2},svg);
-    for (const r of ser) el("circle",{cx:x(r.annee),cy:y(r.v),r:4,fill:col,stroke:css("--surface-1"),"stroke-width":2},svg);
-    const lr = ser[ser.length-1]; const t = el("text",{x:x(lr.annee)+8,y:y(lr.v)+4,class:"lbl strong"},svg); t.textContent = `${name} ${fmt1(lr.v)}`;
+  for (let v = ymin; v <= ymax; v += Math.max(10, Math.round((ymax-ymin)/4/10)*10)){ el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"gridline"},g); const t = el("text",{x:L-8,y:y(v)+4,"text-anchor":"end"},g); t.textContent = v; }
+  for (const a of yrs){ const t = el("text",{x:x(a),y:H-8,"text-anchor":"middle"},g); t.textContent = a; }
+  if (ymin <= 100 && ymax >= 100){ el("line",{x1:L,x2:W-R,y1:y(100),y2:y(100),class:"refline"},svg); }
+  for (const [ser, col, name] of [[fr,"var(--s2)","France"],[es,"var(--s1)","Espagne"]]){
+    const d = ser.map((r,i)=>(i?"L":"M")+x(r.annee)+","+y(r.v)).join("");
+    const len = Math.ceil(ser.slice(1).reduce((s,r,i)=>s+Math.hypot(x(r.annee)-x(ser[i].annee), y(r.v)-y(ser[i].v)),0)) + 2;
+    el("path",{d,fill:"none",stroke:col,"stroke-width":3,"stroke-linecap":"round","stroke-linejoin":"round",class:"draw",style:`--len:${len}`},svg);
+    for (const r of ser) el("circle",{cx:x(r.annee),cy:y(r.v),r:4.5,fill:col,stroke:"var(--panel)","stroke-width":2},svg);
+    const lr = ser[ser.length-1]; const t = el("text",{x:x(lr.annee)+12,y:y(lr.v)+4,class:"lbl strong"},svg); t.textContent = `${name} ${fmt1(lr.v)}`;
   }
   const hit = el("rect",{x:L,y:T,width:W-L-R,height:H-T-B,fill:"transparent"},svg);
-  hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX-b.left)*W/b.width; const a = yrs.reduce((p,c)=>Math.abs(x(c)-lx)<Math.abs(x(p)-lx)?c:p); const e = es.find(r=>r.annee===a), f = fr.find(r=>r.annee===a); showTip(ev, `<b>${a}</b>Espagne : ${e?fmt1(e.v):"—"}<br>France : ${f?fmt1(f.v):"—"}`); });
+  hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX-b.left)*W/b.width; const a = yrs.reduce((p,c)=>Math.abs(x(c)-lx)<Math.abs(x(p)-lx)?c:p); const e = es.find(r=>r.annee===a), f = fr.find(r=>r.annee===a); showTip(ev, `<b>${a}</b>Espagne : ${e?fmt1(e.v):ND}<br>France : ${f?fmt1(f.v):ND}`); });
   hit.addEventListener("mouseleave", hideTip);
-  const ge = growth("ES"), gf = growth("FR");
-  $("#marcheNote").textContent = `De 2021 à ${es[es.length-1].annee} : Espagne ${fmt1(es[es.length-1].v-100)} points, France ${fmt1(fr[fr.length-1].v-100)} points. Le champ couvre tout le high-tech en magasin spécialisé, pas seulement la téléphonie. Source : Eurostat sts_trtu_a.`;
+  $("#marcheNote").textContent = `De 2021 à ${es[es.length-1].annee} : Espagne ${fmt1(es[es.length-1].v-100)} points, France ${fmt1(fr[fr.length-1].v-100)} points. Le champ couvre tout le high-tech en magasin spécialisé, pas seulement la téléphonie. Source : Eurostat sts_trtu_a. Pointillé : base 100.`;
+  const ke = es[es.length-1].v-100, kf = fr[fr.length-1].v-100;
+  $("#kMarche").innerHTML = `<div class="n s1">${ke>=0?"+":""}${fmt1(ke)} pts</div><div class="t">Espagne depuis 2021, contre ${kf>=0?"+":""}${fmt1(kf)} pts en France.</div>`;
 }
 
 /* ---------- concurrence ---------- */
@@ -314,13 +487,13 @@ function drawConcurrence(){
   if (!rows.length){ $("#chartDensite").innerHTML = '<p class="muted small">Pas encore de données OpenStreetMap : la collecte automatique n\'a pas encore tourné ou a échoué (voir le journal en bas de page).</p>'; }
   else {
     const mx = Math.max(...rows.map(r=>r.points_de_vente_pour_100k_hab));
-    hbar("#chartDensite", rows, {label:r=>r.ville, value:r=>r.points_de_vente_pour_100k_hab, color:()=> "var(--series-1)", domain:[0, Math.ceil(mx/5)*5 || 5], fmt:v=>fmt1(v),
+    hbar("#chartDensite", rows, {label:r=>r.ville, value:r=>r.points_de_vente_pour_100k_hab, color:()=> "var(--s1)", domain:[0, Math.ceil(mx/5)*5 || 5], fmt:v=>fmt1(v),
       tipHtml: r => `<b>${esc(r.ville)}</b>${fmt0(r.nb_points_de_vente)} points de vente, dont ${fmt0(r.nb_grandes_enseignes)} de grandes enseignes<br>Population : ${fmt0(r.population)}`});
   }
   const t = $("#tabVilles"); t.innerHTML = "";
   t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Ville"}),h("th",{textContent:"Région"}),h("th",{className:"num",textContent:"Population"}),h("th",{className:"num",textContent:"Points de vente"}),h("th",{className:"num",textContent:"Grandes enseignes"}),h("th",{className:"num",textContent:"Pour 100 000 hab."}),h("th",{textContent:"Hub le plus proche"}),h("th",{className:"num",textContent:"Route (km)"}),h("th",{className:"num",textContent:"Durée (h)"})])));
   const tb = h("tbody"); t.append(tb);
-  for (const r of DATA.densite) tb.append(h("tr",{},[h("td",{textContent:r.ville}),h("td",{textContent:r.region}),h("td",{className:"num",textContent:fmt0(r.population)}),h("td",{className:"num",textContent:fmt0(r.nb_points_de_vente)}),h("td",{className:"num",textContent:fmt0(r.nb_grandes_enseignes)}),h("td",{className:"num",textContent:fmt1(r.points_de_vente_pour_100k_hab)}),h("td",{textContent:r.hub_le_plus_proche ?? "—"}),h("td",{className:"num",textContent:fmt0(r.distance_route_km)}),h("td",{className:"num",textContent:fmt1(r.duree_route_h)})]));
+  for (const r of DATA.densite) tb.append(h("tr",{},[h("td",{textContent:r.ville}),h("td",{textContent:r.region}),h("td",{className:"num",textContent:fmt0(r.population)}),h("td",{className:"num",textContent:fmt0(r.nb_points_de_vente)}),h("td",{className:"num",textContent:fmt0(r.nb_grandes_enseignes)}),h("td",{className:"num",textContent:fmt1(r.points_de_vente_pour_100k_hab)}),h("td",{textContent:r.hub_le_plus_proche ?? ND}),h("td",{className:"num",textContent:fmt0(r.distance_route_km)}),h("td",{className:"num",textContent:fmt1(r.duree_route_h)})]));
   const sel = $("#villeConc"); sel.innerHTML = "";
   const villes = [...new Set(DATA.densite.map(r=>r.ville))];
   for (const v of villes) sel.append(h("option",{value:v,textContent:v}));
@@ -360,7 +533,7 @@ function buildControls(){
     const inp = h("input",{type:"range",min:cfg.min,max:cfg.max,step:cfg.step,value:S[k]}); inp.setAttribute("aria-label", cfg.lab);
     inp.oninput = () => { S[k] = Number(inp.value); b.textContent = fmtParam(k,S[k]); updateSim(); };
     const st = HYP[k].statut;
-    const note = h("div",{className:"note"},[h("span",{className:"tag " + (st.startsWith("hypoth") ? "hyp":"src"),textContent:st})," départ : " + fmtParam(k, Number(HYP[k].valeur))]);
+    const note = h("div",{className:"note"},[h("span",{className:"tag " + tagClass(st),textContent:st})," départ : " + fmtParam(k, Number(HYP[k].valeur))]);
     note.title = HYP[k].source;
     c.append(h("div",{className:"ctl"},[h("label",{},[h("span",{textContent:cfg.lab}),b]),inp,note]));
   }
@@ -375,16 +548,20 @@ function calcSim(p = S){
   const marcheVille = (marcheTel && popES && popV) ? marcheTel.valeur * 1e6 * popV / popES.valeur : null;
   return {loyer, personnel, fixes, contrib, ca, marcheVille, part: marcheVille ? ca / marcheVille : null, popV};
 }
+function kpiBlock(items){
+  const f = document.createDocumentFragment();
+  for (const [l,v,s,cls] of items) f.append(h("div",{className:"k"},[h("div",{className:"lab",textContent:l}),h("div",{className:"val" + (cls ? " " + cls : ""),textContent:v}),h("div",{className:"sub",textContent:s})]));
+  return f;
+}
 function updateSim(){
   const r = calcSim();
-  const tiles = [
+  const box = $("#simTiles"); box.innerHTML = "";
+  box.append(kpiBlock([
     ["CA HT au point mort", eur(r.ca), "charges fixes / taux de contribution"],
     ["Charges fixes par an", eur(r.fixes), `loyer ${eur(r.loyer)} + personnel ${eur(r.personnel)}`],
-    [`Marché téléphonie ${villeSim}`, r.marcheVille ? eur(r.marcheVille) : "—", r.marcheVille ? "au prorata de la population (calcul)" : "population pas encore collectée"],
-    ["Part de ce marché à capter", r.part != null ? pct(r.part,2) : "—", "pour atteindre le point mort"],
-  ];
-  const box = $("#simTiles"); box.innerHTML = "";
-  for (const [l,v,s] of tiles) box.append(h("div",{className:"card tile"},[h("div",{className:"lab",textContent:l}),h("div",{className:"val",textContent:v}),h("div",{className:"sub",textContent:s})]));
+    [`Marché téléphonie ${villeSim}`, r.marcheVille ? eur(r.marcheVille) : ND, r.marcheVille ? "au prorata de la population (calcul)" : "population pas encore collectée"],
+    ["Part de ce marché à capter", r.part != null ? pct(r.part,2) : ND, "pour atteindre le point mort"],
+  ]));
   drawLoyerCurve();
   const t = $("#tabPnl"); t.innerHTML = "";
   const rows = [["Loyer annuel", r.loyer, "surface × loyer × 12"],["Personnel (salaires + charges)", r.personnel, "ETP × salaire × (1 + charges)"],["Charges fixes", r.fixes, ""],["Taux de contribution", r.contrib, "marge brute − autres charges variables"],["CA HT au point mort", r.ca, ""]];
@@ -395,50 +572,78 @@ function updateSim(){
 }
 function drawLoyerCurve(){
   const box = $("#chartLoyer"); box.innerHTML = "";
-  const W = Math.max(300, box.clientWidth || 600), H = 190, L = 56, R = 16, T = 10, B = 28;
+  const W = Math.max(300, box.clientWidth || 600), H = 220, L = 60, R = 16, T = 12, B = 32;
   const xs = []; for (let l = 10; l <= 300; l += 5) xs.push(l);
   const pts = xs.map(l => ({l, ca: calcSim({...S, loyer_eur_m2_mois:l}).ca}));
   const ymax = Math.max(...pts.map(p => p.ca).filter(isFinite)) * 1.08 || 1;
   const x = l => L + (l - 10) / 290 * (W - L - R), y = v => T + (1 - v / ymax) * (H - T - B);
   const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img"},box);
   const g = el("g",{class:"axis"},svg);
-  for (let i=0;i<=4;i++){ const v = ymax*i/4; el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"gridline"},g); const t = el("text",{x:L-6,y:y(v)+4,"text-anchor":"end"},g); t.textContent = eur(v); }
-  for (const l of [10,50,100,150,200,250,300]){ const t = el("text",{x:x(l),y:H-8,"text-anchor":"middle"},g); t.textContent = l; }
-  const tl = el("text",{x:W-R,y:H-8,"text-anchor":"end"},g); tl.textContent = "€/m²/mois";
-  if (pts.every(p => isFinite(p.ca))) el("path",{d:pts.map((p,i)=>(i?"L":"M")+x(p.l)+","+y(p.ca)).join(""),fill:"none",stroke:"var(--series-1)","stroke-width":2},svg);
+  for (let i=0;i<=4;i++){ const v = ymax*i/4; el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"gridline"},g); const t = el("text",{x:L-8,y:y(v)+4,"text-anchor":"end"},g); t.textContent = eur(v); }
+  for (const l of [10,50,100,150,200,250,300]){ const t = el("text",{x:x(l),y:H-10,"text-anchor":"middle"},g); t.textContent = l; }
+  const tl = el("text",{x:W-R,y:H-26,"text-anchor":"end"},g); tl.textContent = "€/m²/mois";
+  if (pts.every(p => isFinite(p.ca))) el("path",{d:pts.map((p,i)=>(i?"L":"M")+x(p.l)+","+y(p.ca)).join(""),fill:"none",stroke:"var(--s1)","stroke-width":3,"stroke-linecap":"round"},svg);
   const cur = calcSim();
-  if (isFinite(cur.ca)) el("circle",{cx:x(S.loyer_eur_m2_mois),cy:y(cur.ca),r:5,fill:"var(--series-1)",stroke:css("--surface-1"),"stroke-width":2},svg);
+  if (isFinite(cur.ca)) el("circle",{cx:x(S.loyer_eur_m2_mois),cy:y(cur.ca),r:6,fill:"var(--s1)",stroke:"var(--panel)","stroke-width":3},svg);
   const hit = el("rect",{x:L,y:T,width:W-L-R,height:H-T-B,fill:"transparent"},svg);
   hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX - b.left) * W / b.width; const l = Math.round(Math.max(10,Math.min(300,10 + (lx - L)/(W-L-R)*290))/5)*5; const c = calcSim({...S, loyer_eur_m2_mois:l}).ca; showTip(ev, `<b>Loyer ${l} €/m²/mois</b>CA au point mort : ${eur(c)}`); });
   hit.addEventListener("mouseleave", hideTip);
 }
 
 /* ---------- lecture des seuils ---------- */
+function gauge(parent, {min, max, seuil, seuilLabel, points, fmt}){
+  const W = 440, H = 54, L = 8, R = 8, y = 30;
+  const x = v => L + (Math.max(min, Math.min(max, v)) - min) / (max - min) * (W - L - R);
+  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Position face au seuil"},parent);
+  el("line",{x1:L,x2:W-R,y1:y,y2:y,stroke:"var(--line)","stroke-width":2,"stroke-linecap":"round"},svg);
+  el("line",{x1:x(seuil),x2:x(seuil),y1:y-14,y2:y+14,stroke:"var(--ink)","stroke-width":2},svg);
+  const st = el("text",{x:x(seuil),y:10,"text-anchor":"middle",class:"refnote"},svg); st.textContent = seuilLabel;
+  for (const p of points){
+    if (p.v == null || isNaN(p.v)) continue;
+    el("circle",{cx:x(p.v),cy:y,r:8,fill:p.color,stroke:"var(--panel)","stroke-width":3},svg);
+    const t = el("text",{x:x(p.v),y:y+28 > H ? H : y+28,"text-anchor":"middle",class:"lbl strong",style:"font-size:12px"},svg); t.textContent = fmt(p.v);
+  }
+}
 function updateVerdict(){
   const ia = SYN.Apple?.indice, iand = SYN.Android?.indice;
   const ma = margeFam("Apple"), mand = margeFam("Android");
   const r = calcSim();
   const checks = [
-    {ok: iand >= 95 && ia >= 95, txt:`Prix dans les 5 % du concurrent : Apple ${fmt1(ia)}, Android ${fmt1(iand)} (seuil 95)`},
-    {ok: ma >= 0.22 && mand >= 0.22, txt:`Marge si alignement ≥ 22 % : Apple ${pct(ma)}, Android ${pct(mand)}`},
-    {ok: r.part == null ? null : r.part <= 0.01, txt: r.part == null ? "Part de marché nécessaire au point mort : population pas encore collectée" : `Part du marché téléphonie de ${villeSim} à capter au point mort : ${pct(r.part,2)} (repère fixé à 1 %, à discuter)`},
+    {ok: iand >= 95 && ia >= 95, t:"Prix dans les 5 % du concurrent", s:`Apple ${fmt1(ia)}, Android ${fmt1(iand)}, seuil 95`,
+      g:{min:60,max:110,seuil:95,seuilLabel:"seuil 95",fmt:v=>fmt1(v),points:[{v:ia,color:"var(--s1)"},{v:iand,color:"var(--s2)"}]}},
+    {ok: ma >= 0.22 && mand >= 0.22, t:"Marge si alignement d'au moins 22 %", s:`Apple ${pct(ma)}, Android ${pct(mand)}`,
+      g:{min:-0.12,max:0.3,seuil:0.22,seuilLabel:"seuil 22 %",fmt:v=>pct(v,1),points:[{v:ma,color:"var(--s1)"},{v:mand,color:"var(--s2)"}]}},
+    {ok: r.part == null ? null : r.part <= 0.01, t:"Part de marché à capter au point mort", s: r.part == null ? "population pas encore collectée" : `Marché téléphonie de ${villeSim}, repère fixé à 1 %, à discuter`,
+      g:{min:0,max:2,seuil:1,seuilLabel:"repère 1 %",fmt:v=>pct(v/100,2),points:[{v:r.part == null ? null : r.part*100,color:"var(--ink)"}]}},
   ];
-  const ul = $("#checks"); ul.innerHTML = "";
-  for (const c of checks) ul.append(h("li",{},[h("span",{className: c.ok == null ? "na" : c.ok ? "ok" : "ko", textContent: c.ok == null ? "?" : c.ok ? "✓" : "✗"}), h("span",{textContent:c.txt})]));
+  const box = $("#checks"); box.innerHTML = "";
+  for (const c of checks){
+    const gcell = h("div",{});
+    box.append(h("div",{className:"gauge"},[
+      h("div",{},[h("div",{className:"g-t",textContent:c.t}),h("div",{className:"g-s",textContent:c.s})]),
+      gcell,
+      h("span",{className:"chip " + (c.ok == null ? "na" : c.ok ? "ok" : "ko"),textContent: c.ok == null ? "À vérifier" : c.ok ? "Seuil tenu" : "Seuil non tenu"})
+    ]));
+    gauge(gcell, c.g);
+  }
   const nok = checks.filter(c => c.ok === false).length;
-  $("#verdictText").textContent = nok === 0 ? "Go conditionnel : les seuils sont tenus" : (iand < 80 && mand < 0) ? "No-Go magasins en l'état : LDLC ne peut pas s'aligner sur Android sans vendre à perte" : "Go conditionnel : des seuils ne sont pas tenus";
+  const noGo = iand < 80 && mand < 0;
+  const word = nok === 0 ? ["GO","good"] : noGo ? ["NO-GO","bad"] : ["GO CONDITIONNEL","warn"];
+  const vw = $("#verdictWord"); vw.textContent = word[0]; vw.className = "word " + word[1];
+  $("#verdictText").textContent = nok === 0 ? "Les trois seuils sont tenus." : noGo ? "En l'état, LDLC ne peut pas s'aligner sur Android sans vendre à perte." : "Certains seuils ne sont pas tenus : il faut lever les conditions avant d'ouvrir.";
 }
 
 function drawTiles(){
   const croisES = growth("ES"), croisFR = growth("FR");
-  const tiles = [
-    ["Indice de prix Espagne / France", fmt1(SYN["Tous modèles"]?.indice), `Apple ${fmt1(SYN.Apple?.indice)} · Android ${fmt1(SYN.Android?.indice)}`],
-    ["Marge Android si alignement", pct(margeFam("Android")), `Apple : ${pct(margeFam("Apple"))} · hypothèse de coût d'achat`],
-    ["Croissance du high-tech spécialisé " + (croisES?.annee ?? ""), croisES ? (croisES.g>0?"+":"") + pct(croisES.g) : "—", croisFR ? `France : ${croisFR.g>0?"+":""}${pct(croisFR.g)} · volume, Eurostat G474` : ""],
-    ["Marché téléphonie Espagne", marcheTel ? fmt1(marcheTel.valeur/1000) + " Md€" : "—", marcheTel ? `${marcheTel.annee}, ${marcheTel.statut}` : ""],
-  ];
   const box = $("#tiles"); box.innerHTML = "";
-  for (const [l,v,s] of tiles) box.append(h("div",{className:"card tile"},[h("div",{className:"lab",textContent:l}),h("div",{className:"val",textContent:v}),h("div",{className:"sub",textContent:s})]));
+  box.append(kpiBlock([
+    ["Indice de prix Espagne / France", fmt1(SYN["Tous modèles"]?.indice), `Apple ${fmt1(SYN.Apple?.indice)}, Android ${fmt1(SYN.Android?.indice)}`],
+    ["Marge Android si alignement", pct(margeFam("Android")), `Apple : ${pct(margeFam("Apple"))}, hypothèse de coût d'achat`, margeFam("Android") < 0 ? "bad" : ""],
+    ["Croissance du high-tech spécialisé " + (croisES?.annee ?? ""), croisES ? (croisES.g>0?"+":"") + pct(croisES.g) : ND, croisFR ? `France : ${croisFR.g>0?"+":""}${pct(croisFR.g)}, volume Eurostat G474` : ""],
+    ["Marché téléphonie Espagne", marcheTel ? fmt1(marcheTel.valeur/1000) + " Md€" : ND, marcheTel ? `${marcheTel.annee}, ${marcheTel.statut}` : ""],
+  ]));
+  const ix = SYN["Tous modèles"]?.indice;
+  $("#kPrix").innerHTML = `<div class="n s1">${fmt1(ix)}</div><div class="t">Indice moyen tous modèles : l'Espagne est ${fmt1(100-ix)} % moins chère hors taxes.</div>`;
 }
 
 /* ---------- tableaux KPIs et sources ---------- */
@@ -456,17 +661,17 @@ function drawTables(){
     ["8","Distance aux hubs", bcn?.distance_route_km ? `Barcelone : ${fmt0(bcn.distance_route_km)} km par la route depuis ${bcn.hub_le_plus_proche}` : "en attente du calcul routier", bcn?.distance_route_km ? "collecté" : "à collecter"],
     ["9","Taxes locales","TVA 21 % contre 20 %, canon digital " + fmt1(Number(HYP.canon_digital_eur_par_mobile.valeur)) + " € par mobile (à vérifier)","partiel"],
     ["10","Pénétration de la téléphonie","29,9 % du marché espagnol (2024) ; parc Apple 31,35 %, Samsung 24,93 %, Xiaomi 22,22 %","sourcé"],
-    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % sur ${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles suivis (biaisé : choisis parce que vendus dans les deux pays)` : "—","à refaire sur tout le catalogue"],
+    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % sur ${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles suivis (biaisé : choisis parce que vendus dans les deux pays)` : ND,"à refaire sur tout le catalogue"],
   ];
   const t = $("#tabKpis"); t.innerHTML = "";
   t.append(h("thead",{},h("tr",{},[h("th",{textContent:"#"}),h("th",{textContent:"KPI"}),h("th",{textContent:"Valeur"}),h("th",{textContent:"Statut"})])));
   const tb = h("tbody"); t.append(tb);
-  for (const r of kp) tb.append(h("tr",{},[h("td",{textContent:r[0]}),h("td",{textContent:r[1]}),h("td",{textContent:r[2]}),h("td",{},h("span",{className:"tag",textContent:r[3]}))]));
+  for (const r of kp) tb.append(h("tr",{},[h("td",{className:"muted",textContent:r[0]}),h("td",{style:"font-weight:500",textContent:r[1]}),h("td",{textContent:r[2]}),h("td",{},h("span",{className:"tag " + tagClass(r[3]),textContent:r[3]}))]));
   const th = $("#tabHyp"); th.innerHTML = "";
   th.append(h("thead",{},h("tr",{},[h("th",{textContent:"Paramètre"}),h("th",{className:"num",textContent:"Valeur"}),h("th",{textContent:"Statut"}),h("th",{textContent:"Source"})])));
   const tb2 = h("tbody"); th.append(tb2);
-  for (const r of DATA.hypotheses) tb2.append(h("tr",{},[h("td",{textContent:r.parametre}),h("td",{className:"num",textContent:(r.unite==="taux" ? pct(Number(r.valeur)) : fmt1(Number(r.valeur)).replace(/,0$/,"") + " " + r.unite)}),h("td",{},h("span",{className:"tag " + (r.statut.startsWith("hypoth")?"hyp":"src"),textContent:r.statut})),h("td",{className:"small",textContent:r.source})]));
-  for (const r of DATA.marche.filter(r=>!String(r.source).startsWith("Eurostat"))) tb2.append(h("tr",{},[h("td",{textContent:`${r.indicateur} (${r.pays}, ${r.annee})`}),h("td",{className:"num",textContent:(r.unite==="taux" ? pct(Number(r.valeur)) : fmt0(Number(r.valeur)) + " " + r.unite)}),h("td",{},h("span",{className:"tag src",textContent:r.statut})),h("td",{className:"small",textContent:r.source})]));
+  for (const r of DATA.hypotheses) tb2.append(h("tr",{},[h("td",{textContent:r.parametre}),h("td",{className:"num",textContent:(r.unite==="taux" ? pct(Number(r.valeur)) : fmt1(Number(r.valeur)).replace(/,0$/,"") + " " + r.unite)}),h("td",{},h("span",{className:"tag " + tagClass(r.statut),textContent:r.statut})),h("td",{className:"small",textContent:r.source})]));
+  for (const r of DATA.marche.filter(r=>!String(r.source).startsWith("Eurostat"))) tb2.append(h("tr",{},[h("td",{textContent:`${r.indicateur} (${r.pays}, ${r.annee})`}),h("td",{className:"num",textContent:(r.unite==="taux" ? pct(Number(r.valeur)) : fmt0(Number(r.valeur)) + " " + r.unite)}),h("td",{},h("span",{className:"tag " + tagClass(r.statut),textContent:r.statut})),h("td",{className:"small",textContent:r.source})]));
   const tj = $("#tabJournal"); tj.innerHTML = "";
   if (!DATA.journal.length){ $("#journalWrap").hidden = true; return; }
   tj.append(h("thead",{},h("tr",{},[h("th",{textContent:"Collecte"}),h("th",{textContent:"Étape"}),h("th",{textContent:"Statut"}),h("th",{textContent:"Détail"})])));
@@ -524,9 +729,25 @@ $("#btnIA").disabled = true; $("#iaStatus").textContent = "Connexion à Claude�
   else { $("#btnIA").hidden = true; $("#iaStatus").textContent = "La synthèse IA fonctionne dans la version publiée sur claude.ai. Hors de claude.ai, lancez src/ai/synthese.py (API Claude)."; }
 })();
 
+/* ---------- navigation active et révélation des graphiques ---------- */
+function setupObservers(){
+  const secs = [...document.querySelectorAll("section.sec")];
+  const links = [...document.querySelectorAll("#navlinks a")];
+  const reveal = () => secs.forEach(s => s.classList.add("in"));
+  if (!("IntersectionObserver" in window)){ reveal(); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.15});
+  secs.forEach(s => io.observe(s));
+  setTimeout(reveal, 4000);
+  const targets = ["verdict", ...secs.map(s => s.id)].map(id => document.getElementById(id)).filter(Boolean);
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+  }), {rootMargin:"-30% 0px -60% 0px"});
+  targets.forEach(t => spy.observe(t));
+}
+
 /* ---------- rendu ---------- */
 function renderAll(){ drawTiles(); drawMarche(); drawIndice(); drawMarge(); drawConcurrence(); buildControls(); updateSim(); drawTables(); }
-renderAll();
+renderAll(); setupObservers();
 let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { drawMarche(); drawIndice(); drawMarge(); drawConcurrence(); drawLoyerCurve(); }, 150); });
 </script>
 </body>
