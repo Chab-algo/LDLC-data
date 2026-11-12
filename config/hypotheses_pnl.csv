@@ -1,0 +1,9 @@
+parametre,valeur,unite,statut,source
+surface_m2,150,m²,hypothèse équipe,milieu de la fourchette 100 à 300 m² des magasins LDLC notée dans la fiche entreprise (à confirmer)
+loyer_eur_m2_mois,135,€/m²/mois,donnée sourcée (proxy),"Gran Vía de Bilbao, 1 620 €/m²/an, rue commerçante secondaire, début 2026 (fiche, KPI 7). Pas de donnée trouvée pour un centre commercial ou une zone périphérique de Barcelone"
+etp,4,personnes,hypothèse équipe,à remplacer par l'effectif réel d'un magasin LDLC si on l'obtient
+salaire_brut_annuel_eur,17094,€/an,donnée sourcée (plancher),"SMI 2026, Real Decreto 126/2026 (BOE 19/02/2026). Plancher légal : le salaire de convention sera plus haut"
+taux_charges_patronales,0.3065,taux,donnée sourcée,"Orden PJC/297/2026 : contingences communes 23,60 % + chômage 5,50 % (CDI) + FOGASA 0,20 % + formation 0,60 % + MEI 0,75 %. Hors accidents du travail (taux variable selon l'activité)"
+taux_marge_brute,0.245,taux,donnée sourcée (proxy),"marge brute du groupe LDLC 2025-2026. La marge réelle en téléphonie n'est pas publiée et est probablement plus basse"
+autres_charges_pct_ca,0.05,taux,hypothèse équipe,"énergie, marketing local, transport depuis le hub, frais bancaires. À affiner avec l'Observatoire des coûts du transport"
+canon_digital_eur_par_mobile,1.10,€/appareil,donnée à vérifier,"montant transitoire de 2017. Le montant en vigueur est fixé par le Real Decreto 209/2023 (non lu)"

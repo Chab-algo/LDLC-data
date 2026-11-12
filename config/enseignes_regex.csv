@@ -1,0 +1,15 @@
+enseigne,regex,type
+MediaMarkt,media ?markt,specialiste
+PcComponentes,pc ?componentes,specialiste
+Fnac,\bfnac\b,specialiste
+El Corte Inglés,corte ingl,generaliste
+Phone House,phone ?house,operateur_revendeur
+Apple,^apple( store)?$|\bapple store\b,marque
+Samsung,samsung,marque
+Xiaomi,xiaomi|\bmi store\b,marque
+Movistar,movistar,operateur
+Vodafone,vodafone,operateur
+Orange,\borange\b,operateur
+Yoigo,yoigo,operateur
+Carrefour,carrefour,generaliste
+Worten,worten,specialiste

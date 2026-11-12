@@ -1,0 +1,14 @@
+pays,annee,indicateur,valeur,unite,statut,source
+FR,2024,marche_biens_techniques,28000.0,M€,donnée sourcée,fiche entreprise section 13
+ES,2024,marche_biens_techniques,12000.0,M€,donnée sourcée,fiche entreprise section 13
+FR,2023,marche_telephonie,8700.0,M€,donnée sourcée,"GfK via AVCesar, télécoms"
+ES,2024,part_telephonie,0.299,taux,donnée sourcée,AECOC / GfK
+ES,2024,marche_telephonie,3588.0,M€,calcul équipe,"29,9 % de 12 000 M€"
+ES,2024,croissance_biens_techniques,0.066,taux,donnée sourcée,fiche entreprise section 13
+ES,2025,croissance_biens_techniques,0.024,taux,donnée sourcée,fiche entreprise section 13
+FR,2024,croissance_biens_techniques,-0.01,taux,donnée sourcée,fiche entreprise section 13
+FR,2025,croissance_biens_techniques,-0.016,taux,donnée sourcée,fiche entreprise section 13
+ES,2026,part_parc_apple,0.3135,taux,donnée sourcée,"StatCounter, août 2026"
+ES,2026,part_parc_samsung,0.2493,taux,donnée sourcée,"StatCounter, août 2026"
+ES,2026,part_parc_xiaomi,0.2222,taux,donnée sourcée,"StatCounter, août 2026"
+ES,2024,part_marche_mediamarkt,0.215,taux,donnée sourcée,"Ceconomy, exercice 2023-2024"

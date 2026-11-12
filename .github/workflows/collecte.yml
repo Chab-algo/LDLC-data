@@ -1,0 +1,42 @@
+name: Collecte et mise à jour des données
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"   # chaque lundi, 5h17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "config/**"
+      - ".github/workflows/collecte.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collecte-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Collecte, base en étoile, compte de résultat, synthèse IA
+        env:
+          ORS_API_KEY: ${{ secrets.ORS_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m src.pipeline
+      - name: Commit des données mises à jour
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: collecte automatique du $(date -u +%Y-%m-%d)"
+          git push
