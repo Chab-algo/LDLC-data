@@ -1,0 +1,15 @@
+freq,indic_de,geo,time,value,flag,freq_label,indic_de_label,dataset,date_collecte
+A,JAN,ES,2020,47318050,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,ES,2021,47400798,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,ES,2022,47486843,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,ES,2023,48085361,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,ES,2024,48619695,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,ES,2025,49128297,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,ES,2026,49590099,p,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2020,67473651,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2021,67728568,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2022,68091703,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2023,68436003,,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2024,68669303,p,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2025,68882600,p,Annual,Population on 1 January - total,demo_gind,2026-11-12
+A,JAN,FR,2026,69112309,p,Annual,Population on 1 January - total,demo_gind,2026-11-12
