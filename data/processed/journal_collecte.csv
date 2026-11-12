@@ -3,3 +3,7 @@ date,etape,statut,detail
 2026-11-12,osm_overpass,ok,
 2026-11-12,routes,échec,"400 Client Error: Bad Request for url: https://router.project-osrm.org/table/v1/driving/nan,5.1128;nan,-1.5536;2.1686,41.3874;-3.7038,40.4168;-0.3763,39.4699;-5.9845,37.3891;-0.8891,41.6488;-4.4214,36.7213;-2.935,43.263;2.8214,41.9794;1.2445,41.1189;0.62,41.6176?sources=0%3B1&destinations=2%3B3%3B4%"
 2026-11-12,prix,ok,
+2026-11-12,eurostat,ok,
+2026-11-12,osm_overpass,échec,"Overpass indisponible : https://overpass.kumi.systems/api/interpreter HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=240)"
+2026-11-12,routes,ok,
+2026-11-12,prix,ok,
