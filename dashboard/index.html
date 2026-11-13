@@ -162,7 +162,7 @@ button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
 
 <section class="page" id="p-ia" hidden>
   <div class="row"><div class="box">
-    <h2>Synthèse Go/No-Go rédigée par l'IA</h2>
+    <h2>Synthèse IA</h2>
     <p class="iahelp">Claude lit les chiffres de ce dashboard (prix, marges, marché, concurrence) et les réglages actuels du magasin pilote, puis rédige une synthèse pour le Comex. Consigne : n'utiliser que ces chiffres et signaler les hypothèses. Changez un réglage dans « Magasin pilote », puis régénérez.</p>
     <div class="iabar"><button class="iabtn" id="btnIA">Générer la synthèse</button><button class="ghost" id="btnCopy" hidden>Copier</button><span class="iast" id="iaStatus"></span></div>
     <div class="iaout" id="iaOut"></div>
@@ -179,6 +179,8 @@ button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
     <li><b>Point mort</b> : CA HT qui couvre le loyer et le personnel, soit charges fixes / (marge brute − autres charges variables).</li>
     <li><b>Part de marché requise</b> : CA au point mort / marché téléphonie de la ville, au prorata de la population.</li>
   </ul>
+  <h2>Synthèse IA</h2>
+  <p>Claude lit les chiffres du dashboard et les réglages du magasin pilote, puis rédige une synthèse Go/No-Go en quatre parties (constats, recommandation, limites, données à collecter). Consigne : n'utiliser que ces chiffres et signaler les hypothèses. Disponible dans la version publiée sur claude.ai.</p>
   <h2>Seuils de décision</h2>
   <ul><li>Indice de prix d'au moins 95.</li><li>Marge si alignement d'au moins 22 %.</li><li>Part de marché requise d'au plus 1 % (repère à discuter).</li></ul>
   <h2>Limites</h2>
