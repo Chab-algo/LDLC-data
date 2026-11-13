@@ -95,7 +95,7 @@ const hdr = txt => ({ text: txt, options: { bold: true, color: "FFFFFF", fill: {
 const cel = (txt, o = {}) => ({ text: txt, options: { fontSize: 12, color: "202124", ...o } });
 pres.addSection({ title: "Méthode" });
 {
-  const s = content("Méthode", "Sources publiques, collectées chaque lundi", "Benjamin. Tout est dans le dépôt GitHub : un script Python par source (src/collect), relancé chaque lundi par GitHub Actions, qui recommite les données et régénère la base et le dashboard. Si une source tombe (OpenStreetMap a expiré une fois), on garde la collecte précédente et l'incident est écrit dans le journal de collecte.");
+  const s = content("Méthode", "Sources publiques, collectées chaque lundi", "Tout est dans le dépôt GitHub : un script Python par source (src/collect), relancé chaque lundi par GitHub Actions, qui recommite les données et régénère la base et le dashboard. Si une source tombe (OpenStreetMap a expiré une fois), on garde la collecte précédente et l'incident est écrit dans le journal de collecte.");
   s.addTable([
     [hdr("Source"), hdr("Accès"), hdr("Ce qu'on en tire")],
     [cel("Eurostat (sts_trtu_a, demo_gind, prc_hicp_aind)"), cel("API JSON-stat, sans clé"), cel("croissance du high-tech spécialisé, population")],
@@ -109,7 +109,7 @@ pres.addSection({ title: "Méthode" });
 
 /* ---------- méthode : modèle en étoile ---------- */
 {
-  const s = content("Méthode", "Modèle en étoile : 6 dimensions, 5 tables de faits", "Thomas. Étoile plutôt que flocon : peu de dimensions, requêtes simples. Clé produit = marque + modèle + capacité + RAM, pas l'EAN, car Apple change de référence selon le pays (MG6K4F/A en France, MG6M4QL/A en Espagne). Prix stockés en TTC et en HT : on compare en HT pour neutraliser la TVA (20 % contre 21 %).");
+  const s = content("Méthode", "Modèle en étoile : 6 dimensions, 5 tables de faits", "Étoile plutôt que flocon : peu de dimensions, requêtes simples. Clé produit = marque + modèle + capacité + RAM, pas l'EAN, car Apple change de référence selon le pays (MG6K4F/A en France, MG6M4QL/A en Espagne). Prix stockés en TTC et en HT : on compare en HT pour neutraliser la TVA (20 % contre 21 %).");
   const dims = [["dim_produit", "marque, modèle, capacité, RAM"], ["dim_enseigne", "type, pays d'origine"], ["dim_pays", "TVA, canon digital"], ["dim_zone", "ville, population, distance"], ["dim_hub", "entrepôts LDLC"], ["dim_date", "jour, exercice LDLC"]];
   const pos = [[0.5, 1.15], [0.5, 2.15], [0.5, 3.15], [7.0, 1.15], [7.0, 2.15], [7.0, 3.15]];
   dims.forEach(([n, d], i) => {
@@ -131,7 +131,7 @@ pres.addSection({ title: "Méthode" });
 
 /* ---------- KPIs ---------- */
 {
-  const s = content("Méthode", "11 KPIs, 5 axes, une décision par axe", "Georges. On reprend les cinq axes du cahier des charges : chaque KPI répond à une question de décision. Catalogue éligible : LDLC a déjà un site espagnol (ldlc.com/es-es) qui liste 368 smartphones sur les 376 du site français (comparaison par marque, 13/11). Part de marché de LDLC en France : estimation de l'équipe, environ 1,4 % des biens techniques.");
+  const s = content("Méthode", "11 KPIs, 5 axes, une décision par axe", "On reprend les cinq axes du cahier des charges : chaque KPI répond à une question de décision. Catalogue éligible : LDLC a déjà un site espagnol (ldlc.com/es-es) qui liste 368 smartphones sur les 376 du site français (comparaison par marque, 13/11). Part de marché de LDLC en France : estimation de l'équipe, environ 1,4 % des biens techniques.");
   s.addTable([
     [hdr("Axe"), hdr("KPIs"), hdr("Décision éclairée"), hdr("Résultat")],
     [cel("Marché et potentiel", { bold: true }), cel("croissance du secteur, parts de marché"), cel("plafond de CA accessible"), cel(`${sg(gES * 100)} % en Espagne (2025), MediaMarkt 21,5 %`)],

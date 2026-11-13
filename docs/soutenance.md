@@ -6,19 +6,19 @@ Deck : `slides/LDLC_Espagne_Comex.pptx` (12 slides), généré par `slides/build
 | Slides | Qui | Temps |
 |---|---|---|
 | 1. Question | Rubens | 1 min |
-| 2. Sources et automatisation | Benjamin | 45 s |
-| 3. Modèle en étoile | Thomas | 45 s |
-| 4. KPIs par axe | Thomas | 1 min 15 |
-| 5 et 6. Marché | Benjamin | 1 min |
+| 2. Sources et automatisation | Thomas | 45 s |
+| 3. Modèle en étoile | Benjamin | 45 s |
+| 4. KPIs par axe | Benjamin | 1 min 15 |
+| 5 et 6. Marché | Thomas | 1 min |
 | 7 et 8. Prix et marge | Georges | 1 min 10 |
-| 9. Barcelone | Benjamin | 30 s |
+| 9. Barcelone | Thomas | 30 s |
 | 10. Magasin pilote | Georges | 30 s |
 | 11. Synthèse IA et démo | Georges | 50 s |
 | 12. Conclusion | Rubens | 1 min 30 |
 
 Le texte de chaque orateur est dans les notes de chaque slide (`slides/notes_oral.py`).
-Georges garde l'ordinateur et avance les slides. Questions : Benjamin (sources, automatisation),
-Thomas (modélisation, KPIs), Georges (chiffres, dashboard, IA), Rubens (choix de LDLC et de l'Espagne, décision).
+Georges garde l'ordinateur et avance les slides. Questions : Thomas (sources, automatisation),
+Benjamin (modélisation, KPIs), Georges (chiffres, dashboard, IA), Rubens (choix de LDLC et de l'Espagne, décision).
 
 ## Message central
 
