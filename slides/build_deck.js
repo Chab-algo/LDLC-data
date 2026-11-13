@@ -149,14 +149,15 @@ pres.addSection({ title: "Analyse" });
 /* ---------- 7. magasin pilote ---------- */
 {
   const sim = D.sim;
+  const ca135 = (150 * 135 * 12 + sim.pers) / sim.contrib;
   const xs = []; for (let l = 10; l <= 300; l += 20) xs.push(l);
   const ys = xs.map(l => (150 * l * 12 + sim.pers) / sim.contrib / 1e6);
-  const s = content("Analyse", "Pilote : 1,7 M€ de CA pour le point mort", "Magasin de 150 m2, 135 EUR/m2/mois, 4 ETP, salaire brut 17 094 EUR, charges patronales 30,7 %, marge brute 24,5 %, autres charges variables 5 %. Loyer : proxy rue commercante secondaire de Bilbao.");
+  const s = content("Analyse", `Pilote : ${fr(sim.ca / 1e6)} M€ de CA pour le point mort`, `Magasin de 150 m2, 14,8 EUR/m2/mois (mediane de 3 annonces de centres commerciaux a Barcelone, echantillon tres petit), 4 ETP, salaire brut 18 887 EUR (convention du commerce de Catalogne), charges patronales 30,7 %, marge brute 24,5 %, autres charges variables 5 %. A 135 EUR/m2/mois (rue de Bilbao), le CA au point mort monte a ${fr(ca135 / 1e6)} M EUR, soit ${pc(ca135 / sim.marche_ville, 2)} du marche.`);
   card(s, "KPI CA", 0.5, 1.15, 2.6, 1.2, "CA point mort", `${fr(sim.ca / 1e6)} M€`, `${fr(sim.fixes / 1e3, 0)} k€ de charges fixes`, "flat");
-  card(s, "KPI part", 0.5, 2.55, 2.6, 1.2, "Part de marché requise", pc(sim.part, 2), `${sg((sim.part - 0.01) * 100)} pt vs 1 % visé`, "bad");
+  card(s, "KPI part", 0.5, 2.55, 2.6, 1.2, "Part de marché requise", pc(sim.part, 2), `${sg((sim.part - 0.01) * 100)} pt vs 1 % visé`, sim.part > 0.01 ? "bad" : "good");
   s.addChart(pres.charts.LINE, [{ name: "CA au point mort", labels: xs.map(String), values: ys }],
     { x: 3.3, y: 1.1, w: 6.2, h: 3.1, ...axisBase, title: "CA AU POINT MORT SELON LE LOYER (M€, € PAR M² ET PAR MOIS)", chartColors: [HEX.s1], lineSize: 3, lineDataSymbol: "none", showValue: false, showLegend: false, valAxisMinVal: 0, valAxisLabelFormatCode: "0.0" });
-  analysis(s, [t("Un magasin de 150 m² doit vendre "), t(`${fr(sim.ca / 1e6)} M€`, true), t(" pour couvrir son loyer et son personnel, soit "), t(pc(sim.part, 2), true), t(` du marché téléphonie de Barcelone (${fr(sim.marche_ville / 1e6, 0)} M€) : au-dessus du repère de 1 %.`)]);
+  analysis(s, [t("Un magasin de 150 m² doit vendre "), t(`${fr(sim.ca / 1e6)} M€`, true), t(" pour couvrir son loyer et son personnel, soit "), t(pc(sim.part, 2), true), t(` du marché téléphonie de Barcelone (${fr(sim.marche_ville / 1e6, 0)} M€) : ${sim.part > 0.01 ? "au-dessus" : "sous"} le repère de 1 %. Avec un loyer de rue commerçante (135 €/m²), il faudrait `), t(`${fr(ca135 / 1e6)} M€`, true), t(` (${pc(ca135 / sim.marche_ville, 2)}).`)]);
 }
 
 /* ---------- 8. conclusion ---------- */
@@ -164,20 +165,21 @@ pres.addSection({ title: "Conclusion" });
 {
   const s = pres.addSlide({ masterName: "FINAL", sectionTitle: "Conclusion" });
   s.addText("Conclusion : No-Go en l'état", { placeholder: "title" });
-  s.addNotes("Les trois seuils fixés dans la fiche ne sont pas tenus. Apple est proche des seuils, Android est intenable. Avant de rouvrir le dossier : élargir le relevé de prix, obtenir la marge réelle de la téléphonie, confirmer le loyer.");
+  s.addNotes("Les seuils de prix et de marge ne sont pas tenus. Celui de part de marché l'est avec un loyer de centre commercial, pas avec celui d'une rue commerçante. Apple est proche des seuils, Android est intenable. Avant de rouvrir le dossier : élargir le relevé de prix, obtenir la marge réelle de la téléphonie, confirmer le loyer.");
   const hd = txt => ({ text: txt, options: { bold: true, color: "FFFFFF", fill: { color: HEX.blue }, align: "center", fontSize: 14 } });
   const cell = (txt, o = {}) => ({ text: txt, options: { fontSize: 14, color: "202124", align: "center", ...o } });
   s.addTable([
     [hd("Seuil"), hd("Résultat"), hd("Verdict")],
     [cell("Indice de prix d'au moins 95", { align: "left" }), cell(`Apple ${fr(syn.Apple)}, Android ${fr(syn.Android)}`), cell("Non tenu", { color: HEX.bad, bold: true })],
     [cell("Marge si alignement d'au moins 22 %", { align: "left" }), cell(`Apple ${pc(mApple)}, Android ${pc(mAnd)}`), cell("Non tenu", { color: HEX.bad, bold: true })],
-    [cell("Part de marché requise d'au plus 1 %", { align: "left" }), cell(pc(D.sim.part, 2)), cell("Non tenu", { color: HEX.bad, bold: true })],
+    [cell("Part de marché requise d'au plus 1 %", { align: "left" }), cell(pc(D.sim.part, 2)), D.sim.part > 0.01 ? cell("Non tenu", { color: HEX.bad, bold: true }) : cell("Tenu", { color: HEX.good, bold: true })],
   ], { x: 0.5, y: 1.2, w: 9, colW: [4.2, 3.1, 1.7], rowH: 0.45, border: { type: "solid", pt: 0.75, color: HEX.line }, objectName: "Tableau des seuils" });
   s.addText([
     { text: "Pour rouvrir le dossier", options: { bold: true, breakLine: true, fontSize: 16 } },
     { text: "Relever les prix chez d'autres enseignes et sur tout le catalogue", options: { bullet: true, breakLine: true } },
     { text: "Obtenir la marge réelle de LDLC sur la téléphonie", options: { bullet: true, breakLine: true } },
-    { text: "Tester Apple seul : c'est le plus proche des seuils", options: { bullet: true } },
+    { text: "Tester Apple seul : c'est le plus proche des seuils", options: { bullet: true, breakLine: true } },
+    { text: "Confirmer le loyer réel à Barcelone (aujourd'hui 3 annonces)", options: { bullet: true } },
   ], { x: 0.5, y: 3.3, w: 9, h: 1.7, fontSize: 14, color: C.text1, valign: "top", paraSpaceAfter: 6, isTextBox: true, margin: 0, objectName: "Prochaines étapes" });
 }
 

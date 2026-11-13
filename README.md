@@ -156,7 +156,7 @@ Secrets GitHub (Settings > Secrets and variables > Actions), tous deux facultati
 - **KPI 11** : les 11 modèles ont été choisis parce qu'on les trouvait dans les deux pays, donc le taux d'éligibilité
   de 100 % n'a pas de valeur. Il faut scraper tout le catalogue téléphonie LDLC.
 - **Marge** : la marge téléphonie de LDLC n'est pas publiée. On utilise la marge brute du groupe (24,5 %), probablement trop haute.
-- **Loyer** : proxy d'une rue commerçante secondaire (Bilbao). Aucun chiffre trouvé pour un centre commercial à Barcelone.
+- **Loyer** : médiane de 3 annonces de centres commerciaux à Barcelone (14,80 €/m²/mois, loyers demandés). Échantillon très petit : à 135 €/m²/mois (rue de Bilbao) la part de marché requise passe à 1,41 %.
 - **Concurrence** : OpenStreetMap est contributif. Un magasin absent d'OSM n'est pas compté.
 - **Canon digital** : montant de 2017 (1,10 € par mobile), à vérifier dans le Real Decreto 209/2023.
 - **Hubs** : coordonnées du centre de la commune, pas l'adresse exacte des entrepôts.

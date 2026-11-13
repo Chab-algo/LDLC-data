@@ -204,14 +204,14 @@
    "indice": 86.7
   },
   {
-   "perimetre": "Apple",
-   "nb_modeles": 7,
-   "indice": 95.9
-  },
-  {
    "perimetre": "Android",
    "nb_modeles": 4,
    "indice": 70.8
+  },
+  {
+   "perimetre": "Apple",
+   "nb_modeles": 7,
+   "indice": 95.9
   }
  ],
  "marge": [
@@ -417,13 +417,13 @@
   }
  ],
  "sim": {
-  "loyer": 243000.0,
-  "pers": 89333.244,
-  "fixes": 332333.244,
+  "loyer": 26640.0,
+  "pers": 98703.462,
+  "fixes": 125343.462,
   "contrib": 0.195,
-  "ca": 1704273.0461538462,
+  "ca": 642786.9846153846,
   "marche_ville": 123958821.61880742,
-  "part": 0.013748703189473273
+  "part": 0.0051854880211111894
  },
  "market_rows": [
   {
