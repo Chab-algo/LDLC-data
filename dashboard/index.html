@@ -70,6 +70,12 @@ tbody tr:last-child td{border-bottom:0}
 .ctl label b{font-weight:700}
 .ctl .n{font-size:12px;color:var(--ink-2);margin-top:2px}
 input[type=range]{width:100%;accent-color:var(--blue)}
+.iahelp{color:var(--ink-2);margin:0 0 12px;max-width:900px;margin-inline:auto;text-align:center}
+.iabar{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+.iabtn{background:var(--blue);color:#fff;border:0;border-radius:4px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer}
+.iabtn:disabled{opacity:.55;cursor:default}
+.iast{color:var(--ink-2);font-size:13px}
+.iaout{white-space:pre-wrap;line-height:1.6;max-width:900px;margin:16px auto 0;min-height:40px}
 button.ghost{background:#fff;color:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:8px 12px;font:inherit;cursor:pointer}
 button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
 
@@ -107,6 +113,7 @@ button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
   <button role="tab" data-p="synthese" aria-selected="true">Synthèse</button>
   <button role="tab" data-p="prix" aria-selected="false">Prix et marge</button>
   <button role="tab" data-p="pilote" aria-selected="false">Magasin pilote</button>
+  <button role="tab" data-p="ia" aria-selected="false">Synthèse IA</button>
   <button role="tab" data-p="instructions" aria-selected="false">Instructions</button>
 </nav>
 
@@ -151,6 +158,15 @@ button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
       <div class="box"><h2>Compte de résultat au point mort</h2><div class="tw"><table id="tabPnl"></table></div></div>
     </div>
   </div>
+</section>
+
+<section class="page" id="p-ia" hidden>
+  <div class="row"><div class="box">
+    <h2>Synthèse Go/No-Go rédigée par l'IA</h2>
+    <p class="iahelp">Claude lit les chiffres de ce dashboard (prix, marges, marché, concurrence) et les réglages actuels du magasin pilote, puis rédige une synthèse pour le Comex. Consigne : n'utiliser que ces chiffres et signaler les hypothèses. Changez un réglage dans « Magasin pilote », puis régénérez.</p>
+    <div class="iabar"><button class="iabtn" id="btnIA">Générer la synthèse</button><button class="ghost" id="btnCopy" hidden>Copier</button><span class="iast" id="iaStatus"></span></div>
+    <div class="iaout" id="iaOut"></div>
+  </div></div>
 </section>
 
 <section class="page ins" id="p-instructions" hidden>
@@ -389,7 +405,7 @@ function drawInstructions(){
     ["8","Distance aux hubs", bcn?.distance_route_km ? `Barcelone ${fmt0(bcn.distance_route_km)} km depuis ${bcn.hub_le_plus_proche}` : ND, bcn?.distance_route_km ? "collecté" : "à collecter"],
     ["9","Taxes locales","TVA 21 % contre 20 %, canon digital " + Number(HYP.canon_digital_eur_par_mobile.valeur).toLocaleString("fr-FR",{minimumFractionDigits:2}) + " € par mobile","partiel"],
     ["10","Pénétration de la téléphonie","29,9 % du marché espagnol (2024)","sourcé"],
-    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles suivis sur ${fmt0(DATA.marche.find(r => r.indicateur === "catalogue_smartphones_ldlc")?.valeur)} références smartphones de LDLC (catalogue complet non analysé)` : ND,"à refaire"],
+    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % : ${fmt0(DATA.eligibilite[0].nb_smartphones_ldlc_es)} smartphones sur ${fmt0(DATA.eligibilite[0].nb_smartphones_ldlc_fr)} du catalogue français déjà en ligne sur ldlc.com/es-es` : ND,"relevé, comparaison par marque"],
   ];
   const t = $("#tabKpis"); t.innerHTML = "";
   t.append(h("thead",{},h("tr",{},[h("th",{textContent:"#"}),h("th",{textContent:"KPI"}),h("th",{textContent:"Valeur"}),h("th",{textContent:"Statut"})])));
@@ -406,6 +422,59 @@ function drawInstructions(){
   const tb3 = h("tbody"); tj.append(tb3);
   for (const r of DATA.journal) tb3.append(h("tr",{},[h("td",{textContent:r.date}),h("td",{textContent:r.etape}),h("td",{textContent:r.statut}),h("td",{textContent:r.detail ?? ""})]));
 }
+
+/* ---------- synthèse IA (Claude, via la capacité "sample" de l'artifact) ---------- */
+let sampleFn = null, aborter = null;
+function contexteIA(){
+  const r = calcSim();
+  const fam = f => DATA.marge_si_alignement.filter(x => x.famille === f).map(x => x.marge_si_alignement);
+  return JSON.stringify({
+    croissance_G474_volume_base100_2021: {Espagne: G474("ES").filter(x=>x.annee>=2021), France: G474("FR").filter(x=>x.annee>=2021)},
+    indice_prix: DATA.indice_synthese,
+    indice_par_modele: DATA.indice_prix.map(x => ({modele:x.modele, famille:x.famille, indice:x.indice_es_vs_fr})),
+    marge_si_alignement_moyenne: {Apple: avg(fam("Apple")), Android: avg(fam("Android"))},
+    hypothese_cout_achat: `prix HT France x (1 - ${HYP.taux_marge_brute.valeur}), marge du groupe appliquée à la téléphonie`,
+    marche: DATA.marche.filter(m => !String(m.source).startsWith("Eurostat") || m.indicateur === "population_1er_janvier").map(m => ({indicateur:m.indicateur, pays:m.pays, annee:m.annee, valeur:m.valeur, unite:m.unite, statut:m.statut})),
+    concurrence_par_ville: DATA.densite,
+    catalogue_eligible: DATA.eligibilite,
+    magasin_pilote: {ville: villeSim(), reglages: Object.fromEntries(Object.keys(SIM).map(k => [k, {valeur:S[k], statut:HYP[k]?.statut}])), ca_point_mort_ht: Math.round(r.ca), marche_telephonie_ville: r.marcheVille && Math.round(r.marcheVille), part_marche_necessaire: r.part},
+    seuils: {indice_prix_min: 95, marge_si_alignement_min: 0.22, part_marche_max: 0.01}
+  });
+}
+async function genIA(){
+  if (!sampleFn) return;
+  const out = $("#iaOut"), st = $("#iaStatus"), btn = $("#btnIA");
+  aborter?.abort(); aborter = new AbortController();
+  btn.disabled = true; st.textContent = "Claude rédige…"; out.textContent = "";
+  const prompt = `Tu es analyste pour le comité exécutif du Groupe LDLC (125 magasins en France, CA 554,1 M€, marge brute 24,5 %, magasins espagnols ouverts en 2018 et fermés en 2020).
+Question : ouvrir des magasins de téléphonie en Espagne est-il réalisable et rentable ?
+Rédige en français, sans tiret long ni tiret en incise, 220 mots maximum, avec exactement ces quatre parties titrées :
+1. Constats (3 points chiffrés)
+2. Recommandation (Go, Go conditionnel ou No-Go en une phrase, puis la condition principale)
+3. Ce qui fragilise l'analyse (2 limites)
+4. Prochaines données à collecter (2)
+Règles : utilise uniquement les chiffres du JSON ci-dessous et compare-les aux seuils fournis. Quand un chiffre vient d'une hypothèse ou d'un calcul de l'équipe, dis-le. N'invente aucun chiffre ni aucune source.
+JSON :
+${contexteIA()}`;
+  try {
+    const res = await sampleFn(prompt, {signal: aborter.signal, modelTier: "default", cache: false, onText: ({text}) => { out.textContent = text; }});
+    out.textContent = res.text;
+    st.textContent = `Générée le ${new Date().toLocaleString("fr-FR")} avec les réglages actuels.` + (res.truncated ? " Réponse tronquée." : "");
+    $("#btnCopy").hidden = false;
+  } catch (e) {
+    if (e?.code === "not_granted") st.textContent = "Accès à Claude refusé pour cette page.";
+    else if (e?.code === "rate_limited") st.textContent = "Trop de demandes, réessayez dans un moment.";
+    else if (e?.name !== "AbortError") { st.textContent = "La génération a échoué : " + (e?.message || e); if (e?.text) out.textContent = e.text; }
+  } finally { btn.disabled = false; }
+}
+$("#btnIA").onclick = genIA;
+$("#btnCopy").onclick = async () => { try { await navigator.clipboard.writeText($("#iaOut").textContent); $("#iaStatus").textContent = "Copié."; } catch { $("#iaStatus").textContent = "Copie refusée par le navigateur."; } };
+$("#btnIA").disabled = true; $("#iaStatus").textContent = "Connexion à Claude…";
+(async () => {
+  try { sampleFn = window.claude?.use ? await window.claude.use("sample") : null; } catch { sampleFn = null; }
+  if (sampleFn) { $("#btnIA").disabled = false; $("#iaStatus").textContent = ""; }
+  else { $("#btnIA").hidden = true; $("#iaStatus").textContent = "La synthèse IA fonctionne dans la version publiée sur claude.ai. Hors de claude.ai, lancer src/ai/synthese.py avec une clé d'API Claude."; }
+})();
 
 /* ---------- pages et rendu ---------- */
 let page = "synthese";

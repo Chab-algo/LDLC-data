@@ -40,4 +40,5 @@ jobs:
           git add data/
           if [ -d dashboard ]; then git add dashboard/; fi
           git diff --cached --quiet || git commit -m "data: collecte automatique du $(date -u +%Y-%m-%d)"
+          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" || git rebase --abort
           git push
