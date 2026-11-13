@@ -1,6 +1,8 @@
 # Génère les slides du Comex (artifact Slides) à partir de data/processed/. Usage : python slides/generer_slides.py
 import json, csv, datetime, html
-P="/home/claude/ldlc-data/data/processed/"
+from pathlib import Path
+P=str(Path(__file__).resolve().parents[1]/"data"/"processed")+"/"
+import os; os.makedirs("project/slides",exist_ok=True)
 rd=lambda f: list(csv.DictReader(open(P+f)))
 ip=rd("indice_prix.csv"); mg=rd("marge_si_alignement.csv"); de=rd("densite_concurrentielle.csv"); ma=rd("marche.csv")
 INK="#16181d"; LIGHT="#f4f2ec"; BLUE="#2a78d6"; ORANGE="#e0622c"; MUTED="#5b5d63"; GRID="#dcd9cf"
