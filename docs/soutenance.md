@@ -3,13 +3,22 @@
 Dashboard (démo, avec la synthèse IA) : https://claude.ai/artifact/UFqbRsCqsWfCxSCEa4iCpf
 Deck : `slides/LDLC_Espagne_Comex.pptx` (12 slides), généré par `slides/build_deck.js`.
 
-| Temps | Partie de l'oral (PDF) | Slides | Qui | Critère évalué |
-|---|---|---|---|---|
-| 1 min | Entreprise et pays cible | 1 | Rubens | posture métier |
-| 1 min 30 | Base de données et cadrage | 2 et 3 | Benjamin (sources, automatisation), Thomas (étoile) | modélisation, sources, automation |
-| 2 min | Pourquoi ces KPIs | 4 | Georges | réflexion analytique et KPIs |
-| 3 min | L'analyse tirée des chiffres | 5 à 11 + démo dashboard et IA | Georges | DataViz |
-| 1 min 30 | Recommandation Go/No-Go | 12 | Rubens | arbitrage |
+| Slides | Qui | Temps |
+|---|---|---|
+| 1. Question | Rubens | 1 min |
+| 2. Sources et automatisation | Benjamin | 45 s |
+| 3. Modèle en étoile | Thomas | 45 s |
+| 4. KPIs par axe | Thomas | 1 min 15 |
+| 5 et 6. Marché | Benjamin | 1 min |
+| 7 et 8. Prix et marge | Georges | 1 min 10 |
+| 9. Barcelone | Benjamin | 30 s |
+| 10. Magasin pilote | Georges | 30 s |
+| 11. Synthèse IA et démo | Georges | 50 s |
+| 12. Conclusion | Rubens | 1 min 30 |
+
+Le texte de chaque orateur est dans les notes de chaque slide (`slides/notes_oral.py`).
+Georges garde l'ordinateur et avance les slides. Questions : Benjamin (sources, automatisation),
+Thomas (modélisation, KPIs), Georges (chiffres, dashboard, IA), Rubens (choix de LDLC et de l'Espagne, décision).
 
 ## Message central
 
