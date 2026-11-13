@@ -1,0 +1,14 @@
+<section id="etoile">
+<h2>Le modèle en étoile : comparer des prix, des zones et des coûts</h2>
+<div class="star">
+<div class="dim d1"><h3>dim_produit</h3><p>marque, modèle, capacité, RAM, famille</p></div>
+<div class="dim d2"><h3>dim_enseigne</h3><p>type, pays d'origine</p></div>
+<div class="dim d3"><h3>dim_pays</h3><p>TVA, canon digital</p></div>
+<div class="fact"><h3>fact_prix</h3><p>prix TTC et HT par jour</p><h3>fact_point_de_vente</h3><p>magasins concurrents</p><h3>fact_marche</h3><p>indicateurs par pays et année</p><h3>fact_magasin_sim</h3><p>compte de résultat simulé</p></div>
+<div class="dim d4"><h3>dim_zone</h3><p>ville, population, distance au hub</p></div>
+<div class="dim d5"><h3>dim_hub</h3><p>entrepôts LDLC</p></div>
+<div class="dim d6"><h3>dim_date</h3><p>jour, exercice LDLC</p></div>
+</div>
+<p class="source">Règle clé : les prix sont appariés par modèle, capacité et RAM, pas par EAN (Apple change de référence selon le pays), et comparés hors taxes</p>
+<aside>1 min 30. Thomas (modélisation). Insister sur l'appariement : MG6K4F/A en France contre MG6M4QL/A en Espagne pour le même iPhone. Comparaison hors taxes pour neutraliser 20 % contre 21 % de TVA.</aside>
+</section>
