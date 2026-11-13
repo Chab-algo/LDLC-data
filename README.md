@@ -126,7 +126,7 @@ Répartition des rôles (proposée, à valider par l'équipe) :
 | URL produits PcComponentes et MediaMarkt dans `config/produits.csv` | à faire |
 | Scraping du catalogue téléphonie complet de LDLC (KPI 11) | à faire |
 | Dashboard et synthèse IA | en cours |
-| Slides Comex | à faire |
+| Slides Comex (`slides/LDLC_Espagne_Comex.pptx`, générées par `slides/build_deck.js`) | fait, à relire |
 
 ## 5. Stack technique
 
