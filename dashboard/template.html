@@ -70,7 +70,6 @@ tbody tr:last-child td{border-bottom:0}
 .ctl label b{font-weight:700}
 .ctl .n{font-size:12px;color:var(--ink-2);margin-top:2px}
 input[type=range]{width:100%;accent-color:var(--blue)}
-.iahelp{color:var(--ink-2);margin:0 0 12px;max-width:900px;margin-inline:auto;text-align:center}
 .iabar{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
 .iabtn{background:var(--blue);color:#fff;border:0;border-radius:4px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer}
 .iabtn:disabled{opacity:.55;cursor:default}
@@ -163,7 +162,6 @@ button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
 <section class="page" id="p-ia" hidden>
   <div class="row"><div class="box">
     <h2>Synthèse IA</h2>
-    <p class="iahelp">Claude lit les chiffres de ce dashboard (prix, marges, marché, concurrence) et les réglages actuels du magasin pilote, puis rédige une synthèse pour le Comex. Consigne : n'utiliser que ces chiffres et signaler les hypothèses. Changez un réglage dans « Magasin pilote », puis régénérez.</p>
     <div class="iabar"><button class="iabtn" id="btnIA">Générer la synthèse</button><button class="ghost" id="btnCopy" hidden>Copier</button><span class="iast" id="iaStatus"></span></div>
     <div class="iaout" id="iaOut"></div>
   </div></div>
