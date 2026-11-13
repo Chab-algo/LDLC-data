@@ -1,0 +1,60 @@
+{
+ "v": 5,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-13T09:42:16Z"
+ },
+ "lists": "css",
+ "format": {
+  "v": 1,
+  "shared": [
+   "project/deck.css"
+  ]
+ },
+ "title": "LDLC en Espagne : recommandation au Comex",
+ "order": [
+  "cover",
+  "reponse",
+  "entreprise",
+  "methode",
+  "etoile",
+  "kpis",
+  "marche",
+  "prix",
+  "marge",
+  "terrain",
+  "pilote",
+  "ia",
+  "reco"
+ ],
+ "cover": "cover",
+ "sections": {
+  "s1": {
+   "description": "La question et notre réponse",
+   "start": "cover"
+  },
+  "s2": {
+   "description": "L'entreprise, la méthode et la base de données",
+   "start": "entreprise"
+  },
+  "s3": {
+   "description": "Les chiffres : marché, prix, marge, terrain, magasin pilote",
+   "start": "marche"
+  },
+  "s4": {
+   "description": "La recommandation au Comex",
+   "start": "reco"
+  }
+ },
+ "faces": {
+  "space-grotesk": {
+   "family": "Space Grotesk",
+   "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap"
+  },
+  "inter": {
+   "family": "Inter",
+   "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap"
+  }
+ },
+ "designSystems": []
+}

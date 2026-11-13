@@ -104,6 +104,7 @@ src/analysis/      pnl_pilote.py : point mort d'un magasin pilote, marge si alig
 src/ai/            synthese.py : synthèse Go/No-Go rédigée par l'API Claude
 src/dashboard/     build_dashboard.py : injecte data/processed/ dans dashboard/template.html
 dashboard/         index.html : le dashboard (ouvrable dans un navigateur)
+slides/            slides du Comex : generer_slides.py (lancé depuis slides/) écrit project/deck.json et project/slides/*.html
 src/pipeline.py    enchaîne tout
 data/raw/          données brutes horodatées
 data/processed/    tables prêtes pour le dashboard
