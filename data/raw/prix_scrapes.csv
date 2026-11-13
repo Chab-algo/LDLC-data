@@ -11,3 +11,36 @@ date_releve,modele,marque,segment,enseigne,pays,prix_ttc_eur,taux_tva,prix_ht_eu
 2026-11-13,Galaxy S26 Ultra 12/256 Go,Samsung,premium,LDLC,FR,1569.95,0.2,1308.29,https://www.ldlc.com/fiche/PB00728573.html,scraping automatique (json-ld),ok
 2026-11-13,Redmi Note 17 Pro 5G 6/256 Go,Xiaomi,milieu,LDLC,FR,399.95,0.2,333.29,https://www.ldlc.com/fiche/PB00753845.html,scraping automatique (json-ld),ok
 2026-11-13,Redmi Note 17 Pro Max 5G 8/256 Go,Xiaomi,milieu,LDLC,FR,599.95,0.2,499.96,https://www.ldlc.com/fiche/PB00753850.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 17 256 Go,Apple,haut,LDLC,FR,1119.0,0.2,932.5,https://www.ldlc.com/fiche/PB00702806.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 17 256 Go,Apple,haut,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-17-256gb-lavanda,,HTTP 403
+2026-11-13,iPhone 17 256 Go,Apple,haut,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-17-negro-256-gb-5g-63-oled-super-retina-xdr-chip-a19-ios-1606125.html,,HTTP 403
+2026-11-13,iPhone 17 Pro 256 Go,Apple,premium,LDLC,FR,1229.0,0.2,1024.17,https://www.ldlc.com/fiche/PB00702822.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 17 Pro 256 Go,Apple,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-17-pro-256gb-plata,,HTTP 403
+2026-11-13,iPhone 17 Pro 256 Go,Apple,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-17-pro-azul-oscuro-256-gb-5g-63-oled-super-retina-xdr-chip-a19-pro-ios-1606137.html,,HTTP 403
+2026-11-13,iPhone 17 Pro Max 256 Go,Apple,premium,LDLC,FR,1379.0,0.2,1149.17,https://www.ldlc.com/fiche/PB00702832.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 17 Pro Max 256 Go,Apple,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-17-pro-max-256gb-azul-oscuro,,HTTP 403
+2026-11-13,iPhone 17 Pro Max 256 Go,Apple,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-17-pro-max-naranja-cosmico-256-gb-5g-69-oled-super-retina-xdr-chip-a19-pro-ios-1606145.html,,HTTP 403
+2026-11-13,iPhone 18 Pro 256 Go,Apple,premium,LDLC,FR,1479.0,0.2,1232.5,https://www.ldlc.com/fiche/PB00752847.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 18 Pro 256 Go,Apple,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-18-pro-256-gb-negro,,HTTP 403
+2026-11-13,iPhone 18 Pro 256 Go,Apple,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-18-pro-negro-256-gb-63-oled-super-retina-xdr-5g-chip-a20-pro-siri-ai-ios-1674333.html,,HTTP 403
+2026-11-13,iPhone 18 Pro 512 Go,Apple,premium,LDLC,FR,1729.0,0.2,1440.83,https://www.ldlc.com/fiche/PB00752852.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 18 Pro 512 Go,Apple,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-18-pro-512-gb-negro,,HTTP 403
+2026-11-13,iPhone 18 Pro 512 Go,Apple,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-18-pro-negro-512-gb-63-oled-super-retina-xdr-5g-chip-a20-pro-siri-ai-ios-1674337.html,,HTTP 403
+2026-11-13,iPhone 18 Pro Max 256 Go,Apple,premium,LDLC,FR,1629.0,0.2,1357.5,https://www.ldlc.com/fiche/PB00752875.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 18 Pro Max 256 Go,Apple,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-18-pro-max-256-gb-negro,,HTTP 403
+2026-11-13,iPhone 18 Pro Max 256 Go,Apple,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-18-pro-max-negro-256-gb-69-oled-super-retina-xdr-5g-chip-a20-pro-siri-ai-ios-1674349.html,,HTTP 403
+2026-11-13,iPhone 18 Pro Max 512 Go,Apple,premium,LDLC,FR,1879.0,0.2,1565.83,https://www.ldlc.com/fiche/PB00752880.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 18 Pro Max 512 Go,Apple,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/apple-iphone-18-pro-max-512-gb-negro,,HTTP 403
+2026-11-13,iPhone 18 Pro Max 512 Go,Apple,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_apple-iphone-18-pro-max-negro-512-gb-69-oled-super-retina-xdr-5g-chip-a20-pro-siri-ai-ios-1674353.html,,HTTP 403
+2026-11-13,Galaxy S26 Ultra 12/256 Go,Samsung,premium,LDLC,FR,1569.95,0.2,1308.29,https://www.ldlc.com/fiche/PB00728573.html,scraping automatique (json-ld),ok
+2026-11-13,Galaxy S26 Ultra 12/256 Go,Samsung,premium,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/samsung-galaxy-s26-ultra-5g-12gb-256gb-69-blanco,,HTTP 403
+2026-11-13,Galaxy S26 Ultra 12/256 Go,Samsung,premium,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_movil-samsung-galaxy-s26-ultra-negro-256-gb-12-gb-ram-69-qhd-qualcomm-snapdragon-8-elite-gen-5-5000-mah-android-16-1620277.html,,HTTP 403
+2026-11-13,Galaxy A57 5G 8/256 Go,Samsung,milieu,LDLC,FR,659.95,0.2,549.96,https://www.ldlc.com/fiche/PB00733132.html,scraping automatique (json-ld),ok
+2026-11-13,Galaxy A57 5G 8/256 Go,Samsung,milieu,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/samsung-galaxy-a57-5g-8gb-256gb-6-7-lila,,HTTP 403
+2026-11-13,Galaxy A57 5G 8/256 Go,Samsung,milieu,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_movil-samsung-galaxy-a57-azul-oscuro-256-gb-8-gb-ram-67-fhd-exynos-1680-5000-mah-android-16-1622503.html,,HTTP 403
+2026-11-13,Redmi Note 17 Pro 5G 6/256 Go,Xiaomi,milieu,LDLC,FR,399.95,0.2,333.29,https://www.ldlc.com/fiche/PB00753845.html,scraping automatique (json-ld),ok
+2026-11-13,Redmi Note 17 Pro 5G 6/256 Go,Xiaomi,milieu,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/xiaomi-redmi-note-17-pro-5g-6gb-256gb-6-83-negro,,HTTP 403
+2026-11-13,Redmi Note 17 Pro 5G 6/256 Go,Xiaomi,milieu,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_movil-xiaomi-redmi-note-17-pro-negro-256gb-6gb-ram-683-amoled-15k-snapdragon-6s-gen-4-8340-mah-1671805.html,,HTTP 403
+2026-11-13,Redmi Note 17 Pro Max 5G 8/256 Go,Xiaomi,milieu,LDLC,FR,599.95,0.2,499.96,https://www.ldlc.com/fiche/PB00753850.html,scraping automatique (json-ld),ok
+2026-11-13,Redmi Note 17 Pro Max 5G 8/256 Go,Xiaomi,milieu,PcComponentes,ES,,0.21,,https://www.pccomponentes.com/xiaomi-redmi-note-17-pro-max-5g-8gb-256gb-6-83-negro,,HTTP 403
+2026-11-13,Redmi Note 17 Pro Max 5G 8/256 Go,Xiaomi,milieu,MediaMarkt,ES,,0.21,,https://www.mediamarkt.es/es/product/_movil-xiaomi-redmi-note-17-pro-max-blanco-256gb-8gb-ram-683-amoled-15k-snapdragon-6-gen-5-9210-mah-1671812.html,,HTTP 403
