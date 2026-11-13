@@ -9,3 +9,8 @@ date_releve,modele,marque,segment,enseigne,pays,prix_ttc_eur,taux_tva,prix_ht_eu
 2026-11-12,Galaxy A57 5G 8/256 Go,Samsung,milieu,LDLC,FR,569.95,0.2,474.96,https://www.ldlc.com/fiche/PB00733125.html,scraping automatique (json-ld),ok
 2026-11-12,Redmi Note 17 Pro 5G 6/256 Go,Xiaomi,milieu,LDLC,FR,399.95,0.2,333.29,https://www.ldlc.com/fiche/PB00753845.html,scraping automatique (json-ld),ok
 2026-11-12,Redmi Note 17 Pro Max 5G 8/256 Go,Xiaomi,milieu,LDLC,FR,599.95,0.2,499.96,https://www.ldlc.com/fiche/PB00753850.html,scraping automatique (json-ld),ok
+2026-11-13,iPhone 17 256 Go,Apple,haut,LDLC,FR,1119.0,0.2,932.5,https://www.ldlc.com/fiche/PB00702806.html,scraping automatique (json-ld),ok
+2026-11-13,Galaxy S26 Ultra 12/256 Go,Samsung,premium,LDLC,FR,1569.95,0.2,1308.29,https://www.ldlc.com/fiche/PB00728573.html,scraping automatique (json-ld),ok
+2026-11-13,Galaxy A57 5G 8/256 Go,Samsung,milieu,LDLC,FR,569.95,0.2,474.96,https://www.ldlc.com/fiche/PB00733125.html,scraping automatique (json-ld),ok
+2026-11-13,Redmi Note 17 Pro 5G 6/256 Go,Xiaomi,milieu,LDLC,FR,399.95,0.2,333.29,https://www.ldlc.com/fiche/PB00753845.html,scraping automatique (json-ld),ok
+2026-11-13,Redmi Note 17 Pro Max 5G 8/256 Go,Xiaomi,milieu,LDLC,FR,599.95,0.2,499.96,https://www.ldlc.com/fiche/PB00753850.html,scraping automatique (json-ld),ok
