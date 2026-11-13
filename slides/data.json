@@ -58,7 +58,8 @@
    "marque": "Apple",
    "famille": "Apple",
    "segment": "haut",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1119.0,
    "prix_ttc_es": 1029.0,
    "prix_ht_ldlc_fr": 932.5,
@@ -71,13 +72,14 @@
    "marque": "Apple",
    "famille": "Apple",
    "segment": "premium",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1229.0,
-   "prix_ttc_es": 1219.0,
+   "prix_ttc_es": 1209.0,
    "prix_ht_ldlc_fr": 1024.17,
-   "prix_ht_es": 1007.44,
+   "prix_ht_es": 999.175,
    "pvpr_es": 1319.0,
-   "indice_es_vs_fr": 98.4
+   "indice_es_vs_fr": 97.6
   },
   {
    "modele": "iPhone 17 Pro Max 256 Go",
@@ -85,133 +87,142 @@
    "famille": "Apple",
    "segment": "premium",
    "concurrent_es": "PcComponentes",
+   "nb_concurrents": 1,
    "prix_ttc_ldlc_fr": 1379.0,
-   "prix_ttc_es": 1299.0,
+   "prix_ttc_es": 1355.0,
    "prix_ht_ldlc_fr": 1149.17,
-   "prix_ht_es": 1073.55,
+   "prix_ht_es": 1119.83,
    "pvpr_es": 1469.0,
-   "indice_es_vs_fr": 93.4
+   "indice_es_vs_fr": 97.4
   },
   {
    "modele": "iPhone 18 Pro 256 Go",
    "marque": "Apple",
    "famille": "Apple",
    "segment": "premium",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1479.0,
-   "prix_ttc_es": 1429.0,
+   "prix_ttc_es": 1444.0,
    "prix_ht_ldlc_fr": 1232.5,
-   "prix_ht_es": 1180.99,
-   "pvpr_es": 1469.0,
-   "indice_es_vs_fr": 95.8
+   "prix_ht_es": 1193.3899999999999,
+   "pvpr_es": null,
+   "indice_es_vs_fr": 96.8
   },
   {
    "modele": "iPhone 18 Pro 512 Go",
    "marque": "Apple",
    "famille": "Apple",
    "segment": "premium",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1729.0,
-   "prix_ttc_es": 1689.0,
+   "prix_ttc_es": 1684.0,
    "prix_ht_ldlc_fr": 1440.83,
-   "prix_ht_es": 1395.87,
-   "pvpr_es": 1719.0,
-   "indice_es_vs_fr": 96.9
+   "prix_ht_es": 1391.735,
+   "pvpr_es": null,
+   "indice_es_vs_fr": 96.6
   },
   {
    "modele": "iPhone 18 Pro Max 256 Go",
    "marque": "Apple",
    "famille": "Apple",
    "segment": "premium",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1629.0,
-   "prix_ttc_es": 1589.0,
+   "prix_ttc_es": 1594.0,
    "prix_ht_ldlc_fr": 1357.5,
-   "prix_ht_es": 1313.22,
-   "pvpr_es": 1619.0,
-   "indice_es_vs_fr": 96.7
+   "prix_ht_es": 1317.355,
+   "pvpr_es": null,
+   "indice_es_vs_fr": 97.0
   },
   {
    "modele": "iPhone 18 Pro Max 512 Go",
    "marque": "Apple",
    "famille": "Apple",
    "segment": "premium",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1879.0,
-   "prix_ttc_es": 1869.0,
+   "prix_ttc_es": 1849.0,
    "prix_ht_ldlc_fr": 1565.83,
-   "prix_ht_es": 1544.63,
+   "prix_ht_es": 1528.1,
    "pvpr_es": null,
-   "indice_es_vs_fr": 98.6
+   "indice_es_vs_fr": 97.6
   },
   {
    "modele": "Galaxy S26 Ultra 12/256 Go",
    "marque": "Samsung",
    "famille": "Android",
    "segment": "premium",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 1569.95,
-   "prix_ttc_es": 1099.0,
+   "prix_ttc_es": 1234.0,
    "prix_ht_ldlc_fr": 1308.29,
-   "prix_ht_es": 908.26,
-   "pvpr_es": 1549.0,
-   "indice_es_vs_fr": 69.4
+   "prix_ht_es": 1019.835,
+   "pvpr_es": 1474.0,
+   "indice_es_vs_fr": 78.0
   },
   {
    "modele": "Galaxy A57 5G 8/256 Go",
    "marque": "Samsung",
    "famille": "Android",
    "segment": "milieu",
-   "concurrent_es": "PcComponentes",
-   "prix_ttc_ldlc_fr": 569.95,
-   "prix_ttc_es": 429.99,
-   "prix_ht_ldlc_fr": 474.96,
-   "prix_ht_es": 355.36,
-   "pvpr_es": 499.99,
-   "indice_es_vs_fr": 74.8
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
+   "prix_ttc_ldlc_fr": 659.95,
+   "prix_ttc_es": 539.0,
+   "prix_ht_ldlc_fr": 549.96,
+   "prix_ht_es": 445.45500000000004,
+   "pvpr_es": 659.0,
+   "indice_es_vs_fr": 81.0
   },
   {
    "modele": "Redmi Note 17 Pro 5G 6/256 Go",
    "marque": "Xiaomi",
    "famille": "Android",
    "segment": "milieu",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 399.95,
-   "prix_ttc_es": 302.82,
+   "prix_ttc_es": 315.885,
    "prix_ht_ldlc_fr": 333.29,
-   "prix_ht_es": 250.26,
-   "pvpr_es": 479.99,
-   "indice_es_vs_fr": 75.1
+   "prix_ht_es": 261.06,
+   "pvpr_es": 478.0,
+   "indice_es_vs_fr": 78.3
   },
   {
    "modele": "Redmi Note 17 Pro Max 5G 8/256 Go",
    "marque": "Xiaomi",
    "famille": "Android",
    "segment": "milieu",
-   "concurrent_es": "PcComponentes",
+   "concurrent_es": "MediaMarkt + PcComponentes",
+   "nb_concurrents": 2,
    "prix_ttc_ldlc_fr": 599.95,
-   "prix_ttc_es": 386.19,
+   "prix_ttc_es": 417.575,
    "prix_ht_ldlc_fr": 499.96,
-   "prix_ht_es": 319.17,
-   "pvpr_es": 409.36,
-   "indice_es_vs_fr": 63.8
+   "prix_ht_es": 345.1,
+   "pvpr_es": 503.65999999999997,
+   "indice_es_vs_fr": 69.0
   }
  ],
  "syn": [
   {
    "perimetre": "Tous modèles",
    "nb_modeles": 11,
-   "indice": 86.7
-  },
-  {
-   "perimetre": "Android",
-   "nb_modeles": 4,
-   "indice": 70.8
+   "indice": 89.1
   },
   {
    "perimetre": "Apple",
    "nb_modeles": 7,
-   "indice": 95.9
+   "indice": 96.3
+  },
+  {
+   "perimetre": "Android",
+   "nb_modeles": 4,
+   "indice": 76.6
   }
  ],
  "marge": [
@@ -227,81 +238,81 @@
    "modele": "iPhone 17 Pro 256 Go",
    "famille": "Apple",
    "prix_ht_ldlc_fr": 1024.17,
-   "prix_ht_es": 1007.44,
+   "prix_ht_es": 999.175,
    "cout_achat_estime_ht": 773.248,
-   "marge_si_alignement": 0.232
+   "marge_si_alignement": 0.226
   },
   {
    "modele": "iPhone 17 Pro Max 256 Go",
    "famille": "Apple",
    "prix_ht_ldlc_fr": 1149.17,
-   "prix_ht_es": 1073.55,
+   "prix_ht_es": 1119.83,
    "cout_achat_estime_ht": 867.623,
-   "marge_si_alignement": 0.192
+   "marge_si_alignement": 0.225
   },
   {
    "modele": "iPhone 18 Pro 256 Go",
    "famille": "Apple",
    "prix_ht_ldlc_fr": 1232.5,
-   "prix_ht_es": 1180.99,
+   "prix_ht_es": 1193.39,
    "cout_achat_estime_ht": 930.538,
-   "marge_si_alignement": 0.212
+   "marge_si_alignement": 0.22
   },
   {
    "modele": "iPhone 18 Pro 512 Go",
    "famille": "Apple",
    "prix_ht_ldlc_fr": 1440.83,
-   "prix_ht_es": 1395.87,
+   "prix_ht_es": 1391.735,
    "cout_achat_estime_ht": 1087.827,
-   "marge_si_alignement": 0.221
+   "marge_si_alignement": 0.218
   },
   {
    "modele": "iPhone 18 Pro Max 256 Go",
    "famille": "Apple",
    "prix_ht_ldlc_fr": 1357.5,
-   "prix_ht_es": 1313.22,
+   "prix_ht_es": 1317.355,
    "cout_achat_estime_ht": 1024.912,
-   "marge_si_alignement": 0.22
+   "marge_si_alignement": 0.222
   },
   {
    "modele": "iPhone 18 Pro Max 512 Go",
    "famille": "Apple",
    "prix_ht_ldlc_fr": 1565.83,
-   "prix_ht_es": 1544.63,
+   "prix_ht_es": 1528.1,
    "cout_achat_estime_ht": 1182.202,
-   "marge_si_alignement": 0.235
+   "marge_si_alignement": 0.226
   },
   {
    "modele": "Galaxy S26 Ultra 12/256 Go",
    "famille": "Android",
    "prix_ht_ldlc_fr": 1308.29,
-   "prix_ht_es": 908.26,
+   "prix_ht_es": 1019.835,
    "cout_achat_estime_ht": 987.759,
-   "marge_si_alignement": -0.088
+   "marge_si_alignement": 0.031
   },
   {
    "modele": "Galaxy A57 5G 8/256 Go",
    "famille": "Android",
-   "prix_ht_ldlc_fr": 474.96,
-   "prix_ht_es": 355.36,
-   "cout_achat_estime_ht": 358.595,
-   "marge_si_alignement": -0.009
+   "prix_ht_ldlc_fr": 549.96,
+   "prix_ht_es": 445.455,
+   "cout_achat_estime_ht": 415.22,
+   "marge_si_alignement": 0.068
   },
   {
    "modele": "Redmi Note 17 Pro 5G 6/256 Go",
    "famille": "Android",
    "prix_ht_ldlc_fr": 333.29,
-   "prix_ht_es": 250.26,
+   "prix_ht_es": 261.06,
    "cout_achat_estime_ht": 251.634,
-   "marge_si_alignement": -0.005
+   "marge_si_alignement": 0.036
   },
   {
    "modele": "Redmi Note 17 Pro Max 5G 8/256 Go",
    "famille": "Android",
    "prix_ht_ldlc_fr": 499.96,
-   "prix_ht_es": 319.17,
+   "prix_ht_es": 345.1,
    "cout_achat_estime_ht": 377.47,
-   "marge_si_alignement": -0.183
+   "marge_si_alignement": -0.094
   }
  ],
  "dens": [
@@ -542,6 +553,51 @@
    "unite": "taux",
    "statut": "donnée sourcée",
    "source": "Ceconomy, exercice 2023-2024"
+  },
+  {
+   "pays": "FR",
+   "annee": 2026,
+   "indicateur": "catalogue_smartphones_ldlc",
+   "valeur": 391.0,
+   "unite": "références",
+   "statut": "donnée sourcée",
+   "source": "page catégorie smartphones de ldlc.com lue le 13/11/2026 : Apple 101, Samsung 122, Xiaomi 27, autres 141 (coloris et capacités comptés séparément)"
+  },
+  {
+   "pays": "ES",
+   "annee": 2024,
+   "indicateur": "marche_telephonie_recoupement",
+   "valeur": 3300.0,
+   "unite": "M€",
+   "statut": "donnée sourcée (presse)",
+   "source": "Merca2 (04/03/2025) : 3 300 M€ de facturation et 10,41 M d unités en 2024 ; recoupe l estimation de 3 588 M€ ci-dessus (écart de 8 %)"
+  },
+  {
+   "pays": "ES",
+   "annee": 2024,
+   "indicateur": "prix_moyen_smartphone",
+   "valeur": 317.0,
+   "unite": "€",
+   "statut": "donnée sourcée (presse)",
+   "source": "Merca2 : 316,67 € de dépense moyenne par smartphone (tous segments) ; nos 11 modèles sont des modèles récents plus chers"
+  },
+  {
+   "pays": "FR",
+   "annee": 2025,
+   "indicateur": "part_ldlc_high_tech_en_ligne",
+   "valeur": 0.095,
+   "unite": "taux",
+   "statut": "estimation équipe",
+   "source": "CA France 2025-2026 de LDLC (464,0 M€) / marché du high-tech en e-commerce 4,9 Md€ (Fevad 2024) : ordre de grandeur de 9 à 10 %, surestimé (le CA inclut BtoB et magasins)"
+  },
+  {
+   "pays": "FR",
+   "annee": 2026,
+   "indicateur": "marge_telephonie_estimee",
+   "valeur": 0.15,
+   "unite": "taux",
+   "statut": "estimation équipe",
+   "source": "LDLC ne publie aucune marge par famille. Fourchette de 10 à 20 % pour un distributeur sur smartphones (pages sectorielles peu fiables, Fnac Darty indique que la téléphonie dilue sa marge). Marge du groupe LDLC : 24,5 % (2025-2026), 21,1 % (2024-2025)"
   }
  ]
 }

@@ -54,6 +54,7 @@ const mAnd = avg(D.marge.filter(r => r.famille === "Android").map(r => r.marge_s
 const bcn = D.dens.find(r => r.ville === "Barcelona");
 const rankBcn = [...D.dens].sort((a, b) => b.points_de_vente_pour_100k_hab - a.points_de_vente_pour_100k_hab).findIndex(r => r.ville === "Barcelona") + 1;
 const mk = k => D.market_rows.find(r => r.indicateur === k);
+const sens = (m, fam) => avg(D.idx.filter(r => r.famille === fam).map(r => 1 - r.prix_ht_ldlc_fr * (1 - m) / r.prix_ht_es));
 const short = s => s.replace(/ 5G/, "").replace(/ Go$/, "");
 
 /* ---------- briques ---------- */
@@ -116,7 +117,7 @@ pres.addSection({ title: "Analyse" });
 /* ---------- 4. prix ---------- */
 {
   const rows = [...D.idx].sort((a, b) => b.indice_es_vs_fr - a.indice_es_vs_fr);
-  const s = content("Analyse", "Prix : Android bien moins cher en Espagne", "Indice = prix HT du concurrent espagnol (PcComponentes) / prix HT LDLC France x 100. 11 modèles appariés, un seul jour de relevé.");
+  const s = content("Analyse", "Prix : Android bien moins cher en Espagne", "Indice = prix HT moyen des concurrents espagnols (PcComponentes et MediaMarkt, relevés du 13/11) / prix HT LDLC France x 100. 11 modèles appariés. MediaMarkt : prix lus sur les pages de liste. Deux Redmi sont vendus par un vendeur marketplace sur PcComponentes.");
   card(s, "KPI Apple", 0.5, 1.15, 2.6, 1.2, "Indice Apple", fr(syn.Apple), `${fr(syn.Apple - 100)} % vs France`, "bad");
   card(s, "KPI Android", 0.5, 2.55, 2.6, 1.2, "Indice Android", fr(syn.Android), `${fr(syn.Android - 100)} % vs France`, "bad");
   s.addChart(pres.charts.BAR, [{ name: "Indice", labels: rows.map(r => short(r.modele)), values: rows.map(r => r.indice_es_vs_fr) }],
@@ -127,12 +128,12 @@ pres.addSection({ title: "Analyse" });
 /* ---------- 5. marge ---------- */
 {
   const rows = [...D.marge].sort((a, b) => b.marge_si_alignement - a.marge_si_alignement);
-  const s = content("Analyse", "Marge : s'aligner fait passer Android sous zéro", "Coût d'achat estimé = prix HT France x (1 - 24,5 %). 24,5 % est la marge brute du groupe, appliquée à la téléphonie par hypothèse. Seuil de marge : 22 %.");
+  const s = content("Analyse", `Marge : Android à ${pc(mAnd, 0)} si LDLC s'aligne`, `Coût d'achat estimé = prix HT France x (1 - 24,5 %). 24,5 % est la marge brute du groupe (21,1 % l'an dernier), appliquée à la téléphonie par hypothèse : LDLC ne publie aucune marge par famille. Estimation d'un distributeur sur smartphones : 10 à 20 %. À 15 % : Apple ${pc(sens(0.15, "Apple"))}, Android ${pc(sens(0.15, "Android"))}. Seuil de marge : 22 %.`);
   card(s, "KPI Apple", 0.5, 1.15, 2.6, 1.2, "Marge Apple", pc(mApple), `${sg((mApple - 0.22) * 100)} pts vs seuil 22 %`, "bad");
   card(s, "KPI Android", 0.5, 2.55, 2.6, 1.2, "Marge Android", pc(mAnd), `${sg((mAnd - 0.22) * 100)} pts vs seuil 22 %`, "bad");
   s.addChart(pres.charts.BAR, [{ name: "Marge", labels: rows.map(r => short(r.modele)), values: rows.map(r => r.marge_si_alignement * 100) }],
     { x: 3.3, y: 1.1, w: 6.2, h: 3.2, ...axisBase, barDir: "bar", catAxisOrientation: "maxMin", catAxisLabelPos: "low", title: "MARGE SI LDLC S'ALIGNE SUR LE PRIX ESPAGNOL (%)", chartColors: rows.map(r => r.famille === "Apple" ? HEX.s1 : HEX.s2), showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0", showLegend: false, valAxisMinVal: -20, valAxisMaxVal: 30, barGapWidthPct: 40 });
-  analysis(s, [t("En vendant au prix espagnol, la marge tombe à "), t(pc(mAnd), true), t(" sur Android : LDLC vendrait à perte. Sur Apple, elle atteint "), t(pc(mApple), true), t(", juste sous le seuil de "), t("22 %", true), t(". Hypothèse : marge brute du groupe appliquée à la téléphonie.")]);
+  analysis(s, [t("En vendant au prix espagnol, la marge tombe à "), t(pc(mAnd), true), t(" sur Android : quasi nulle. Sur Apple, elle atteint "), t(pc(mApple), true), t(", sous le seuil de "), t("22 %", true), t(". Hypothèse : marge du groupe (24,5 %) ; à 15 %, estimation basse pour la téléphonie, Android passe à "), t(pc(sens(0.15, "Android")), true), t(".")]);
 }
 
 /* ---------- 6. concurrence ---------- */
@@ -165,7 +166,7 @@ pres.addSection({ title: "Conclusion" });
 {
   const s = pres.addSlide({ masterName: "FINAL", sectionTitle: "Conclusion" });
   s.addText("Conclusion : No-Go en l'état", { placeholder: "title" });
-  s.addNotes("Les seuils de prix et de marge ne sont pas tenus. Celui de part de marché l'est avec un loyer de centre commercial, pas avec celui d'une rue commerçante. Apple est proche des seuils, Android est intenable. Avant de rouvrir le dossier : élargir le relevé de prix, obtenir la marge réelle de la téléphonie, confirmer le loyer.");
+  s.addNotes("Les seuils de prix et de marge ne sont pas tenus. Celui de part de marché l'est avec un loyer de centre commercial, pas avec celui d'une rue commerçante. Apple est proche des seuils, Android est quasi sans marge. Avant de rouvrir le dossier : élargir le relevé de prix, obtenir la marge réelle de la téléphonie, confirmer le loyer.");
   const hd = txt => ({ text: txt, options: { bold: true, color: "FFFFFF", fill: { color: HEX.blue }, align: "center", fontSize: 14 } });
   const cell = (txt, o = {}) => ({ text: txt, options: { fontSize: 14, color: "202124", align: "center", ...o } });
   s.addTable([
@@ -176,7 +177,7 @@ pres.addSection({ title: "Conclusion" });
   ], { x: 0.5, y: 1.2, w: 9, colW: [4.2, 3.1, 1.7], rowH: 0.45, border: { type: "solid", pt: 0.75, color: HEX.line }, objectName: "Tableau des seuils" });
   s.addText([
     { text: "Pour rouvrir le dossier", options: { bold: true, breakLine: true, fontSize: 16 } },
-    { text: "Relever les prix chez d'autres enseignes et sur tout le catalogue", options: { bullet: true, breakLine: true } },
+    { text: "Ajouter Amazon, Fnac et El Corte Inglés (bloquent la lecture) et suivre les prix chaque semaine", options: { bullet: true, breakLine: true } },
     { text: "Obtenir la marge réelle de LDLC sur la téléphonie", options: { bullet: true, breakLine: true } },
     { text: "Tester Apple seul : c'est le plus proche des seuils", options: { bullet: true, breakLine: true } },
     { text: "Confirmer le loyer réel à Barcelone (aujourd'hui 3 annonces)", options: { bullet: true } },

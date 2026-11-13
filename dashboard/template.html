@@ -373,22 +373,23 @@ function drawLoyerCurve(){
 
 /* ---------- page instructions ---------- */
 const tagTone = st => /partiel|estim|proxy|simul|à refaire|à collecter|1 enseigne|en attente|hypoth/i.test(st) ? "var(--warn)" : "var(--good)";
+const sensMarge = (m, fam) => avg(DATA.indice_prix.filter(r => r.famille === fam).map(r => 1 - r.prix_ht_ldlc_fr * (1 - m) / r.prix_ht_es));
 function drawInstructions(){
   $("#limites").innerHTML = "";
-  for (const l of ["Une seule enseigne espagnole relevée (PcComponentes), 11 modèles, un seul jour de prix.","Marge téléphonie de LDLC non publiée : marge brute du groupe utilisée (24,5 %).","Loyer : médiane de 3 annonces de centres commerciaux à Barcelone, échantillon très petit.","Concurrence : OpenStreetMap est incomplet.","KPI 11 biaisé : les 11 modèles sont ceux vendus dans les deux pays."]) $("#limites").append(h("li",{textContent:l}));
+  for (const l of ["Deux enseignes espagnoles relevées (PcComponentes, MediaMarkt), 11 modèles, relevés des 12 et 13/11 : pas d'historique. Amazon.es, Fnac et El Corte Inglés bloquent la lecture automatique.","Prix MediaMarkt lus sur les pages de liste (fiches produit bloquées) ; PcComponentes : deux Redmi vendus par un vendeur marketplace.",`Marge téléphonie de LDLC non publiée : marge brute du groupe utilisée (24,5 %). Estimation d'un distributeur sur smartphones : 10 à 20 %. À 15 %, marge si alignement : Apple ${pct(sensMarge(0.15,"Apple"))}, Android ${pct(sensMarge(0.15,"Android"))}.`,"Loyer : médiane de 3 annonces de centres commerciaux à Barcelone, échantillon très petit.","Concurrence : OpenStreetMap est incomplet.","KPI 11 : le taux d'éligibilité n'est pas mesuré sur les 391 références du catalogue LDLC."]) $("#limites").append(h("li",{textContent:l}));
   const d = DATA.densite.filter(r=>r.points_de_vente_pour_100k_hab!=null), bcn = DATA.densite.find(r=>r.ville==="Barcelona"), ge = growth("ES"), gf = growth("FR");
   const kp = [
     ["1","Croissance du secteur", ge ? `Espagne ${sgn(ge.g,pct(ge.g))}, France ${sgn(gf.g,pct(gf.g))} (${ge.annee}, volume, Eurostat G474)` : ND,"collecté"],
     ["2","Part de marché de LDLC en France","environ 1,4 % (tous biens techniques)","estimé"],
     ["3","Part de marché du leader espagnol","MediaMarkt 21,5 % (2023-2024)","sourcé"],
-    ["4","Indice de prix Espagne / France",`${fmt1(SYN["Tous modèles"]?.indice)} (Apple ${fmt1(SYN.Apple?.indice)}, Android ${fmt1(SYN.Android?.indice)})`,"collecté, 1 enseigne"],
+    ["4","Indice de prix Espagne / France",`${fmt1(SYN["Tous modèles"]?.indice)} (Apple ${fmt1(SYN.Apple?.indice)}, Android ${fmt1(SYN.Android?.indice)})`,"collecté, 2 enseignes"],
     ["5","Marge post-taxe si alignement",`Apple ${pct(avg(DATA.marge_si_alignement.filter(r=>r.famille==="Apple").map(r=>r.marge_si_alignement)))}, Android ${pct(avg(DATA.marge_si_alignement.filter(r=>r.famille==="Android").map(r=>r.marge_si_alignement)))}`,"simulé"],
     ["6","Densité concurrentielle", d.length ? `${d.length} villes, Barcelone ${fmt1(bcn?.points_de_vente_pour_100k_hab)} pour 100 000 hab.` : ND, d.length ? "collecté" : "à collecter"],
     ["7","Coût au m²", fmtParam("loyer_eur_m2_mois", Number(HYP.loyer_eur_m2_mois.valeur)) + " (annonces)","partiel"],
     ["8","Distance aux hubs", bcn?.distance_route_km ? `Barcelone ${fmt0(bcn.distance_route_km)} km depuis ${bcn.hub_le_plus_proche}` : ND, bcn?.distance_route_km ? "collecté" : "à collecter"],
     ["9","Taxes locales","TVA 21 % contre 20 %, canon digital " + Number(HYP.canon_digital_eur_par_mobile.valeur).toLocaleString("fr-FR",{minimumFractionDigits:2}) + " € par mobile","partiel"],
     ["10","Pénétration de la téléphonie","29,9 % du marché espagnol (2024)","sourcé"],
-    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % sur ${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles` : ND,"à refaire"],
+    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles suivis sur ${fmt0(DATA.marche.find(r => r.indicateur === "catalogue_smartphones_ldlc")?.valeur)} références smartphones de LDLC (catalogue complet non analysé)` : ND,"à refaire"],
   ];
   const t = $("#tabKpis"); t.innerHTML = "";
   t.append(h("thead",{},h("tr",{},[h("th",{textContent:"#"}),h("th",{textContent:"KPI"}),h("th",{textContent:"Valeur"}),h("th",{textContent:"Statut"})])));
