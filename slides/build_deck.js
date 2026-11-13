@@ -65,6 +65,10 @@ function card(slide, name, x, y, w, h, title, value, delta, tone) {
   const col = tone === "bad" ? HEX.bad : tone === "good" ? HEX.good : HEX.grey;
   slide.addText(delta, { x, y: y + 0.88, w, h: 0.25, fontSize: 12, color: col, align: "center", isTextBox: true, margin: 0, objectName: name + " variation" });
 }
+function highlight(slide, name, x, y, w, h, label, lx, ly, lw) {
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, rectRadius: 0.05, fill: { type: "none" }, line: { color: HEX.bad, width: 1.5, dashType: "dash" }, objectName: name + " encadré" });
+  slide.addText(label, { x: lx, y: ly, w: lw, h: 0.3, fontSize: 14, bold: true, color: HEX.bad, align: "right", isTextBox: true, margin: 0, objectName: name + " repère" });
+}
 function analysis(slide, runs) {
   slide.addText(runs, { x: 0.5, y: 4.3, w: 9, h: 0.85, fontSize: 14, color: C.text1, align: "left", valign: "top", isTextBox: true, margin: 0, objectName: "Analyse" });
 }
@@ -153,6 +157,7 @@ pres.addSection({ title: "Analyse" });
     { name: "Espagne", labels: es.map(r => String(r[0])), values: es.map(r => r[1]) },
     { name: "France", labels: fra.map(r => String(r[0])), values: fra.map(r => r[1]) },
   ], { x: 3.3, y: 1.1, w: 6.2, h: 3.1, ...axisBase, title: "VOLUME DES VENTES, BASE 100 EN 2021", chartColors: [HEX.s1, HEX.s2], lineSize: 3, lineDataSymbolSize: 7, showValue: true, dataLabelPosition: "t", dataLabelFormatCode: "0.0", showLegend: true, legendPos: "b", legendFontFace: "Arial", legendFontSize: 10, valAxisMinVal: 80, valAxisMaxVal: 180 });
+  highlight(s, "2025", 8.55, 1.6, 0.85, 2.0, `Espagne ${sg(gES * 100)} % en 2025`, 6.0, 1.45, 2.45);
   analysis(s, [t("Depuis 2021, le commerce high-tech spécialisé gagne "), t(`${fr(esLast - 100)} %`, true), t(" en Espagne contre "), t(`${fr(frLast - 100)} %`, true), t(" en France. En 2025, l'Espagne croît de "), t(`${sg(gES * 100)} %`, true), t(" contre "), t(`${sg(gFR * 100)} %`, true), t(" : le marché est porteur.")]);
 }
 
@@ -177,6 +182,7 @@ pres.addSection({ title: "Analyse" });
   card(s, "KPI Android", 0.5, 2.55, 2.6, 1.2, "Indice Android", fr(syn.Android), `${fr(syn.Android - 100)} % vs France`, "bad");
   s.addChart(pres.charts.BAR, [{ name: "Indice", labels: rows.map(r => short(r.modele)), values: rows.map(r => r.indice_es_vs_fr) }],
     { x: 3.3, y: 1.1, w: 6.2, h: 3.2, ...axisBase, barDir: "bar", catAxisOrientation: "maxMin", title: "INDICE DE PRIX ESPAGNE / FRANCE (100 = PARITÉ)", chartColors: rows.map(r => r.famille === "Apple" ? HEX.s1 : HEX.s2), showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0", showLegend: false, valAxisMinVal: 0, valAxisMaxVal: 120, barGapWidthPct: 40 });
+  highlight(s, "Android", 3.35, 3.3, 6.1, 0.95, `Android ${fr(syn.Android - 100)} %`, 7.5, 3.95, 1.9);
   analysis(s, [t("Pour un même modèle, l'Espagne est en moyenne "), t(`${fr(100 - syn["Tous modèles"])} %`, true), t(" moins chère hors taxes. L'écart est faible sur Apple ("), t(fr(syn.Apple), true), t(") mais fort sur Android ("), t(fr(syn.Android), true), t(") : LDLC devrait baisser ses prix pour s'aligner.")]);
 }
 
@@ -188,6 +194,7 @@ pres.addSection({ title: "Analyse" });
   card(s, "KPI Android", 0.5, 2.55, 2.6, 1.2, "Marge Android", pc(mAnd), `${sg((mAnd - 0.22) * 100)} pts vs seuil 22 %`, "bad");
   s.addChart(pres.charts.BAR, [{ name: "Marge", labels: rows.map(r => short(r.modele)), values: rows.map(r => r.marge_si_alignement * 100) }],
     { x: 3.3, y: 1.1, w: 6.2, h: 3.2, ...axisBase, barDir: "bar", catAxisOrientation: "maxMin", catAxisLabelPos: "low", title: "MARGE SI LDLC S'ALIGNE SUR LE PRIX ESPAGNOL (%)", chartColors: rows.map(r => r.famille === "Apple" ? HEX.s1 : HEX.s2), showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0", showLegend: false, valAxisMinVal: -20, valAxisMaxVal: 30, barGapWidthPct: 40 });
+  highlight(s, "Android", 3.35, 3.38, 6.1, 0.88, `Marge Android ${pc(mAnd)}`, 7.2, 3.72, 2.2);
   analysis(s, [t("En vendant au prix espagnol, la marge tombe à "), t(pc(mAnd), true), t(" sur Android : quasi nulle. Sur Apple, elle atteint "), t(pc(mApple), true), t(", sous le seuil de "), t("22 %", true), t(". Hypothèse : marge du groupe (24,5 %) ; à 15 %, estimation basse pour la téléphonie, Android passe à "), t(pc(sens(0.15, "Android")), true), t(".")]);
 }
 
