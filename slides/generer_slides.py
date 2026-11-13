@@ -205,9 +205,9 @@ S["kpis"]=f"""<section id="kpis">
 <tr><td><b>Prix et marges</b></td><td>indice de prix relatif, marge brute post-taxe</td><td>peut-on être au bon prix ?</td><td>indice 86,7 ; Android 70,8 ; marge Android si alignement −7 %</td></tr>
 <tr><td><b>Réseau et implantation</b></td><td>densité concurrentielle par zone, coût au m²</td><td>rythme et coût d'ouverture</td><td>11,1 points de vente pour 100 000 hab. à Barcelone ; loyer proxy 135 €/m²/mois</td></tr>
 <tr><td><b>Opérations et logistique</b></td><td>distance aux hubs, douane et taxes locales</td><td>impact sur l'approvisionnement</td><td>{fr(avg_cat,0)} km en moyenne vers la Catalogne ; pas de douane, TVA 21 %, canon digital</td></tr>
-<tr><td><b>Assortiment</b></td><td>pénétration de la téléphonie, % du catalogue éligible</td><td>catalogue complet ou ciblé</td><td>téléphonie 29,9 % du marché ; catalogue éligible à mesurer</td></tr>
+<tr><td><b>Assortiment</b></td><td>pénétration de la téléphonie, % du catalogue éligible</td><td>catalogue complet ou ciblé</td><td>téléphonie 29,9 % du marché ; 97,9 % des smartphones LDLC déjà en ligne sur ldlc.com/es-es</td></tr>
 </table>
-<aside>2 min. Georges (analyse). On reprend les cinq axes du cahier des charges. Chaque KPI répond à une décision. Le % du catalogue éligible n'est pas encore fiable : nos 11 modèles ont été choisis parce qu'ils sont vendus dans les deux pays. La part de marché de LDLC en France est une estimation de l'équipe (CA particuliers / marché des biens techniques).</aside>
+<aside>2 min. Georges (analyse). On reprend les cinq axes du cahier des charges. Chaque KPI répond à une décision. Catalogue éligible : LDLC a déjà un site espagnol (ldlc.com/es-es) qui liste 368 smartphones sur les 376 du site français (comparaison par marque, relevé du 13/11/2026). L'assortiment n'est donc pas un frein : déploiement du catalogue complet possible. La part de marché de LDLC en France est une estimation de l'équipe (CA particuliers / marché des biens techniques).</aside>
 </section>"""
 cat=[r for r in de if r["region"]=="Catalogne"]
 rows_cat="".join(f'<tr><td>{esc(r["ville"])}</td><td class="r">{fr(float(r["distance_route_km"]),0)} km</td><td class="r">{fr(float(r["duree_route_h"]))} h</td><td class="r">{fr(float(r["nb_points_de_vente"]),0)}</td><td class="r">{fr(float(r["points_de_vente_pour_100k_hab"]))}</td></tr>' for r in sorted(cat,key=lambda r: float(r["distance_route_km"])))
@@ -245,7 +245,7 @@ S["reco"]=f"""<section id="reco" class="dark">
 </div>
 <table class="kt axes">
 <tr><td>Marché et potentiel</td><td class="go">favorable</td><td>Prix et marges</td><td class="nogo">bloquant</td><td>Réseau</td><td class="mid">à préciser</td></tr>
-<tr><td>Logistique et taxes</td><td class="go">favorable</td><td>Assortiment</td><td class="mid">à mesurer</td><td></td><td></td></tr>
+<tr><td>Logistique et taxes</td><td class="go">favorable</td><td>Assortiment</td><td class="go">favorable</td><td></td><td></td></tr>
 </table>
 <p class="source light">La collecte continue chaque semaine : la recommandation se met à jour avec les données</p>
 <aside>1 min 30. Rubens. Trancher : No-Go magasins, Go online. Les conditions de succès rendent la décision réversible. Limites à assumer si on nous les demande : une seule enseigne espagnole relevée, marge téléphonie non publiée, loyer proxy, OSM incomplet, canon digital de 2017 à vérifier.</aside>

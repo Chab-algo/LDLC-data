@@ -41,7 +41,7 @@ Périmètre retenu : **la téléphonie (smartphones)**. Pays cible : **l'Espagne
 | 8 | Distance aux hubs | `dim_zone` (OSRM ou OpenRouteService) | collecté automatiquement |
 | 9 | Taxes locales | `dim_pays` (TVA, canon digital) | canon digital à vérifier |
 | 10 | Pénétration de la téléphonie | `config/marche.csv` | sourcé |
-| 11 | % du catalogue éligible | vue `v_eligibilite_catalogue` | biaisé pour l'instant, voir limites |
+| 11 | % du catalogue éligible | vue `v_eligibilite_catalogue` (`config/catalogue_ldlc.csv`) | 97,9 % (368 smartphones sur 376 déjà en ligne sur ldlc.com/es-es) |
 | + | Rentabilité d'un magasin pilote | `pnl_pilote.csv` | CA au point mort simulé |
 
 ### Modèle en étoile (DuckDB, `data/ldlc_espagne.duckdb`)
@@ -143,7 +143,7 @@ La collecte tourne seule chaque lundi (GitHub Actions) ; le dashboard est régé
 | Base en étoile | fait |
 | Compte de résultat simulé (point mort) | fait, hypothèses à affiner |
 | URL produits PcComponentes et MediaMarkt dans `config/produits.csv` | à faire |
-| Scraping du catalogue téléphonie complet de LDLC (KPI 11) | à faire |
+| KPI 11 : comparaison des catalogues LDLC France et Espagne | fait par marque, à automatiser par référence |
 | Dashboard et synthèse IA | en cours |
 | Slides Comex | à faire |
 
@@ -154,7 +154,7 @@ Conditions pour repasser en Go : prix Android à moins de 5 % des concurrents, m
 loyer en centre commercial confirmé. Données à obtenir avant de revoir la décision en 2028 :
 1. coûts d'achat réels de LDLC en téléphonie (donnée interne) ;
 2. prix d'une deuxième enseigne espagnole (MediaMarkt) ;
-3. catalogue téléphonie complet de LDLC (KPI 11) ;
+3. disponibilité réelle en stock des références sur ldlc.com/es-es ;
 4. loyers en centre commercial et en périphérie de Barcelone ;
 5. effectif et CA moyen d'un magasin LDLC.
 
@@ -183,8 +183,9 @@ Secrets GitHub (Settings > Secrets and variables > Actions), tous deux facultati
 ## 7. Limites connues
 
 - **Prix** : une seule enseigne espagnole pour l'instant (PcComponentes), 11 modèles, un seul jour de relevé.
-- **KPI 11** : les 11 modèles ont été choisis parce qu'on les trouvait dans les deux pays, donc le taux d'éligibilité
-  de 100 % n'a pas de valeur. Il faut scraper tout le catalogue téléphonie LDLC.
+- **KPI 11** : comparaison du nombre de smartphones par marque entre ldlc.com et ldlc.com/es-es (relevé manuel du 13/11/2026),
+  pas encore référence par référence. Le site espagnol montre que LDLC peut vendre ces modèles en Espagne, pas qu'ils sont en stock
+  ni qu'ils sont vendus par des enseignes espagnoles. À automatiser : scraper les deux listes et les apparier par référence.
 - **Marge** : la marge téléphonie de LDLC n'est pas publiée. On utilise la marge brute du groupe (24,5 %), probablement trop haute.
 - **Loyer** : proxy d'une rue commerçante secondaire (Bilbao). Aucun chiffre trouvé pour un centre commercial à Barcelone.
 - **Concurrence** : OpenStreetMap est contributif. Un magasin absent d'OSM n'est pas compté.

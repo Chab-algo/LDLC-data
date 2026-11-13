@@ -1,2 +1,2 @@
-nb_modeles_ldlc_suivis,nb_vendus_en_espagne,pct_eligible
-11,11,100.0
+date_releve,nb_smartphones_ldlc_fr,nb_smartphones_ldlc_es,pct_eligible,methode
+2026-11-13,376.0,368.0,97.9,"nombre de smartphones (écran tactile) en ligne sur ldlc.com/es-es rapporté à ldlc.com, par marque"
