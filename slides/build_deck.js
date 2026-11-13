@@ -88,6 +88,61 @@ pres.addSection({ title: "Contexte" });
   s.addNotes("Question posée par le Comex. Périmètre : smartphones. Pays : Espagne. On y répond avec 11 KPIs, tous visibles dans le dashboard.");
 }
 
+/* ---------- méthode : sources et automatisation ---------- */
+const ELIG = (() => { const l = fs.readFileSync(path.join(__dirname, "..", "data", "processed", "eligibilite_catalogue.csv"), "utf8").trim().split("\n")[1].split(","); return { fr: +l[1], es: +l[2], pct: +l[3] }; })();
+const nbPdv = D.dens.reduce((a, r) => a + (r.nb_points_de_vente || 0), 0);
+const hdr = txt => ({ text: txt, options: { bold: true, color: "FFFFFF", fill: { color: HEX.blue }, fontSize: 12 } });
+const cel = (txt, o = {}) => ({ text: txt, options: { fontSize: 12, color: "202124", ...o } });
+pres.addSection({ title: "Méthode" });
+{
+  const s = content("Méthode", "Sources publiques, collectées chaque lundi", "Benjamin. Tout est dans le dépôt GitHub : un script Python par source (src/collect), relancé chaque lundi par GitHub Actions, qui recommite les données et régénère la base et le dashboard. Si une source tombe (OpenStreetMap a expiré une fois), on garde la collecte précédente et l'incident est écrit dans le journal de collecte.");
+  s.addTable([
+    [hdr("Source"), hdr("Accès"), hdr("Ce qu'on en tire")],
+    [cel("Eurostat (sts_trtu_a, demo_gind, prc_hicp_aind)"), cel("API JSON-stat, sans clé"), cel("croissance du high-tech spécialisé, population")],
+    [cel("OpenStreetMap (Overpass)"), cel("API, sans clé"), cel(`${fr(nbPdv, 0)} points de vente concurrents dans 10 villes`)],
+    [cel("OSRM / OpenRouteService"), cel("API"), cel("distance et temps de route depuis les hubs LDLC")],
+    [cel("LDLC, PcComponentes, MediaMarkt"), cel("scraping des fiches + relevés datés"), cel("prix TTC des 11 modèles, catalogues France et Espagne")],
+    [cel("BOE, AECOC/GfK, StatCounter, Ceconomy, rapports LDLC"), cel("publications officielles"), cel("SMI, cotisations, taille du marché, parts de marché")],
+  ], { x: 0.5, y: 1.1, w: 9, colW: [3.3, 2.3, 3.4], rowH: 0.42, border: { type: "solid", pt: 0.75, color: HEX.line }, objectName: "Tableau des sources" });
+  analysis(s, [t("Chaîne : "), t("Python", true), t(" (collecte) → "), t("DuckDB", true), t(" (base en étoile) → "), t("dashboard", true), t(" + "), t("synthèse IA", true), t(". Automatisée par "), t("GitHub Actions chaque lundi", true), t(". Chaque chiffre porte un statut : sourcé, calcul de l'équipe ou hypothèse.")]);
+}
+
+/* ---------- méthode : modèle en étoile ---------- */
+{
+  const s = content("Méthode", "Modèle en étoile : 6 dimensions, 5 tables de faits", "Thomas. Étoile plutôt que flocon : peu de dimensions, requêtes simples. Clé produit = marque + modèle + capacité + RAM, pas l'EAN, car Apple change de référence selon le pays (MG6K4F/A en France, MG6M4QL/A en Espagne). Prix stockés en TTC et en HT : on compare en HT pour neutraliser la TVA (20 % contre 21 %).");
+  const dims = [["dim_produit", "marque, modèle, capacité, RAM"], ["dim_enseigne", "type, pays d'origine"], ["dim_pays", "TVA, canon digital"], ["dim_zone", "ville, population, distance"], ["dim_hub", "entrepôts LDLC"], ["dim_date", "jour, exercice LDLC"]];
+  const pos = [[0.5, 1.15], [0.5, 2.15], [0.5, 3.15], [7.0, 1.15], [7.0, 2.15], [7.0, 3.15]];
+  dims.forEach(([n, d], i) => {
+    const [x, y] = pos[i];
+    s.addShape(pres.shapes.LINE, { x: i < 3 ? x + 2.5 : 3.6, y: y + 0.4, w: i < 3 ? 0.6 : 3.4 - 0, h: 0, line: { color: HEX.line, width: 1.5 }, objectName: `Lien ${n}` });
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w: 2.5, h: 0.8, fill: { color: "FFFFFF" }, line: { color: HEX.s1, width: 1.5 }, objectName: `${n} cadre` });
+    s.addText([{ text: n, options: { bold: true, breakLine: true, fontSize: 13 } }, { text: d, options: { fontSize: 11, color: C.text2 } }], { x: x + 0.1, y, w: 2.3, h: 0.8, valign: "middle", color: C.text1, isTextBox: true, margin: 0, objectName: `${n} texte` });
+  });
+  s.addShape(pres.shapes.RECTANGLE, { x: 3.6, y: 1.05, w: 2.8, h: 3.0, fill: { color: HEX.blue }, line: { color: HEX.blue, width: 1 }, objectName: "Faits cadre" });
+  s.addText([
+    { text: "fact_prix", options: { bold: true, breakLine: true } }, { text: "prix TTC et HT par jour", options: { fontSize: 11, breakLine: true } },
+    { text: "fact_point_de_vente", options: { bold: true, breakLine: true } }, { text: "magasins concurrents", options: { fontSize: 11, breakLine: true } },
+    { text: "fact_marche", options: { bold: true, breakLine: true } }, { text: "indicateurs par pays et année", options: { fontSize: 11, breakLine: true } },
+    { text: "fact_catalogue", options: { bold: true, breakLine: true } }, { text: "smartphones LDLC France / Espagne", options: { fontSize: 11, breakLine: true } },
+    { text: "fact_magasin_sim", options: { bold: true, breakLine: true } }, { text: "compte de résultat simulé", options: { fontSize: 11 } },
+  ], { x: 3.75, y: 1.1, w: 2.5, h: 2.9, fontSize: 13, color: "FFFFFF", valign: "middle", isTextBox: true, margin: 0, paraSpaceAfter: 2, objectName: "Faits texte" });
+  analysis(s, [t("Règle clé : les prix sont appariés par "), t("marque, modèle, capacité et RAM", true), t(", pas par EAN (Apple change de référence selon le pays), et comparés "), t("hors taxes", true), t(" pour neutraliser l'écart de TVA (20 % contre 21 %).")]);
+}
+
+/* ---------- KPIs ---------- */
+{
+  const s = content("Méthode", "11 KPIs, 5 axes, une décision par axe", "Georges. On reprend les cinq axes du cahier des charges : chaque KPI répond à une question de décision. Catalogue éligible : LDLC a déjà un site espagnol (ldlc.com/es-es) qui liste 368 smartphones sur les 376 du site français (comparaison par marque, 13/11). Part de marché de LDLC en France : estimation de l'équipe, environ 1,4 % des biens techniques.");
+  s.addTable([
+    [hdr("Axe"), hdr("KPIs"), hdr("Décision éclairée"), hdr("Résultat")],
+    [cel("Marché et potentiel", { bold: true }), cel("croissance du secteur, parts de marché"), cel("plafond de CA accessible"), cel(`${sg(gES * 100)} % en Espagne (2025), MediaMarkt 21,5 %`)],
+    [cel("Prix et marges", { bold: true }), cel("indice de prix, marge post-taxe"), cel("peut-on être au prix ?"), cel(`indice ${fr(syn["Tous modèles"])}, marge Android ${pc(mAnd)}`)],
+    [cel("Réseau et implantation", { bold: true }), cel("densité concurrentielle, coût au m²"), cel("rythme et coût d'ouverture"), cel(`Barcelone ${fr(bcn.points_de_vente_pour_100k_hab)} pdv / 100 000 hab.`)],
+    [cel("Opérations et logistique", { bold: true }), cel("distance aux hubs, taxes locales"), cel("impact sur l'approvisionnement"), cel(`${fr(bcn.distance_route_km, 0)} km, TVA 21 %, canon digital`)],
+    [cel("Assortiment", { bold: true }), cel("pénétration, % catalogue éligible"), cel("catalogue complet ou ciblé"), cel(`${fr(ELIG.pct)} % du catalogue déjà sur ldlc.com/es-es`)],
+  ], { x: 0.5, y: 1.1, w: 9, colW: [2.0, 2.6, 2.0, 2.4], rowH: 0.48, border: { type: "solid", pt: 0.75, color: HEX.line }, objectName: "Tableau des KPIs" });
+  analysis(s, [t("Le marché et l'assortiment sont "), t("favorables", true), t(". Le verdict se joue sur l'axe "), t("prix et marges", true), t(" : c'est lui que les slides suivantes détaillent.")]);
+}
+
 /* ---------- 2. marché ---------- */
 pres.addSection({ title: "Analyse" });
 {
@@ -159,6 +214,18 @@ pres.addSection({ title: "Analyse" });
   s.addChart(pres.charts.LINE, [{ name: "CA au point mort", labels: xs.map(String), values: ys }],
     { x: 3.3, y: 1.1, w: 6.2, h: 3.1, ...axisBase, title: "CA AU POINT MORT SELON LE LOYER (M€, € PAR M² ET PAR MOIS)", chartColors: [HEX.s1], lineSize: 3, lineDataSymbol: "none", showValue: false, showLegend: false, valAxisMinVal: 0, valAxisLabelFormatCode: "0.0" });
   analysis(s, [t("Un magasin de 150 m² doit vendre "), t(`${fr(sim.ca / 1e6)} M€`, true), t(" pour couvrir son loyer et son personnel, soit "), t(pc(sim.part, 2), true), t(` du marché téléphonie de Barcelone (${fr(sim.marche_ville / 1e6, 0)} M€) : ${sim.part > 0.01 ? "au-dessus" : "sous"} le repère de 1 %. Avec un loyer de rue commerçante (135 €/m²), il faudrait `), t(`${fr(ca135 / 1e6)} M€`, true), t(` (${pc(ca135 / sim.marche_ville, 2)}).`)]);
+}
+
+/* ---------- brique IA ---------- */
+{
+  const s = content("Analyse", "Synthèse IA rédigée à partir de nos chiffres", "Démo en direct dans le dashboard (onglet Synthèse IA, lien claude.ai) : baisser la marge brute à 15 % dans Magasin pilote, puis générer. La synthèse se réécrit avec les nouveaux chiffres et signale les hypothèses.");
+  const boxes = [["Ce qu'elle reçoit", "tous les KPIs du dashboard, les réglages du simulateur et les seuils de décision"], ["Ce qu'elle doit respecter", "n'utiliser que ces chiffres, dire quand un chiffre vient d'une hypothèse, 220 mots maximum"], ["Ce qu'elle rend", "1. Constats chiffrés\n2. Recommandation\n3. Limites\n4. Données à collecter"]];
+  boxes.forEach(([h, d], i) => {
+    const x = 0.5 + i * 3.05;
+    s.addShape(pres.shapes.RECTANGLE, { x, y: 1.2, w: 2.85, h: 2.6, fill: { color: i === 2 ? HEX.blue : "FFFFFF" }, line: { color: i === 2 ? HEX.blue : HEX.line, width: 1 }, objectName: `IA cadre ${i + 1}` });
+    s.addText([{ text: h, options: { bold: true, fontSize: 16, breakLine: true } }, { text: d, options: { fontSize: 14 } }], { x: x + 0.2, y: 1.35, w: 2.45, h: 2.3, valign: "top", color: i === 2 ? "FFFFFF" : C.text1, isTextBox: true, margin: 0, paraSpaceAfter: 8, objectName: `IA texte ${i + 1}` });
+  });
+  analysis(s, [t("Le Comex change une hypothèse dans le simulateur, "), t("la synthèse se réécrit", true), t(" avec les nouveaux chiffres. Version automatisée : "), t("src/ai/synthese.py", true), t(" (API Claude) dans la collecte hebdomadaire.")]);
 }
 
 /* ---------- 8. conclusion ---------- */
