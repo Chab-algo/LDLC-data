@@ -1,1009 +1,1011 @@
 ville,osm_type,osm_id,shop,nom,marque,operateur,lat,lon,date_collecte
-Barcelona,node,672398192,electronics,Telefónica,,,41.3839925,2.170792,2026-11-12
-Barcelona,node,1378087287,electronics,Fnac,Fnac,,41.3900974,2.1363247,2026-11-12
-Barcelona,node,1429934865,computer,Traxtore,,,41.3834144,2.1625429,2026-11-12
-Barcelona,node,1458910236,electronics,CeX,CeX,,41.4300765,2.1815374,2026-11-12
-Barcelona,node,1844121283,mobile_phone,Om Sai Ram Telefonia,,,41.405324,2.1758399,2026-11-12
-Barcelona,node,1845431575,mobile_phone,Mobile Shop,,,41.4060063,2.1763601,2026-11-12
-Barcelona,node,1960375510,electronics,Miró,,,41.3956105,2.1690258,2026-11-12
-Barcelona,node,2275047338,computer,Green Megastore,,,41.3832028,2.1627895,2026-11-12
-Barcelona,node,2275047339,computer,P.C. Green,,,41.3829989,2.1625014,2026-11-12
-Barcelona,node,2275100915,electronics,MediaMarkt,MediaMarkt,,41.3822657,2.1632822,2026-11-12
-Barcelona,node,2603612465,electronics,Apple Store,Apple Store,Apple,41.3879538,2.169488,2026-11-12
-Barcelona,node,2624679767,computer,Diagonal Informàtica,,,41.3987204,2.1693331,2026-11-12
-Barcelona,node,2892037116,mobile_phone,SE Mòbil,,,41.3796952,2.1708179,2026-11-12
-Barcelona,node,2918930735,computer,Life Informática,,,41.403623,2.2026665,2026-11-12
-Barcelona,node,2967597497,computer,BMS Mobile,,,41.3836156,2.1490371,2026-11-12
-Barcelona,node,2967993574,mobile_phone,iPro,,,41.3827781,2.1713625,2026-11-12
-Barcelona,node,3106805629,mobile_phone,Shani Mòbils,,,41.3761537,2.16618,2026-11-12
-Barcelona,node,3914568530,electronics,Euronics,Euronics,,41.4021421,2.1639125,2026-11-12
-Barcelona,node,3997362918,mobile_phone,Fahad Móviles,,,41.4025798,2.1629783,2026-11-12
-Barcelona,node,4109446565,mobile_phone,India Mobil,,,41.4135661,2.201333,2026-11-12
-Barcelona,node,4231795591,mobile_phone,Tuanity,,,41.3505585,2.1409574,2026-11-12
-Barcelona,node,4251798191,computer,Grup Tècnic Informàtic Artech,,,41.419604,2.1801911,2026-11-12
-Barcelona,node,4423331189,electronics,Comercial Electronica Horta,,,41.4283615,2.1593768,2026-11-12
-Barcelona,node,4523300289,electronics,Cex,,,41.3980738,2.1571435,2026-11-12
-Barcelona,node,4559842490,electronics,Ronda Electrodomèstics,,,41.3810429,2.1636386,2026-11-12
-Barcelona,node,4643743349,electronics,MediaMarkt,MediaMarkt,,41.3872831,2.1719647,2026-11-12
-Barcelona,node,4659788093,mobile_phone,Telefonia Reparació,,,41.3774983,2.1642908,2026-11-12
-Barcelona,node,4659811589,mobile_phone,,,,41.377536,2.1649479,2026-11-12
-Barcelona,node,4661082491,mobile_phone,Mi Mobil,,,41.3757125,2.1667535,2026-11-12
-Barcelona,node,4675157089,electronics,MediaMarkt,MediaMarkt,,41.3927833,2.1457456,2026-11-12
-Barcelona,node,4715211866,electronics,Fnac,Fnac,,41.4054305,2.1906231,2026-11-12
-Barcelona,node,4727205189,mobile_phone,Fahad Móviles,,,41.4025839,2.1629656,2026-11-12
-Barcelona,node,4727953592,computer,AbsolutPC,,,41.4104186,2.1828574,2026-11-12
-Barcelona,node,4728122291,computer,Beep,,,41.4126772,2.1810116,2026-11-12
-Barcelona,node,4762859834,computer,NeoByte,,,41.3832354,2.1623479,2026-11-12
-Barcelona,node,4762864130,mobile_phone,Planet Mobils,,,41.4295444,2.1827375,2026-11-12
-Barcelona,node,4811094214,mobile_phone,Malik Mobile Shop,,,41.4095674,2.1480944,2026-11-12
-Barcelona,node,4823518321,mobile_phone,,,,41.4182589,2.180299,2026-11-12
-Barcelona,node,4860087532,mobile_phone,,,,41.4154144,2.1817747,2026-11-12
-Barcelona,node,4940190161,electronics,Joaquim Laborda - Reparación de Cámaras,,,41.3817164,2.1476929,2026-11-12
-Barcelona,node,4941330421,mobile_phone,,,,41.3901498,2.1507139,2026-11-12
-Barcelona,node,5209287522,mobile_phone,Discount,,,41.399761,2.1686389,2026-11-12
-Barcelona,node,5271863086,mobile_phone,Barcelona Móviles,,,41.4335502,2.1837327,2026-11-12
-Barcelona,node,5271863091,computer,3X5 Informàtica,,,41.4336306,2.1837675,2026-11-12
-Barcelona,node,5322028936,computer,Go_ Informàtica,,,41.3974647,2.1655295,2026-11-12
-Barcelona,node,5335761922,electronics,Rhythm control,,,41.3756126,2.1656009,2026-11-12
-Barcelona,node,5335761923,electronics,Vinylarium,,,41.375551,2.1651978,2026-11-12
-Barcelona,node,5562146026,electronics,Monsó i Benet,,,41.3865111,2.1599415,2026-11-12
-Barcelona,node,5567074076,mobile_phone,4g Movil,,,41.3796345,2.1547462,2026-11-12
-Barcelona,node,5617055921,electronics,Pulgar i Edo,,,41.3844417,2.1602896,2026-11-12
-Barcelona,node,5820816656,mobile_phone,,,,41.4361612,2.1908114,2026-11-12
-Barcelona,node,5834511038,electronics,Apple Store,Apple Store,,41.4396495,2.1986756,2026-11-12
-Barcelona,node,5834511041,electronics,MediaMarkt,MediaMarkt,,41.4395369,2.1990887,2026-11-12
-Barcelona,node,5834511343,computer,Fnac,Fnac,,41.4403674,2.1989277,2026-11-12
-Barcelona,node,5848762279,electronics,Fnac,Fnac,,41.3764151,2.1491644,2026-11-12
-Barcelona,node,5851809961,mobile_phone,Samsung,,,41.4415583,2.1975803,2026-11-12
-Barcelona,node,5958736285,computer,Mr.Usby,,,41.4123925,2.1905095,2026-11-12
-Barcelona,node,6061422546,mobile_phone,Uniq Phone House,,,41.3818051,2.1759045,2026-11-12
-Barcelona,node,6166459744,computer,Cainfor,,Cainfor S.L.,41.4093947,2.1725482,2026-11-12
-Barcelona,node,6194576550,electronics,Sat Eixample,,,41.3877142,2.1441916,2026-11-12
-Barcelona,node,6196316420,mobile_phone,Tech Lab,,,41.3902637,2.1462511,2026-11-12
-Barcelona,node,6260786090,mobile_phone,vodaphone,,,41.3753543,2.1324736,2026-11-12
-Barcelona,node,6321544166,mobile_phone,Topas Informàtica,,,41.3756512,2.1285874,2026-11-12
-Barcelona,node,6331343652,computer,Zerobyte Informàtica,,,41.3988606,2.1644991,2026-11-12
-Barcelona,node,6370103285,computer,iRepairs,,,41.3987887,2.1434713,2026-11-12
-Barcelona,node,6429380406,mobile_phone,ElectrOutlet,,,41.3593402,2.1418509,2026-11-12
-Barcelona,node,6434446385,mobile_phone,Moviz,,,41.363672,2.1368252,2026-11-12
-Barcelona,node,6450697895,mobile_phone,GSM Red.Elèctric,,,41.3586201,2.1408792,2026-11-12
-Barcelona,node,6477368258,mobile_phone,BS Tecnología,,,41.4026328,2.1694903,2026-11-12
-Barcelona,node,6742563018,computer,repararportatil.com,,,41.3835295,2.140695,2026-11-12
-Barcelona,node,6815581285,mobile_phone,Catmobil,,,41.3980755,2.1528436,2026-11-12
-Barcelona,node,6871568134,computer,Paciència Informàtica,,,41.381285,2.1359971,2026-11-12
-Barcelona,node,7017780935,computer,Informàtica Nei,,,41.3836229,2.1541204,2026-11-12
-Barcelona,node,7084720621,electronics,TravelWifi,,,41.3872,2.16584,2026-11-12
-Barcelona,node,7084907054,mobile_phone,Orange,Orange,,41.3933759,2.1457379,2026-11-12
-Barcelona,node,7462950261,computer,GESTEC,,,41.4245716,2.2022688,2026-11-12
-Barcelona,node,7555814341,electronics,Instaser,,,41.4070681,2.1931128,2026-11-12
-Barcelona,node,7556742389,electronics,tresdenou. Impresio,,,41.4013278,2.2004317,2026-11-12
-Barcelona,node,7556742591,computer,Tuink cartuxos,,,41.401496,2.2002687,2026-11-12
-Barcelona,node,7563950445,mobile_phone,Liberty Mòbils,,,41.4015952,2.2008737,2026-11-12
-Barcelona,node,7615982800,mobile_phone,Mobil Addict,,,41.4001139,2.1983279,2026-11-12
-Barcelona,node,7705311169,mobile_phone,Badal mobils,,,41.3754167,2.1300227,2026-11-12
-Barcelona,node,7714282662,electronics,Conexiones Condal,,,41.3766171,2.1261044,2026-11-12
-Barcelona,node,7714319961,computer,Camaher,,,41.3763989,2.1252068,2026-11-12
-Barcelona,node,7736420796,computer,Informàtica Les Corts,,,41.3767815,2.1223963,2026-11-12
-Barcelona,node,7736420816,mobile_phone,Hb mòbil,,,41.3757825,2.1222902,2026-11-12
-Barcelona,node,7890494899,computer,LIFE informàtica,,,41.3833492,2.1624799,2026-11-12
-Barcelona,node,7996801485,computer,El planeta del PC,,,41.3972834,2.1764508,2026-11-12
-Barcelona,node,8062015290,mobile_phone,Reparem,,,41.4035872,2.202711,2026-11-12
-Barcelona,node,8062016188,mobile_phone,Metro mòbils,,,41.4035521,2.2027892,2026-11-12
-Barcelona,node,8450285973,mobile_phone,Gràcia Mòbils,,,41.4012397,2.1585392,2026-11-12
-Barcelona,node,8493682539,mobile_phone,,,,41.4044703,2.1742813,2026-11-12
-Barcelona,node,8520874318,mobile_phone,BitHomeStore,,,41.3980929,2.1528691,2026-11-12
-Barcelona,node,8544879060,mobile_phone,TuFone,,,41.4390038,2.1665605,2026-11-12
-Barcelona,node,8625138758,mobile_phone,Spazio Phone,,,41.3960124,2.1540168,2026-11-12
-Barcelona,node,8706732483,mobile_phone,,,,41.4238479,2.1550455,2026-11-12
-Barcelona,node,8709742441,mobile_phone,,,,41.4248812,2.155666,2026-11-12
-Barcelona,node,8709863483,mobile_phone,Mobile House,,,41.4273189,2.1564056,2026-11-12
-Barcelona,node,8831398619,mobile_phone,GràciaPhones,,,41.399259,2.1532617,2026-11-12
-Barcelona,node,8928341774,mobile_phone,Phone shop,,,41.3867456,2.1619261,2026-11-12
-Barcelona,node,9131367185,mobile_phone,Wings Mobile,,,41.3971067,2.1479667,2026-11-12
-Barcelona,node,9144409546,electronics,Clínica del Electrodoméstico,,,41.3944783,2.1560065,2026-11-12
-Barcelona,node,9166699797,mobile_phone,Parlem Telecom (Sant Andreu),,Parlem Telecom,41.4359507,2.1898238,2026-11-12
-Barcelona,node,9237881396,electronics,Calbet,,,41.3852419,2.1621857,2026-11-12
-Barcelona,node,9240224979,electronics,Milar,Milar,,41.3868135,2.1782565,2026-11-12
-Barcelona,node,9282790514,electronics,Euronics City,Euronics,,41.3830125,2.1638833,2026-11-12
-Barcelona,node,9282816430,mobile_phone,Phone House,Phone House,,41.3821423,2.1637681,2026-11-12
-Barcelona,node,9295573914,electronics,Miele,Miele,,41.397439,2.154517,2026-11-12
-Barcelona,node,9554535816,computer,Laby. Recuperación de datos,,,41.4024559,2.1816226,2026-11-12
-Barcelona,node,9713364855,electronics,Còsmik,,,41.3859812,2.1488301,2026-11-12
-Barcelona,node,9734369318,electronics,Osaka Solutions SL,,,41.4251115,2.1742199,2026-11-12
-Barcelona,node,9774784867,mobile_phone,Mobile+Technology,,,41.3608678,2.1392602,2026-11-12
-Barcelona,node,9782534417,computer,Bcnserveis - Diseñó web y marketing online,,,41.3708239,2.1425679,2026-11-12
-Barcelona,node,10249788109,mobile_phone,Electro Sant Pau,,,41.3770272,2.1698388,2026-11-12
-Barcelona,node,10249798309,mobile_phone,Nadeem Movils,,,41.3765273,2.1692591,2026-11-12
-Barcelona,node,10287674163,mobile_phone,The Phone Shop,,,41.3852138,2.1713235,2026-11-12
-Barcelona,node,10678180279,electronics,Pocket Power,,,41.3819706,2.1698361,2026-11-12
-Barcelona,node,10751516256,computer,Micro PC,,,41.3951944,2.1913406,2026-11-12
-Barcelona,node,10763842242,computer,Mime Tech Solutions,,,41.4048319,2.1551032,2026-11-12
-Barcelona,node,10772906091,mobile_phone,4G Mòbils,,,41.4027982,2.1600647,2026-11-12
-Barcelona,node,10780360517,mobile_phone,Zain Mobils,,,41.3737712,2.1689439,2026-11-12
-Barcelona,node,10914344405,electronics,Osaka Solutions,,,41.3828042,2.1312823,2026-11-12
-Barcelona,node,11020963036,mobile_phone,HB Movil,,,41.3788081,2.1536033,2026-11-12
-Barcelona,node,11020963050,mobile_phone,Alvis Mobile,,,41.3761238,2.1511048,2026-11-12
-Barcelona,node,11020963085,mobile_phone,Mobile House,,,41.3702721,2.1433646,2026-11-12
-Barcelona,node,11028063349,electronics,Bbc,,,41.4134651,2.1608037,2026-11-12
-Barcelona,node,11028575878,mobile_phone,Bcn Mobils i Multimedia,,,41.4117469,2.1406227,2026-11-12
-Barcelona,node,11032146730,mobile_phone,Mobile care,,,41.3849649,2.1737044,2026-11-12
-Barcelona,node,11033020060,electronics,CeX,CeX,,41.3753437,2.1442059,2026-11-12
-Barcelona,node,11033039351,computer,Electrorenover,,,41.3753031,2.1466335,2026-11-12
-Barcelona,node,11042870471,mobile_phone,Gadgets i Telefonía,,,41.400868,2.1739767,2026-11-12
-Barcelona,node,11044622137,mobile_phone,España Mòbils,,,41.4012675,2.1586118,2026-11-12
-Barcelona,node,11047912699,mobile_phone,Tesco Móbils,,,41.3998799,2.1703914,2026-11-12
-Barcelona,node,11047920633,electronics,Calbet,,,41.3867364,2.1529646,2026-11-12
-Barcelona,node,11048677991,electronics,Garmin,,,41.3896336,2.1350511,2026-11-12
-Barcelona,node,11048691118,mobile_phone,Casa Móvil,,,41.4353168,2.1807673,2026-11-12
-Barcelona,node,11103180500,mobile_phone,Mi Market Tecnologías,,,41.3753369,2.1446097,2026-11-12
-Barcelona,node,11103230810,electronics,Onkar Gallery,,,41.3753417,2.1443243,2026-11-12
-Barcelona,node,11150187993,electronics,miró,,,41.3990834,2.1561868,2026-11-12
-Barcelona,node,11150228660,mobile_phone,Top Mòbil,,,41.3995333,2.1556713,2026-11-12
-Barcelona,node,11161636077,electronics,Milar,,,41.4011894,2.157493,2026-11-12
-Barcelona,node,11265524697,electronics,MediaMarkt,MediaMarkt,,41.4098454,2.2156631,2026-11-12
-Barcelona,node,11265524709,mobile_phone,My Phone,,,41.410261,2.2174675,2026-11-12
-Barcelona,node,11265524724,electronics,Hubside.Store,,,41.4096987,2.2162619,2026-11-12
-Barcelona,node,11294405765,electronics,Electro MRE,,,41.4009716,2.1583595,2026-11-12
-Barcelona,node,11327670416,electronics,PC Componentes,,,41.3876271,2.171846,2026-11-12
-Barcelona,node,11327870756,computer,GD suministros informáticos,,,41.3853023,2.146944,2026-11-12
-Barcelona,node,11518739615,mobile_phone,Mi Mobil,,,41.3767336,2.1219827,2026-11-12
-Barcelona,node,11518739617,mobile_phone,,,,41.3767782,2.121887,2026-11-12
-Barcelona,node,11534625376,electronics,Charles,,,41.3797718,2.1582274,2026-11-12
-Barcelona,node,11630647452,electronics,Milar,Milar,,41.4085069,2.1641427,2026-11-12
-Barcelona,node,11693541697,electronics,Vimagson S.L.,,,41.4021477,2.1572581,2026-11-12
-Barcelona,node,11741923769,mobile_phone,MobileMarkt,,,41.4025424,2.1527394,2026-11-12
-Barcelona,node,11755847799,mobile_phone,Bol Movils,,,41.3888243,2.1953733,2026-11-12
-Barcelona,node,11876564869,mobile_phone,Dani mobils,,,41.4030358,2.1984023,2026-11-12
-Barcelona,node,11930201779,mobile_phone,mobile shop,,,41.3843443,2.1701742,2026-11-12
-Barcelona,node,11954620819,electronics,Tecno Mòbil,,,41.4071628,2.1669248,2026-11-12
-Barcelona,node,12038108242,mobile_phone,TecnoCell,,,41.3982752,2.1422994,2026-11-12
-Barcelona,node,12047175370,electronics,Bazar El Regalo,,,41.4030744,2.1987944,2026-11-12
-Barcelona,node,12153162335,mobile_phone,Right Way Mobile,,,41.3869988,2.1568272,2026-11-12
-Barcelona,node,12326979636,electronics,Farhan,,,41.4053654,2.1501907,2026-11-12
-Barcelona,node,12365137192,electronics,Pont Reyes,,,41.3866627,2.1650721,2026-11-12
-Barcelona,node,12384321894,mobile_phone,,,,41.3850184,2.1617734,2026-11-12
-Barcelona,node,12461348550,computer,Clinic Technology Berlín,,Clinic Technology,41.3841986,2.1404756,2026-11-12
-Barcelona,node,12864492001,computer,Mastac,,,41.3786631,2.1281495,2026-11-12
-Barcelona,node,12941963271,computer,TorresPc,,,41.4469171,2.1771649,2026-11-12
-Barcelona,node,13039327837,electronics,Samsung,Samsung,Servei Oficial Samsung - Secel Tecnologics,41.3871976,2.1466429,2026-11-12
-Barcelona,node,13114998933,mobile_phone,recambiosmovil.com,,,41.3867396,2.1597233,2026-11-12
-Barcelona,node,13176455865,electronics,Basant,,,41.4043899,2.2040669,2026-11-12
-Barcelona,node,13180277501,computer,Regla de 3 - Servicio Técnico Autorizado Apple,,,41.4028835,2.169294,2026-11-12
-Barcelona,node,13182210712,mobile_phone,MagicPhone,,,41.3883056,2.14565,2026-11-12
-Barcelona,node,13182210713,mobile_phone,Singh Mòbils,,,41.3855943,2.1429632,2026-11-12
-Barcelona,node,13250787528,mobile_phone,Mòbil+,,,41.379923,2.1483458,2026-11-12
-Barcelona,node,13250791366,mobile_phone,SWS Móvil,,,41.3743629,2.1628723,2026-11-12
-Barcelona,node,13250794382,mobile_phone,Combine,,,41.3740132,2.1634833,2026-11-12
-Barcelona,node,13250822468,mobile_phone,Cover House,,,41.3738458,2.1639111,2026-11-12
-Barcelona,node,13277438239,mobile_phone,Fiazan Mobils,,,41.3733182,2.1684378,2026-11-12
-Barcelona,node,13372492201,mobile_phone,Apple Man Móbils,,,41.4057361,2.1633248,2026-11-12
-Barcelona,node,13443033802,electronics,Metro Electrónica,,,41.3796466,2.1583294,2026-11-12
-Barcelona,node,13446880901,mobile_phone,Sants Mobil,,,41.3754818,2.1257579,2026-11-12
-Barcelona,node,13506982009,mobile_phone,,,,41.3752015,2.1533167,2026-11-12
-Barcelona,node,13527181102,mobile_phone,i-Tech Móvil,,,41.4299684,2.1592256,2026-11-12
-Barcelona,node,13603491101,mobile_phone,Shabeeh Movil,,,41.429563,2.1580297,2026-11-12
-Barcelona,node,13624799230,computer,PC Components,,,41.3862935,2.1664006,2026-11-12
-Barcelona,node,13811494202,electronics,Fnac,Fnac,,41.3851238,2.1699498,2026-11-12
-Barcelona,node,13899462237,electronics,Gondal Envíos,,,41.4428142,2.1755026,2026-11-12
-Barcelona,node,14096064177,mobile_phone,Phone Gallery,,,41.3902688,2.1432588,2026-11-12
-Barcelona,node,14172923801,electronics,Mex Mobile Exchange,,,41.3750893,2.1450968,2026-11-12
-Barcelona,node,14222189617,mobile_phone,Marina Mobile,,,41.3918222,2.1906674,2026-11-12
-Barcelona,node,14274304901,electronics,"DAG, S.L.",,,41.4043247,2.2062429,2026-11-12
-Barcelona,node,14274416301,computer,Mòbils informàtica,,,41.403304,2.2054205,2026-11-12
-Madrid,node,170951314,mobile_phone,Movileo.com,,,40.4039813,-3.7019736,2026-11-12
-Madrid,node,302789137,electronics,Hermanos Pérez,,,40.4514395,-3.7035098,2026-11-12
-Madrid,node,302790290,mobile_phone,Mobid,,,40.4553668,-3.7027978,2026-11-12
-Madrid,node,1326907771,mobile_phone,Luzmovil,,,40.4109462,-3.7080342,2026-11-12
-Madrid,node,1517407932,mobile_phone,Love my phone,,,40.4265167,-3.7014825,2026-11-12
-Madrid,node,1595614347,mobile_phone,Movistar,Movistar,,40.386642,-3.764065,2026-11-12
-Madrid,node,1595614348,computer,Pacific Computer,,,40.3859522,-3.7590049,2026-11-12
-Madrid,node,1642178017,mobile_phone,Cube Movil,,,40.4247155,-3.7092141,2026-11-12
-Madrid,node,1740123900,computer,2 y Media Systems,,,40.4223463,-3.6825992,2026-11-12
-Madrid,node,1897058728,computer,Jofimática,,,40.3736599,-3.6189473,2026-11-12
-Madrid,node,1944473871,mobile_phone,Locutorio y juguetería,,,40.4464272,-3.7129831,2026-11-12
-Madrid,node,2028772724,electronics,MediaMarkt,MediaMarkt,,40.3644272,-3.7365255,2026-11-12
-Madrid,node,2039721185,electronics,Conectrol (sonido),,,40.4234562,-3.6795691,2026-11-12
-Madrid,node,2057557423,mobile_phone,Moviland,,,40.4557157,-3.7041586,2026-11-12
-Madrid,node,2304484540,computer,Mercabit,,,40.393022,-3.7406686,2026-11-12
-Madrid,node,2546794635,computer,GRI,,,40.4104201,-3.6948417,2026-11-12
-Madrid,node,2559186989,computer,Efecto 2000,,,40.4041013,-3.6750667,2026-11-12
-Madrid,node,2567969166,mobile_phone,Infomovitech,,,40.4554143,-3.7027796,2026-11-12
-Madrid,node,2568714091,computer,Icon Madrid,,,40.3459983,-3.707455,2026-11-12
-Madrid,node,2583625936,mobile_phone,Huawei,Huawei,,40.4207537,-3.7063665,2026-11-12
-Madrid,node,2606329606,computer,imaxpc,,,40.4325283,-3.6744485,2026-11-12
-Madrid,node,2622900854,mobile_phone,Mobile Case,,,40.4182536,-3.704311,2026-11-12
-Madrid,node,2624746889,computer,APP informática,,,40.4012055,-3.6337499,2026-11-12
-Madrid,node,2642236891,mobile_phone,Mil Van,,,40.4262345,-3.6802628,2026-11-12
-Madrid,node,2656069344,mobile_phone,,,,40.4149937,-3.7063324,2026-11-12
-Madrid,node,2671175810,electronics,Electrofosena,,,40.433143,-3.7088855,2026-11-12
-Madrid,node,2678581199,mobile_phone,Baba Móviles,,,40.424207,-3.7072821,2026-11-12
-Madrid,node,2731037233,electronics,Electricidad Cubas,,,40.4230873,-3.7091898,2026-11-12
-Madrid,node,2756126333,mobile_phone,Siglo,,,40.4239318,-3.7089981,2026-11-12
-Madrid,node,2818088443,electronics,Master,,,40.3989211,-3.6216326,2026-11-12
-Madrid,node,2834135507,mobile_phone,Isa Teleglobal,,,40.4043718,-3.6761726,2026-11-12
-Madrid,node,2835645932,electronics,Menaje del Hogar,,,40.3859145,-3.7046699,2026-11-12
-Madrid,node,2839810438,mobile_phone,Movil City,,,40.45637,-3.7023763,2026-11-12
-Madrid,node,2867491071,mobile_phone,,,,40.448419,-3.7035421,2026-11-12
-Madrid,node,2867491090,mobile_phone,,,,40.4483224,-3.7035706,2026-11-12
-Madrid,node,2883622705,electronics,Smart Link,,,40.4246516,-3.7073135,2026-11-12
-Madrid,node,2891445714,mobile_phone,Movil Kitts,,,40.452558,-3.7033334,2026-11-12
-Madrid,node,2891477462,electronics,Solución Tecnología,,,40.4532852,-3.703214,2026-11-12
-Madrid,node,2955179914,electronics,Electrónica Villivar,,,40.4588898,-3.704648,2026-11-12
-Madrid,node,2961144376,mobile_phone,Digi,,,40.4643322,-3.6952194,2026-11-12
-Madrid,node,2972134288,mobile_phone,Móvil Rep store,,,40.4536782,-3.7031514,2026-11-12
-Madrid,node,2972941365,electronics,"Armonía Electrodomésticos, SL",,,40.4365131,-3.7044659,2026-11-12
-Madrid,node,2972941394,electronics,Electrodomésticos Cobo,,,40.4356689,-3.7045207,2026-11-12
-Madrid,node,3049233704,electronics,Electrónica Embajadores,,,40.3978404,-3.6975148,2026-11-12
-Madrid,node,3051156935,electronics,,,,40.4262929,-3.6062649,2026-11-12
-Madrid,node,3068221413,electronics,Samsung,Samsung,,40.4586655,-3.6875153,2026-11-12
-Madrid,node,3136660348,computer,Rápido informática,,,40.3506704,-3.7043169,2026-11-12
-Madrid,node,3157641833,computer,Refill 24,,,40.4233898,-3.6546989,2026-11-12
-Madrid,node,3159536163,electronics,Taquería Don Diego,,,40.3561068,-3.6870969,2026-11-12
-Madrid,node,3161138689,mobile_phone,Movistar,Movistar,,40.3853811,-3.7222736,2026-11-12
-Madrid,node,3220343887,electronics,Casa Reyna,,,40.420785,-3.7048072,2026-11-12
-Madrid,node,3223094445,electronics,Digital SA,,,40.4349173,-3.670659,2026-11-12
-Madrid,node,3271451848,electronics,MediaMarkt,MediaMarkt,Media Markt Saturn S.A.U. - A82037292,40.4253766,-3.6739737,2026-11-12
-Madrid,node,3361624778,computer,PC Service,,,40.4251224,-3.7038459,2026-11-12
-Madrid,node,3368048353,computer,Workshop PC,,,40.4240102,-3.7033223,2026-11-12
-Madrid,node,3461943020,mobile_phone,Phone Service Center,,,40.4279811,-3.7018254,2026-11-12
-Madrid,node,3461943026,computer,MAC - Benotac,,,40.4282302,-3.7019232,2026-11-12
-Madrid,node,3484378465,computer,Windows Plus Computer,,,40.4756326,-3.7111766,2026-11-12
-Madrid,node,3489014041,computer,App Informática,,,40.4233911,-3.6744581,2026-11-12
-Madrid,node,3489014044,computer,Scala Informática,,,40.4233933,-3.6744975,2026-11-12
-Madrid,node,3512921654,electronics,Apple Store,Apple Store,Apple Inc.,40.4168855,-3.7022602,2026-11-12
-Madrid,node,3550750734,mobile_phone,Tecno Movil,,,40.3506556,-3.6915474,2026-11-12
-Madrid,node,3628683895,mobile_phone,Techify,,,40.4292887,-3.7048643,2026-11-12
-Madrid,node,3632136752,mobile_phone,Movilmanía Madrid,,,40.4518078,-3.673837,2026-11-12
-Madrid,node,3636842701,computer,Inforein,,,40.4547162,-3.6989608,2026-11-12
-Madrid,node,3673685457,computer,App Informática,,,40.4889046,-3.6624086,2026-11-12
-Madrid,node,3713711217,mobile_phone,Mini Market,,,40.4161425,-3.7003254,2026-11-12
-Madrid,node,3715546282,computer,App Informática,,,40.4837389,-3.7026784,2026-11-12
-Madrid,node,3745792944,computer,Pekesoft Ltd,,Tienda de informática,40.4304732,-3.6359297,2026-11-12
-Madrid,node,3770264323,computer,Servicio Técnico Rulmorma,,,40.4700064,-3.6912233,2026-11-12
-Madrid,node,3891098310,computer,iFixRapid Servicio Técnico Apple,,,40.4410161,-3.6710516,2026-11-12
-Madrid,node,3926257471,computer,Gea Store,,,40.4625018,-3.6301213,2026-11-12
-Madrid,node,3946850005,mobile_phone,Accesorios de móviles Fun&tab,,,40.4192554,-3.7020887,2026-11-12
-Madrid,node,3961350056,mobile_phone,Euroma Telecom,,,40.4722723,-3.6984454,2026-11-12
-Madrid,node,4006082989,mobile_phone,Nahid Informática,,,40.4046051,-3.7033671,2026-11-12
-Madrid,node,4102811124,computer,Computronic,,,40.4655173,-3.7195349,2026-11-12
-Madrid,node,4109400896,electronics,FerSay,,,40.464719,-3.6948672,2026-11-12
-Madrid,node,4109403833,mobile_phone,Move,,,40.4635117,-3.6962633,2026-11-12
-Madrid,node,4109407842,mobile_phone,Móvil Europa,,,40.464309,-3.6952839,2026-11-12
-Madrid,node,4109427341,mobile_phone,MundoPhone,,,40.4622023,-3.6977971,2026-11-12
-Madrid,node,4191725451,computer,Dryse,,,40.4207905,-3.7074573,2026-11-12
-Madrid,node,4213743493,mobile_phone,Xiaomi,Xiaomi,,40.4163839,-3.7031725,2026-11-12
-Madrid,node,4281903700,computer,,,,40.419663,-3.7055807,2026-11-12
-Madrid,node,4316945499,computer,Packet Informática,,,40.4688092,-3.6932733,2026-11-12
-Madrid,node,4355520418,mobile_phone,,,,40.4468611,-3.7123502,2026-11-12
-Madrid,node,4355540025,electronics,,,,40.4772007,-3.7117174,2026-11-12
-Madrid,node,4355550470,electronics,Samsung,Samsung,,40.4791019,-3.7079129,2026-11-12
-Madrid,node,4355550471,mobile_phone,Phone House,Phone House,,40.4793544,-3.7081836,2026-11-12
-Madrid,node,4358163389,computer,,,,40.4135245,-3.7281545,2026-11-12
-Madrid,node,4387730196,mobile_phone,Novel,,,40.4125289,-3.7028347,2026-11-12
-Madrid,node,4413672090,electronics,Bazar Chandra,,,40.4347863,-3.6983696,2026-11-12
-Madrid,node,4419229133,mobile_phone,Móvil Tec,,,40.4351949,-3.7120834,2026-11-12
-Madrid,node,4429177490,computer,Batch PC,,,40.4353535,-3.7160872,2026-11-12
-Madrid,node,4461827262,electronics,Sonytel,,,40.4453437,-3.70362,2026-11-12
-Madrid,node,4487170747,computer,Universomac Servicio Técnico Autorizado Apple,,,40.4381771,-3.6737169,2026-11-12
-Madrid,node,4487216099,computer,Universomac Servicio Técnico Autorizado Apple,,,40.4589059,-3.6949071,2026-11-12
-Madrid,node,4513971194,electronics,Katel,,,40.4068719,-3.6265768,2026-11-12
-Madrid,node,4549523289,electronics,La Boutique de la Electrónica,,,40.4357044,-3.6430942,2026-11-12
-Madrid,node,4582623421,computer,PCBox,,,40.4409606,-3.6747964,2026-11-12
-Madrid,node,4582839595,electronics,Macvb (Apple service),,,40.4236217,-3.6793473,2026-11-12
-Madrid,node,4585414690,mobile_phone,Lycamobile,,,40.4346674,-3.7030068,2026-11-12
-Madrid,node,4585950990,mobile_phone,Locutorio Mila,,,40.4342974,-3.7027171,2026-11-12
-Madrid,node,4594571298,mobile_phone,Lycamobile,,,40.4293271,-3.6701573,2026-11-12
-Madrid,node,4594765776,computer,Servifax Samsung,,,40.4313945,-3.7135852,2026-11-12
-Madrid,node,4594765788,computer,To Refill,,,40.432263,-3.7134823,2026-11-12
-Madrid,node,4594765994,computer,Root Informática S.L.,,,40.4316798,-3.7121517,2026-11-12
-Madrid,node,4596506817,mobile_phone,Movilbee,,,40.4349974,-3.6575203,2026-11-12
-Madrid,node,4596556401,mobile_phone,Phone Store,,,40.4316989,-3.6572949,2026-11-12
-Madrid,node,4596556734,mobile_phone,Fokusmobile,,,40.4321753,-3.6560211,2026-11-12
-Madrid,node,4621851015,mobile_phone,Tél and com,,,40.4470399,-3.5872252,2026-11-12
-Madrid,node,4623660391,electronics,Palco,,,40.4394976,-3.6452905,2026-11-12
-Madrid,node,4624073290,computer,Iluvatar,,,40.4398199,-3.6445418,2026-11-12
-Madrid,node,4644371863,electronics,Kitprinter 3d,,,40.4296486,-3.7216995,2026-11-12
-Madrid,node,4674956016,computer,Roufet.com,,,40.4278018,-3.7187625,2026-11-12
-Madrid,node,4683017292,electronics,Antenas ITB,,,40.4362909,-3.7027897,2026-11-12
-Madrid,node,4710075397,electronics,,,,40.4342099,-3.6461379,2026-11-12
-Madrid,node,4710186008,electronics,,,,40.434306,-3.6453226,2026-11-12
-Madrid,node,4710221392,mobile_phone,Weimei,,,40.4349653,-3.6439904,2026-11-12
-Madrid,node,4710223389,electronics,,,,40.4369605,-3.640486,2026-11-12
-Madrid,node,4724006384,mobile_phone,Móvil Shop,,,40.4310196,-3.7163412,2026-11-12
-Madrid,node,4738219960,mobile_phone,Alam Telecom,,,40.4139281,-3.7082579,2026-11-12
-Madrid,node,4743144889,mobile_phone,Movistar,Movistar,,40.3914718,-3.7275772,2026-11-12
-Madrid,node,4887540577,electronics,MediaMarkt,MediaMarkt,,40.4186004,-3.7037118,2026-11-12
-Madrid,node,4919531621,electronics,Hermanos Pérez,,,40.4784531,-3.7075363,2026-11-12
-Madrid,node,4951801027,mobile_phone,ViaMóvil,,,40.4231627,-3.6798059,2026-11-12
-Madrid,node,4953449371,electronics,Pascual,,,40.4757806,-3.7177952,2026-11-12
-Madrid,node,4957196523,mobile_phone,Llamaya,,,40.3557586,-3.6976715,2026-11-12
-Madrid,node,4957310221,mobile_phone,Movil Casa,,,40.3934511,-3.6946169,2026-11-12
-Madrid,node,4992487821,computer,Servicio Técnico HP,,,40.441372,-3.6720594,2026-11-12
-Madrid,node,5254388143,electronics,La Casa del GPS,,,40.4175147,-3.6780093,2026-11-12
-Madrid,node,5341516926,computer,,,,40.379529,-3.7487038,2026-11-12
-Madrid,node,5369161523,electronics,Reparación electrodomésticos,,,40.3737403,-3.6212193,2026-11-12
-Madrid,node,5370125926,electronics,Reparamix,,,40.3581591,-3.6863074,2026-11-12
-Madrid,node,5370630521,electronics,Altoha,,,40.4362901,-3.6385619,2026-11-12
-Madrid,node,5404023907,electronics,Elite Master,,,40.4823119,-3.7111558,2026-11-12
-Madrid,node,5476882225,electronics,Guarconsa,,,40.4336834,-3.6972417,2026-11-12
-Madrid,node,5477916386,mobile_phone,La Casa del Móvil,,,40.4334688,-3.7054529,2026-11-12
-Madrid,node,5491139827,mobile_phone,Madrid Tel,,,40.4338943,-3.7065101,2026-11-12
-Madrid,node,5559088993,mobile_phone,Phone Shop,,,40.4323453,-3.7036207,2026-11-12
-Madrid,node,5661760876,computer,Seinma,,,40.4163036,-3.677863,2026-11-12
-Madrid,node,5789634234,electronics,Crystal,,,40.4908702,-3.5910099,2026-11-12
-Madrid,node,6137061787,electronics,CeX,CeX,,40.412856,-3.7003081,2026-11-12
-Madrid,node,6137157585,computer,LDLC,LDLC,,40.4544873,-3.6897416,2026-11-12
-Madrid,node,6169470587,electronics,Travelwifi,,,40.4162298,-3.7051625,2026-11-12
-Madrid,node,6235647826,mobile_phone,Movilonia,,,40.4467374,-3.71172,2026-11-12
-Madrid,node,6235785066,mobile_phone,,,,40.4762603,-3.714299,2026-11-12
-Madrid,node,6236049515,computer,Dogend Informática,,,40.4772589,-3.7154522,2026-11-12
-Madrid,node,6239874717,computer,Vartex Informática,,,40.4778649,-3.7134902,2026-11-12
-Madrid,node,6403580734,computer,Selected electronics,,,40.4902765,-3.5919094,2026-11-12
-Madrid,node,6704193567,electronics,Fnac,Fnac,,40.4791351,-3.7080986,2026-11-12
-Madrid,node,6753600833,mobile_phone,GM Móvil,,,40.4573625,-3.7099172,2026-11-12
-Madrid,node,6970332048,computer,,,,40.405289,-3.6754042,2026-11-12
-Madrid,node,7041933587,mobile_phone,Casa Móvil,,,40.3679419,-3.598944,2026-11-12
-Madrid,node,7131719264,electronics,Milar,Milar,,40.3941443,-3.6615624,2026-11-12
-Madrid,node,7183613645,electronics,Mi Electro,,,40.3876353,-3.6647774,2026-11-12
-Madrid,node,7370307098,computer,Portátil Madrid,,,40.3925147,-3.7271955,2026-11-12
-Madrid,node,7386343749,computer,Naser Top Line,,,40.4370873,-3.6756071,2026-11-12
-Madrid,node,7650080886,electronics,Miele,Miele,,40.422196,-3.6871415,2026-11-12
-Madrid,node,7787846685,computer,Dismicro Bros,,,40.3873057,-3.6554006,2026-11-12
-Madrid,node,7951547581,computer,PC Componentes,,,40.4053884,-3.6742373,2026-11-12
-Madrid,node,7952388754,electronics,Samsung,Samsung,,40.3684592,-3.5989008,2026-11-12
-Madrid,node,8079036397,mobile_phone,Happy Phone,,,40.4069583,-3.6697696,2026-11-12
-Madrid,node,8343340241,mobile_phone,Movil Home,,,40.4117016,-3.7062242,2026-11-12
-Madrid,node,8412813548,computer,Micro computer,,,40.4534103,-3.7080541,2026-11-12
-Madrid,node,8602619373,mobile_phone,Mr & Mrs Phone,,,40.4452548,-3.6727753,2026-11-12
-Madrid,node,8847983415,mobile_phone,Móvil telecom,,,40.3931495,-3.7405042,2026-11-12
-Madrid,node,8911221257,mobile_phone,Airis Soluciones,,,40.4338255,-3.7154608,2026-11-12
-Madrid,node,8948794004,electronics,Lyca Mobile,,,40.4562748,-3.7049711,2026-11-12
-Madrid,node,9056500981,mobile_phone,Chipper-Digi,,,40.3748888,-3.7507173,2026-11-12
-Madrid,node,9355589913,electronics,Milar,Milar,,40.3929328,-3.6554642,2026-11-12
-Madrid,node,9450850754,mobile_phone,Prophone Store,,,40.4568063,-3.7044568,2026-11-12
-Madrid,node,9459250140,mobile_phone,Spring Phone,,,40.4066481,-3.6723395,2026-11-12
-Madrid,node,9520570781,electronics,Comercial Castilla,,,40.3954046,-3.6981297,2026-11-12
-Madrid,node,9524061300,electronics,Tata Telecom,,,40.4588148,-3.7000527,2026-11-12
-Madrid,node,9532057234,mobile_phone,,,,40.3868911,-3.7400021,2026-11-12
-Madrid,node,9585098506,electronics,MAE Recovery,Apple Store,,40.4725252,-3.7090297,2026-11-12
-Madrid,node,9621495017,mobile_phone,Sol Internacional,,,40.4029045,-3.6753798,2026-11-12
-Madrid,node,9623248847,computer,Telefonía e Informática,,,40.3949932,-3.7639205,2026-11-12
-Madrid,node,9625929666,computer,Zbitt,,,40.3927175,-3.7646211,2026-11-12
-Madrid,node,9628269276,electronics,RaulVisión,,,40.3932577,-3.7554271,2026-11-12
-Madrid,node,9699911976,computer,PhoneBit,,,40.3917197,-3.7521046,2026-11-12
-Madrid,node,9732020941,electronics,Electronica Aluche,,,40.3896515,-3.7606634,2026-11-12
-Madrid,node,9820337318,electronics,MediaMarkt,MediaMarkt,,40.4179963,-3.703497,2026-11-12
-Madrid,node,9986731724,computer,Pentaprisma,,,40.4085175,-3.7119916,2026-11-12
-Madrid,node,10140307151,mobile_phone,Planet Phone,,,40.4571818,-3.7030914,2026-11-12
-Madrid,node,10219552455,mobile_phone,Phone Service Center,,,40.4581409,-3.6765143,2026-11-12
-Madrid,node,10262794433,computer,VK Informática,,,40.3858232,-3.6486266,2026-11-12
-Madrid,node,10557718832,mobile_phone,R Móvil Express,R,,40.45693,-3.7054409,2026-11-12
-Madrid,node,10606501244,mobile_phone,Vodafone,Vodafone,,40.4696548,-3.6404632,2026-11-12
-Madrid,node,10606501245,mobile_phone,Movistar,Movistar,,40.4696589,-3.640313,2026-11-12
-Madrid,node,10606501246,mobile_phone,Orange,Orange,,40.4696589,-3.6401333,2026-11-12
-Madrid,node,10723154104,mobile_phone,Lucky Phone House,,,40.3816469,-3.6239003,2026-11-12
-Madrid,node,10723250853,mobile_phone,Móvil Show,,,40.3783821,-3.621298,2026-11-12
-Madrid,node,10723250855,electronics,M. Caro,,,40.3785126,-3.6213265,2026-11-12
-Madrid,node,10733696905,mobile_phone,,,,40.3887119,-3.7317159,2026-11-12
-Madrid,node,10733696999,mobile_phone,Digi Mobil,,,40.3883797,-3.7298527,2026-11-12
-Madrid,node,10733697005,computer,Cibercomunitel,,,40.389319,-3.7299035,2026-11-12
-Madrid,node,10829477396,electronics,Airport Technology Shops,,,40.4631576,-3.5708099,2026-11-12
-Madrid,node,10921079826,computer,EMJ Servicios Informáticos,,,40.397514,-3.7033179,2026-11-12
-Madrid,node,10931227483,computer,Pc Box,,,40.4038086,-3.679307,2026-11-12
-Madrid,node,10940588190,mobile_phone,Wei Electrica,,,40.3997491,-3.6716605,2026-11-12
-Madrid,node,10940588195,mobile_phone,Movil-Tech,,,40.3999789,-3.6721151,2026-11-12
-Madrid,node,10969529528,electronics,Fnac,Fnac,,40.390199,-3.7011114,2026-11-12
-Madrid,node,10969529529,mobile_phone,Vodafone,Vodafone,,40.3902739,-3.7010717,2026-11-12
-Madrid,node,11133979728,computer,App Informática,,,40.407395,-3.7469219,2026-11-12
-Madrid,node,11185764837,mobile_phone,Orange,Orange,,40.3886987,-3.731848,2026-11-12
-Madrid,node,11198507444,mobile_phone,Classic Mobile Telecom,,,40.3963901,-3.7150973,2026-11-12
-Madrid,node,11211126544,mobile_phone,Bazar J&Z,,,40.3943739,-3.7088881,2026-11-12
-Madrid,node,11211126545,mobile_phone,Bazar J&Z,,,40.3944412,-3.7090288,2026-11-12
-Madrid,node,11214051633,electronics,Electrofuture,,,40.3932221,-3.7132335,2026-11-12
-Madrid,node,11230913273,computer,Ordenadores MR Micro,,,40.3910422,-3.7124401,2026-11-12
-Madrid,node,11237252250,mobile_phone,Lucky Phonehouse,,,40.3958012,-3.7137619,2026-11-12
-Madrid,node,11283910354,computer,La tienda del consumible,,,40.456847,-3.7020989,2026-11-12
-Madrid,node,11309927869,computer,Technical Computer,,,40.3656197,-3.7534379,2026-11-12
-Madrid,node,11311310252,electronics,Teledato,MiElectro,,40.3947047,-3.7133031,2026-11-12
-Madrid,node,11343152114,electronics,Repuestos Valencia,,,40.4397492,-3.6447019,2026-11-12
-Madrid,node,11359779383,computer,Yoye,,,40.4209099,-3.709626,2026-11-12
-Madrid,node,11361727163,mobile_phone,Casa de móvil,,,40.4299534,-3.7061823,2026-11-12
-Madrid,node,11380284944,computer,AbascalMac,,,40.43869,-3.7015624,2026-11-12
-Madrid,node,11445404426,electronics,MediaMarkt,MediaMarkt,,40.4798769,-3.7052322,2026-11-12
-Madrid,node,11523649257,mobile_phone,Móvil Casa,,,40.4062756,-3.6930313,2026-11-12
-Madrid,node,11711279741,electronics,El Corte Inglés,El Corte Inglés,,40.430077,-3.7161053,2026-11-12
-Madrid,node,11793829046,electronics,Electricidad Ara,,,40.4512126,-3.7043778,2026-11-12
-Madrid,node,11811904974,computer,Dragon Telecom,,,40.3456386,-3.7093063,2026-11-12
-Madrid,node,11889181978,mobile_phone,Phone Shop,,,40.3975225,-3.7166085,2026-11-12
-Madrid,node,11998948389,computer,Ofertas PC,,,40.4789971,-3.7030555,2026-11-12
-Madrid,node,12058931789,computer,dsp,,,40.4379132,-3.7170793,2026-11-12
-Madrid,node,12069390190,electronics,CAT Castillo,,,40.384956,-3.7525489,2026-11-12
-Madrid,node,12076252942,electronics,Master,,,40.3888866,-3.7393472,2026-11-12
-Madrid,node,12076321321,mobile_phone,,,,40.395143,-3.7202748,2026-11-12
-Madrid,node,12098590212,mobile_phone,Cube Móvil,,,40.407015,-3.7009824,2026-11-12
-Madrid,node,12098590229,mobile_phone,Mobitech,,,40.4066325,-3.7012719,2026-11-12
-Madrid,node,12100834023,electronics,Campi Electricidad,,,40.4523415,-3.7102811,2026-11-12
-Madrid,node,12117110647,computer,APP Informática,APP Informática,,40.3751608,-3.7736428,2026-11-12
-Madrid,node,12121871915,mobile_phone,iDeal,,,40.4387929,-3.7130021,2026-11-12
-Madrid,node,12121871956,mobile_phone,On-Fix,,,40.4379411,-3.713071,2026-11-12
-Madrid,node,12123952951,electronics,Infomax,,,40.4091389,-3.7100072,2026-11-12
-Madrid,node,12139482432,computer,Arroyo Mac,,,40.4057005,-3.7012615,2026-11-12
-Madrid,node,12186161058,mobile_phone,Orange,Orange,,40.3865748,-3.7636468,2026-11-12
-Madrid,node,12186161066,mobile_phone,Orange,Orange,Jazztel,40.3863874,-3.7637052,2026-11-12
-Madrid,node,12192547414,mobile_phone,Phone,,,40.4285977,-3.6751906,2026-11-12
-Madrid,node,12192730163,mobile_phone,Jazztel,,,40.4462751,-3.5877526,2026-11-12
-Madrid,node,12198834902,computer,S & H,,,40.4372924,-3.7029568,2026-11-12
-Madrid,node,12260741872,electronics,City Service,,,40.4360544,-3.6431821,2026-11-12
-Madrid,node,12265999566,electronics,workme,,,40.4401078,-3.6438464,2026-11-12
-Madrid,node,12293776753,mobile_phone,Infotech,,,40.4095297,-3.6935566,2026-11-12
-Madrid,node,12311576993,mobile_phone,Farid Telecom,,,40.4121688,-3.6996147,2026-11-12
-Madrid,node,12351499584,mobile_phone,ServiMovil-PC,,,40.3857211,-3.7405335,2026-11-12
-Madrid,node,12351514142,mobile_phone,Locutorio Khan Internet,,,40.386124,-3.7404512,2026-11-12
-Madrid,node,12409115926,computer,Marpez Sistemas Informáticos,,,40.4764056,-3.6407695,2026-11-12
-Madrid,node,12423030052,mobile_phone,Tecnología inteligente,,,40.4517057,-3.703038,2026-11-12
-Madrid,node,12452943838,computer,Informático Pro,,,40.4389912,-3.7083921,2026-11-12
-Madrid,node,12474552135,mobile_phone,Locutorio Ambote,,,40.3767943,-3.6211185,2026-11-12
-Madrid,node,12541145196,electronics,MediaMarkt,MediaMarkt,,40.392568,-3.6556109,2026-11-12
-Madrid,node,12570816663,mobile_phone,Vodafone,Vodafone,,40.3973638,-3.667718,2026-11-12
-Madrid,node,12578631852,computer,Pspchips,,,40.4365387,-3.7179194,2026-11-12
-Madrid,node,12633161254,mobile_phone,Mobile Telefonia,,,40.3867539,-3.7065971,2026-11-12
-Madrid,node,12634675790,mobile_phone,Zona Movil,,,40.3859247,-3.7059151,2026-11-12
-Madrid,node,12634700109,electronics,Bazar Shiva,,,40.3859823,-3.7055263,2026-11-12
-Madrid,node,12634700113,mobile_phone,Freddy Moviles,,,40.386112,-3.705129,2026-11-12
-Madrid,node,12644308311,mobile_phone,Renew Markt,,,40.385653,-3.7068563,2026-11-12
-Madrid,node,12644308318,mobile_phone,Electro World,,,40.3857946,-3.7072222,2026-11-12
-Madrid,node,12644308355,mobile_phone,China Spain Mobile and Services,,,40.3856754,-3.7081949,2026-11-12
-Madrid,node,12644308371,mobile_phone,Bafre China-Spain,,,40.3852588,-3.7076402,2026-11-12
-Madrid,node,12644308424,mobile_phone,Locutorio Tasnia Tahsin Nebeeha,,,40.3852653,-3.7082457,2026-11-12
-Madrid,node,12670247544,mobile_phone,Zain Telefonia,,,40.3828884,-3.7078006,2026-11-12
-Madrid,node,12696236592,mobile_phone,Ria,,,40.437877,-3.7128246,2026-11-12
-Madrid,node,12704564422,mobile_phone,Aziza,,,40.4369262,-3.6997935,2026-11-12
-Madrid,node,12729605040,mobile_phone,Mi Móvil,,,40.3857681,-3.7058453,2026-11-12
-Madrid,node,12734727467,mobile_phone,Phone Shop,,,40.383343,-3.7058189,2026-11-12
-Madrid,node,12734727469,mobile_phone,You Mobile,,,40.3835279,-3.7058613,2026-11-12
-Madrid,node,12810197252,mobile_phone,Joy phone,,,40.4132427,-3.7007887,2026-11-12
-Madrid,node,12810197265,mobile_phone,Miss carcasas,,,40.4150084,-3.7031909,2026-11-12
-Madrid,node,12866310682,mobile_phone,Phonelectric,,,40.4063557,-3.6983333,2026-11-12
-Madrid,node,12884650804,mobile_phone,Milchip,,,40.4064485,-3.6760369,2026-11-12
-Madrid,node,12884650807,computer,Eurocopa,,,40.4058613,-3.6751657,2026-11-12
-Madrid,node,12888691901,computer,Talleres del PC,,,40.4308341,-3.7019629,2026-11-12
-Madrid,node,12946115438,mobile_phone,Renphone,,,40.4779634,-3.7040939,2026-11-12
-Madrid,node,12956516903,mobile_phone,Reparamos tu Móvil,,,40.4037217,-3.7139488,2026-11-12
-Madrid,node,12977767278,mobile_phone,,,,40.3913302,-3.742725,2026-11-12
-Madrid,node,12981566515,electronics,The Fox Company,,,40.3684477,-3.7550462,2026-11-12
-Madrid,node,12988484032,mobile_phone,MovilTen,,,40.4021617,-3.6968736,2026-11-12
-Madrid,node,12993968752,computer,Soft World,,,40.4047089,-3.6987825,2026-11-12
-Madrid,node,13016266023,mobile_phone,E-phone sell,,,40.459375,-3.6994231,2026-11-12
-Madrid,node,13039783141,mobile_phone,May móvil,,,40.3993712,-3.6709741,2026-11-12
-Madrid,node,13039856128,mobile_phone,Cubi móvil,,,40.3993144,-3.6708618,2026-11-12
-Madrid,node,13062831230,electronics,soportales,,,40.3932166,-3.6583564,2026-11-12
-Madrid,node,13062897551,mobile_phone,Weimei,,,40.3964321,-3.6659252,2026-11-12
-Madrid,node,13062899577,mobile_phone,,,,40.3920587,-3.6620317,2026-11-12
-Madrid,node,13062899763,mobile_phone,,,,40.3929821,-3.6606202,2026-11-12
-Madrid,node,13062905424,mobile_phone,Orange,Orange,,40.3975344,-3.668005,2026-11-12
-Madrid,node,13120822791,computer,Ifactory,,,40.4266399,-3.6669445,2026-11-12
-Madrid,node,13121743801,mobile_phone,Back Móvil,,,40.4454576,-3.7885889,2026-11-12
-Madrid,node,13158139147,mobile_phone,móvil i point callao,,,40.4196343,-3.7069194,2026-11-12
-Madrid,node,13159930066,mobile_phone,Fantasy phone,,,40.421537,-3.7099422,2026-11-12
-Madrid,node,13234991214,mobile_phone,Phone Doctors,,,40.3968564,-3.6983378,2026-11-12
-Madrid,node,13336152124,mobile_phone,Tech World,,,40.4220412,-3.7076824,2026-11-12
-Madrid,node,13363466101,electronics,Componentes Electrónicos Posan,,,40.4333251,-3.6426276,2026-11-12
-Madrid,node,13446436027,mobile_phone,Kashem Telefonía Móvil,,,40.452832,-3.7015397,2026-11-12
-Madrid,node,13465048250,computer,SmilePC,,,40.4739153,-3.6430339,2026-11-12
-Madrid,node,13529059392,mobile_phone,Mishu Móvil,,,40.4121986,-3.7041292,2026-11-12
-Madrid,node,13532373577,mobile_phone,Locutorio Goya,,,40.4261931,-3.6741234,2026-11-12
-Madrid,node,13618008425,mobile_phone,Locutorio Khan 2,,,40.3748189,-3.7427877,2026-11-12
-Madrid,node,13647668840,electronics,Euronics,Euronics,,40.3977304,-3.696418,2026-11-12
-Madrid,node,13716935000,mobile_phone,Miss carcasas,,,40.4210886,-3.700625,2026-11-12
-Madrid,node,13717953780,electronics,Aliexpress Plaza,,,40.3687589,-3.5967324,2026-11-12
-Madrid,node,13785180776,electronics,CeX,CeX,,40.3914123,-3.7420771,2026-11-12
-Madrid,node,13791429576,electronics,Electrónica Latina,,,40.4128261,-3.7209338,2026-11-12
-Madrid,node,13959633501,mobile_phone,Amir,,,40.4112019,-3.7050096,2026-11-12
-Madrid,node,14084152448,computer,PCBox,,,40.4301615,-3.7042542,2026-11-12
-Madrid,node,14152950107,electronics,MediaMarkt,MediaMarkt,,40.4627602,-3.6889752,2026-11-12
-Madrid,node,14206371027,mobile_phone,The Phone Talent,,,40.3516261,-3.6887669,2026-11-12
-Madrid,node,14319759524,mobile_phone,Mobile shop,,,40.4042196,-3.6803348,2026-11-12
-Madrid,way,165353134,electronics,MediaMarkt,MediaMarkt,,40.4456426,-3.586473,2026-11-12
-Madrid,way,208277966,computer,,,,40.4266892,-3.6669086,2026-11-12
-Madrid,way,348682082,electronics,,,,40.3515091,-3.6915927,2026-11-12
-Madrid,way,348682083,electronics,Lidl,,,40.3515367,-3.6920335,2026-11-12
-Madrid,way,373743577,mobile_phone,MovilEuropa,,,40.3860464,-3.7050801,2026-11-12
-Madrid,way,679015267,mobile_phone,,,,40.4141934,-3.7039168,2026-11-12
-Madrid,way,681503975,mobile_phone,Tahsin Telecom,,,40.4126763,-3.6954994,2026-11-12
-Madrid,way,681503978,mobile_phone,Locutorio Moratin,,,40.4125812,-3.6961189,2026-11-12
-Madrid,way,691032706,electronics,Locutorio,,,40.4118951,-3.7074273,2026-11-12
-Madrid,way,692395502,mobile_phone,Fundamental,,,40.4125856,-3.7077614,2026-11-12
-Madrid,way,994058693,electronics,Tech&Fly,,,40.4947863,-3.5674999,2026-11-12
-Madrid,relation,14555658,electronics,Electro Hogar Outlet,,,40.3746079,-3.644893,2026-11-12
-Valencia,node,1189714314,mobile_phone,Tari Mobile Hospital,,,39.4543915,-0.3914059,2026-11-12
-Valencia,node,1452023062,computer,APP informatica,,,39.4787024,-0.39387,2026-11-12
-Valencia,node,1452368047,electronics,Oinel,,,39.478934,-0.3959914,2026-11-12
-Valencia,node,1452644860,electronics,Interservicio,,"Bosch, Siemens, Ufesa",39.4805341,-0.3961104,2026-11-12
-Valencia,node,1956841601,computer,Escaire,,Escaire.net,39.4812444,-0.3436051,2026-11-12
-Valencia,node,2475527939,mobile_phone,Low Cost Movil,,,39.4702752,-0.384512,2026-11-12
-Valencia,node,2834849912,electronics,Apple Store Calle Colón,Apple Store,,39.4690839,-0.3723058,2026-11-12
-Valencia,node,2899926213,mobile_phone,Tienda Oficial de Jiayu España,,,39.4655518,-0.3393084,2026-11-12
-Valencia,node,3254179917,computer,Informática Ecoturia,,Ecolider y DHL Express,39.4672653,-0.385156,2026-11-12
-Valencia,node,3498960466,electronics,Electrónica Céspedes,,,39.4756154,-0.389702,2026-11-12
-Valencia,node,3657800645,electronics,MediaMarkt,MediaMarkt,,39.4672449,-0.3744506,2026-11-12
-Valencia,node,3699314150,mobile_phone,OK Phone,,,39.48095,-0.3709438,2026-11-12
-Valencia,node,3954426029,electronics,SecurMAX,,Securmax Seguridad S.L.,39.4656622,-0.3710158,2026-11-12
-Valencia,node,4172600994,electronics,Enchufix,,,39.4526434,-0.4012851,2026-11-12
-Valencia,node,4266931594,computer,App cabañal,,,39.4730906,-0.3337325,2026-11-12
-Valencia,node,4897372523,computer,App Informática,,,39.4659275,-0.3870475,2026-11-12
-Valencia,node,4907454023,mobile_phone,Phone House,Phone House,,39.4672642,-0.3806781,2026-11-12
-Valencia,node,4989970381,mobile_phone,Lycamobile,,,39.460317,-0.3343064,2026-11-12
-Valencia,node,4992278224,mobile_phone,Tecno Mobil,,,39.4630576,-0.3432721,2026-11-12
-Valencia,node,5046886223,mobile_phone,Phone House,Phone House,,39.4716004,-0.3765168,2026-11-12
-Valencia,node,5171067193,electronics,El Manitas de Casa,,,39.4575408,-0.3684037,2026-11-12
-Valencia,node,5299082725,computer,Puesta a punto,,,39.4869792,-0.3915036,2026-11-12
-Valencia,node,5371354762,computer,PC BOX,,,39.4676953,-0.3836239,2026-11-12
-Valencia,node,5960058008,electronics,Electrodomésticos Guerrero,,,39.4810247,-0.3572708,2026-11-12
-Valencia,node,6106357685,computer,,,,39.4597528,-0.3656803,2026-11-12
-Valencia,node,6617346023,mobile_phone,Miss Phone,,,39.4680381,-0.3505907,2026-11-12
-Valencia,node,6812000985,computer,Aula Informática,,,39.4847545,-0.3579102,2026-11-12
-Valencia,node,6812000988,electronics,Milar Muñoz,,Milar,39.4847102,-0.358276,2026-11-12
-Valencia,node,6942936380,electronics,Euronics,Euronics,,39.4828435,-0.3703258,2026-11-12
-Valencia,node,6961518008,mobile_phone,Movil City,,,39.4855917,-0.3635134,2026-11-12
-Valencia,node,6967291175,computer,ChipToChip,,,39.4631864,-0.3705581,2026-11-12
-Valencia,node,7214075576,mobile_phone,E!,,,39.469831,-0.3794825,2026-11-12
-Valencia,node,8745734223,computer,Vnet Informática 24h,,,39.4731299,-0.3499195,2026-11-12
-Valencia,node,8745734224,computer,"Coy Coy tintas, tóner, impresoras e informática",,,39.4707386,-0.351356,2026-11-12
-Valencia,node,9862537303,electronics,Dorme. Puertas y Automatismos,,,39.466705,-0.3383794,2026-11-12
-Valencia,node,9862559836,mobile_phone,FuturMovil,,,39.4655852,-0.328995,2026-11-12
-Valencia,node,10587567099,electronics,Globaltech,,,39.4564655,-0.371752,2026-11-12
-Valencia,node,10596568616,computer,Hipermaco,,,39.4554035,-0.3696225,2026-11-12
-Valencia,node,10596568617,computer,Compters,,,39.4553801,-0.3695112,2026-11-12
-Valencia,node,10852830145,mobile_phone,Soni Movil,,,39.4666455,-0.3793156,2026-11-12
-Valencia,node,10855565357,mobile_phone,Movil House,,,39.4664825,-0.3799939,2026-11-12
-Valencia,node,10855565360,mobile_phone,Yuncoa Telecom,,,39.4662515,-0.3794677,2026-11-12
-Valencia,node,10957466626,electronics,Entertainment Exchange CEX,,,39.4654915,-0.3739934,2026-11-12
-Valencia,node,11046943263,electronics,,,,39.4788967,-0.3768017,2026-11-12
-Valencia,node,11226399843,computer,BIOS Informatica,,,39.493761,-0.3979492,2026-11-12
-Valencia,node,11247541434,mobile_phone,MASlife,,,39.4867005,-0.3902336,2026-11-12
-Valencia,node,11928757411,mobile_phone,City Phone,,,39.4725871,-0.3770941,2026-11-12
-Valencia,node,12574049728,electronics,CeX,CeX,,39.4848289,-0.3618612,2026-11-12
-Valencia,node,12647408201,computer,Club Byte,,,39.4726805,-0.3851497,2026-11-12
-Valencia,node,12772955133,computer,Micros Shop Informática,,,39.4610599,-0.3640178,2026-11-12
-Valencia,node,12842410297,electronics,Electricidad,,,39.4696124,-0.3679924,2026-11-12
-Valencia,node,13051069445,electronics,Milar,Milar,,39.4687734,-0.3372361,2026-11-12
-Valencia,node,13168893895,computer,Softmaker,,,39.4721892,-0.3377541,2026-11-12
-Valencia,node,13295188512,electronics,mi electro,,,39.4737413,-0.3534386,2026-11-12
-Valencia,node,13397748186,mobile_phone,vestito mobile,,,39.4700617,-0.3711687,2026-11-12
-Valencia,node,13554685828,mobile_phone,Fone Zone,,,39.4545374,-0.3913997,2026-11-12
-Valencia,node,13620598963,computer,,,,39.4596836,-0.3415935,2026-11-12
-Valencia,node,13800896901,computer,Ofertas PC,,,39.470039,-0.3837407,2026-11-12
-Valencia,node,13800946901,computer,Microtech-Informatics,,,39.4741905,-0.3830775,2026-11-12
-Valencia,node,14023338801,mobile_phone,Mbb Electronics,,,39.4567498,-0.3904483,2026-11-12
-Valencia,node,14030974501,computer,Microsshop informática,,,39.4591589,-0.3935198,2026-11-12
-Valencia,node,14064727622,computer,APP_ informática - Telica,,,39.4297713,-0.3621171,2026-11-12
-Valencia,node,14210124748,mobile_phone,Futurmovil,,,39.4716537,-0.3427767,2026-11-12
-Valencia,node,14210126653,computer,Urbantoner,,,39.4693824,-0.3438812,2026-11-12
-Valencia,node,14220108688,computer,Inforl@ndia,,,39.4697605,-0.3393068,2026-11-12
-Valencia,node,14243171125,computer,MAN Computer,,,39.4862759,-0.3681558,2026-11-12
-Valencia,node,14252538301,electronics,Mi Electro,,,39.4933466,-0.3938834,2026-11-12
-Valencia,node,14260570401,computer,Power Navy,,,39.481986,-0.3702583,2026-11-12
-Valencia,node,14270381038,mobile_phone,Droidhouse,,,39.4720578,-0.3538801,2026-11-12
-Valencia,way,23761012,electronics,MediaMarkt,MediaMarkt,,39.4903733,-0.4006553,2026-11-12
-Sevilla,node,1531495377,mobile_phone,E-tong,,,37.3921348,-5.9913992,2026-11-12
-Sevilla,node,2211649435,computer,App Informática,,,37.3618731,-5.9856442,2026-11-12
-Sevilla,node,2335910782,electronics,Electrónica Goya,,,37.3848033,-5.9688691,2026-11-12
-Sevilla,node,2474401092,computer,App Informática,,,37.3892056,-5.9823899,2026-11-12
-Sevilla,node,2641681293,electronics,Electrocien,,,37.372375,-5.9597894,2026-11-12
-Sevilla,node,2723918396,electronics,Electromenaje 2005,,,37.4037049,-5.9767568,2026-11-12
-Sevilla,node,2918724286,mobile_phone,Vodaphone,,,37.3757683,-5.9974864,2026-11-12
-Sevilla,node,3012261137,computer,Appinformatica,,,37.3769692,-5.9733097,2026-11-12
-Sevilla,node,3060451794,computer,El Arca de Noé,,,37.3587438,-5.9860658,2026-11-12
-Sevilla,node,3157719334,computer,PC3,,,37.3990643,-5.983864,2026-11-12
-Sevilla,node,3165356183,computer,PCBox,,,37.3880582,-5.9199298,2026-11-12
-Sevilla,node,3208192709,mobile_phone,Yo Móvil,,,37.3883557,-6.0017582,2026-11-12
-Sevilla,node,3214724176,computer,Cibercenter,,,37.3895939,-6.0001156,2026-11-12
-Sevilla,node,3233677016,electronics,Rótulos luminosos neón. Serigrafía. Impresión digital,,,37.3971434,-5.9930345,2026-11-12
-Sevilla,node,3234773265,computer,App Informática,,,37.3975774,-5.9926139,2026-11-12
-Sevilla,node,3581117745,electronics,BSH Interservice,,,37.3882576,-5.9531704,2026-11-12
-Sevilla,node,3681245810,electronics,Electro Peñaflor,,,37.3832239,-6.0060412,2026-11-12
-Sevilla,node,3869643232,mobile_phone,Phone House,Phone House,,37.3768512,-5.9974853,2026-11-12
-Sevilla,node,3869646379,electronics,Electricidad,,,37.376935,-5.9975032,2026-11-12
-Sevilla,node,3869658082,electronics,Tian yi,,,37.375463,-5.9976449,2026-11-12
-Sevilla,node,3869662557,electronics,Entertainment Exchange Webuy.com,,,37.3762964,-5.9975083,2026-11-12
-Sevilla,node,3869691419,mobile_phone,Phone Star,,,37.3781636,-5.9978007,2026-11-12
-Sevilla,node,4017115988,computer,Arintec,,,37.3826016,-6.0096143,2026-11-12
-Sevilla,node,4017180306,mobile_phone,Telefoneitor,,,37.3827878,-6.0094534,2026-11-12
-Sevilla,node,4059628389,computer,Sirmac,,,37.3772292,-6.0059001,2026-11-12
-Sevilla,node,4335435789,mobile_phone,,,,37.3897857,-5.9949736,2026-11-12
-Sevilla,node,4423445690,computer,Bellerin,,,37.3865208,-5.9992242,2026-11-12
-Sevilla,node,4591301307,electronics,Enterteinement Exchange,,,37.3925157,-5.9911372,2026-11-12
-Sevilla,node,4719197899,computer,Sound Sevilla,,,37.3909587,-5.9191269,2026-11-12
-Sevilla,node,4827216650,computer,Microsur Sevilla Informatica,,,37.3769754,-5.9735165,2026-11-12
-Sevilla,node,5546543948,computer,mundo informática,,,37.3458842,-5.9773645,2026-11-12
-Sevilla,node,5627456727,computer,Abaxial Informática S.L,,,37.3847544,-6.0097825,2026-11-12
-Sevilla,node,5636939903,computer,SevillaPC,,,37.3814523,-6.0048192,2026-11-12
-Sevilla,node,5778414556,mobile_phone,Lys Distribuciones (República Móvil),,República Móvil,37.4220249,-5.9715203,2026-11-12
-Sevilla,node,6061790956,mobile_phone,Zero Digital,,,37.3931464,-5.9837963,2026-11-12
-Sevilla,node,6061813228,computer,@dv,,,37.3921429,-5.9794499,2026-11-12
-Sevilla,node,6517103448,electronics,M.León,,,37.3888271,-6.0089291,2026-11-12
-Sevilla,node,6570606302,mobile_phone,Chic Moviles,,,37.3797248,-6.0082985,2026-11-12
-Sevilla,node,6587730496,computer,ProNet PC,,,37.3738661,-6.0036025,2026-11-12
-Sevilla,node,6589567786,mobile_phone,MÁSMÓVIL,,,37.3748498,-5.9983053,2026-11-12
-Sevilla,node,6589599792,mobile_phone,ViveTuMóvil,,,37.3748305,-5.9994989,2026-11-12
-Sevilla,node,6589647616,electronics,HGM Sevilla,,,37.374769,-6.0011235,2026-11-12
-Sevilla,node,6589800286,mobile_phone,TuMovil Sevilla,,,37.3745999,-6.0031117,2026-11-12
-Sevilla,node,6596889490,mobile_phone,HappyTel,,,37.3772832,-6.0035155,2026-11-12
-Sevilla,node,6597301994,electronics,Surasa SL,,,37.3793793,-5.9994316,2026-11-12
-Sevilla,node,6597361586,electronics,Electroymas,,,37.3789968,-6.0001443,2026-11-12
-Sevilla,node,6606174885,electronics,Sonytel Sevilla,,,37.3798255,-5.9991397,2026-11-12
-Sevilla,node,6617891185,computer,APP Informática Los Remedios,,,37.376087,-6.0035612,2026-11-12
-Sevilla,node,6661468386,electronics,ElectroAljarafe Triana-Los Remedios,,,37.3809685,-6.0004934,2026-11-12
-Sevilla,node,6661468485,computer,Eprom Informática,,,37.3810021,-6.0005296,2026-11-12
-Sevilla,node,6665241961,electronics,Zero Digital,,,37.3836376,-6.0048814,2026-11-12
-Sevilla,node,7291315961,electronics,Electrohogar Triana,,,37.380472,-6.0087682,2026-11-12
-Sevilla,node,7501754148,electronics,Sonicolor,,,37.3686192,-5.9571514,2026-11-12
-Sevilla,node,7803821447,mobile_phone,Phone House,Phone House,,37.4186475,-5.9738172,2026-11-12
-Sevilla,node,7932077938,mobile_phone,Playmóvil,,,37.3597543,-5.9860448,2026-11-12
-Sevilla,node,7994605715,electronics,APP Informática,,,37.3687375,-5.9704007,2026-11-12
-Sevilla,node,8429497162,mobile_phone,Titiphone,,,37.3790457,-5.9413526,2026-11-12
-Sevilla,node,8930367648,mobile_phone,MasLife,Yoigo,Yoigo,37.4004696,-5.9760181,2026-11-12
-Sevilla,node,9534441175,mobile_phone,Contecta-T,,,37.3452057,-5.9818278,2026-11-12
-Sevilla,node,9705069726,electronics,Profitter - Sistemas de Energia,,,37.3774015,-6.0137585,2026-11-12
-Sevilla,node,9714512016,mobile_phone,Reparación Iphone Sevilla,,,37.3720032,-5.9976194,2026-11-12
-Sevilla,node,9717245896,computer,K-tuin,,,37.3737954,-5.9945708,2026-11-12
-Sevilla,node,10821317783,electronics,"Copiadoras Sevilla Dos, S.A.U.",,,37.3911041,-5.9825496,2026-11-12
-Sevilla,node,11274709581,mobile_phone,Hospimóvil,,,37.3976012,-5.9913645,2026-11-12
-Sevilla,node,13036773224,computer,CEINFO,,,37.3255858,-5.9687419,2026-11-12
-Sevilla,way,301831301,computer,2F Reina Mercedes,,,37.3598154,-5.9858625,2026-11-12
-Sevilla,way,576299251,electronics,Más-Factory,,,37.3436554,-5.9771191,2026-11-12
-Zaragoza,node,287932251,computer,PCBox,,,41.6455145,-0.8736559,2026-11-12
-Zaragoza,node,1250333445,computer,PCBox,,,41.6428451,-0.8954949,2026-11-12
-Zaragoza,node,1486463919,electronics,MediaMarkt,MediaMarkt,,41.6092493,-0.8910846,2026-11-12
-Zaragoza,node,1532742680,computer,APP Informática,,,41.6686703,-0.8841635,2026-11-12
-Zaragoza,node,1607041136,electronics,Servicio Técnico Actur,,JVC,41.6696649,-0.8831861,2026-11-12
-Zaragoza,node,1607041267,computer,,,Toshiba,41.6703704,-0.8852679,2026-11-12
-Zaragoza,node,1797731174,electronics,Fnac,Fnac,GG.AA. Fnac España S.A.U.,41.6529976,-0.8817459,2026-11-12
-Zaragoza,node,1797731185,mobile_phone,Ayan Móviles,,,41.6408361,-0.8910969,2026-11-12
-Zaragoza,node,2087053738,computer,k-tuin,,,41.651735,-0.8824796,2026-11-12
-Zaragoza,node,2997959033,electronics,Almacenes Paymar,,,41.6431847,-0.8812149,2026-11-12
-Zaragoza,node,3049218519,mobile_phone,Jazztel,,,41.6446296,-0.8756999,2026-11-12
-Zaragoza,node,3052578226,electronics,,,,41.6459014,-0.8744358,2026-11-12
-Zaragoza,node,3057846838,mobile_phone,Alex Movilex,,,41.645115,-0.880323,2026-11-12
-Zaragoza,node,3741251586,computer,Informática Zaragoza,,,41.6430443,-0.8946726,2026-11-12
-Zaragoza,node,4327830100,computer,Ecomputer,,,41.6368809,-0.8761566,2026-11-12
-Zaragoza,node,4327870398,computer,Beep,Beep,,41.636735,-0.8759352,2026-11-12
-Zaragoza,node,4334524425,mobile_phone,Ciber Gran Vía. MoneyGram Titanes.,,,41.645814,-0.8912027,2026-11-12
-Zaragoza,node,4334540354,computer,Color Plus,,,41.645847,-0.890392,2026-11-12
-Zaragoza,node,4349525937,electronics,Audio Goya,,,41.6461869,-0.893888,2026-11-12
-Zaragoza,node,4349647130,computer,PCBox,,,41.6512928,-0.8910495,2026-11-12
-Zaragoza,node,4355681291,computer,Ecomputer,,,41.6440637,-0.8879065,2026-11-12
-Zaragoza,node,4356639373,electronics,Apple Store,Apple Store,Apple,41.6093062,-0.8863997,2026-11-12
-Zaragoza,node,4365285123,electronics,Promodis Telecom,,,41.6561144,-0.9044422,2026-11-12
-Zaragoza,node,4365396733,computer,Cibestore,,,41.6507386,-0.8987729,2026-11-12
-Zaragoza,node,4366620492,computer,Espazio PC-Móvil,,,41.654086,-0.8775526,2026-11-12
-Zaragoza,node,4366784700,electronics,"Ingeniería de Equipos de Control, S.L.",,,41.6390437,-0.8833,2026-11-12
-Zaragoza,node,4370893746,computer,Beep,Beep,,41.6735188,-0.8862726,2026-11-12
-Zaragoza,node,4374483191,computer,APP Informática,,,41.6200332,-0.9183557,2026-11-12
-Zaragoza,node,4383629996,mobile_phone,Cibervia,,,41.6540443,-0.8846394,2026-11-12
-Zaragoza,node,4385180592,mobile_phone,Locutorio Cumbaya,,,41.6403499,-0.8875102,2026-11-12
-Zaragoza,node,4385253893,mobile_phone,Movifix,,,41.6485653,-0.9001093,2026-11-12
-Zaragoza,node,4399258795,computer,Raxon,,,41.6392563,-0.8959156,2026-11-12
-Zaragoza,node,4401524347,computer,ABC Floppy,,,41.6436942,-0.89267,2026-11-12
-Zaragoza,node,4477568620,mobile_phone,Alex Movilex,,,41.653722,-0.8836488,2026-11-12
-Zaragoza,node,4821420303,computer,Lan Informática,,,41.6429294,-0.911648,2026-11-12
-Zaragoza,node,4821503883,computer,Tintared,,,41.6484281,-0.9133677,2026-11-12
-Zaragoza,node,4821503892,electronics,Eli-Man,,,41.650278,-0.9142194,2026-11-12
-Zaragoza,node,4821516937,computer,Tienda Acer Zaragoza,,,41.6506387,-0.9099121,2026-11-12
-Zaragoza,node,4833638336,electronics,Diusframi,,,41.6493151,-0.9095521,2026-11-12
-Zaragoza,node,4835686330,electronics,Master Instaluz,,,41.6509063,-0.9127587,2026-11-12
-Zaragoza,node,4844645658,computer,APP Informática,,,41.6476923,-0.9156524,2026-11-12
-Zaragoza,node,4846192605,computer,Suin,,,41.6498042,-0.9169947,2026-11-12
-Zaragoza,node,4858018886,mobile_phone,The Phone Shop,,,41.6515812,-0.9121338,2026-11-12
-Zaragoza,node,4858044574,mobile_phone,Phone One,,,41.650948,-0.9149976,2026-11-12
-Zaragoza,node,4943660186,computer,Informatica Comte,,,41.6516102,-0.8739722,2026-11-12
-Zaragoza,node,4985314830,electronics,StarPhone,,,41.642147,-0.8934827,2026-11-12
-Zaragoza,node,4985314839,mobile_phone,Zas!mobil,,,41.6428496,-0.8928376,2026-11-12
-Zaragoza,node,4985641556,computer,ABC Floppy,,,41.640789,-0.8931313,2026-11-12
-Zaragoza,node,4985727442,electronics,Goyasonido.com,,,41.6433101,-0.8891778,2026-11-12
-Zaragoza,node,4985727443,computer,Miranda Digital,,,41.6433356,-0.8892341,2026-11-12
-Zaragoza,node,4998012520,mobile_phone,Locutorio Hola,,,41.6535553,-0.9035692,2026-11-12
-Zaragoza,node,4998015525,electronics,Electrodomésticos Tornos,,,41.6531995,-0.9050833,2026-11-12
-Zaragoza,node,4998015541,mobile_phone,Movilsorio,,,41.6524982,-0.908023,2026-11-12
-Zaragoza,node,5041916086,computer,Ecomputer,,,41.6484717,-0.9042585,2026-11-12
-Zaragoza,node,5043617454,electronics,CeX,CeX,,41.6512454,-0.8846688,2026-11-12
-Zaragoza,node,5060995004,mobile_phone,Alex Movilex,,,41.6481984,-0.9018491,2026-11-12
-Zaragoza,node,5061015228,mobile_phone,Arbab Móviles,,,41.6544876,-0.8860707,2026-11-12
-Zaragoza,node,5087182691,mobile_phone,Eje Cafetero,,,41.6472451,-0.8746295,2026-11-12
-Zaragoza,node,5103391427,electronics,Fnac,Fnac,,41.607806,-0.8870441,2026-11-12
-Zaragoza,node,5107415309,mobile_phone,Alex Movilex,,,41.6445984,-0.8845872,2026-11-12
-Zaragoza,node,5138040562,mobile_phone,Codex Technology,,,41.6629417,-0.8628036,2026-11-12
-Zaragoza,node,5204677345,mobile_phone,Max Fix,,,41.653168,-0.9059893,2026-11-12
-Zaragoza,node,5314002922,mobile_phone,Cic Comunicaciones,,,41.6617731,-0.8661187,2026-11-12
-Zaragoza,node,5602505728,computer,Ecomputer,,,41.6513782,-0.8790299,2026-11-12
-Zaragoza,node,5613944823,mobile_phone,Phone House,Phone House,,41.6087456,-0.8868816,2026-11-12
-Zaragoza,node,5614969622,mobile_phone,E Moviles,,,41.6567679,-0.8826656,2026-11-12
-Zaragoza,node,5627425726,electronics,Hispasoft,,,41.6544989,-0.8811147,2026-11-12
-Zaragoza,node,5633590622,electronics,Novomusica,,,41.6484219,-0.8775644,2026-11-12
-Zaragoza,node,5798581490,computer,Ciber Battle,,,41.6407095,-0.8961442,2026-11-12
-Zaragoza,node,5798581504,electronics,Electrónica Certe,,,41.6398475,-0.8969358,2026-11-12
-Zaragoza,node,5798581510,electronics,Viena Audio,,,41.6390108,-0.8972592,2026-11-12
-Zaragoza,node,5812837091,computer,Reparación de ordenadores Asterra,,,41.6420387,-0.8682993,2026-11-12
-Zaragoza,node,5812837116,mobile_phone,Griffaphone Smartphone,,,41.6439409,-0.8700154,2026-11-12
-Zaragoza,node,5813340160,electronics,Comercial Lapuyade,,,41.6439227,-0.8734162,2026-11-12
-Zaragoza,node,5813340170,electronics,Moroelectra,,,41.6425546,-0.8737227,2026-11-12
-Zaragoza,node,6086635387,mobile_phone,You Mobile,,,41.6535813,-0.9026237,2026-11-12
-Zaragoza,node,6270440632,computer,Digital Net,,,41.6701874,-0.8263255,2026-11-12
-Zaragoza,node,7628764043,electronics,Dawer Electrónica,,,41.6483432,-0.8994954,2026-11-12
-Zaragoza,node,7820096743,electronics,Locutorio Pamir,,,41.6302265,-0.8858853,2026-11-12
-Zaragoza,node,7820096750,computer,PC Phone Technology,,,41.6301631,-0.8859004,2026-11-12
-Zaragoza,node,7820096753,electronics,Wali Mobiles Locutorio,,,41.6311183,-0.8856275,2026-11-12
-Zaragoza,node,9226964193,electronics,Phone Fans,,,41.6597354,-0.8741258,2026-11-12
-Zaragoza,node,9821743017,electronics,Electro Fushion,,,41.6549791,-0.9020631,2026-11-12
-Zaragoza,node,10284418872,mobile_phone,,,,41.6358516,-0.8788732,2026-11-12
-Zaragoza,node,10293200657,computer,DigiZ,,,41.6326052,-0.8793026,2026-11-12
-Zaragoza,node,11981592533,mobile_phone,Mas Life,,,41.6306176,-0.885544,2026-11-12
-Zaragoza,node,11981592568,mobile_phone,Digi,,,41.63067,-0.8855311,2026-11-12
-Zaragoza,node,11981594570,computer,App Informática,,,41.6290342,-0.8855497,2026-11-12
-Zaragoza,node,11981594572,computer,UPI,,,41.6294021,-0.8858853,2026-11-12
-Zaragoza,node,12020757118,mobile_phone,Bitten Apple,,,41.6519732,-0.8835812,2026-11-12
-Zaragoza,node,12448426586,mobile_phone,Digi,,,41.6087552,-0.8850334,2026-11-12
-Zaragoza,node,12479179134,mobile_phone,Apla Global Technology,,,41.6499543,-0.8871683,2026-11-12
-Zaragoza,node,12486643753,mobile_phone,Movicel,,,41.6358097,-0.879266,2026-11-12
-Zaragoza,node,12496833295,mobile_phone,Lowi,,,41.6520094,-0.8762878,2026-11-12
-Zaragoza,node,13011452398,mobile_phone,Neksus,,,41.6431473,-0.8826342,2026-11-12
-Zaragoza,node,13064993512,computer,Informática Las Fuentes,,,41.6496619,-0.8613359,2026-11-12
-Zaragoza,node,13413194421,computer,Padilla,,,41.6517743,-0.8761982,2026-11-12
-Zaragoza,node,13453316175,electronics,Roymar,,,41.6357975,-0.8750271,2026-11-12
-Zaragoza,node,13972961734,mobile_phone,Mundo Connect,,,41.6504766,-0.9047597,2026-11-12
-Zaragoza,node,13972961744,mobile_phone,El Joker,,,41.6503734,-0.9038319,2026-11-12
-Zaragoza,node,14201628391,mobile_phone,La Tienda del Móvil,,,41.6382782,-0.897056,2026-11-12
-Zaragoza,node,14232195771,mobile_phone,CMR Mobile,,,41.6478079,-0.8931118,2026-11-12
-Malaga,node,3361908105,electronics,MediaMarkt,MediaMarkt,,36.7112139,-4.431562,2026-11-12
-Malaga,node,3581167693,electronics,BSH Interservice,,,36.7257833,-4.4688039,2026-11-12
-Malaga,node,4218595289,electronics,Capi,,,36.675976,-4.492368,2026-11-12
-Malaga,node,4423548189,electronics,Hogarium,,,36.7053648,-4.4383915,2026-11-12
-Malaga,node,4531811509,computer,Informatica La Crónica,,,36.6906051,-4.4482064,2026-11-12
-Malaga,node,4856204302,computer,Load,,,36.7281655,-4.4132527,2026-11-12
-Malaga,node,4859421889,computer,microcad,,,36.7296618,-4.4028756,2026-11-12
-Malaga,node,4865490062,computer,Andyko,,,36.731277,-4.4184696,2026-11-12
-Malaga,node,5339795934,electronics,JIM & JAM,,,36.722576,-4.431797,2026-11-12
-Malaga,node,5556186382,electronics,PC Box,,,36.7141095,-4.4234374,2026-11-12
-Malaga,node,5574303199,electronics,La Tienda de Informática del Centro,,,36.7194623,-4.4239959,2026-11-12
-Malaga,node,5688560835,computer,CSI Servicios Informática,,,36.7160454,-4.4392767,2026-11-12
-Malaga,node,5691089021,electronics,Electrónica Muñoz,,,36.7264422,-4.4268636,2026-11-12
-Malaga,node,5693245187,electronics,MediaMarkt,MediaMarkt,,36.6554813,-4.4793972,2026-11-12
-Malaga,node,7511894417,computer,Centro Informático Bindery,,,36.7355741,-4.4234185,2026-11-12
-Malaga,node,8247455858,electronics,Bazar San Juan,Bazar San Juan,,36.697112,-4.4486935,2026-11-12
-Malaga,node,8247526233,electronics,Juan Lucas,Tiendas Activa,,36.7067223,-4.4372109,2026-11-12
-Malaga,node,8247526234,electronics,Juan Lucas,Tiendas Activa,,36.7119385,-4.4287572,2026-11-12
-Malaga,node,9282711244,electronics,Rossellimac,,,36.6570099,-4.4765596,2026-11-12
-Malaga,node,9666015780,electronics,Worten,Worten,,36.6599207,-4.4818042,2026-11-12
-Malaga,node,10079791890,computer,Daniel Gontán,,,36.7215824,-4.4352485,2026-11-12
-Malaga,node,10577245959,computer,Ecoportátil,,,36.729347,-4.4191928,2026-11-12
-Malaga,node,10701494405,mobile_phone,Huawei,Huawei,,36.7165568,-4.4231677,2026-11-12
-Malaga,node,10701605107,mobile_phone,IniCgo,,,36.7204733,-4.4227585,2026-11-12
-Malaga,node,11876058114,mobile_phone,MásMóvil,,,36.686808,-4.4591774,2026-11-12
-Malaga,node,11876058120,mobile_phone,Orange,Orange,,36.6866425,-4.4587788,2026-11-12
-Malaga,node,12558801402,mobile_phone,Lina Mobile,,,36.721371,-4.4332165,2026-11-12
-Malaga,node,12646995760,computer,GomaPhone,,,36.7197097,-4.4774709,2026-11-12
-Malaga,node,13078172808,computer,Mantenimiento Informático Málaga Remoted Help,,Remoted Help,36.6861118,-4.4495885,2026-11-12
-Malaga,node,13240337519,mobile_phone,Phone House,Phone House,,36.7116043,-4.4314927,2026-11-12
-Malaga,node,13319759901,computer,Migc,,,36.7219691,-4.4326855,2026-11-12
-Malaga,node,13319760101,electronics,Bruño,,,36.7220178,-4.4324746,2026-11-12
-Malaga,node,13573311794,electronics,,,,36.6991066,-4.4463733,2026-11-12
-Malaga,node,13869399202,mobile_phone,Vodafone,,,36.6978429,-4.4479731,2026-11-12
-Malaga,node,13869405201,mobile_phone,Movistar,,,36.6969966,-4.4488995,2026-11-12
-Malaga,way,886945469,electronics,Bazar San Juan,Bazar San Juan,,36.7078675,-4.4746828,2026-11-12
-Malaga,way,886952720,electronics,Juan Lucas,Tiendas Activa,,36.7081901,-4.4762456,2026-11-12
-Bilbao,node,1112149220,electronics,Fnac,Fnac,,43.2613508,-2.9300157,2026-11-12
-Bilbao,node,1116567600,mobile_phone,Phone House,Phone House,,43.2608557,-2.9392909,2026-11-12
-Bilbao,node,2639203086,computer,CanalPC,,,43.2605535,-2.9424824,2026-11-12
-Bilbao,node,2689611797,computer,PcCoste,,,43.2588092,-2.9406791,2026-11-12
-Bilbao,node,2813304670,mobile_phone,Phone House,Phone House,,43.2587705,-2.9236264,2026-11-12
-Bilbao,node,2863349479,electronics,DIAL Don Servicio,,,43.258035,-2.9435759,2026-11-12
-Bilbao,node,3101380124,mobile_phone,Rotial Mobile,,,43.2620303,-2.9227052,2026-11-12
-Bilbao,node,3208401871,computer,Doktore PC,,,43.2703346,-2.94381,2026-11-12
-Bilbao,node,4121261619,computer,Servicio Técnico Audio 2,,,43.2659987,-2.9341461,2026-11-12
-Bilbao,node,4207838490,computer,Mac-Line,,,43.2659607,-2.9346981,2026-11-12
-Bilbao,node,4316727569,electronics,1001 Baterías Pilas,,,43.2616254,-2.9428088,2026-11-12
-Bilbao,node,4394216989,computer,"Txesmika, S.A.",,,43.2601208,-2.934685,2026-11-12
-Bilbao,node,4634342647,electronics,,,,43.2551771,-2.9183071,2026-11-12
-Bilbao,node,4634342653,electronics,SES Suministros Eléctricos,,,43.2551241,-2.9179174,2026-11-12
-Bilbao,node,4634454981,mobile_phone,Euskaltel,,,43.25401,-2.9136298,2026-11-12
-Bilbao,node,4710040321,mobile_phone,,,,43.2564636,-2.923347,2026-11-12
-Bilbao,node,4713089493,electronics,Serantes,,,43.2568544,-2.9245693,2026-11-12
-Bilbao,node,4723744934,electronics,Radio Rhin,,,43.2600445,-2.9355592,2026-11-12
-Bilbao,node,4723832132,computer,Serinfor,,,43.260275,-2.9343584,2026-11-12
-Bilbao,node,4727846388,mobile_phone,Servico Técnico Informático,,,43.2677742,-2.9324249,2026-11-12
-Bilbao,node,4734200256,mobile_phone,Telecom,,,43.2642018,-2.9348322,2026-11-12
-Bilbao,node,4736006764,mobile_phone,Móvil Shop,,,43.263822,-2.9344769,2026-11-12
-Bilbao,node,4738192586,mobile_phone,Athleticetel,,,43.2563259,-2.9299248,2026-11-12
-Bilbao,node,4738192590,mobile_phone,,,,43.2564297,-2.9301819,2026-11-12
-Bilbao,node,4738272324,mobile_phone,,,,43.2565074,-2.9303948,2026-11-12
-Bilbao,node,4738272326,mobile_phone,,,,43.2565962,-2.9306279,2026-11-12
-Bilbao,node,4738272330,mobile_phone,Locutorio Fátima,,,43.2567169,-2.9309427,2026-11-12
-Bilbao,node,4738272331,mobile_phone,Locutorio Fadel,,,43.2567908,-2.9311786,2026-11-12
-Bilbao,node,4738272334,mobile_phone,Fast Mobiles,,,43.2568949,-2.9314144,2026-11-12
-Bilbao,node,4739554427,mobile_phone,Su Tienda,,,43.2565312,-2.9296362,2026-11-12
-Bilbao,node,4739879001,mobile_phone,Bilbo Mobile,,,43.2583633,-2.9319461,2026-11-12
-Bilbao,node,4744756096,electronics,,,,43.256947,-2.932504,2026-11-12
-Bilbao,node,4745089977,mobile_phone,Accesorios de Móviles,,,43.2602403,-2.9292481,2026-11-12
-Bilbao,node,4745089982,electronics,Expert,Expert,,43.260732,-2.9292455,2026-11-12
-Bilbao,node,4745146816,electronics,Keytron,,,43.2596264,-2.9302558,2026-11-12
-Bilbao,node,4747035722,computer,Bilbocolor,,,43.2584709,-2.932993,2026-11-12
-Bilbao,node,4747097678,computer,Computek,,,43.2580748,-2.9329457,2026-11-12
-Bilbao,node,4747181496,mobile_phone,Euskaltel,,,43.257506,-2.9355414,2026-11-12
-Bilbao,node,4748967092,computer,Alltek,,,43.2596625,-2.9361466,2026-11-12
-Bilbao,node,4748967107,mobile_phone,Hola Mobi,,,43.2596636,-2.9349766,2026-11-12
-Bilbao,node,4757644642,computer,Armu,,,43.2481777,-2.9344192,2026-11-12
-Bilbao,node,4757644651,electronics,,,,43.2486961,-2.9335396,2026-11-12
-Bilbao,node,4757645639,electronics,Arguibe,,,43.2492674,-2.9336983,2026-11-12
-Bilbao,node,4757975838,electronics,Euskal Digit@l,,,43.2605141,-2.9376462,2026-11-12
-Bilbao,node,4758008146,electronics,K-Tuin,,,43.2610582,-2.9388139,2026-11-12
-Bilbao,node,4758008147,mobile_phone,,,La Casa de las Carcasas,43.2609508,-2.9390828,2026-11-12
-Bilbao,node,4759659611,mobile_phone,CellTell,,,43.2614636,-2.9420797,2026-11-12
-Bilbao,node,4761544244,mobile_phone,Zonabi Móvil,,,43.2623661,-2.9416538,2026-11-12
-Bilbao,node,4761544262,mobile_phone,Euskaltel,,,43.2622053,-2.940022,2026-11-12
-Bilbao,node,5702888915,electronics,Suministros Bravo,,,43.2525682,-2.9382003,2026-11-12
-Bilbao,node,6832417177,mobile_phone,Vodafone,Vodafone,,43.2539292,-2.9123159,2026-11-12
-Bilbao,node,6869768385,computer,Zorrotza,,,43.2762478,-2.9720795,2026-11-12
-Bilbao,node,7000736062,electronics,CeX,CeX,,43.2581291,-2.9223847,2026-11-12
-Bilbao,node,7201448833,computer,Microson,,,43.2664869,-2.9205646,2026-11-12
-Bilbao,node,7922215360,electronics,MediaMarkt,MediaMarkt,,43.2678069,-2.941049,2026-11-12
-Bilbao,node,11218145137,mobile_phone,MÁSlife,,,43.2538678,-2.9158122,2026-11-12
-Bilbao,node,12759272888,mobile_phone,San Mamés Móviles,,,43.261166,-2.9484237,2026-11-12
-Bilbao,node,12759277368,mobile_phone,Movil Movil,,,43.2607599,-2.9486128,2026-11-12
-Bilbao,node,12884471001,electronics,Bosch,Bosch,,43.2638483,-2.9465933,2026-11-12
-Bilbao,node,12985679267,mobile_phone,Móvil Club,,,43.2650887,-2.9166824,2026-11-12
-Bilbao,node,13546047801,computer,INFOPLANET Tienda de Informática - Reparación de ordenadores - Papelería Bilbao,,,43.2739904,-2.9589795,2026-11-12
-Bilbao,node,13572761401,computer,Compudata,,,43.2626769,-2.9448815,2026-11-12
-Girona,node,1280510741,electronics,Electro Stocks,,,41.963016,2.80242,2026-11-12
-Girona,node,1421112051,computer,,,Pcbox,41.9692852,2.8178129,2026-11-12
-Girona,node,1427750051,computer,iMàtica - Serveis Informatics,,,41.9713339,2.8179052,2026-11-12
-Girona,node,1458489977,electronics,,,,41.994664,2.819743,2026-11-12
-Girona,node,1765360518,mobile_phone,Banco Santander,,Orange,41.9825191,2.8196988,2026-11-12
-Girona,node,1765360520,mobile_phone,Tecno Gallery,,The Phone House,41.9827138,2.8200154,2026-11-12
-Girona,node,1765360521,mobile_phone,,,Yoigo,41.9828282,2.8200068,2026-11-12
-Girona,node,2573419965,electronics,Parament,,,41.980084,2.8138275,2026-11-12
-Girona,node,2627344525,mobile_phone,,,Yoigo,41.9806612,2.8147443,2026-11-12
-Girona,node,2793289694,electronics,Comercial Muntaner,,,41.9768716,2.8109645,2026-11-12
-Girona,node,2821364593,electronics,Catar,,,41.9737816,2.8139378,2026-11-12
-Girona,node,2833973448,computer,APP Informática,,,41.982286,2.8158567,2026-11-12
-Girona,node,2833973457,mobile_phone,Luck Telecom,,,41.9806958,2.8148163,2026-11-12
-Girona,node,2834691476,computer,Factoria 81,,,41.9825418,2.8169894,2026-11-12
-Girona,node,2835350162,electronics,Clave,,,41.9839475,2.8177854,2026-11-12
-Girona,node,2835365798,electronics,Electroahorro,,,41.9831661,2.817966,2026-11-12
-Girona,node,2999383340,electronics,Electrodomestics Angelats,,,41.9842389,2.8160935,2026-11-12
-Girona,node,3010239827,electronics,Tien 21,,Tien21,41.9783882,2.8097359,2026-11-12
-Girona,node,3012617940,electronics,ST Mares,,,41.9777101,2.8092107,2026-11-12
-Girona,node,3014959048,mobile_phone,Girona mobils,,,41.9765721,2.8089385,2026-11-12
-Girona,node,3034767608,computer,Aplieuropa,,,41.9765858,2.8061206,2026-11-12
-Girona,node,3307457544,electronics,Bazar Andorra,,,41.9784086,2.8216736,2026-11-12
-Girona,node,3308032642,mobile_phone,,,Movistar,41.983638,2.8182672,2026-11-12
-Girona,node,3364246785,mobile_phone,,,,41.9853638,2.8219875,2026-11-12
-Girona,node,3388071448,electronics,Bosch,,,41.9852918,2.8232458,2026-11-12
-Girona,node,3388071555,mobile_phone,Tecnogallery,,,41.9826877,2.8203608,2026-11-12
-Girona,node,3425099352,computer,.EHF,,,41.9811166,2.8182401,2026-11-12
-Girona,node,3425099358,electronics,Electro Ahorro,,,41.9817883,2.817999,2026-11-12
-Girona,node,3508263984,computer,Tot digital,,,41.9753538,2.8186541,2026-11-12
-Girona,node,3508263992,computer,APP Informàtica,,,41.975956,2.8191021,2026-11-12
-Girona,node,3508264093,computer,,,Beep,41.9762824,2.8180104,2026-11-12
-Girona,node,3508630092,mobile_phone,Cheng,,,41.9794331,2.8183141,2026-11-12
-Girona,node,3508630322,mobile_phone,,,Movistar,41.9811948,2.8200767,2026-11-12
-Girona,node,3635028323,computer,Copycat,,,41.9694395,2.8099852,2026-11-12
-Girona,node,3656260075,electronics,Zeners,,,41.9716475,2.8162985,2026-11-12
-Girona,node,3667428800,electronics,Electrodomèstics Casellas,,,41.9760053,2.8035985,2026-11-12
-Girona,node,3679063231,computer,Microgestio,,,41.9798079,2.8206004,2026-11-12
-Girona,node,3679063292,electronics,Sony,,,41.9796327,2.8209411,2026-11-12
-Girona,node,3687238404,electronics,Game,,,41.9799342,2.820019,2026-11-12
-Girona,node,3687238794,mobile_phone,Pop,,,41.9776097,2.8204483,2026-11-12
-Girona,node,3687238808,electronics,Xtreme games,,,41.979117,2.8181884,2026-11-12
-Girona,node,3687238945,mobile_phone,Skytec,,,41.9768471,2.8195033,2026-11-12
-Girona,node,3687238958,electronics,Can Calvet,,Calvet,41.9780128,2.8214089,2026-11-12
-Girona,node,3784624860,computer,Consum i serveis,,,41.9949038,2.8021446,2026-11-12
-Girona,node,3918038884,mobile_phone,Mobil,,,41.9779108,2.8215897,2026-11-12
-Girona,node,3918053552,computer,Linia 67,,,41.9772365,2.8221948,2026-11-12
-Girona,node,4335087243,electronics,Electrolot,,,41.9701703,2.814551,2026-11-12
-Girona,node,4335087245,computer,Girtic,,,41.9695374,2.8168153,2026-11-12
-Girona,node,4737138223,electronics,Plana Fàbrega,,,41.9768856,2.8034833,2026-11-12
-Girona,node,5001970843,electronics,BTS electronica,,,41.9701029,2.8101131,2026-11-12
-Girona,node,6004490707,computer,RSYSTEMS,,,41.9683841,2.8235494,2026-11-12
-Girona,node,6775041286,computer,App,,,41.9724569,2.8167102,2026-11-12
-Girona,node,6802551285,electronics,Nord Figueres Girona,,,41.9721428,2.8229733,2026-11-12
-Girona,node,7302537821,computer,PH Systems S.L,,,41.9759028,2.826108,2026-11-12
-Girona,node,9066399268,computer,Tecnigi360º,,,41.9687783,2.8236754,2026-11-12
-Girona,node,9686341397,mobile_phone,Mobi Mòbils,,,41.9849414,2.824542,2026-11-12
-Girona,node,9686449203,mobile_phone,popmobile,,,41.9840496,2.8240643,2026-11-12
-Girona,node,10694368237,electronics,Ginser,,,41.9785444,2.8115578,2026-11-12
-Girona,node,12378766334,mobile_phone,Tech Mòbil,,,41.9732226,2.8204935,2026-11-12
-Girona,node,12397810583,mobile_phone,Link,,,41.974489,2.8032453,2026-11-12
-Girona,node,12588493525,mobile_phone,Siphone,,,41.9767345,2.8209278,2026-11-12
-Girona,way,63935829,electronics,MediaMarkt,MediaMarkt,,41.9585269,2.8113835,2026-11-12
-Girona,way,63937545,electronics,Electronica BF,,,41.9608469,2.8031197,2026-11-12
-Tarragona,node,1327011308,computer,PCBox,,,41.1141622,1.2430311,2026-11-12
-Tarragona,node,4878807122,electronics,Servei autoritzat,,,41.1233421,1.2461124,2026-11-12
-Tarragona,node,5781621751,computer,Marketpc,,,41.115769,1.2426088,2026-11-12
-Tarragona,node,6765939883,electronics,Comercial Electrónica L. P.,,,41.1213494,1.2485853,2026-11-12
-Tarragona,node,8514644952,computer,Beep Box,,,41.1206587,1.2520793,2026-11-12
-Tarragona,node,9853364472,mobile_phone,Seu Telefonica,,,41.1178565,1.2457739,2026-11-12
-Tarragona,node,9853364473,computer,Centelles Informàtica,,,41.1180392,1.2456881,2026-11-12
-Tarragona,node,9853425490,mobile_phone,Star Moviles,,,41.1166067,1.2463409,2026-11-12
-Tarragona,node,10126540615,mobile_phone,Nova Moviles,,,41.1188081,1.246452,2026-11-12
-Tarragona,node,10183933937,mobile_phone,movistar,Movistar,,41.1174951,1.2492063,2026-11-12
-Tarragona,node,10224091717,electronics,Domèstic Tarraco,,,41.1165607,1.2468382,2026-11-12
-Tarragona,node,10224091725,mobile_phone,Xingda Mobil,,,41.1168079,1.2483614,2026-11-12
-Tarragona,node,10224091727,electronics,euronics,,,41.116711,1.2473529,2026-11-12
-Tarragona,node,10707783783,mobile_phone,Movistar,Movistar,,41.1280029,1.2063445,2026-11-12
-Tarragona,node,10707807127,mobile_phone,Yoigo,Yoigo,,41.127594,1.2072076,2026-11-12
-Tarragona,node,10707807155,mobile_phone,Orange,Orange,,41.1280499,1.2062435,2026-11-12
-Tarragona,node,10992301885,mobile_phone,Mobil Infor,,,41.1164697,1.2484395,2026-11-12
-Tarragona,node,12055606140,electronics,Ferraté,,,41.1160159,1.2407366,2026-11-12
-Tarragona,node,12107996083,mobile_phone,My Phone,,,41.1167978,1.2389012,2026-11-12
-Tarragona,node,12168508733,computer,PC Repair,,,41.1153898,1.247193,2026-11-12
-Tarragona,node,12168508737,computer,Beep Box,Beep,,41.1158538,1.246975,2026-11-12
-Tarragona,node,12214658618,mobile_phone,Maher,,,41.1151479,1.2435632,2026-11-12
-Tarragona,node,12214658646,computer,Mr Computer,,,41.1153872,1.2431261,2026-11-12
-Tarragona,node,12297404734,mobile_phone,maher,,,41.1146918,1.2475012,2026-11-12
-Tarragona,node,12335272041,mobile_phone,Mòn Locutori,,,41.1151515,1.2479337,2026-11-12
-Tarragona,node,12348642236,electronics,Mercor Tarragona,,,41.1157521,1.2457467,2026-11-12
-Tarragona,node,12386564559,electronics,Bosch,Bosch,,41.1161624,1.2598907,2026-11-12
-Tarragona,node,12386727871,mobile_phone,Top Mobil,,,41.1185277,1.2478701,2026-11-12
-Tarragona,node,12533938174,mobile_phone,Pak,,,41.1201549,1.2522765,2026-11-12
-Tarragona,node,12557203037,computer,wellcomm,,,41.1197709,1.2497221,2026-11-12
-Tarragona,node,12798343185,mobile_phone,Phonesat,,,41.1199687,1.2509014,2026-11-12
-Tarragona,node,12798343188,electronics,Piñol,,,41.1206242,1.2512695,2026-11-12
-Tarragona,node,13205235557,mobile_phone,tecphone,,,41.1223802,1.2437324,2026-11-12
-Tarragona,node,13248168310,mobile_phone,Multi Tech Info,,,41.1179795,1.2513923,2026-11-12
-Tarragona,node,13336799617,mobile_phone,Jasstech Mobilephones Wholesale,,,41.1141956,1.2468252,2026-11-12
-Tarragona,node,13507381445,electronics,Sakamo Compraventa,,,41.1152833,1.245547,2026-11-12
-Tarragona,node,13507381450,electronics,Electro Arena,,,41.1153261,1.2455535,2026-11-12
-Tarragona,node,13507381451,mobile_phone,maher,,,41.1158276,1.2455141,2026-11-12
-Tarragona,node,13719172702,mobile_phone,Phone Center,,,41.1159177,1.2446118,2026-11-12
-Tarragona,node,13719172710,mobile_phone,ipoint,,,41.1164164,1.2462378,2026-11-12
-Tarragona,node,14042010349,mobile_phone,Momin Locutori,,,41.1150722,1.2499086,2026-11-12
-Tarragona,node,14087320361,mobile_phone,Red Flash,,,41.1182013,1.2573005,2026-11-12
-Tarragona,way,78353780,electronics,MediaMarkt,MediaMarkt,,41.1325423,1.2024522,2026-11-12
-Lleida,node,3700785795,mobile_phone,Mobile Cottage,,,41.6120462,0.6299526,2026-11-12
-Lleida,node,3965867964,electronics,Servei Tècnic Navas,,,41.6121955,0.6284205,2026-11-12
-Lleida,node,4596816190,computer,Pc Clot,,,41.623267,0.6213339,2026-11-12
-Lleida,node,4597227789,electronics,Tot movil,,,41.6162478,0.6214913,2026-11-12
-Lleida,node,4597228089,mobile_phone,,,,41.6242665,0.6216754,2026-11-12
-Lleida,node,4602995596,computer,Micro-Exe,,,41.6225516,0.6169413,2026-11-12
-Lleida,node,4605481095,electronics,Satelec Electro,,,41.6241389,0.6221131,2026-11-12
-Lleida,node,4622811391,mobile_phone,Digi Store,,,41.6200242,0.6285846,2026-11-12
-Lleida,node,4707101294,electronics,Seguí Clima,,,41.619431,0.6770601,2026-11-12
-Lleida,node,4707104690,electronics,Elektrik Catalunya,,,41.614665,0.6640887,2026-11-12
-Lleida,node,4707104901,electronics,PIE Electricitat,,,41.6182445,0.6795496,2026-11-12
-Lleida,node,4727738197,electronics,Watson,,,41.6206478,0.6130372,2026-11-12
-Lleida,node,4752449225,computer,Simm solucions tecnologiques,,,41.6107404,0.6330679,2026-11-12
-Lleida,node,5189031339,computer,PC Box,,,41.6120439,0.6291166,2026-11-12
-Lleida,node,5459318904,computer,Ofisat,,,41.6213736,0.6191879,2026-11-12
-Lleida,node,6163158876,mobile_phone,,,,41.6123359,0.6190999,2026-11-12
-Lleida,node,9930381478,electronics,K-tuin Apple Premium Reseller,,,41.6159021,0.6270439,2026-11-12
-Lleida,node,9930381486,mobile_phone,La casa de las carcassas,,,41.6141603,0.6257001,2026-11-12
-Lleida,node,9932091968,electronics,Chema Gallery | Lleida,,,41.6136992,0.6251453,2026-11-12
-Lleida,node,10044905759,mobile_phone,Phone Center,,,41.6240027,0.622832,2026-11-12
-Lleida,node,10201897254,computer,Lleida Digital,,,41.6027274,0.6408794,2026-11-12
-Lleida,node,10203645598,computer,Cover Informàtica,,,41.6051022,0.6387115,2026-11-12
-Lleida,node,10203645606,electronics,Vilcar,,,41.604907,0.6386078,2026-11-12
-Lleida,node,10203692678,electronics,A+D,,,41.6031662,0.6395261,2026-11-12
-Lleida,node,10226026514,electronics,ElectroNord,,,41.6184411,0.6330361,2026-11-12
-Lleida,node,10226088921,mobile_phone,Lycamobile,,,41.6185418,0.6328286,2026-11-12
-Lleida,node,10226088937,electronics,Emac,,,41.6171096,0.6332992,2026-11-12
-Lleida,node,10241160277,mobile_phone,Neksus,Yoigo;MasMóvil;Jazztel;Pepephone,,41.6169951,0.6129887,2026-11-12
-Lleida,node,11643220707,computer,INGROUP,,,41.6124522,0.6627407,2026-11-12
-Lleida,node,12717069830,mobile_phone,Doctor Mobile,,,41.61181,0.6216393,2026-11-12
-Lleida,node,12717113176,electronics,Home Gallery,,,41.6122077,0.6221404,2026-11-12
-Lleida,node,13041599139,mobile_phone,Lleida mòbil,,,41.6205339,0.6296202,2026-11-12
-Lleida,node,13143497920,mobile_phone,Bonaire mobilink,,,41.6180867,0.619964,2026-11-12
-Lleida,node,13143497922,mobile_phone,B10 Informática,,,41.6174325,0.620296,2026-11-12
-Lleida,node,13194184396,mobile_phone,Arena mobil,,,41.6122731,0.6236441,2026-11-12
-Lleida,node,13194281549,mobile_phone,Jazztel,,,41.616289,0.6283877,2026-11-12
-Lleida,node,13195369045,mobile_phone,iServitech,,,41.6159224,0.6206106,2026-11-12
-Lleida,node,13254622617,electronics,Euronics,Euronics,,41.6172177,0.617433,2026-11-12
-Lleida,node,13302097350,mobile_phone,Ningmao Mòbils,,,41.6203636,0.6283452,2026-11-12
-Lleida,node,13339007406,mobile_phone,Mòbil mania,,,41.6210143,0.6278805,2026-11-12
-Lleida,node,13418550501,electronics,Calbet Electrodomèstics,,,41.6214174,0.6273577,2026-11-12
-Lleida,node,13429010581,mobile_phone,Rayan Móbil,,,41.6131494,0.6242153,2026-11-12
-Lleida,node,13429037780,mobile_phone,Dr. Mobile,,,41.6130317,0.6241187,2026-11-12
-Lleida,node,13434492622,mobile_phone,Sadat Locutorio,,,41.6177494,0.6204433,2026-11-12
-Lleida,node,13504795034,mobile_phone,smart cellular,,,41.6228531,0.6228013,2026-11-12
-Lleida,node,14103583747,mobile_phone,Tecno mobile,,,41.6175811,0.6181536,2026-11-12
-Lleida,node,14183317194,mobile_phone,Sadat mobile,,,41.6236595,0.6232488,2026-11-12
-Lleida,way,288445034,electronics,MediaMarkt,MediaMarkt,,41.6067881,0.6325447,2026-11-12
+Barcelona,node,672398192,electronics,Telefónica,,,41.3839925,2.170792,2026-11-13
+Barcelona,node,1378087287,electronics,Fnac,Fnac,,41.3900974,2.1363247,2026-11-13
+Barcelona,node,1429934865,computer,Traxtore,,,41.3834144,2.1625429,2026-11-13
+Barcelona,node,1458910236,electronics,CeX,CeX,,41.4300765,2.1815374,2026-11-13
+Barcelona,node,1844121283,mobile_phone,Om Sai Ram Telefonia,,,41.405324,2.1758399,2026-11-13
+Barcelona,node,1845431575,mobile_phone,Mobile Shop,,,41.4060063,2.1763601,2026-11-13
+Barcelona,node,1960375510,electronics,Miró,,,41.3956105,2.1690258,2026-11-13
+Barcelona,node,2275047338,computer,Green Megastore,,,41.3832028,2.1627895,2026-11-13
+Barcelona,node,2275047339,computer,P.C. Green,,,41.3829989,2.1625014,2026-11-13
+Barcelona,node,2275100915,electronics,MediaMarkt,MediaMarkt,,41.3822657,2.1632822,2026-11-13
+Barcelona,node,2603612465,electronics,Apple Store,Apple Store,Apple,41.3879538,2.169488,2026-11-13
+Barcelona,node,2624679767,computer,Diagonal Informàtica,,,41.3987204,2.1693331,2026-11-13
+Barcelona,node,2892037116,mobile_phone,SE Mòbil,,,41.3796952,2.1708179,2026-11-13
+Barcelona,node,2918930735,computer,Life Informática,,,41.403623,2.2026665,2026-11-13
+Barcelona,node,2967597497,computer,BMS Mobile,,,41.3836156,2.1490371,2026-11-13
+Barcelona,node,2967993574,mobile_phone,iPro,,,41.3827781,2.1713625,2026-11-13
+Barcelona,node,3106805629,mobile_phone,Shani Mòbils,,,41.3761537,2.16618,2026-11-13
+Barcelona,node,3914568530,electronics,Euronics,Euronics,,41.4021421,2.1639125,2026-11-13
+Barcelona,node,3997362918,mobile_phone,Fahad Móviles,,,41.4025798,2.1629783,2026-11-13
+Barcelona,node,4109446565,mobile_phone,India Mobil,,,41.4135661,2.201333,2026-11-13
+Barcelona,node,4231795591,mobile_phone,Tuanity,,,41.3505585,2.1409574,2026-11-13
+Barcelona,node,4251798191,computer,Grup Tècnic Informàtic Artech,,,41.419604,2.1801911,2026-11-13
+Barcelona,node,4423331189,electronics,Comercial Electronica Horta,,,41.4283615,2.1593768,2026-11-13
+Barcelona,node,4523300289,electronics,Cex,,,41.3980738,2.1571435,2026-11-13
+Barcelona,node,4559842490,electronics,Ronda Electrodomèstics,,,41.3810429,2.1636386,2026-11-13
+Barcelona,node,4643743349,electronics,MediaMarkt,MediaMarkt,,41.3872831,2.1719647,2026-11-13
+Barcelona,node,4659788093,mobile_phone,Telefonia Reparació,,,41.3774983,2.1642908,2026-11-13
+Barcelona,node,4659811589,mobile_phone,,,,41.377536,2.1649479,2026-11-13
+Barcelona,node,4661082491,mobile_phone,Mi Mobil,,,41.3757125,2.1667535,2026-11-13
+Barcelona,node,4675157089,electronics,MediaMarkt,MediaMarkt,,41.3927833,2.1457456,2026-11-13
+Barcelona,node,4715211866,electronics,Fnac,Fnac,,41.4054305,2.1906231,2026-11-13
+Barcelona,node,4727205189,mobile_phone,Fahad Móviles,,,41.4025839,2.1629656,2026-11-13
+Barcelona,node,4727953592,computer,AbsolutPC,,,41.4104186,2.1828574,2026-11-13
+Barcelona,node,4728122291,computer,Beep,,,41.4126772,2.1810116,2026-11-13
+Barcelona,node,4762859834,computer,NeoByte,,,41.3832354,2.1623479,2026-11-13
+Barcelona,node,4762864130,mobile_phone,Planet Mobils,,,41.4295444,2.1827375,2026-11-13
+Barcelona,node,4811094214,mobile_phone,Malik Mobile Shop,,,41.4095674,2.1480944,2026-11-13
+Barcelona,node,4823518321,mobile_phone,,,,41.4182589,2.180299,2026-11-13
+Barcelona,node,4860087532,mobile_phone,,,,41.4154144,2.1817747,2026-11-13
+Barcelona,node,4940190161,electronics,Joaquim Laborda - Reparación de Cámaras,,,41.3817164,2.1476929,2026-11-13
+Barcelona,node,4941330421,mobile_phone,,,,41.3901498,2.1507139,2026-11-13
+Barcelona,node,5209287522,mobile_phone,Discount,,,41.399761,2.1686389,2026-11-13
+Barcelona,node,5271863086,mobile_phone,Barcelona Móviles,,,41.4335502,2.1837327,2026-11-13
+Barcelona,node,5271863091,computer,3X5 Informàtica,,,41.4336306,2.1837675,2026-11-13
+Barcelona,node,5322028936,computer,Go_ Informàtica,,,41.3974647,2.1655295,2026-11-13
+Barcelona,node,5335761922,electronics,Rhythm control,,,41.3756126,2.1656009,2026-11-13
+Barcelona,node,5335761923,electronics,Vinylarium,,,41.375551,2.1651978,2026-11-13
+Barcelona,node,5562146026,electronics,Monsó i Benet,,,41.3865111,2.1599415,2026-11-13
+Barcelona,node,5567074076,mobile_phone,4g Movil,,,41.3796345,2.1547462,2026-11-13
+Barcelona,node,5617055921,electronics,Pulgar i Edo,,,41.3844417,2.1602896,2026-11-13
+Barcelona,node,5820816656,mobile_phone,,,,41.4361612,2.1908114,2026-11-13
+Barcelona,node,5834511038,electronics,Apple Store,Apple Store,,41.4396495,2.1986756,2026-11-13
+Barcelona,node,5834511041,electronics,MediaMarkt,MediaMarkt,,41.4395369,2.1990887,2026-11-13
+Barcelona,node,5834511343,computer,Fnac,Fnac,,41.4403674,2.1989277,2026-11-13
+Barcelona,node,5848762279,electronics,Fnac,Fnac,,41.3764151,2.1491644,2026-11-13
+Barcelona,node,5851809961,mobile_phone,Samsung,,,41.4415583,2.1975803,2026-11-13
+Barcelona,node,5958736285,computer,Mr.Usby,,,41.4123925,2.1905095,2026-11-13
+Barcelona,node,6061422546,mobile_phone,Uniq Phone House,,,41.3818051,2.1759045,2026-11-13
+Barcelona,node,6166459744,computer,Cainfor,,Cainfor S.L.,41.4093947,2.1725482,2026-11-13
+Barcelona,node,6194576550,electronics,Sat Eixample,,,41.3877142,2.1441916,2026-11-13
+Barcelona,node,6196316420,mobile_phone,Tech Lab,,,41.3902637,2.1462511,2026-11-13
+Barcelona,node,6260786090,mobile_phone,vodaphone,,,41.3753543,2.1324736,2026-11-13
+Barcelona,node,6321544166,mobile_phone,Topas Informàtica,,,41.3756512,2.1285874,2026-11-13
+Barcelona,node,6331343652,computer,Zerobyte Informàtica,,,41.3988606,2.1644991,2026-11-13
+Barcelona,node,6370103285,computer,iRepairs,,,41.3987887,2.1434713,2026-11-13
+Barcelona,node,6429380406,mobile_phone,ElectrOutlet,,,41.3593402,2.1418509,2026-11-13
+Barcelona,node,6434446385,mobile_phone,Moviz,,,41.363672,2.1368252,2026-11-13
+Barcelona,node,6450697895,mobile_phone,GSM Red.Elèctric,,,41.3586201,2.1408792,2026-11-13
+Barcelona,node,6477368258,mobile_phone,BS Tecnología,,,41.4026328,2.1694903,2026-11-13
+Barcelona,node,6742563018,computer,repararportatil.com,,,41.3835295,2.140695,2026-11-13
+Barcelona,node,6815581285,mobile_phone,Catmobil,,,41.3980755,2.1528436,2026-11-13
+Barcelona,node,6871568134,computer,Paciència Informàtica,,,41.381285,2.1359971,2026-11-13
+Barcelona,node,7017780935,computer,Informàtica Nei,,,41.3836229,2.1541204,2026-11-13
+Barcelona,node,7084720621,electronics,TravelWifi,,,41.3872,2.16584,2026-11-13
+Barcelona,node,7084907054,mobile_phone,Orange,Orange,,41.3933759,2.1457379,2026-11-13
+Barcelona,node,7462950261,computer,GESTEC,,,41.4245716,2.2022688,2026-11-13
+Barcelona,node,7555814341,electronics,Instaser,,,41.4070681,2.1931128,2026-11-13
+Barcelona,node,7556742389,electronics,tresdenou. Impresio,,,41.4013278,2.2004317,2026-11-13
+Barcelona,node,7556742591,computer,Tuink cartuxos,,,41.401496,2.2002687,2026-11-13
+Barcelona,node,7563950445,mobile_phone,Liberty Mòbils,,,41.4015952,2.2008737,2026-11-13
+Barcelona,node,7615982800,mobile_phone,Mobil Addict,,,41.4001139,2.1983279,2026-11-13
+Barcelona,node,7705311169,mobile_phone,Badal mobils,,,41.3754167,2.1300227,2026-11-13
+Barcelona,node,7714282662,electronics,Conexiones Condal,,,41.3766171,2.1261044,2026-11-13
+Barcelona,node,7714319961,computer,Camaher,,,41.3763989,2.1252068,2026-11-13
+Barcelona,node,7736420796,computer,Informàtica Les Corts,,,41.3767815,2.1223963,2026-11-13
+Barcelona,node,7736420816,mobile_phone,Hb mòbil,,,41.3757825,2.1222902,2026-11-13
+Barcelona,node,7890494899,computer,LIFE informàtica,,,41.3833492,2.1624799,2026-11-13
+Barcelona,node,7996801485,computer,El planeta del PC,,,41.3972834,2.1764508,2026-11-13
+Barcelona,node,8062015290,mobile_phone,Reparem,,,41.4035872,2.202711,2026-11-13
+Barcelona,node,8062016188,mobile_phone,Metro mòbils,,,41.4035521,2.2027892,2026-11-13
+Barcelona,node,8450285973,mobile_phone,Gràcia Mòbils,,,41.4012397,2.1585392,2026-11-13
+Barcelona,node,8493682539,mobile_phone,,,,41.4044703,2.1742813,2026-11-13
+Barcelona,node,8520874318,mobile_phone,BitHomeStore,,,41.3980929,2.1528691,2026-11-13
+Barcelona,node,8544879060,mobile_phone,TuFone,,,41.4390038,2.1665605,2026-11-13
+Barcelona,node,8625138758,mobile_phone,Spazio Phone,,,41.3960124,2.1540168,2026-11-13
+Barcelona,node,8706732483,mobile_phone,,,,41.4238479,2.1550455,2026-11-13
+Barcelona,node,8709742441,mobile_phone,,,,41.4248812,2.155666,2026-11-13
+Barcelona,node,8709863483,mobile_phone,Mobile House,,,41.4273189,2.1564056,2026-11-13
+Barcelona,node,8831398619,mobile_phone,GràciaPhones,,,41.399259,2.1532617,2026-11-13
+Barcelona,node,8928341774,mobile_phone,Phone shop,,,41.3867456,2.1619261,2026-11-13
+Barcelona,node,9131367185,mobile_phone,Wings Mobile,,,41.3971067,2.1479667,2026-11-13
+Barcelona,node,9144409546,electronics,Clínica del Electrodoméstico,,,41.3944783,2.1560065,2026-11-13
+Barcelona,node,9166699797,mobile_phone,Parlem Telecom (Sant Andreu),,Parlem Telecom,41.4359507,2.1898238,2026-11-13
+Barcelona,node,9237881396,electronics,Calbet,,,41.3852419,2.1621857,2026-11-13
+Barcelona,node,9240224979,electronics,Milar,Milar,,41.3868135,2.1782565,2026-11-13
+Barcelona,node,9282790514,electronics,Euronics City,Euronics,,41.3830125,2.1638833,2026-11-13
+Barcelona,node,9282816430,mobile_phone,Phone House,Phone House,,41.3821423,2.1637681,2026-11-13
+Barcelona,node,9295573914,electronics,Miele,Miele,,41.397439,2.154517,2026-11-13
+Barcelona,node,9554535816,computer,Laby. Recuperación de datos,,,41.4024559,2.1816226,2026-11-13
+Barcelona,node,9713364855,electronics,Còsmik,,,41.3859812,2.1488301,2026-11-13
+Barcelona,node,9734369318,electronics,Osaka Solutions SL,,,41.4251115,2.1742199,2026-11-13
+Barcelona,node,9774784867,mobile_phone,Mobile+Technology,,,41.3608678,2.1392602,2026-11-13
+Barcelona,node,9782534417,computer,Bcnserveis - Diseñó web y marketing online,,,41.3708239,2.1425679,2026-11-13
+Barcelona,node,10249788109,mobile_phone,Electro Sant Pau,,,41.3770272,2.1698388,2026-11-13
+Barcelona,node,10249798309,mobile_phone,Nadeem Movils,,,41.3765273,2.1692591,2026-11-13
+Barcelona,node,10287674163,mobile_phone,The Phone Shop,,,41.3852138,2.1713235,2026-11-13
+Barcelona,node,10678180279,electronics,Pocket Power,,,41.3819706,2.1698361,2026-11-13
+Barcelona,node,10751516256,computer,Micro PC,,,41.3951944,2.1913406,2026-11-13
+Barcelona,node,10763842242,computer,Mime Tech Solutions,,,41.4048319,2.1551032,2026-11-13
+Barcelona,node,10772906091,mobile_phone,4G Mòbils,,,41.4027982,2.1600647,2026-11-13
+Barcelona,node,10780360517,mobile_phone,Zain Mobils,,,41.3737712,2.1689439,2026-11-13
+Barcelona,node,10914344405,electronics,Osaka Solutions,,,41.3828042,2.1312823,2026-11-13
+Barcelona,node,11020963036,mobile_phone,HB Movil,,,41.3788081,2.1536033,2026-11-13
+Barcelona,node,11020963050,mobile_phone,Alvis Mobile,,,41.3761238,2.1511048,2026-11-13
+Barcelona,node,11020963085,mobile_phone,Mobile House,,,41.3702721,2.1433646,2026-11-13
+Barcelona,node,11028063349,electronics,Bbc,,,41.4134651,2.1608037,2026-11-13
+Barcelona,node,11028575878,mobile_phone,Bcn Mobils i Multimedia,,,41.4117469,2.1406227,2026-11-13
+Barcelona,node,11032146730,mobile_phone,Mobile care,,,41.3849649,2.1737044,2026-11-13
+Barcelona,node,11033020060,electronics,CeX,CeX,,41.3753437,2.1442059,2026-11-13
+Barcelona,node,11033039351,computer,Electrorenover,,,41.3753031,2.1466335,2026-11-13
+Barcelona,node,11042870471,mobile_phone,Gadgets i Telefonía,,,41.400868,2.1739767,2026-11-13
+Barcelona,node,11044622137,mobile_phone,España Mòbils,,,41.4012675,2.1586118,2026-11-13
+Barcelona,node,11047912699,mobile_phone,Tesco Móbils,,,41.3998799,2.1703914,2026-11-13
+Barcelona,node,11047920633,electronics,Calbet,,,41.3867364,2.1529646,2026-11-13
+Barcelona,node,11048677991,electronics,Garmin,,,41.3896336,2.1350511,2026-11-13
+Barcelona,node,11048691118,mobile_phone,Casa Móvil,,,41.4353168,2.1807673,2026-11-13
+Barcelona,node,11103180500,mobile_phone,Mi Market Tecnologías,,,41.3753369,2.1446097,2026-11-13
+Barcelona,node,11103230810,electronics,Onkar Gallery,,,41.3753417,2.1443243,2026-11-13
+Barcelona,node,11150187993,electronics,miró,,,41.3990834,2.1561868,2026-11-13
+Barcelona,node,11150228660,mobile_phone,Top Mòbil,,,41.3995333,2.1556713,2026-11-13
+Barcelona,node,11161636077,electronics,Milar,,,41.4011894,2.157493,2026-11-13
+Barcelona,node,11265524697,electronics,MediaMarkt,MediaMarkt,,41.4098454,2.2156631,2026-11-13
+Barcelona,node,11265524709,mobile_phone,My Phone,,,41.410261,2.2174675,2026-11-13
+Barcelona,node,11265524724,electronics,Hubside.Store,,,41.4096987,2.2162619,2026-11-13
+Barcelona,node,11294405765,electronics,Electro MRE,,,41.4009716,2.1583595,2026-11-13
+Barcelona,node,11327670416,electronics,PC Componentes,,,41.3876271,2.171846,2026-11-13
+Barcelona,node,11327870756,computer,GD suministros informáticos,,,41.3853023,2.146944,2026-11-13
+Barcelona,node,11518739615,mobile_phone,Mi Mobil,,,41.3767336,2.1219827,2026-11-13
+Barcelona,node,11518739617,mobile_phone,,,,41.3767782,2.121887,2026-11-13
+Barcelona,node,11534625376,electronics,Charles,,,41.3797718,2.1582274,2026-11-13
+Barcelona,node,11630647452,electronics,Milar,Milar,,41.4085069,2.1641427,2026-11-13
+Barcelona,node,11693541697,electronics,Vimagson S.L.,,,41.4021477,2.1572581,2026-11-13
+Barcelona,node,11741923769,mobile_phone,MobileMarkt,,,41.4025424,2.1527394,2026-11-13
+Barcelona,node,11755847799,mobile_phone,Bol Movils,,,41.3888243,2.1953733,2026-11-13
+Barcelona,node,11876564869,mobile_phone,Dani mobils,,,41.4030358,2.1984023,2026-11-13
+Barcelona,node,11930201779,mobile_phone,mobile shop,,,41.3843443,2.1701742,2026-11-13
+Barcelona,node,11954620819,electronics,Tecno Mòbil,,,41.4071628,2.1669248,2026-11-13
+Barcelona,node,12038108242,mobile_phone,TecnoCell,,,41.3982752,2.1422994,2026-11-13
+Barcelona,node,12047175370,electronics,Bazar El Regalo,,,41.4030744,2.1987944,2026-11-13
+Barcelona,node,12153162335,mobile_phone,Right Way Mobile,,,41.3869988,2.1568272,2026-11-13
+Barcelona,node,12326979636,electronics,Farhan,,,41.4053654,2.1501907,2026-11-13
+Barcelona,node,12365137192,electronics,Pont Reyes,,,41.3866627,2.1650721,2026-11-13
+Barcelona,node,12384321894,mobile_phone,,,,41.3850184,2.1617734,2026-11-13
+Barcelona,node,12461348550,computer,Clinic Technology Berlín,,Clinic Technology,41.3841986,2.1404756,2026-11-13
+Barcelona,node,12864492001,computer,Mastac,,,41.3786631,2.1281495,2026-11-13
+Barcelona,node,12941963271,computer,TorresPc,,,41.4469171,2.1771649,2026-11-13
+Barcelona,node,13039327837,electronics,Samsung,Samsung,Servei Oficial Samsung - Secel Tecnologics,41.3871976,2.1466429,2026-11-13
+Barcelona,node,13114998933,mobile_phone,recambiosmovil.com,,,41.3867396,2.1597233,2026-11-13
+Barcelona,node,13176455865,electronics,Basant,,,41.4043899,2.2040669,2026-11-13
+Barcelona,node,13180277501,computer,Regla de 3 - Servicio Técnico Autorizado Apple,,,41.4028835,2.169294,2026-11-13
+Barcelona,node,13182210712,mobile_phone,MagicPhone,,,41.3883056,2.14565,2026-11-13
+Barcelona,node,13182210713,mobile_phone,Singh Mòbils,,,41.3855943,2.1429632,2026-11-13
+Barcelona,node,13250787528,mobile_phone,Mòbil+,,,41.379923,2.1483458,2026-11-13
+Barcelona,node,13250791366,mobile_phone,SWS Móvil,,,41.3743629,2.1628723,2026-11-13
+Barcelona,node,13250794382,mobile_phone,Combine,,,41.3740132,2.1634833,2026-11-13
+Barcelona,node,13250822468,mobile_phone,Cover House,,,41.3738458,2.1639111,2026-11-13
+Barcelona,node,13277438239,mobile_phone,Fiazan Mobils,,,41.3733182,2.1684378,2026-11-13
+Barcelona,node,13372492201,mobile_phone,Apple Man Móbils,,,41.4057361,2.1633248,2026-11-13
+Barcelona,node,13443033802,electronics,Metro Electrónica,,,41.3796466,2.1583294,2026-11-13
+Barcelona,node,13446880901,mobile_phone,Sants Mobil,,,41.3754818,2.1257579,2026-11-13
+Barcelona,node,13506982009,mobile_phone,,,,41.3752015,2.1533167,2026-11-13
+Barcelona,node,13527181102,mobile_phone,i-Tech Móvil,,,41.4299684,2.1592256,2026-11-13
+Barcelona,node,13603491101,mobile_phone,Shabeeh Movil,,,41.429563,2.1580297,2026-11-13
+Barcelona,node,13624799230,computer,PC Components,,,41.3862935,2.1664006,2026-11-13
+Barcelona,node,13811494202,electronics,Fnac,Fnac,,41.3851238,2.1699498,2026-11-13
+Barcelona,node,13899462237,electronics,Gondal Envíos,,,41.4428142,2.1755026,2026-11-13
+Barcelona,node,14096064177,mobile_phone,Phone Gallery,,,41.3902688,2.1432588,2026-11-13
+Barcelona,node,14172923801,electronics,Mex Mobile Exchange,,,41.3750893,2.1450968,2026-11-13
+Barcelona,node,14222189617,mobile_phone,Marina Mobile,,,41.3918222,2.1906674,2026-11-13
+Barcelona,node,14274304901,electronics,"DAG, S.L.",,,41.4043247,2.2062429,2026-11-13
+Barcelona,node,14274416301,computer,Mòbils informàtica,,,41.403304,2.2054205,2026-11-13
+Barcelona,node,14370707368,mobile_phone,Más Ahorro,,,41.4103648,2.1827504,2026-11-13
+Madrid,node,170951314,mobile_phone,Movileo.com,,,40.4039813,-3.7019736,2026-11-13
+Madrid,node,302789137,electronics,Hermanos Pérez,,,40.4514395,-3.7035098,2026-11-13
+Madrid,node,302790290,mobile_phone,Mobid,,,40.4553668,-3.7027978,2026-11-13
+Madrid,node,1326907771,mobile_phone,Luzmovil,,,40.4109462,-3.7080342,2026-11-13
+Madrid,node,1517407932,mobile_phone,Love my phone,,,40.4265167,-3.7014825,2026-11-13
+Madrid,node,1595614347,mobile_phone,Movistar,Movistar,,40.386642,-3.764065,2026-11-13
+Madrid,node,1595614348,computer,Pacific Computer,,,40.3859522,-3.7590049,2026-11-13
+Madrid,node,1642178017,mobile_phone,Cube Movil,,,40.4247155,-3.7092141,2026-11-13
+Madrid,node,1740123900,computer,2 y Media Systems,,,40.4223463,-3.6825992,2026-11-13
+Madrid,node,1897058728,computer,Jofimática,,,40.3736599,-3.6189473,2026-11-13
+Madrid,node,1944473871,mobile_phone,Locutorio y juguetería,,,40.4464272,-3.7129831,2026-11-13
+Madrid,node,2028772724,electronics,MediaMarkt,MediaMarkt,,40.3644272,-3.7365255,2026-11-13
+Madrid,node,2039721185,electronics,Conectrol (sonido),,,40.4234562,-3.6795691,2026-11-13
+Madrid,node,2057557423,mobile_phone,Moviland,,,40.4557157,-3.7041586,2026-11-13
+Madrid,node,2304484540,computer,Mercabit,,,40.393022,-3.7406686,2026-11-13
+Madrid,node,2546794635,computer,GRI,,,40.4104201,-3.6948417,2026-11-13
+Madrid,node,2559186989,computer,Efecto 2000,,,40.4041013,-3.6750667,2026-11-13
+Madrid,node,2567969166,mobile_phone,Infomovitech,,,40.4554143,-3.7027796,2026-11-13
+Madrid,node,2568714091,computer,Icon Madrid,,,40.3459983,-3.707455,2026-11-13
+Madrid,node,2583625936,mobile_phone,Huawei,Huawei,,40.4207537,-3.7063665,2026-11-13
+Madrid,node,2606329606,computer,imaxpc,,,40.4325283,-3.6744485,2026-11-13
+Madrid,node,2622900854,mobile_phone,Mobile Case,,,40.4182536,-3.704311,2026-11-13
+Madrid,node,2624746889,computer,APP informática,,,40.4012055,-3.6337499,2026-11-13
+Madrid,node,2642236891,mobile_phone,Mil Van,,,40.4262345,-3.6802628,2026-11-13
+Madrid,node,2656069344,mobile_phone,,,,40.4149937,-3.7063324,2026-11-13
+Madrid,node,2671175810,electronics,Electrofosena,,,40.433143,-3.7088855,2026-11-13
+Madrid,node,2678581199,mobile_phone,Baba Móviles,,,40.424207,-3.7072821,2026-11-13
+Madrid,node,2731037233,electronics,Electricidad Cubas,,,40.4230873,-3.7091898,2026-11-13
+Madrid,node,2756126333,mobile_phone,Siglo,,,40.4239318,-3.7089981,2026-11-13
+Madrid,node,2818088443,electronics,Master,,,40.3989211,-3.6216326,2026-11-13
+Madrid,node,2834135507,mobile_phone,Isa Teleglobal,,,40.4043718,-3.6761726,2026-11-13
+Madrid,node,2835645932,electronics,Menaje del Hogar,,,40.3859145,-3.7046699,2026-11-13
+Madrid,node,2839810438,mobile_phone,Movil City,,,40.45637,-3.7023763,2026-11-13
+Madrid,node,2867491071,mobile_phone,,,,40.448419,-3.7035421,2026-11-13
+Madrid,node,2867491090,mobile_phone,,,,40.4483224,-3.7035706,2026-11-13
+Madrid,node,2883622705,electronics,Smart Link,,,40.4246516,-3.7073135,2026-11-13
+Madrid,node,2891445714,mobile_phone,Movil Kitts,,,40.452558,-3.7033334,2026-11-13
+Madrid,node,2891477462,electronics,Solución Tecnología,,,40.4532852,-3.703214,2026-11-13
+Madrid,node,2955179914,electronics,Electrónica Villivar,,,40.4588898,-3.704648,2026-11-13
+Madrid,node,2961144376,mobile_phone,Digi,,,40.4643322,-3.6952194,2026-11-13
+Madrid,node,2972134288,mobile_phone,Móvil Rep store,,,40.4536782,-3.7031514,2026-11-13
+Madrid,node,2972941365,electronics,"Armonía Electrodomésticos, SL",,,40.4365131,-3.7044659,2026-11-13
+Madrid,node,2972941394,electronics,Electrodomésticos Cobo,,,40.4356689,-3.7045207,2026-11-13
+Madrid,node,3049233704,electronics,Electrónica Embajadores,,,40.3978404,-3.6975148,2026-11-13
+Madrid,node,3051156935,electronics,,,,40.4262929,-3.6062649,2026-11-13
+Madrid,node,3068221413,electronics,Samsung,Samsung,,40.4586655,-3.6875153,2026-11-13
+Madrid,node,3136660348,computer,Rápido informática,,,40.3506704,-3.7043169,2026-11-13
+Madrid,node,3157641833,computer,Refill 24,,,40.4233898,-3.6546989,2026-11-13
+Madrid,node,3159536163,electronics,Taquería Don Diego,,,40.3561068,-3.6870969,2026-11-13
+Madrid,node,3161138689,mobile_phone,Movistar,Movistar,,40.3853811,-3.7222736,2026-11-13
+Madrid,node,3220343887,electronics,Casa Reyna,,,40.420785,-3.7048072,2026-11-13
+Madrid,node,3223094445,electronics,Digital SA,,,40.4349173,-3.670659,2026-11-13
+Madrid,node,3271451848,electronics,MediaMarkt,MediaMarkt,Media Markt Saturn S.A.U. - A82037292,40.4253766,-3.6739737,2026-11-13
+Madrid,node,3361624778,computer,PC Service,,,40.4251224,-3.7038459,2026-11-13
+Madrid,node,3368048353,computer,Workshop PC,,,40.4240102,-3.7033223,2026-11-13
+Madrid,node,3461943020,mobile_phone,Phone Service Center,,,40.4279811,-3.7018254,2026-11-13
+Madrid,node,3461943026,computer,MAC - Benotac,,,40.4282302,-3.7019232,2026-11-13
+Madrid,node,3484378465,computer,Windows Plus Computer,,,40.4756326,-3.7111766,2026-11-13
+Madrid,node,3489014041,computer,App Informática,,,40.4233911,-3.6744581,2026-11-13
+Madrid,node,3489014044,computer,Scala Informática,,,40.4233933,-3.6744975,2026-11-13
+Madrid,node,3512921654,electronics,Apple Store,Apple Store,Apple Inc.,40.4168855,-3.7022602,2026-11-13
+Madrid,node,3550750734,mobile_phone,Tecno Movil,,,40.3506556,-3.6915474,2026-11-13
+Madrid,node,3628683895,mobile_phone,Techify,,,40.4292887,-3.7048643,2026-11-13
+Madrid,node,3632136752,mobile_phone,Movilmanía Madrid,,,40.4518078,-3.673837,2026-11-13
+Madrid,node,3636842701,computer,Inforein,,,40.4547162,-3.6989608,2026-11-13
+Madrid,node,3673685457,computer,App Informática,,,40.4889046,-3.6624086,2026-11-13
+Madrid,node,3713711217,mobile_phone,Mini Market,,,40.4161425,-3.7003254,2026-11-13
+Madrid,node,3715546282,computer,App Informática,,,40.4837389,-3.7026784,2026-11-13
+Madrid,node,3745792944,computer,Pekesoft Ltd,,Tienda de informática,40.4304732,-3.6359297,2026-11-13
+Madrid,node,3770264323,computer,Servicio Técnico Rulmorma,,,40.4700064,-3.6912233,2026-11-13
+Madrid,node,3891098310,computer,iFixRapid Servicio Técnico Apple,,,40.4410161,-3.6710516,2026-11-13
+Madrid,node,3926257471,computer,Gea Store,,,40.4625018,-3.6301213,2026-11-13
+Madrid,node,3946850005,mobile_phone,Accesorios de móviles Fun&tab,,,40.4192554,-3.7020887,2026-11-13
+Madrid,node,3961350056,mobile_phone,Euroma Telecom,,,40.4722723,-3.6984454,2026-11-13
+Madrid,node,4006082989,mobile_phone,Nahid Informática,,,40.4046051,-3.7033671,2026-11-13
+Madrid,node,4102811124,computer,Computronic,,,40.4655173,-3.7195349,2026-11-13
+Madrid,node,4109400896,electronics,FerSay,,,40.464719,-3.6948672,2026-11-13
+Madrid,node,4109403833,mobile_phone,Move,,,40.4635117,-3.6962633,2026-11-13
+Madrid,node,4109407842,mobile_phone,Móvil Europa,,,40.464309,-3.6952839,2026-11-13
+Madrid,node,4109427341,mobile_phone,MundoPhone,,,40.4622023,-3.6977971,2026-11-13
+Madrid,node,4191725451,computer,Dryse,,,40.4207905,-3.7074573,2026-11-13
+Madrid,node,4213743493,mobile_phone,Xiaomi,Xiaomi,,40.4163839,-3.7031725,2026-11-13
+Madrid,node,4281903700,computer,,,,40.419663,-3.7055807,2026-11-13
+Madrid,node,4316945499,computer,Packet Informática,,,40.4688092,-3.6932733,2026-11-13
+Madrid,node,4355520418,mobile_phone,,,,40.4468611,-3.7123502,2026-11-13
+Madrid,node,4355540025,electronics,,,,40.4772007,-3.7117174,2026-11-13
+Madrid,node,4355550470,electronics,Samsung,Samsung,,40.4791019,-3.7079129,2026-11-13
+Madrid,node,4355550471,mobile_phone,Phone House,Phone House,,40.4793544,-3.7081836,2026-11-13
+Madrid,node,4358163389,computer,,,,40.4135245,-3.7281545,2026-11-13
+Madrid,node,4387730196,mobile_phone,Novel,,,40.4125289,-3.7028347,2026-11-13
+Madrid,node,4413672090,electronics,Bazar Chandra,,,40.4347863,-3.6983696,2026-11-13
+Madrid,node,4419229133,mobile_phone,Móvil Tec,,,40.4351949,-3.7120834,2026-11-13
+Madrid,node,4429177490,computer,Batch PC,,,40.4353535,-3.7160872,2026-11-13
+Madrid,node,4461827262,electronics,Sonytel,,,40.4453437,-3.70362,2026-11-13
+Madrid,node,4487170747,computer,Universomac Servicio Técnico Autorizado Apple,,,40.4381771,-3.6737169,2026-11-13
+Madrid,node,4487216099,computer,Universomac Servicio Técnico Autorizado Apple,,,40.4589059,-3.6949071,2026-11-13
+Madrid,node,4513971194,electronics,Katel,,,40.4068719,-3.6265768,2026-11-13
+Madrid,node,4549523289,electronics,La Boutique de la Electrónica,,,40.4357044,-3.6430942,2026-11-13
+Madrid,node,4582623421,computer,PCBox,,,40.4409606,-3.6747964,2026-11-13
+Madrid,node,4582839595,electronics,Macvb (Apple service),,,40.4236217,-3.6793473,2026-11-13
+Madrid,node,4585414690,mobile_phone,Lycamobile,,,40.4346674,-3.7030068,2026-11-13
+Madrid,node,4585950990,mobile_phone,Locutorio Mila,,,40.4342974,-3.7027171,2026-11-13
+Madrid,node,4594571298,mobile_phone,Lycamobile,,,40.4293271,-3.6701573,2026-11-13
+Madrid,node,4594765776,computer,Servifax Samsung,,,40.4313945,-3.7135852,2026-11-13
+Madrid,node,4594765788,computer,To Refill,,,40.432263,-3.7134823,2026-11-13
+Madrid,node,4594765994,computer,Root Informática S.L.,,,40.4316798,-3.7121517,2026-11-13
+Madrid,node,4596506817,mobile_phone,Movilbee,,,40.4349974,-3.6575203,2026-11-13
+Madrid,node,4596556401,mobile_phone,Phone Store,,,40.4316989,-3.6572949,2026-11-13
+Madrid,node,4596556734,mobile_phone,Fokusmobile,,,40.4321753,-3.6560211,2026-11-13
+Madrid,node,4621851015,mobile_phone,Tél and com,,,40.4470399,-3.5872252,2026-11-13
+Madrid,node,4623660391,electronics,Palco,,,40.4394976,-3.6452905,2026-11-13
+Madrid,node,4624073290,computer,Iluvatar,,,40.4398199,-3.6445418,2026-11-13
+Madrid,node,4644371863,electronics,Kitprinter 3d,,,40.4296486,-3.7216995,2026-11-13
+Madrid,node,4674956016,computer,Roufet.com,,,40.4278018,-3.7187625,2026-11-13
+Madrid,node,4683017292,electronics,Antenas ITB,,,40.4362909,-3.7027897,2026-11-13
+Madrid,node,4710075397,electronics,,,,40.4342099,-3.6461379,2026-11-13
+Madrid,node,4710186008,electronics,,,,40.434306,-3.6453226,2026-11-13
+Madrid,node,4710221392,mobile_phone,Weimei,,,40.4349653,-3.6439904,2026-11-13
+Madrid,node,4710223389,electronics,,,,40.4369605,-3.640486,2026-11-13
+Madrid,node,4724006384,mobile_phone,Móvil Shop,,,40.4310196,-3.7163412,2026-11-13
+Madrid,node,4738219960,mobile_phone,Alam Telecom,,,40.4139281,-3.7082579,2026-11-13
+Madrid,node,4743144889,mobile_phone,Movistar,Movistar,,40.3914718,-3.7275772,2026-11-13
+Madrid,node,4887540577,electronics,MediaMarkt,MediaMarkt,,40.4186004,-3.7037118,2026-11-13
+Madrid,node,4919531621,electronics,Hermanos Pérez,,,40.4784531,-3.7075363,2026-11-13
+Madrid,node,4951801027,mobile_phone,ViaMóvil,,,40.4231627,-3.6798059,2026-11-13
+Madrid,node,4953449371,electronics,Pascual,,,40.4757806,-3.7177952,2026-11-13
+Madrid,node,4957196523,mobile_phone,Llamaya,,,40.3557586,-3.6976715,2026-11-13
+Madrid,node,4957310221,mobile_phone,Movil Casa,,,40.3934511,-3.6946169,2026-11-13
+Madrid,node,4992487821,computer,Servicio Técnico HP,,,40.441372,-3.6720594,2026-11-13
+Madrid,node,5254388143,electronics,La Casa del GPS,,,40.4175147,-3.6780093,2026-11-13
+Madrid,node,5341516926,computer,,,,40.379529,-3.7487038,2026-11-13
+Madrid,node,5369161523,electronics,Reparación electrodomésticos,,,40.3737403,-3.6212193,2026-11-13
+Madrid,node,5370125926,electronics,Reparamix,,,40.3581591,-3.6863074,2026-11-13
+Madrid,node,5370630521,electronics,Altoha,,,40.4362901,-3.6385619,2026-11-13
+Madrid,node,5404023907,electronics,Elite Master,,,40.4823119,-3.7111558,2026-11-13
+Madrid,node,5476882225,electronics,Guarconsa,,,40.4336834,-3.6972417,2026-11-13
+Madrid,node,5477916386,mobile_phone,La Casa del Móvil,,,40.4334688,-3.7054529,2026-11-13
+Madrid,node,5491139827,mobile_phone,Madrid Tel,,,40.4338943,-3.7065101,2026-11-13
+Madrid,node,5559088993,mobile_phone,Phone Shop,,,40.4323453,-3.7036207,2026-11-13
+Madrid,node,5661760876,computer,Seinma,,,40.4163036,-3.677863,2026-11-13
+Madrid,node,5789634234,electronics,Crystal,,,40.4908702,-3.5910099,2026-11-13
+Madrid,node,6137061787,electronics,CeX,CeX,,40.412856,-3.7003081,2026-11-13
+Madrid,node,6137157585,computer,LDLC,LDLC,,40.4544873,-3.6897416,2026-11-13
+Madrid,node,6169470587,electronics,Travelwifi,,,40.4162298,-3.7051625,2026-11-13
+Madrid,node,6235647826,mobile_phone,Movilonia,,,40.4467374,-3.71172,2026-11-13
+Madrid,node,6235785066,mobile_phone,,,,40.4762603,-3.714299,2026-11-13
+Madrid,node,6236049515,computer,Dogend Informática,,,40.4772589,-3.7154522,2026-11-13
+Madrid,node,6239874717,computer,Vartex Informática,,,40.4778649,-3.7134902,2026-11-13
+Madrid,node,6403580734,computer,Selected electronics,,,40.4902765,-3.5919094,2026-11-13
+Madrid,node,6704193567,electronics,Fnac,Fnac,,40.4791351,-3.7080986,2026-11-13
+Madrid,node,6753600833,mobile_phone,GM Móvil,,,40.4573625,-3.7099172,2026-11-13
+Madrid,node,6970332048,computer,,,,40.405289,-3.6754042,2026-11-13
+Madrid,node,7041933587,mobile_phone,Casa Móvil,,,40.3679419,-3.598944,2026-11-13
+Madrid,node,7131719264,electronics,Milar,Milar,,40.3941443,-3.6615624,2026-11-13
+Madrid,node,7183613645,electronics,Mi Electro,,,40.3876353,-3.6647774,2026-11-13
+Madrid,node,7370307098,computer,Portátil Madrid,,,40.3925147,-3.7271955,2026-11-13
+Madrid,node,7386343749,computer,Naser Top Line,,,40.4370873,-3.6756071,2026-11-13
+Madrid,node,7650080886,electronics,Miele,Miele,,40.422196,-3.6871415,2026-11-13
+Madrid,node,7787846685,computer,Dismicro Bros,,,40.3873057,-3.6554006,2026-11-13
+Madrid,node,7951547581,computer,PC Componentes,,,40.4053884,-3.6742373,2026-11-13
+Madrid,node,7952388754,electronics,Samsung,Samsung,,40.3684592,-3.5989008,2026-11-13
+Madrid,node,8079036397,mobile_phone,Happy Phone,,,40.4069583,-3.6697696,2026-11-13
+Madrid,node,8343340241,mobile_phone,Movil Home,,,40.4117016,-3.7062242,2026-11-13
+Madrid,node,8412813548,computer,Micro computer,,,40.4534103,-3.7080541,2026-11-13
+Madrid,node,8602619373,mobile_phone,Mr & Mrs Phone,,,40.4452548,-3.6727753,2026-11-13
+Madrid,node,8847983415,mobile_phone,Móvil telecom,,,40.3931495,-3.7405042,2026-11-13
+Madrid,node,8911221257,mobile_phone,Airis Soluciones,,,40.4338255,-3.7154608,2026-11-13
+Madrid,node,8948794004,electronics,Lyca Mobile,,,40.4562748,-3.7049711,2026-11-13
+Madrid,node,9056500981,mobile_phone,Chipper-Digi,,,40.3748888,-3.7507173,2026-11-13
+Madrid,node,9355589913,electronics,Milar,Milar,,40.3929328,-3.6554642,2026-11-13
+Madrid,node,9450850754,mobile_phone,Prophone Store,,,40.4568063,-3.7044568,2026-11-13
+Madrid,node,9459250140,mobile_phone,Spring Phone,,,40.4066481,-3.6723395,2026-11-13
+Madrid,node,9520570781,electronics,Comercial Castilla,,,40.3954046,-3.6981297,2026-11-13
+Madrid,node,9524061300,electronics,Tata Telecom,,,40.4588148,-3.7000527,2026-11-13
+Madrid,node,9532057234,mobile_phone,,,,40.3868911,-3.7400021,2026-11-13
+Madrid,node,9585098506,electronics,MAE Recovery,Apple Store,,40.4725252,-3.7090297,2026-11-13
+Madrid,node,9621495017,mobile_phone,Sol Internacional,,,40.4029045,-3.6753798,2026-11-13
+Madrid,node,9623248847,computer,Telefonía e Informática,,,40.3949932,-3.7639205,2026-11-13
+Madrid,node,9625929666,computer,Zbitt,,,40.3927175,-3.7646211,2026-11-13
+Madrid,node,9628269276,electronics,RaulVisión,,,40.3932577,-3.7554271,2026-11-13
+Madrid,node,9699911976,computer,PhoneBit,,,40.3917197,-3.7521046,2026-11-13
+Madrid,node,9732020941,electronics,Electronica Aluche,,,40.3896515,-3.7606634,2026-11-13
+Madrid,node,9820337318,electronics,MediaMarkt,MediaMarkt,,40.4179963,-3.703497,2026-11-13
+Madrid,node,9986731724,computer,Pentaprisma,,,40.4085175,-3.7119916,2026-11-13
+Madrid,node,10140307151,mobile_phone,Planet Phone,,,40.4571818,-3.7030914,2026-11-13
+Madrid,node,10219552455,mobile_phone,Phone Service Center,,,40.4581409,-3.6765143,2026-11-13
+Madrid,node,10262794433,computer,VK Informática,,,40.3858232,-3.6486266,2026-11-13
+Madrid,node,10557718832,mobile_phone,R Móvil Express,R,,40.45693,-3.7054409,2026-11-13
+Madrid,node,10606501244,mobile_phone,Vodafone,Vodafone,,40.4696548,-3.6404632,2026-11-13
+Madrid,node,10606501245,mobile_phone,Movistar,Movistar,,40.4696589,-3.640313,2026-11-13
+Madrid,node,10606501246,mobile_phone,Orange,Orange,,40.4696589,-3.6401333,2026-11-13
+Madrid,node,10723154104,mobile_phone,Lucky Phone House,,,40.3816469,-3.6239003,2026-11-13
+Madrid,node,10723250853,mobile_phone,Móvil Show,,,40.3783821,-3.621298,2026-11-13
+Madrid,node,10723250855,electronics,M. Caro,,,40.3785126,-3.6213265,2026-11-13
+Madrid,node,10733696905,mobile_phone,,,,40.3887119,-3.7317159,2026-11-13
+Madrid,node,10733696999,mobile_phone,Digi Mobil,,,40.3883797,-3.7298527,2026-11-13
+Madrid,node,10733697005,computer,Cibercomunitel,,,40.389319,-3.7299035,2026-11-13
+Madrid,node,10829477396,electronics,Airport Technology Shops,,,40.4631576,-3.5708099,2026-11-13
+Madrid,node,10921079826,computer,EMJ Servicios Informáticos,,,40.397514,-3.7033179,2026-11-13
+Madrid,node,10931227483,computer,Pc Box,,,40.4038086,-3.679307,2026-11-13
+Madrid,node,10940588190,mobile_phone,Wei Electrica,,,40.3997491,-3.6716605,2026-11-13
+Madrid,node,10940588195,mobile_phone,Movil-Tech,,,40.3999789,-3.6721151,2026-11-13
+Madrid,node,10969529528,electronics,Fnac,Fnac,,40.390199,-3.7011114,2026-11-13
+Madrid,node,10969529529,mobile_phone,Vodafone,Vodafone,,40.3902739,-3.7010717,2026-11-13
+Madrid,node,11133979728,computer,App Informática,,,40.407395,-3.7469219,2026-11-13
+Madrid,node,11185764837,mobile_phone,Orange,Orange,,40.3886987,-3.731848,2026-11-13
+Madrid,node,11198507444,mobile_phone,Classic Mobile Telecom,,,40.3963901,-3.7150973,2026-11-13
+Madrid,node,11211126544,mobile_phone,Bazar J&Z,,,40.3943739,-3.7088881,2026-11-13
+Madrid,node,11211126545,mobile_phone,Bazar J&Z,,,40.3944412,-3.7090288,2026-11-13
+Madrid,node,11214051633,electronics,Electrofuture,,,40.3932221,-3.7132335,2026-11-13
+Madrid,node,11230913273,computer,Ordenadores MR Micro,,,40.3910422,-3.7124401,2026-11-13
+Madrid,node,11237252250,mobile_phone,Lucky Phonehouse,,,40.3958012,-3.7137619,2026-11-13
+Madrid,node,11283910354,computer,La tienda del consumible,,,40.456847,-3.7020989,2026-11-13
+Madrid,node,11309927869,computer,Technical Computer,,,40.3656197,-3.7534379,2026-11-13
+Madrid,node,11311310252,electronics,Teledato,MiElectro,,40.3947047,-3.7133031,2026-11-13
+Madrid,node,11343152114,electronics,Repuestos Valencia,,,40.4397492,-3.6447019,2026-11-13
+Madrid,node,11359779383,computer,Yoye,,,40.4209099,-3.709626,2026-11-13
+Madrid,node,11361727163,mobile_phone,Casa de móvil,,,40.4299534,-3.7061823,2026-11-13
+Madrid,node,11380284944,computer,AbascalMac,,,40.43869,-3.7015624,2026-11-13
+Madrid,node,11445404426,electronics,MediaMarkt,MediaMarkt,,40.4798769,-3.7052322,2026-11-13
+Madrid,node,11523649257,mobile_phone,Móvil Casa,,,40.4062756,-3.6930313,2026-11-13
+Madrid,node,11711279741,electronics,El Corte Inglés,El Corte Inglés,,40.430077,-3.7161053,2026-11-13
+Madrid,node,11793829046,electronics,Electricidad Ara,,,40.4512126,-3.7043778,2026-11-13
+Madrid,node,11811904974,computer,Dragon Telecom,,,40.3456386,-3.7093063,2026-11-13
+Madrid,node,11889181978,mobile_phone,Phone Shop,,,40.3975225,-3.7166085,2026-11-13
+Madrid,node,11998948389,computer,Ofertas PC,,,40.4789971,-3.7030555,2026-11-13
+Madrid,node,12058931789,computer,dsp,,,40.4379132,-3.7170793,2026-11-13
+Madrid,node,12069390190,electronics,CAT Castillo,,,40.384956,-3.7525489,2026-11-13
+Madrid,node,12076252942,electronics,Master,,,40.3888866,-3.7393472,2026-11-13
+Madrid,node,12076321321,mobile_phone,,,,40.395143,-3.7202748,2026-11-13
+Madrid,node,12098590212,mobile_phone,Cube Móvil,,,40.407015,-3.7009824,2026-11-13
+Madrid,node,12098590229,mobile_phone,Mobitech,,,40.4066325,-3.7012719,2026-11-13
+Madrid,node,12100834023,electronics,Campi Electricidad,,,40.4523415,-3.7102811,2026-11-13
+Madrid,node,12117110647,computer,APP Informática,APP Informática,,40.3751608,-3.7736428,2026-11-13
+Madrid,node,12121871915,mobile_phone,iDeal,,,40.4387929,-3.7130021,2026-11-13
+Madrid,node,12121871956,mobile_phone,On-Fix,,,40.4379411,-3.713071,2026-11-13
+Madrid,node,12123952951,electronics,Infomax,,,40.4091389,-3.7100072,2026-11-13
+Madrid,node,12139482432,computer,Arroyo Mac,,,40.4057005,-3.7012615,2026-11-13
+Madrid,node,12186161058,mobile_phone,Orange,Orange,,40.3865748,-3.7636468,2026-11-13
+Madrid,node,12186161066,mobile_phone,Orange,Orange,Jazztel,40.3863874,-3.7637052,2026-11-13
+Madrid,node,12192547414,mobile_phone,Phone,,,40.4285977,-3.6751906,2026-11-13
+Madrid,node,12192730163,mobile_phone,Jazztel,,,40.4462751,-3.5877526,2026-11-13
+Madrid,node,12198834902,computer,S & H,,,40.4372924,-3.7029568,2026-11-13
+Madrid,node,12260741872,electronics,City Service,,,40.4360544,-3.6431821,2026-11-13
+Madrid,node,12265999566,electronics,workme,,,40.4401078,-3.6438464,2026-11-13
+Madrid,node,12293776753,mobile_phone,Infotech,,,40.4095297,-3.6935566,2026-11-13
+Madrid,node,12311576993,mobile_phone,Farid Telecom,,,40.4121688,-3.6996147,2026-11-13
+Madrid,node,12351499584,mobile_phone,ServiMovil-PC,,,40.3857211,-3.7405335,2026-11-13
+Madrid,node,12351514142,mobile_phone,Locutorio Khan Internet,,,40.386124,-3.7404512,2026-11-13
+Madrid,node,12409115926,computer,Marpez Sistemas Informáticos,,,40.4764056,-3.6407695,2026-11-13
+Madrid,node,12423030052,mobile_phone,Tecnología inteligente,,,40.4517057,-3.703038,2026-11-13
+Madrid,node,12452943838,computer,Informático Pro,,,40.4389912,-3.7083921,2026-11-13
+Madrid,node,12474552135,mobile_phone,Locutorio Ambote,,,40.3767943,-3.6211185,2026-11-13
+Madrid,node,12541145196,electronics,MediaMarkt,MediaMarkt,,40.392568,-3.6556109,2026-11-13
+Madrid,node,12570816663,mobile_phone,Vodafone,Vodafone,,40.3973638,-3.667718,2026-11-13
+Madrid,node,12578631852,computer,Pspchips,,,40.4365387,-3.7179194,2026-11-13
+Madrid,node,12633161254,mobile_phone,Mobile Telefonia,,,40.3867539,-3.7065971,2026-11-13
+Madrid,node,12634675790,mobile_phone,Zona Movil,,,40.3859247,-3.7059151,2026-11-13
+Madrid,node,12634700109,electronics,Bazar Shiva,,,40.3859823,-3.7055263,2026-11-13
+Madrid,node,12634700113,mobile_phone,Freddy Moviles,,,40.386112,-3.705129,2026-11-13
+Madrid,node,12644308311,mobile_phone,Renew Markt,,,40.385653,-3.7068563,2026-11-13
+Madrid,node,12644308318,mobile_phone,Electro World,,,40.3857946,-3.7072222,2026-11-13
+Madrid,node,12644308355,mobile_phone,China Spain Mobile and Services,,,40.3856754,-3.7081949,2026-11-13
+Madrid,node,12644308371,mobile_phone,Bafre China-Spain,,,40.3852588,-3.7076402,2026-11-13
+Madrid,node,12644308424,mobile_phone,Locutorio Tasnia Tahsin Nebeeha,,,40.3852653,-3.7082457,2026-11-13
+Madrid,node,12670247544,mobile_phone,Zain Telefonia,,,40.3828884,-3.7078006,2026-11-13
+Madrid,node,12696236592,mobile_phone,Ria,,,40.437877,-3.7128246,2026-11-13
+Madrid,node,12704564422,mobile_phone,Aziza,,,40.4369262,-3.6997935,2026-11-13
+Madrid,node,12729605040,mobile_phone,Mi Móvil,,,40.3857681,-3.7058453,2026-11-13
+Madrid,node,12734727467,mobile_phone,Phone Shop,,,40.383343,-3.7058189,2026-11-13
+Madrid,node,12734727469,mobile_phone,You Mobile,,,40.3835279,-3.7058613,2026-11-13
+Madrid,node,12810197252,mobile_phone,Joy phone,,,40.4132427,-3.7007887,2026-11-13
+Madrid,node,12810197265,mobile_phone,Miss carcasas,,,40.4150084,-3.7031909,2026-11-13
+Madrid,node,12866310682,mobile_phone,Phonelectric,,,40.4063557,-3.6983333,2026-11-13
+Madrid,node,12884650804,mobile_phone,Milchip,,,40.4064485,-3.6760369,2026-11-13
+Madrid,node,12884650807,computer,Eurocopa,,,40.4058613,-3.6751657,2026-11-13
+Madrid,node,12888691901,computer,Talleres del PC,,,40.4308341,-3.7019629,2026-11-13
+Madrid,node,12946115438,mobile_phone,Renphone,,,40.4779634,-3.7040939,2026-11-13
+Madrid,node,12956516903,mobile_phone,Reparamos tu Móvil,,,40.4037217,-3.7139488,2026-11-13
+Madrid,node,12977767278,mobile_phone,,,,40.3913302,-3.742725,2026-11-13
+Madrid,node,12981566515,electronics,The Fox Company,,,40.3684477,-3.7550462,2026-11-13
+Madrid,node,12988484032,mobile_phone,MovilTen,,,40.4021617,-3.6968736,2026-11-13
+Madrid,node,12993968752,computer,Soft World,,,40.4047089,-3.6987825,2026-11-13
+Madrid,node,13016266023,mobile_phone,E-phone sell,,,40.459375,-3.6994231,2026-11-13
+Madrid,node,13039783141,mobile_phone,May móvil,,,40.3993712,-3.6709741,2026-11-13
+Madrid,node,13039856128,mobile_phone,Cubi móvil,,,40.3993144,-3.6708618,2026-11-13
+Madrid,node,13062831230,electronics,soportales,,,40.3932166,-3.6583564,2026-11-13
+Madrid,node,13062897551,mobile_phone,Weimei,,,40.3964321,-3.6659252,2026-11-13
+Madrid,node,13062899577,mobile_phone,,,,40.3920587,-3.6620317,2026-11-13
+Madrid,node,13062899763,mobile_phone,,,,40.3929821,-3.6606202,2026-11-13
+Madrid,node,13062905424,mobile_phone,Orange,Orange,,40.3975344,-3.668005,2026-11-13
+Madrid,node,13120822791,computer,Ifactory,,,40.4266399,-3.6669445,2026-11-13
+Madrid,node,13121743801,mobile_phone,Back Móvil,,,40.4454576,-3.7885889,2026-11-13
+Madrid,node,13158139147,mobile_phone,móvil i point callao,,,40.4196343,-3.7069194,2026-11-13
+Madrid,node,13159930066,mobile_phone,Fantasy phone,,,40.421537,-3.7099422,2026-11-13
+Madrid,node,13234991214,mobile_phone,Phone Doctors,,,40.3968564,-3.6983378,2026-11-13
+Madrid,node,13336152124,mobile_phone,Tech World,,,40.4220412,-3.7076824,2026-11-13
+Madrid,node,13363466101,electronics,Componentes Electrónicos Posan,,,40.4333251,-3.6426276,2026-11-13
+Madrid,node,13446436027,mobile_phone,Kashem Telefonía Móvil,,,40.452832,-3.7015397,2026-11-13
+Madrid,node,13465048250,computer,SmilePC,,,40.4739153,-3.6430339,2026-11-13
+Madrid,node,13529059392,mobile_phone,Mishu Móvil,,,40.4121986,-3.7041292,2026-11-13
+Madrid,node,13532373577,mobile_phone,Locutorio Goya,,,40.4261931,-3.6741234,2026-11-13
+Madrid,node,13618008425,mobile_phone,Locutorio Khan 2,,,40.3748189,-3.7427877,2026-11-13
+Madrid,node,13647668840,electronics,Euronics,Euronics,,40.3977304,-3.696418,2026-11-13
+Madrid,node,13716935000,mobile_phone,Miss carcasas,,,40.4210886,-3.700625,2026-11-13
+Madrid,node,13717953780,electronics,Aliexpress Plaza,,,40.3687589,-3.5967324,2026-11-13
+Madrid,node,13785180776,electronics,CeX,CeX,,40.3914123,-3.7420771,2026-11-13
+Madrid,node,13791429576,electronics,Electrónica Latina,,,40.4128261,-3.7209338,2026-11-13
+Madrid,node,13959633501,mobile_phone,Amir,,,40.4112019,-3.7050096,2026-11-13
+Madrid,node,14084152448,computer,PCBox,,,40.4301615,-3.7042542,2026-11-13
+Madrid,node,14152950107,electronics,MediaMarkt,MediaMarkt,,40.4627602,-3.6889752,2026-11-13
+Madrid,node,14206371027,mobile_phone,The Phone Talent,,,40.3516261,-3.6887669,2026-11-13
+Madrid,node,14319759524,mobile_phone,Mobile shop,,,40.4042196,-3.6803348,2026-11-13
+Madrid,way,165353134,electronics,MediaMarkt,MediaMarkt,,40.4456426,-3.586473,2026-11-13
+Madrid,way,208277966,computer,,,,40.4266892,-3.6669086,2026-11-13
+Madrid,way,348682082,electronics,,,,40.3515091,-3.6915927,2026-11-13
+Madrid,way,348682083,electronics,Lidl,,,40.3515367,-3.6920335,2026-11-13
+Madrid,way,373743577,mobile_phone,MovilEuropa,,,40.3860464,-3.7050801,2026-11-13
+Madrid,way,679015267,mobile_phone,,,,40.4141934,-3.7039168,2026-11-13
+Madrid,way,681503975,mobile_phone,Tahsin Telecom,,,40.4126763,-3.6954994,2026-11-13
+Madrid,way,681503978,mobile_phone,Locutorio Moratin,,,40.4125812,-3.6961189,2026-11-13
+Madrid,way,691032706,electronics,Locutorio,,,40.4118951,-3.7074273,2026-11-13
+Madrid,way,692395502,mobile_phone,Fundamental,,,40.4125856,-3.7077614,2026-11-13
+Madrid,way,994058693,electronics,Tech&Fly,,,40.4947863,-3.5674999,2026-11-13
+Madrid,relation,14555658,electronics,Electro Hogar Outlet,,,40.3746079,-3.644893,2026-11-13
+Valencia,node,1189714314,mobile_phone,Tari Mobile Hospital,,,39.4543915,-0.3914059,2026-11-13
+Valencia,node,1452023062,computer,APP informatica,,,39.4787024,-0.39387,2026-11-13
+Valencia,node,1452368047,electronics,Oinel,,,39.478934,-0.3959914,2026-11-13
+Valencia,node,1452644860,electronics,Interservicio,,"Bosch, Siemens, Ufesa",39.4805341,-0.3961104,2026-11-13
+Valencia,node,1956841601,computer,Escaire,,Escaire.net,39.4812444,-0.3436051,2026-11-13
+Valencia,node,2475527939,mobile_phone,Low Cost Movil,,,39.4702752,-0.384512,2026-11-13
+Valencia,node,2834849912,electronics,Apple Store Calle Colón,Apple Store,,39.4690839,-0.3723058,2026-11-13
+Valencia,node,2899926213,mobile_phone,Tienda Oficial de Jiayu España,,,39.4655518,-0.3393084,2026-11-13
+Valencia,node,3254179917,computer,Informática Ecoturia,,Ecolider y DHL Express,39.4672653,-0.385156,2026-11-13
+Valencia,node,3498960466,electronics,Electrónica Céspedes,,,39.4756154,-0.389702,2026-11-13
+Valencia,node,3657800645,electronics,MediaMarkt,MediaMarkt,,39.4672449,-0.3744506,2026-11-13
+Valencia,node,3699314150,mobile_phone,OK Phone,,,39.48095,-0.3709438,2026-11-13
+Valencia,node,3954426029,electronics,SecurMAX,,Securmax Seguridad S.L.,39.4656622,-0.3710158,2026-11-13
+Valencia,node,4172600994,electronics,Enchufix,,,39.4526434,-0.4012851,2026-11-13
+Valencia,node,4266931594,computer,App cabañal,,,39.4730906,-0.3337325,2026-11-13
+Valencia,node,4897372523,computer,App Informática,,,39.4659275,-0.3870475,2026-11-13
+Valencia,node,4907454023,mobile_phone,Phone House,Phone House,,39.4672642,-0.3806781,2026-11-13
+Valencia,node,4989970381,mobile_phone,Lycamobile,,,39.460317,-0.3343064,2026-11-13
+Valencia,node,4992278224,mobile_phone,Tecno Mobil,,,39.4630576,-0.3432721,2026-11-13
+Valencia,node,5046886223,mobile_phone,Phone House,Phone House,,39.4716004,-0.3765168,2026-11-13
+Valencia,node,5171067193,electronics,El Manitas de Casa,,,39.4575408,-0.3684037,2026-11-13
+Valencia,node,5299082725,computer,Puesta a punto,,,39.4869792,-0.3915036,2026-11-13
+Valencia,node,5371354762,computer,PC BOX,,,39.4676953,-0.3836239,2026-11-13
+Valencia,node,5960058008,electronics,Electrodomésticos Guerrero,,,39.4810247,-0.3572708,2026-11-13
+Valencia,node,6106357685,computer,,,,39.4597528,-0.3656803,2026-11-13
+Valencia,node,6617346023,mobile_phone,Miss Phone,,,39.4680381,-0.3505907,2026-11-13
+Valencia,node,6812000985,computer,Aula Informática,,,39.4847545,-0.3579102,2026-11-13
+Valencia,node,6812000988,electronics,Milar Muñoz,,Milar,39.4847102,-0.358276,2026-11-13
+Valencia,node,6942936380,electronics,Euronics,Euronics,,39.4828435,-0.3703258,2026-11-13
+Valencia,node,6961518008,mobile_phone,Movil City,,,39.4855917,-0.3635134,2026-11-13
+Valencia,node,6967291175,computer,ChipToChip,,,39.4631864,-0.3705581,2026-11-13
+Valencia,node,7214075576,mobile_phone,E!,,,39.469831,-0.3794825,2026-11-13
+Valencia,node,8745734223,computer,Vnet Informática 24h,,,39.4731299,-0.3499195,2026-11-13
+Valencia,node,8745734224,computer,"Coy Coy tintas, tóner, impresoras e informática",,,39.4707386,-0.351356,2026-11-13
+Valencia,node,9862537303,electronics,Dorme. Puertas y Automatismos,,,39.466705,-0.3383794,2026-11-13
+Valencia,node,9862559836,mobile_phone,FuturMovil,,,39.4655852,-0.328995,2026-11-13
+Valencia,node,10587567099,electronics,Globaltech,,,39.4564655,-0.371752,2026-11-13
+Valencia,node,10596568616,computer,Hipermaco,,,39.4554035,-0.3696225,2026-11-13
+Valencia,node,10596568617,computer,Compters,,,39.4553801,-0.3695112,2026-11-13
+Valencia,node,10852830145,mobile_phone,Soni Movil,,,39.4666455,-0.3793156,2026-11-13
+Valencia,node,10855565357,mobile_phone,Movil House,,,39.4664825,-0.3799939,2026-11-13
+Valencia,node,10855565360,mobile_phone,Yuncoa Telecom,,,39.4662515,-0.3794677,2026-11-13
+Valencia,node,10957466626,electronics,Entertainment Exchange CEX,,,39.4654915,-0.3739934,2026-11-13
+Valencia,node,11046943263,electronics,,,,39.4788967,-0.3768017,2026-11-13
+Valencia,node,11226399843,computer,BIOS Informatica,,,39.493761,-0.3979492,2026-11-13
+Valencia,node,11247541434,mobile_phone,MASlife,,,39.4867005,-0.3902336,2026-11-13
+Valencia,node,11928757411,mobile_phone,City Phone,,,39.4725871,-0.3770941,2026-11-13
+Valencia,node,12574049728,electronics,CeX,CeX,,39.4848289,-0.3618612,2026-11-13
+Valencia,node,12647408201,computer,Club Byte,,,39.4726805,-0.3851497,2026-11-13
+Valencia,node,12772955133,computer,Micros Shop Informática,,,39.4610599,-0.3640178,2026-11-13
+Valencia,node,12842410297,electronics,Electricidad,,,39.4696124,-0.3679924,2026-11-13
+Valencia,node,13051069445,electronics,Milar,Milar,,39.4687734,-0.3372361,2026-11-13
+Valencia,node,13168893895,computer,Softmaker,,,39.4721892,-0.3377541,2026-11-13
+Valencia,node,13295188512,electronics,mi electro,,,39.4737413,-0.3534386,2026-11-13
+Valencia,node,13397748186,mobile_phone,vestito mobile,,,39.4700617,-0.3711687,2026-11-13
+Valencia,node,13554685828,mobile_phone,Fone Zone,,,39.4545374,-0.3913997,2026-11-13
+Valencia,node,13620598963,computer,,,,39.4596836,-0.3415935,2026-11-13
+Valencia,node,13800896901,computer,Ofertas PC,,,39.470039,-0.3837407,2026-11-13
+Valencia,node,13800946901,computer,Microtech-Informatics,,,39.4741905,-0.3830775,2026-11-13
+Valencia,node,14023338801,mobile_phone,Mbb Electronics,,,39.4567498,-0.3904483,2026-11-13
+Valencia,node,14030974501,computer,Microsshop informática,,,39.4591589,-0.3935198,2026-11-13
+Valencia,node,14064727622,computer,APP_ informática - Telica,,,39.4297713,-0.3621171,2026-11-13
+Valencia,node,14210124748,mobile_phone,Futurmovil,,,39.4716537,-0.3427767,2026-11-13
+Valencia,node,14210126653,computer,Urbantoner,,,39.4693824,-0.3438812,2026-11-13
+Valencia,node,14220108688,computer,Inforl@ndia,,,39.4697605,-0.3393068,2026-11-13
+Valencia,node,14243171125,computer,MAN Computer,,,39.4862759,-0.3681558,2026-11-13
+Valencia,node,14252538301,electronics,Mi Electro,,,39.4933466,-0.3938834,2026-11-13
+Valencia,node,14260570401,computer,Power Navy,,,39.481986,-0.3702583,2026-11-13
+Valencia,node,14270381038,mobile_phone,Droidhouse,,,39.4720578,-0.3538801,2026-11-13
+Valencia,way,23761012,electronics,MediaMarkt,MediaMarkt,,39.4903733,-0.4006553,2026-11-13
+Sevilla,node,1531495377,mobile_phone,E-tong,,,37.3921348,-5.9913992,2026-11-13
+Sevilla,node,2211649435,computer,App Informática,,,37.3618731,-5.9856442,2026-11-13
+Sevilla,node,2335910782,electronics,Electrónica Goya,,,37.3848033,-5.9688691,2026-11-13
+Sevilla,node,2474401092,computer,App Informática,,,37.3892056,-5.9823899,2026-11-13
+Sevilla,node,2641681293,electronics,Electrocien,,,37.372375,-5.9597894,2026-11-13
+Sevilla,node,2723918396,electronics,Electromenaje 2005,,,37.4037049,-5.9767568,2026-11-13
+Sevilla,node,2918724286,mobile_phone,Vodaphone,,,37.3757683,-5.9974864,2026-11-13
+Sevilla,node,3012261137,computer,Appinformatica,,,37.3769692,-5.9733097,2026-11-13
+Sevilla,node,3060451794,computer,El Arca de Noé,,,37.3587438,-5.9860658,2026-11-13
+Sevilla,node,3157719334,computer,PC3,,,37.3990643,-5.983864,2026-11-13
+Sevilla,node,3165356183,computer,PCBox,,,37.3880582,-5.9199298,2026-11-13
+Sevilla,node,3208192709,mobile_phone,Yo Móvil,,,37.3883557,-6.0017582,2026-11-13
+Sevilla,node,3214724176,computer,Cibercenter,,,37.3895939,-6.0001156,2026-11-13
+Sevilla,node,3233677016,electronics,Rótulos luminosos neón. Serigrafía. Impresión digital,,,37.3971434,-5.9930345,2026-11-13
+Sevilla,node,3234773265,computer,App Informática,,,37.3975774,-5.9926139,2026-11-13
+Sevilla,node,3581117745,electronics,BSH Interservice,,,37.3882576,-5.9531704,2026-11-13
+Sevilla,node,3681245810,electronics,Electro Peñaflor,,,37.3832239,-6.0060412,2026-11-13
+Sevilla,node,3869643232,mobile_phone,Phone House,Phone House,,37.3768512,-5.9974853,2026-11-13
+Sevilla,node,3869646379,electronics,Electricidad,,,37.376935,-5.9975032,2026-11-13
+Sevilla,node,3869658082,electronics,Tian yi,,,37.375463,-5.9976449,2026-11-13
+Sevilla,node,3869662557,electronics,Entertainment Exchange Webuy.com,,,37.3762964,-5.9975083,2026-11-13
+Sevilla,node,3869691419,mobile_phone,Phone Star,,,37.3781636,-5.9978007,2026-11-13
+Sevilla,node,4017115988,computer,Arintec,,,37.3826016,-6.0096143,2026-11-13
+Sevilla,node,4017180306,mobile_phone,Telefoneitor,,,37.3827878,-6.0094534,2026-11-13
+Sevilla,node,4059628389,computer,Sirmac,,,37.3772292,-6.0059001,2026-11-13
+Sevilla,node,4335435789,mobile_phone,,,,37.3897857,-5.9949736,2026-11-13
+Sevilla,node,4423445690,computer,Bellerin,,,37.3865208,-5.9992242,2026-11-13
+Sevilla,node,4591301307,electronics,Enterteinement Exchange,,,37.3925157,-5.9911372,2026-11-13
+Sevilla,node,4719197899,computer,Sound Sevilla,,,37.3909587,-5.9191269,2026-11-13
+Sevilla,node,4827216650,computer,Microsur Sevilla Informatica,,,37.3769754,-5.9735165,2026-11-13
+Sevilla,node,5546543948,computer,mundo informática,,,37.3458842,-5.9773645,2026-11-13
+Sevilla,node,5627456727,computer,Abaxial Informática S.L,,,37.3847544,-6.0097825,2026-11-13
+Sevilla,node,5636939903,computer,SevillaPC,,,37.3814523,-6.0048192,2026-11-13
+Sevilla,node,5778414556,mobile_phone,Lys Distribuciones (República Móvil),,República Móvil,37.4220249,-5.9715203,2026-11-13
+Sevilla,node,6061790956,mobile_phone,Zero Digital,,,37.3931464,-5.9837963,2026-11-13
+Sevilla,node,6061813228,computer,@dv,,,37.3921429,-5.9794499,2026-11-13
+Sevilla,node,6517103448,electronics,M.León,,,37.3888271,-6.0089291,2026-11-13
+Sevilla,node,6570606302,mobile_phone,Chic Moviles,,,37.3797248,-6.0082985,2026-11-13
+Sevilla,node,6587730496,computer,ProNet PC,,,37.3738661,-6.0036025,2026-11-13
+Sevilla,node,6589567786,mobile_phone,MÁSMÓVIL,,,37.3748498,-5.9983053,2026-11-13
+Sevilla,node,6589599792,mobile_phone,ViveTuMóvil,,,37.3748305,-5.9994989,2026-11-13
+Sevilla,node,6589647616,electronics,HGM Sevilla,,,37.374769,-6.0011235,2026-11-13
+Sevilla,node,6589800286,mobile_phone,TuMovil Sevilla,,,37.3745999,-6.0031117,2026-11-13
+Sevilla,node,6596889490,mobile_phone,HappyTel,,,37.3772832,-6.0035155,2026-11-13
+Sevilla,node,6597301994,electronics,Surasa SL,,,37.3793793,-5.9994316,2026-11-13
+Sevilla,node,6597361586,electronics,Electroymas,,,37.3789968,-6.0001443,2026-11-13
+Sevilla,node,6606174885,electronics,Sonytel Sevilla,,,37.3798255,-5.9991397,2026-11-13
+Sevilla,node,6617891185,computer,APP Informática Los Remedios,,,37.376087,-6.0035612,2026-11-13
+Sevilla,node,6661468386,electronics,ElectroAljarafe Triana-Los Remedios,,,37.3809685,-6.0004934,2026-11-13
+Sevilla,node,6661468485,computer,Eprom Informática,,,37.3810021,-6.0005296,2026-11-13
+Sevilla,node,6665241961,electronics,Zero Digital,,,37.3836376,-6.0048814,2026-11-13
+Sevilla,node,7291315961,electronics,Electrohogar Triana,,,37.380472,-6.0087682,2026-11-13
+Sevilla,node,7501754148,electronics,Sonicolor,,,37.3686192,-5.9571514,2026-11-13
+Sevilla,node,7803821447,mobile_phone,Phone House,Phone House,,37.4186475,-5.9738172,2026-11-13
+Sevilla,node,7932077938,mobile_phone,Playmóvil,,,37.3597543,-5.9860448,2026-11-13
+Sevilla,node,7994605715,electronics,APP Informática,,,37.3687375,-5.9704007,2026-11-13
+Sevilla,node,8429497162,mobile_phone,Titiphone,,,37.3790457,-5.9413526,2026-11-13
+Sevilla,node,8930367648,mobile_phone,MasLife,Yoigo,Yoigo,37.4004696,-5.9760181,2026-11-13
+Sevilla,node,9534441175,mobile_phone,Contecta-T,,,37.3452057,-5.9818278,2026-11-13
+Sevilla,node,9705069726,electronics,Profitter - Sistemas de Energia,,,37.3774015,-6.0137585,2026-11-13
+Sevilla,node,9714512016,mobile_phone,Reparación Iphone Sevilla,,,37.3720032,-5.9976194,2026-11-13
+Sevilla,node,9717245896,computer,K-tuin,,,37.3737954,-5.9945708,2026-11-13
+Sevilla,node,10821317783,electronics,"Copiadoras Sevilla Dos, S.A.U.",,,37.3911041,-5.9825496,2026-11-13
+Sevilla,node,11274709581,mobile_phone,Hospimóvil,,,37.3976012,-5.9913645,2026-11-13
+Sevilla,node,13036773224,computer,CEINFO,,,37.3255858,-5.9687419,2026-11-13
+Sevilla,node,14127720169,computer,Pc Paco,,,37.3822319,-5.986482,2026-11-13
+Sevilla,way,301831301,computer,2F Reina Mercedes,,,37.3598154,-5.9858625,2026-11-13
+Sevilla,way,576299251,electronics,Más-Factory,,,37.3436554,-5.9771191,2026-11-13
+Zaragoza,node,287932251,computer,PCBox,,,41.6455145,-0.8736559,2026-11-13
+Zaragoza,node,1250333445,computer,PCBox,,,41.6428451,-0.8954949,2026-11-13
+Zaragoza,node,1486463919,electronics,MediaMarkt,MediaMarkt,,41.6092493,-0.8910846,2026-11-13
+Zaragoza,node,1532742680,computer,APP Informática,,,41.6686703,-0.8841635,2026-11-13
+Zaragoza,node,1607041136,electronics,Servicio Técnico Actur,,JVC,41.6696649,-0.8831861,2026-11-13
+Zaragoza,node,1607041267,computer,,,Toshiba,41.6703704,-0.8852679,2026-11-13
+Zaragoza,node,1797731174,electronics,Fnac,Fnac,GG.AA. Fnac España S.A.U.,41.6529976,-0.8817459,2026-11-13
+Zaragoza,node,1797731185,mobile_phone,Ayan Móviles,,,41.6408361,-0.8910969,2026-11-13
+Zaragoza,node,2087053738,computer,k-tuin,,,41.651735,-0.8824796,2026-11-13
+Zaragoza,node,2997959033,electronics,Almacenes Paymar,,,41.6431847,-0.8812149,2026-11-13
+Zaragoza,node,3049218519,mobile_phone,Jazztel,,,41.6446296,-0.8756999,2026-11-13
+Zaragoza,node,3052578226,electronics,,,,41.6459014,-0.8744358,2026-11-13
+Zaragoza,node,3057846838,mobile_phone,Alex Movilex,,,41.645115,-0.880323,2026-11-13
+Zaragoza,node,3741251586,computer,Informática Zaragoza,,,41.6430443,-0.8946726,2026-11-13
+Zaragoza,node,4327830100,computer,Ecomputer,,,41.6368809,-0.8761566,2026-11-13
+Zaragoza,node,4327870398,computer,Beep,Beep,,41.636735,-0.8759352,2026-11-13
+Zaragoza,node,4334524425,mobile_phone,Ciber Gran Vía. MoneyGram Titanes.,,,41.645814,-0.8912027,2026-11-13
+Zaragoza,node,4334540354,computer,Color Plus,,,41.645847,-0.890392,2026-11-13
+Zaragoza,node,4349525937,electronics,Audio Goya,,,41.6461869,-0.893888,2026-11-13
+Zaragoza,node,4349647130,computer,PCBox,,,41.6512928,-0.8910495,2026-11-13
+Zaragoza,node,4355681291,computer,Ecomputer,,,41.6440637,-0.8879065,2026-11-13
+Zaragoza,node,4356639373,electronics,Apple Store,Apple Store,Apple,41.6093062,-0.8863997,2026-11-13
+Zaragoza,node,4365285123,electronics,Promodis Telecom,,,41.6561144,-0.9044422,2026-11-13
+Zaragoza,node,4365396733,computer,Cibestore,,,41.6507386,-0.8987729,2026-11-13
+Zaragoza,node,4366620492,computer,Espazio PC-Móvil,,,41.654086,-0.8775526,2026-11-13
+Zaragoza,node,4366784700,electronics,"Ingeniería de Equipos de Control, S.L.",,,41.6390437,-0.8833,2026-11-13
+Zaragoza,node,4370893746,computer,Beep,Beep,,41.6735188,-0.8862726,2026-11-13
+Zaragoza,node,4374483191,computer,APP Informática,,,41.6200332,-0.9183557,2026-11-13
+Zaragoza,node,4383629996,mobile_phone,Cibervia,,,41.6540443,-0.8846394,2026-11-13
+Zaragoza,node,4385180592,mobile_phone,Locutorio Cumbaya,,,41.6403499,-0.8875102,2026-11-13
+Zaragoza,node,4385253893,mobile_phone,Movifix,,,41.6485653,-0.9001093,2026-11-13
+Zaragoza,node,4399258795,computer,Raxon,,,41.6392563,-0.8959156,2026-11-13
+Zaragoza,node,4401524347,computer,ABC Floppy,,,41.6436942,-0.89267,2026-11-13
+Zaragoza,node,4477568620,mobile_phone,Alex Movilex,,,41.653722,-0.8836488,2026-11-13
+Zaragoza,node,4821420303,computer,Lan Informática,,,41.6429294,-0.911648,2026-11-13
+Zaragoza,node,4821503883,computer,Tintared,,,41.6484281,-0.9133677,2026-11-13
+Zaragoza,node,4821503892,electronics,Eli-Man,,,41.650278,-0.9142194,2026-11-13
+Zaragoza,node,4821516937,computer,Tienda Acer Zaragoza,,,41.6506387,-0.9099121,2026-11-13
+Zaragoza,node,4833638336,electronics,Diusframi,,,41.6493151,-0.9095521,2026-11-13
+Zaragoza,node,4835686330,electronics,Master Instaluz,,,41.6509063,-0.9127587,2026-11-13
+Zaragoza,node,4844645658,computer,APP Informática,,,41.6476923,-0.9156524,2026-11-13
+Zaragoza,node,4846192605,computer,Suin,,,41.6498042,-0.9169947,2026-11-13
+Zaragoza,node,4858018886,mobile_phone,The Phone Shop,,,41.6515812,-0.9121338,2026-11-13
+Zaragoza,node,4858044574,mobile_phone,Phone One,,,41.650948,-0.9149976,2026-11-13
+Zaragoza,node,4943660186,computer,Informatica Comte,,,41.6516102,-0.8739722,2026-11-13
+Zaragoza,node,4985314830,electronics,StarPhone,,,41.642147,-0.8934827,2026-11-13
+Zaragoza,node,4985314839,mobile_phone,Zas!mobil,,,41.6428496,-0.8928376,2026-11-13
+Zaragoza,node,4985641556,computer,ABC Floppy,,,41.640789,-0.8931313,2026-11-13
+Zaragoza,node,4985727442,electronics,Goyasonido.com,,,41.6433101,-0.8891778,2026-11-13
+Zaragoza,node,4985727443,computer,Miranda Digital,,,41.6433356,-0.8892341,2026-11-13
+Zaragoza,node,4998012520,mobile_phone,Locutorio Hola,,,41.6535553,-0.9035692,2026-11-13
+Zaragoza,node,4998015525,electronics,Electrodomésticos Tornos,,,41.6531995,-0.9050833,2026-11-13
+Zaragoza,node,4998015541,mobile_phone,Movilsorio,,,41.6524982,-0.908023,2026-11-13
+Zaragoza,node,5041916086,computer,Ecomputer,,,41.6484717,-0.9042585,2026-11-13
+Zaragoza,node,5043617454,electronics,CeX,CeX,,41.6512454,-0.8846688,2026-11-13
+Zaragoza,node,5060995004,mobile_phone,Alex Movilex,,,41.6481984,-0.9018491,2026-11-13
+Zaragoza,node,5061015228,mobile_phone,Arbab Móviles,,,41.6544876,-0.8860707,2026-11-13
+Zaragoza,node,5087182691,mobile_phone,Eje Cafetero,,,41.6472451,-0.8746295,2026-11-13
+Zaragoza,node,5103391427,electronics,Fnac,Fnac,,41.607806,-0.8870441,2026-11-13
+Zaragoza,node,5107415309,mobile_phone,Alex Movilex,,,41.6445984,-0.8845872,2026-11-13
+Zaragoza,node,5138040562,mobile_phone,Codex Technology,,,41.6629417,-0.8628036,2026-11-13
+Zaragoza,node,5204677345,mobile_phone,Max Fix,,,41.653168,-0.9059893,2026-11-13
+Zaragoza,node,5314002922,mobile_phone,Cic Comunicaciones,,,41.6617731,-0.8661187,2026-11-13
+Zaragoza,node,5602505728,computer,Ecomputer,,,41.6513782,-0.8790299,2026-11-13
+Zaragoza,node,5613944823,mobile_phone,Phone House,Phone House,,41.6087456,-0.8868816,2026-11-13
+Zaragoza,node,5614969622,mobile_phone,E Moviles,,,41.6567679,-0.8826656,2026-11-13
+Zaragoza,node,5627425726,electronics,Hispasoft,,,41.6544989,-0.8811147,2026-11-13
+Zaragoza,node,5633590622,electronics,Novomusica,,,41.6484219,-0.8775644,2026-11-13
+Zaragoza,node,5798581490,computer,Ciber Battle,,,41.6407095,-0.8961442,2026-11-13
+Zaragoza,node,5798581504,electronics,Electrónica Certe,,,41.6398475,-0.8969358,2026-11-13
+Zaragoza,node,5798581510,electronics,Viena Audio,,,41.6390108,-0.8972592,2026-11-13
+Zaragoza,node,5812837091,computer,Reparación de ordenadores Asterra,,,41.6420387,-0.8682993,2026-11-13
+Zaragoza,node,5812837116,mobile_phone,Griffaphone Smartphone,,,41.6439409,-0.8700154,2026-11-13
+Zaragoza,node,5813340160,electronics,Comercial Lapuyade,,,41.6439227,-0.8734162,2026-11-13
+Zaragoza,node,5813340170,electronics,Moroelectra,,,41.6425546,-0.8737227,2026-11-13
+Zaragoza,node,6086635387,mobile_phone,You Mobile,,,41.6535813,-0.9026237,2026-11-13
+Zaragoza,node,6270440632,computer,Digital Net,,,41.6701874,-0.8263255,2026-11-13
+Zaragoza,node,7628764043,electronics,Dawer Electrónica,,,41.6483432,-0.8994954,2026-11-13
+Zaragoza,node,7820096743,electronics,Locutorio Pamir,,,41.6302265,-0.8858853,2026-11-13
+Zaragoza,node,7820096750,computer,PC Phone Technology,,,41.6301631,-0.8859004,2026-11-13
+Zaragoza,node,7820096753,electronics,Wali Mobiles Locutorio,,,41.6311183,-0.8856275,2026-11-13
+Zaragoza,node,9226964193,electronics,Phone Fans,,,41.6597354,-0.8741258,2026-11-13
+Zaragoza,node,9821743017,electronics,Electro Fushion,,,41.6549791,-0.9020631,2026-11-13
+Zaragoza,node,10284418872,mobile_phone,,,,41.6358516,-0.8788732,2026-11-13
+Zaragoza,node,10293200657,computer,DigiZ,,,41.6326052,-0.8793026,2026-11-13
+Zaragoza,node,11981592533,mobile_phone,Mas Life,,,41.6306176,-0.885544,2026-11-13
+Zaragoza,node,11981592568,mobile_phone,Digi,,,41.63067,-0.8855311,2026-11-13
+Zaragoza,node,11981594570,computer,App Informática,,,41.6290342,-0.8855497,2026-11-13
+Zaragoza,node,11981594572,computer,UPI,,,41.6294021,-0.8858853,2026-11-13
+Zaragoza,node,12020757118,mobile_phone,Bitten Apple,,,41.6519732,-0.8835812,2026-11-13
+Zaragoza,node,12448426586,mobile_phone,Digi,,,41.6087552,-0.8850334,2026-11-13
+Zaragoza,node,12479179134,mobile_phone,Apla Global Technology,,,41.6499543,-0.8871683,2026-11-13
+Zaragoza,node,12486643753,mobile_phone,Movicel,,,41.6358097,-0.879266,2026-11-13
+Zaragoza,node,12496833295,mobile_phone,Lowi,,,41.6520094,-0.8762878,2026-11-13
+Zaragoza,node,13011452398,mobile_phone,Neksus,,,41.6431473,-0.8826342,2026-11-13
+Zaragoza,node,13064993512,computer,Informática Las Fuentes,,,41.6496619,-0.8613359,2026-11-13
+Zaragoza,node,13413194421,computer,Padilla,,,41.6517743,-0.8761982,2026-11-13
+Zaragoza,node,13453316175,electronics,Roymar,,,41.6357975,-0.8750271,2026-11-13
+Zaragoza,node,13972961734,mobile_phone,Mundo Connect,,,41.6504766,-0.9047597,2026-11-13
+Zaragoza,node,13972961744,mobile_phone,El Joker,,,41.6503734,-0.9038319,2026-11-13
+Zaragoza,node,14201628391,mobile_phone,La Tienda del Móvil,,,41.6382782,-0.897056,2026-11-13
+Zaragoza,node,14232195771,mobile_phone,CMR Mobile,,,41.6478079,-0.8931118,2026-11-13
+Malaga,node,3361908105,electronics,MediaMarkt,MediaMarkt,,36.7112139,-4.431562,2026-11-13
+Malaga,node,3581167693,electronics,BSH Interservice,,,36.7257833,-4.4688039,2026-11-13
+Malaga,node,4218595289,electronics,Capi,,,36.675976,-4.492368,2026-11-13
+Malaga,node,4423548189,electronics,Hogarium,,,36.7053648,-4.4383915,2026-11-13
+Malaga,node,4531811509,computer,Informatica La Crónica,,,36.6906051,-4.4482064,2026-11-13
+Malaga,node,4856204302,computer,Load,,,36.7281655,-4.4132527,2026-11-13
+Malaga,node,4859421889,computer,microcad,,,36.7296618,-4.4028756,2026-11-13
+Malaga,node,4865490062,computer,Andyko,,,36.731277,-4.4184696,2026-11-13
+Malaga,node,5339795934,electronics,JIM & JAM,,,36.722576,-4.431797,2026-11-13
+Malaga,node,5556186382,electronics,PC Box,,,36.7141095,-4.4234374,2026-11-13
+Malaga,node,5574303199,electronics,La Tienda de Informática del Centro,,,36.7194623,-4.4239959,2026-11-13
+Malaga,node,5688560835,computer,CSI Servicios Informática,,,36.7160454,-4.4392767,2026-11-13
+Malaga,node,5691089021,electronics,Electrónica Muñoz,,,36.7264422,-4.4268636,2026-11-13
+Malaga,node,5693245187,electronics,MediaMarkt,MediaMarkt,,36.6554813,-4.4793972,2026-11-13
+Malaga,node,7511894417,computer,Centro Informático Bindery,,,36.7355741,-4.4234185,2026-11-13
+Malaga,node,8247455858,electronics,Bazar San Juan,Bazar San Juan,,36.697112,-4.4486935,2026-11-13
+Malaga,node,8247526233,electronics,Juan Lucas,Tiendas Activa,,36.7067223,-4.4372109,2026-11-13
+Malaga,node,8247526234,electronics,Juan Lucas,Tiendas Activa,,36.7119385,-4.4287572,2026-11-13
+Malaga,node,9282711244,electronics,Rossellimac,,,36.6570099,-4.4765596,2026-11-13
+Malaga,node,9666015780,electronics,Worten,Worten,,36.6599207,-4.4818042,2026-11-13
+Malaga,node,10079791890,computer,Daniel Gontán,,,36.7215824,-4.4352485,2026-11-13
+Malaga,node,10577245959,computer,Ecoportátil,,,36.729347,-4.4191928,2026-11-13
+Malaga,node,10701494405,mobile_phone,Huawei,Huawei,,36.7165568,-4.4231677,2026-11-13
+Malaga,node,10701605107,mobile_phone,IniCgo,,,36.7204733,-4.4227585,2026-11-13
+Malaga,node,11876058114,mobile_phone,MásMóvil,,,36.686808,-4.4591774,2026-11-13
+Malaga,node,11876058120,mobile_phone,Orange,Orange,,36.6866425,-4.4587788,2026-11-13
+Malaga,node,12558801402,mobile_phone,Lina Mobile,,,36.721371,-4.4332165,2026-11-13
+Malaga,node,12646995760,computer,GomaPhone,,,36.7197097,-4.4774709,2026-11-13
+Malaga,node,13078172808,computer,Mantenimiento Informático Málaga Remoted Help,,Remoted Help,36.6861118,-4.4495885,2026-11-13
+Malaga,node,13240337519,mobile_phone,Phone House,Phone House,,36.7116043,-4.4314927,2026-11-13
+Malaga,node,13319759901,computer,Migc,,,36.7219691,-4.4326855,2026-11-13
+Malaga,node,13319760101,electronics,Bruño,,,36.7220178,-4.4324746,2026-11-13
+Malaga,node,13573311794,electronics,,,,36.6991066,-4.4463733,2026-11-13
+Malaga,node,13869399202,mobile_phone,Vodafone,,,36.6978429,-4.4479731,2026-11-13
+Malaga,node,13869405201,mobile_phone,Movistar,,,36.6969966,-4.4488995,2026-11-13
+Malaga,way,886945469,electronics,Bazar San Juan,Bazar San Juan,,36.7078675,-4.4746828,2026-11-13
+Malaga,way,886952720,electronics,Juan Lucas,Tiendas Activa,,36.7081901,-4.4762456,2026-11-13
+Bilbao,node,1112149220,electronics,Fnac,Fnac,,43.2613508,-2.9300157,2026-11-13
+Bilbao,node,1116567600,mobile_phone,Phone House,Phone House,,43.2608557,-2.9392909,2026-11-13
+Bilbao,node,2639203086,computer,CanalPC,,,43.2605535,-2.9424824,2026-11-13
+Bilbao,node,2689611797,computer,PcCoste,,,43.2588092,-2.9406791,2026-11-13
+Bilbao,node,2813304670,mobile_phone,Phone House,Phone House,,43.2587705,-2.9236264,2026-11-13
+Bilbao,node,2863349479,electronics,DIAL Don Servicio,,,43.258035,-2.9435759,2026-11-13
+Bilbao,node,3101380124,mobile_phone,Rotial Mobile,,,43.2620303,-2.9227052,2026-11-13
+Bilbao,node,3208401871,computer,Doktore PC,,,43.2703346,-2.94381,2026-11-13
+Bilbao,node,4121261619,computer,Servicio Técnico Audio 2,,,43.2659987,-2.9341461,2026-11-13
+Bilbao,node,4207838490,computer,Mac-Line,,,43.2659607,-2.9346981,2026-11-13
+Bilbao,node,4316727569,electronics,1001 Baterías Pilas,,,43.2616254,-2.9428088,2026-11-13
+Bilbao,node,4394216989,computer,"Txesmika, S.A.",,,43.2601208,-2.934685,2026-11-13
+Bilbao,node,4634342647,electronics,,,,43.2551771,-2.9183071,2026-11-13
+Bilbao,node,4634342653,electronics,SES Suministros Eléctricos,,,43.2551241,-2.9179174,2026-11-13
+Bilbao,node,4634454981,mobile_phone,Euskaltel,,,43.25401,-2.9136298,2026-11-13
+Bilbao,node,4710040321,mobile_phone,,,,43.2564636,-2.923347,2026-11-13
+Bilbao,node,4713089493,electronics,Serantes,,,43.2568544,-2.9245693,2026-11-13
+Bilbao,node,4723744934,electronics,Radio Rhin,,,43.2600445,-2.9355592,2026-11-13
+Bilbao,node,4723832132,computer,Serinfor,,,43.260275,-2.9343584,2026-11-13
+Bilbao,node,4727846388,mobile_phone,Servico Técnico Informático,,,43.2677742,-2.9324249,2026-11-13
+Bilbao,node,4734200256,mobile_phone,Telecom,,,43.2642018,-2.9348322,2026-11-13
+Bilbao,node,4736006764,mobile_phone,Móvil Shop,,,43.263822,-2.9344769,2026-11-13
+Bilbao,node,4738192586,mobile_phone,Athleticetel,,,43.2563259,-2.9299248,2026-11-13
+Bilbao,node,4738192590,mobile_phone,,,,43.2564297,-2.9301819,2026-11-13
+Bilbao,node,4738272324,mobile_phone,,,,43.2565074,-2.9303948,2026-11-13
+Bilbao,node,4738272326,mobile_phone,,,,43.2565962,-2.9306279,2026-11-13
+Bilbao,node,4738272330,mobile_phone,Locutorio Fátima,,,43.2567169,-2.9309427,2026-11-13
+Bilbao,node,4738272331,mobile_phone,Locutorio Fadel,,,43.2567908,-2.9311786,2026-11-13
+Bilbao,node,4738272334,mobile_phone,Fast Mobiles,,,43.2568949,-2.9314144,2026-11-13
+Bilbao,node,4739554427,mobile_phone,Su Tienda,,,43.2565312,-2.9296362,2026-11-13
+Bilbao,node,4739879001,mobile_phone,Bilbo Mobile,,,43.2583633,-2.9319461,2026-11-13
+Bilbao,node,4744756096,electronics,,,,43.256947,-2.932504,2026-11-13
+Bilbao,node,4745089977,mobile_phone,Accesorios de Móviles,,,43.2602403,-2.9292481,2026-11-13
+Bilbao,node,4745089982,electronics,Expert,Expert,,43.260732,-2.9292455,2026-11-13
+Bilbao,node,4745146816,electronics,Keytron,,,43.2596264,-2.9302558,2026-11-13
+Bilbao,node,4747035722,computer,Bilbocolor,,,43.2584709,-2.932993,2026-11-13
+Bilbao,node,4747097678,computer,Computek,,,43.2580748,-2.9329457,2026-11-13
+Bilbao,node,4747181496,mobile_phone,Euskaltel,,,43.257506,-2.9355414,2026-11-13
+Bilbao,node,4748967092,computer,Alltek,,,43.2596625,-2.9361466,2026-11-13
+Bilbao,node,4748967107,mobile_phone,Hola Mobi,,,43.2596636,-2.9349766,2026-11-13
+Bilbao,node,4757644642,computer,Armu,,,43.2481777,-2.9344192,2026-11-13
+Bilbao,node,4757644651,electronics,,,,43.2486961,-2.9335396,2026-11-13
+Bilbao,node,4757645639,electronics,Arguibe,,,43.2492674,-2.9336983,2026-11-13
+Bilbao,node,4757975838,electronics,Euskal Digit@l,,,43.2605141,-2.9376462,2026-11-13
+Bilbao,node,4758008146,electronics,K-Tuin,,,43.2610582,-2.9388139,2026-11-13
+Bilbao,node,4758008147,mobile_phone,,,La Casa de las Carcasas,43.2609508,-2.9390828,2026-11-13
+Bilbao,node,4759659611,mobile_phone,CellTell,,,43.2614636,-2.9420797,2026-11-13
+Bilbao,node,4761544244,mobile_phone,Zonabi Móvil,,,43.2623661,-2.9416538,2026-11-13
+Bilbao,node,4761544262,mobile_phone,Euskaltel,,,43.2622053,-2.940022,2026-11-13
+Bilbao,node,5702888915,electronics,Suministros Bravo,,,43.2525682,-2.9382003,2026-11-13
+Bilbao,node,6832417177,mobile_phone,Vodafone,Vodafone,,43.2539292,-2.9123159,2026-11-13
+Bilbao,node,6869768385,computer,Zorrotza,,,43.2762478,-2.9720795,2026-11-13
+Bilbao,node,7000736062,electronics,CeX,CeX,,43.2581291,-2.9223847,2026-11-13
+Bilbao,node,7201448833,computer,Microson,,,43.2664869,-2.9205646,2026-11-13
+Bilbao,node,7922215360,electronics,MediaMarkt,MediaMarkt,,43.2678069,-2.941049,2026-11-13
+Bilbao,node,11218145137,mobile_phone,MÁSlife,,,43.2538678,-2.9158122,2026-11-13
+Bilbao,node,12759272888,mobile_phone,San Mamés Móviles,,,43.261166,-2.9484237,2026-11-13
+Bilbao,node,12759277368,mobile_phone,Movil Movil,,,43.2607599,-2.9486128,2026-11-13
+Bilbao,node,12884471001,electronics,Bosch,Bosch,,43.2638483,-2.9465933,2026-11-13
+Bilbao,node,12985679267,mobile_phone,Móvil Club,,,43.2650887,-2.9166824,2026-11-13
+Bilbao,node,13546047801,computer,INFOPLANET Tienda de Informática - Reparación de ordenadores - Papelería Bilbao,,,43.2739904,-2.9589795,2026-11-13
+Bilbao,node,13572761401,computer,Compudata,,,43.2626769,-2.9448815,2026-11-13
+Girona,node,1280510741,electronics,Electro Stocks,,,41.963016,2.80242,2026-11-13
+Girona,node,1421112051,computer,,,Pcbox,41.9692852,2.8178129,2026-11-13
+Girona,node,1427750051,computer,iMàtica - Serveis Informatics,,,41.9713339,2.8179052,2026-11-13
+Girona,node,1458489977,electronics,,,,41.994664,2.819743,2026-11-13
+Girona,node,1765360518,mobile_phone,Banco Santander,,Orange,41.9825191,2.8196988,2026-11-13
+Girona,node,1765360520,mobile_phone,Tecno Gallery,,The Phone House,41.9827138,2.8200154,2026-11-13
+Girona,node,1765360521,mobile_phone,,,Yoigo,41.9828282,2.8200068,2026-11-13
+Girona,node,2573419965,electronics,Parament,,,41.980084,2.8138275,2026-11-13
+Girona,node,2627344525,mobile_phone,,,Yoigo,41.9806612,2.8147443,2026-11-13
+Girona,node,2793289694,electronics,Comercial Muntaner,,,41.9768716,2.8109645,2026-11-13
+Girona,node,2821364593,electronics,Catar,,,41.9737816,2.8139378,2026-11-13
+Girona,node,2833973448,computer,APP Informática,,,41.982286,2.8158567,2026-11-13
+Girona,node,2833973457,mobile_phone,Luck Telecom,,,41.9806958,2.8148163,2026-11-13
+Girona,node,2834691476,computer,Factoria 81,,,41.9825418,2.8169894,2026-11-13
+Girona,node,2835350162,electronics,Clave,,,41.9839475,2.8177854,2026-11-13
+Girona,node,2835365798,electronics,Electroahorro,,,41.9831661,2.817966,2026-11-13
+Girona,node,2999383340,electronics,Electrodomestics Angelats,,,41.9842389,2.8160935,2026-11-13
+Girona,node,3010239827,electronics,Tien 21,,Tien21,41.9783882,2.8097359,2026-11-13
+Girona,node,3012617940,electronics,ST Mares,,,41.9777101,2.8092107,2026-11-13
+Girona,node,3014959048,mobile_phone,Girona mobils,,,41.9765721,2.8089385,2026-11-13
+Girona,node,3034767608,computer,Aplieuropa,,,41.9765858,2.8061206,2026-11-13
+Girona,node,3307457544,electronics,Bazar Andorra,,,41.9784086,2.8216736,2026-11-13
+Girona,node,3308032642,mobile_phone,,,Movistar,41.983638,2.8182672,2026-11-13
+Girona,node,3364246785,mobile_phone,,,,41.9853638,2.8219875,2026-11-13
+Girona,node,3388071448,electronics,Bosch,,,41.9852918,2.8232458,2026-11-13
+Girona,node,3388071555,mobile_phone,Tecnogallery,,,41.9826877,2.8203608,2026-11-13
+Girona,node,3425099352,computer,.EHF,,,41.9811166,2.8182401,2026-11-13
+Girona,node,3425099358,electronics,Electro Ahorro,,,41.9817883,2.817999,2026-11-13
+Girona,node,3508263984,computer,Tot digital,,,41.9753538,2.8186541,2026-11-13
+Girona,node,3508263992,computer,APP Informàtica,,,41.975956,2.8191021,2026-11-13
+Girona,node,3508264093,computer,,,Beep,41.9762824,2.8180104,2026-11-13
+Girona,node,3508630092,mobile_phone,Cheng,,,41.9794331,2.8183141,2026-11-13
+Girona,node,3508630322,mobile_phone,,,Movistar,41.9811948,2.8200767,2026-11-13
+Girona,node,3635028323,computer,Copycat,,,41.9694395,2.8099852,2026-11-13
+Girona,node,3656260075,electronics,Zeners,,,41.9716475,2.8162985,2026-11-13
+Girona,node,3667428800,electronics,Electrodomèstics Casellas,,,41.9760053,2.8035985,2026-11-13
+Girona,node,3679063231,computer,Microgestio,,,41.9798079,2.8206004,2026-11-13
+Girona,node,3679063292,electronics,Sony,,,41.9796327,2.8209411,2026-11-13
+Girona,node,3687238404,electronics,Game,,,41.9799342,2.820019,2026-11-13
+Girona,node,3687238794,mobile_phone,Pop,,,41.9776097,2.8204483,2026-11-13
+Girona,node,3687238808,electronics,Xtreme games,,,41.979117,2.8181884,2026-11-13
+Girona,node,3687238945,mobile_phone,Skytec,,,41.9768471,2.8195033,2026-11-13
+Girona,node,3687238958,electronics,Can Calvet,,Calvet,41.9780128,2.8214089,2026-11-13
+Girona,node,3784624860,computer,Consum i serveis,,,41.9949038,2.8021446,2026-11-13
+Girona,node,3918038884,mobile_phone,Mobil,,,41.9779108,2.8215897,2026-11-13
+Girona,node,3918053552,computer,Linia 67,,,41.9772365,2.8221948,2026-11-13
+Girona,node,4335087243,electronics,Electrolot,,,41.9701703,2.814551,2026-11-13
+Girona,node,4335087245,computer,Girtic,,,41.9695374,2.8168153,2026-11-13
+Girona,node,4737138223,electronics,Plana Fàbrega,,,41.9768856,2.8034833,2026-11-13
+Girona,node,5001970843,electronics,BTS electronica,,,41.9701029,2.8101131,2026-11-13
+Girona,node,6004490707,computer,RSYSTEMS,,,41.9683841,2.8235494,2026-11-13
+Girona,node,6775041286,computer,App,,,41.9724569,2.8167102,2026-11-13
+Girona,node,6802551285,electronics,Nord Figueres Girona,,,41.9721428,2.8229733,2026-11-13
+Girona,node,7302537821,computer,PH Systems S.L,,,41.9759028,2.826108,2026-11-13
+Girona,node,9066399268,computer,Tecnigi360º,,,41.9687783,2.8236754,2026-11-13
+Girona,node,9686341397,mobile_phone,Mobi Mòbils,,,41.9849414,2.824542,2026-11-13
+Girona,node,9686449203,mobile_phone,popmobile,,,41.9840496,2.8240643,2026-11-13
+Girona,node,10694368237,electronics,Ginser,,,41.9785444,2.8115578,2026-11-13
+Girona,node,12378766334,mobile_phone,Tech Mòbil,,,41.9732226,2.8204935,2026-11-13
+Girona,node,12397810583,mobile_phone,Link,,,41.974489,2.8032453,2026-11-13
+Girona,node,12588493525,mobile_phone,Siphone,,,41.9767345,2.8209278,2026-11-13
+Girona,way,63935829,electronics,MediaMarkt,MediaMarkt,,41.9585269,2.8113835,2026-11-13
+Girona,way,63937545,electronics,Electronica BF,,,41.9608469,2.8031197,2026-11-13
+Tarragona,node,1327011308,computer,PCBox,,,41.1141622,1.2430311,2026-11-13
+Tarragona,node,4878807122,electronics,Servei autoritzat,,,41.1233421,1.2461124,2026-11-13
+Tarragona,node,5781621751,computer,Marketpc,,,41.115769,1.2426088,2026-11-13
+Tarragona,node,6765939883,electronics,Comercial Electrónica L. P.,,,41.1213494,1.2485853,2026-11-13
+Tarragona,node,8514644952,computer,Beep Box,,,41.1206587,1.2520793,2026-11-13
+Tarragona,node,9853364472,mobile_phone,Seu Telefonica,,,41.1178565,1.2457739,2026-11-13
+Tarragona,node,9853364473,computer,Centelles Informàtica,,,41.1180392,1.2456881,2026-11-13
+Tarragona,node,9853425490,mobile_phone,Star Moviles,,,41.1166067,1.2463409,2026-11-13
+Tarragona,node,10126540615,mobile_phone,Nova Moviles,,,41.1188081,1.246452,2026-11-13
+Tarragona,node,10183933937,mobile_phone,movistar,Movistar,,41.1174951,1.2492063,2026-11-13
+Tarragona,node,10224091717,electronics,Domèstic Tarraco,,,41.1165607,1.2468382,2026-11-13
+Tarragona,node,10224091725,mobile_phone,Xingda Mobil,,,41.1168079,1.2483614,2026-11-13
+Tarragona,node,10224091727,electronics,euronics,,,41.116711,1.2473529,2026-11-13
+Tarragona,node,10707783783,mobile_phone,Movistar,Movistar,,41.1280029,1.2063445,2026-11-13
+Tarragona,node,10707807127,mobile_phone,Yoigo,Yoigo,,41.127594,1.2072076,2026-11-13
+Tarragona,node,10707807155,mobile_phone,Orange,Orange,,41.1280499,1.2062435,2026-11-13
+Tarragona,node,10992301885,mobile_phone,Mobil Infor,,,41.1164697,1.2484395,2026-11-13
+Tarragona,node,12055606140,electronics,Ferraté,,,41.1160159,1.2407366,2026-11-13
+Tarragona,node,12107996083,mobile_phone,My Phone,,,41.1167978,1.2389012,2026-11-13
+Tarragona,node,12168508733,computer,PC Repair,,,41.1153898,1.247193,2026-11-13
+Tarragona,node,12168508737,computer,Beep Box,Beep,,41.1158538,1.246975,2026-11-13
+Tarragona,node,12214658618,mobile_phone,Maher,,,41.1151479,1.2435632,2026-11-13
+Tarragona,node,12214658646,computer,Mr Computer,,,41.1153872,1.2431261,2026-11-13
+Tarragona,node,12297404734,mobile_phone,maher,,,41.1146918,1.2475012,2026-11-13
+Tarragona,node,12335272041,mobile_phone,Mòn Locutori,,,41.1151515,1.2479337,2026-11-13
+Tarragona,node,12348642236,electronics,Mercor Tarragona,,,41.1157521,1.2457467,2026-11-13
+Tarragona,node,12386564559,electronics,Bosch,Bosch,,41.1161624,1.2598907,2026-11-13
+Tarragona,node,12386727871,mobile_phone,Top Mobil,,,41.1185277,1.2478701,2026-11-13
+Tarragona,node,12533938174,mobile_phone,Pak,,,41.1201549,1.2522765,2026-11-13
+Tarragona,node,12557203037,computer,wellcomm,,,41.1197709,1.2497221,2026-11-13
+Tarragona,node,12798343185,mobile_phone,Phonesat,,,41.1199687,1.2509014,2026-11-13
+Tarragona,node,12798343188,electronics,Piñol,,,41.1206242,1.2512695,2026-11-13
+Tarragona,node,13205235557,mobile_phone,tecphone,,,41.1223802,1.2437324,2026-11-13
+Tarragona,node,13248168310,mobile_phone,Multi Tech Info,,,41.1179795,1.2513923,2026-11-13
+Tarragona,node,13336799617,mobile_phone,Jasstech Mobilephones Wholesale,,,41.1141956,1.2468252,2026-11-13
+Tarragona,node,13507381445,electronics,Sakamo Compraventa,,,41.1152833,1.245547,2026-11-13
+Tarragona,node,13507381450,electronics,Electro Arena,,,41.1153261,1.2455535,2026-11-13
+Tarragona,node,13507381451,mobile_phone,maher,,,41.1158276,1.2455141,2026-11-13
+Tarragona,node,13719172702,mobile_phone,Phone Center,,,41.1159177,1.2446118,2026-11-13
+Tarragona,node,13719172710,mobile_phone,ipoint,,,41.1164164,1.2462378,2026-11-13
+Tarragona,node,14042010349,mobile_phone,Momin Locutori,,,41.1150722,1.2499086,2026-11-13
+Tarragona,node,14087320361,mobile_phone,Red Flash,,,41.1182013,1.2573005,2026-11-13
+Tarragona,way,78353780,electronics,MediaMarkt,MediaMarkt,,41.1325423,1.2024522,2026-11-13
+Lleida,node,3700785795,mobile_phone,Mobile Cottage,,,41.6120462,0.6299526,2026-11-13
+Lleida,node,3965867964,electronics,Servei Tècnic Navas,,,41.6121955,0.6284205,2026-11-13
+Lleida,node,4596816190,computer,Pc Clot,,,41.623267,0.6213339,2026-11-13
+Lleida,node,4597227789,electronics,Tot movil,,,41.6162478,0.6214913,2026-11-13
+Lleida,node,4597228089,mobile_phone,,,,41.6242665,0.6216754,2026-11-13
+Lleida,node,4602995596,computer,Micro-Exe,,,41.6225516,0.6169413,2026-11-13
+Lleida,node,4605481095,electronics,Satelec Electro,,,41.6241389,0.6221131,2026-11-13
+Lleida,node,4622811391,mobile_phone,Digi Store,,,41.6200242,0.6285846,2026-11-13
+Lleida,node,4707101294,electronics,Seguí Clima,,,41.619431,0.6770601,2026-11-13
+Lleida,node,4707104690,electronics,Elektrik Catalunya,,,41.614665,0.6640887,2026-11-13
+Lleida,node,4707104901,electronics,PIE Electricitat,,,41.6182445,0.6795496,2026-11-13
+Lleida,node,4727738197,electronics,Watson,,,41.6206478,0.6130372,2026-11-13
+Lleida,node,4752449225,computer,Simm solucions tecnologiques,,,41.6107404,0.6330679,2026-11-13
+Lleida,node,5189031339,computer,PC Box,,,41.6120439,0.6291166,2026-11-13
+Lleida,node,5459318904,computer,Ofisat,,,41.6213736,0.6191879,2026-11-13
+Lleida,node,6163158876,mobile_phone,,,,41.6123359,0.6190999,2026-11-13
+Lleida,node,9930381478,electronics,K-tuin Apple Premium Reseller,,,41.6159021,0.6270439,2026-11-13
+Lleida,node,9930381486,mobile_phone,La casa de las carcassas,,,41.6141603,0.6257001,2026-11-13
+Lleida,node,9932091968,electronics,Chema Gallery | Lleida,,,41.6136992,0.6251453,2026-11-13
+Lleida,node,10044905759,mobile_phone,Phone Center,,,41.6240027,0.622832,2026-11-13
+Lleida,node,10201897254,computer,Lleida Digital,,,41.6027274,0.6408794,2026-11-13
+Lleida,node,10203645598,computer,Cover Informàtica,,,41.6051022,0.6387115,2026-11-13
+Lleida,node,10203645606,electronics,Vilcar,,,41.604907,0.6386078,2026-11-13
+Lleida,node,10203692678,electronics,A+D,,,41.6031662,0.6395261,2026-11-13
+Lleida,node,10226026514,electronics,ElectroNord,,,41.6184411,0.6330361,2026-11-13
+Lleida,node,10226088921,mobile_phone,Lycamobile,,,41.6185418,0.6328286,2026-11-13
+Lleida,node,10226088937,electronics,Emac,,,41.6171096,0.6332992,2026-11-13
+Lleida,node,10241160277,mobile_phone,Neksus,Yoigo;MasMóvil;Jazztel;Pepephone,,41.6169951,0.6129887,2026-11-13
+Lleida,node,11643220707,computer,INGROUP,,,41.6124522,0.6627407,2026-11-13
+Lleida,node,12717069830,mobile_phone,Doctor Mobile,,,41.61181,0.6216393,2026-11-13
+Lleida,node,12717113176,electronics,Home Gallery,,,41.6122077,0.6221404,2026-11-13
+Lleida,node,13041599139,mobile_phone,Lleida mòbil,,,41.6205339,0.6296202,2026-11-13
+Lleida,node,13143497920,mobile_phone,Bonaire mobilink,,,41.6180867,0.619964,2026-11-13
+Lleida,node,13143497922,mobile_phone,B10 Informática,,,41.6174325,0.620296,2026-11-13
+Lleida,node,13194184396,mobile_phone,Arena mobil,,,41.6122731,0.6236441,2026-11-13
+Lleida,node,13194281549,mobile_phone,Jazztel,,,41.616289,0.6283877,2026-11-13
+Lleida,node,13195369045,mobile_phone,iServitech,,,41.6159224,0.6206106,2026-11-13
+Lleida,node,13254622617,electronics,Euronics,Euronics,,41.6172177,0.617433,2026-11-13
+Lleida,node,13302097350,mobile_phone,Ningmao Mòbils,,,41.6203636,0.6283452,2026-11-13
+Lleida,node,13339007406,mobile_phone,Mòbil mania,,,41.6210143,0.6278805,2026-11-13
+Lleida,node,13418550501,electronics,Calbet Electrodomèstics,,,41.6214174,0.6273577,2026-11-13
+Lleida,node,13429010581,mobile_phone,Rayan Móbil,,,41.6131494,0.6242153,2026-11-13
+Lleida,node,13429037780,mobile_phone,Dr. Mobile,,,41.6130317,0.6241187,2026-11-13
+Lleida,node,13434492622,mobile_phone,Sadat Locutorio,,,41.6177494,0.6204433,2026-11-13
+Lleida,node,13504795034,mobile_phone,smart cellular,,,41.6228531,0.6228013,2026-11-13
+Lleida,node,14103583747,mobile_phone,Tecno mobile,,,41.6175811,0.6181536,2026-11-13
+Lleida,node,14183317194,mobile_phone,Sadat mobile,,,41.6236595,0.6232488,2026-11-13
+Lleida,way,288445034,electronics,MediaMarkt,MediaMarkt,,41.6067881,0.6325447,2026-11-13

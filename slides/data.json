@@ -215,14 +215,14 @@
    "indice": 89.1
   },
   {
-   "perimetre": "Apple",
-   "nb_modeles": 7,
-   "indice": 96.3
-  },
-  {
    "perimetre": "Android",
    "nb_modeles": 4,
    "indice": 76.6
+  },
+  {
+   "perimetre": "Apple",
+   "nb_modeles": 7,
+   "indice": 96.3
   }
  ],
  "marge": [
@@ -378,9 +378,9 @@
    "hub_le_plus_proche": "SQF",
    "distance_route_km": 634.2,
    "duree_route_h": 6.79,
-   "nb_points_de_vente": 191.0,
+   "nb_points_de_vente": 192.0,
    "nb_grandes_enseignes": 11.0,
-   "points_de_vente_pour_100k_hab": 11.1
+   "points_de_vente_pour_100k_hab": 11.2
   },
   {
    "ville": "Sevilla",
@@ -389,9 +389,9 @@
    "hub_le_plus_proche": "NTE",
    "distance_route_km": 1497.0,
    "duree_route_h": 15.8,
-   "nb_points_de_vente": 67.0,
+   "nb_points_de_vente": 68.0,
    "nb_grandes_enseignes": 0.0,
-   "points_de_vente_pour_100k_hab": 9.7
+   "points_de_vente_pour_100k_hab": 9.9
   },
   {
    "ville": "Madrid",
