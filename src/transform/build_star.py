@@ -190,10 +190,12 @@ def build() -> duckdb.DuckDBPyConnection:
           FROM fact_prix f
         ), fr AS (SELECT produit_id, prix_ht_eur ht_fr, prix_ttc_eur ttc_fr FROM last
                   JOIN dim_enseigne USING (enseigne_id) WHERE rn=1 AND enseigne='LDLC' AND pays='FR'),
-        es AS (SELECT produit_id, enseigne AS concurrent_es, prix_ht_eur ht_es, prix_ttc_eur ttc_es,
-                      prix_barre_ou_pvpr_eur pvpr_es FROM last JOIN dim_enseigne USING (enseigne_id)
-               WHERE rn=1 AND pays='ES' AND enseigne <> 'LDLC')
-        SELECT p.modele, p.marque, p.famille, p.segment, es.concurrent_es,
+        -- prix de référence espagnol = moyenne des concurrents relevés (dernier prix de chaque enseigne)
+        es AS (SELECT produit_id, string_agg(enseigne, ' + ' ORDER BY enseigne) AS concurrent_es,
+                      count(*) AS nb_concurrents, avg(prix_ht_eur) ht_es, avg(prix_ttc_eur) ttc_es,
+                      avg(prix_barre_ou_pvpr_eur) pvpr_es FROM last JOIN dim_enseigne USING (enseigne_id)
+               WHERE rn=1 AND pays='ES' AND enseigne <> 'LDLC' GROUP BY produit_id)
+        SELECT p.modele, p.marque, p.famille, p.segment, es.concurrent_es, es.nb_concurrents,
                fr.ttc_fr AS prix_ttc_ldlc_fr, es.ttc_es AS prix_ttc_es, fr.ht_fr AS prix_ht_ldlc_fr,
                es.ht_es AS prix_ht_es, es.pvpr_es,
                round(100 * es.ht_es / fr.ht_fr, 1) AS indice_es_vs_fr

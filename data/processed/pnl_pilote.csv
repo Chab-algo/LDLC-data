@@ -1,9 +1,9 @@
 poste,valeur,calcul
-Loyer annuel,243000.0,surface x loyer x 12
-Personnel (salaires + charges),89333.244,ETP x salaire x (1 + charges)
-Charges fixes totales,332333.244,
+Loyer annuel,26640.0,surface x loyer x 12
+Personnel (salaires + charges),98703.462,ETP x salaire x (1 + charges)
+Charges fixes totales,125343.462,
 Taux de contribution,0.195,marge brute - autres charges variables
-CA HT au point mort,1704273.0461538462,charges fixes / taux de contribution
+CA HT au point mort,642786.9846153846,charges fixes / taux de contribution
 Marché téléphonie Espagne,3588000000.0,config/marche.csv (calcul équipe)
 Marché téléphonie Barcelona (au prorata de la population),123958821.61880742,hypothèse : dépense par habitant égale à la moyenne nationale
-Part du marché de Barcelona nécessaire au point mort,0.013748703189473273,
+Part du marché de Barcelona nécessaire au point mort,0.0051854880211111894,

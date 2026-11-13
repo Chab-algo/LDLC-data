@@ -143,10 +143,10 @@ La collecte tourne seule chaque lundi (GitHub Actions) ; le dashboard est régé
 | Scripts de collecte et automatisation hebdomadaire | fait, premier passage à vérifier |
 | Base en étoile | fait |
 | Compte de résultat simulé (point mort) | fait, hypothèses à affiner |
-| URL produits PcComponentes et MediaMarkt dans `config/produits.csv` | à faire |
-| KPI 11 : comparaison des catalogues LDLC France et Espagne | fait par marque, à automatiser par référence |
+| URL produits PcComponentes et MediaMarkt dans `config/produits.csv` | fait (13/11/2026) |
+| Scraping du catalogue téléphonie complet de LDLC (KPI 11) | à faire |
 | Dashboard et synthèse IA | en cours |
-| Slides Comex | à faire |
+| Slides Comex (`slides/LDLC_Espagne_Comex.pptx`, générées par `slides/build_deck.js`) | fait, à relire |
 
 ### Next steps (recommandations post-étude)
 
@@ -183,12 +183,11 @@ Secrets GitHub (Settings > Secrets and variables > Actions), tous deux facultati
 
 ## 7. Limites connues
 
-- **Prix** : une seule enseigne espagnole pour l'instant (PcComponentes), 11 modèles, un seul jour de relevé.
-- **KPI 11** : comparaison du nombre de smartphones par marque entre ldlc.com et ldlc.com/es-es (relevé manuel du 13/11/2026),
-  pas encore référence par référence. Le site espagnol montre que LDLC peut vendre ces modèles en Espagne, pas qu'ils sont en stock
-  ni qu'ils sont vendus par des enseignes espagnoles. À automatiser : scraper les deux listes et les apparier par référence.
-- **Marge** : la marge téléphonie de LDLC n'est pas publiée. On utilise la marge brute du groupe (24,5 %), probablement trop haute.
-- **Loyer** : proxy d'une rue commerçante secondaire (Bilbao). Aucun chiffre trouvé pour un centre commercial à Barcelone.
+- **Prix** : deux enseignes espagnoles (PcComponentes, MediaMarkt), 11 modèles, relevés des 12 et 13/11. Prix MediaMarkt lus sur les pages de liste (fiches produit en erreur 403). Amazon.es, Fnac et El Corte Inglés bloquent la lecture.
+- **KPI 11** : les 11 modèles ont été choisis parce qu'on les trouvait dans les deux pays, donc le taux d'éligibilité
+  de 100 % n'a pas de valeur. Le catalogue smartphones de LDLC compte 391 références (13/11/2026) : l'éligibilité reste à mesurer sur l'ensemble.
+- **Marge** : la marge téléphonie de LDLC n'est pas publiée. On utilise la marge brute du groupe (24,5 %), probablement trop haute : estimation de 10 à 20 % pour un distributeur sur smartphones (`config/marche.csv`, statut estimation).
+- **Loyer** : médiane de 3 annonces de centres commerciaux à Barcelone (14,80 €/m²/mois, loyers demandés). Échantillon très petit : à 135 €/m²/mois (rue de Bilbao) la part de marché requise passe à 1,41 %.
 - **Concurrence** : OpenStreetMap est contributif. Un magasin absent d'OSM n'est pas compté.
 - **Canon digital** : montant de 2017 (1,10 € par mobile), à vérifier dans le Real Decreto 209/2023.
 - **Hubs** : coordonnées du centre de la commune, pas l'adresse exacte des entrepôts.

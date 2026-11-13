@@ -3,211 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LDLC en Espagne : Go ou No-Go ?</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Space+Grotesk:wght@400..700&display=swap">
+<title>Analyse LDLC Espagne</title>
 <style>
-.viz-root{
-  color-scheme:light;
-  --surface-0:#f4f3f0; --surface-1:#fcfcfb; --surface-2:#efeee9; --border:#dddcd6;
-  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#77766f;
-  --series-1:#2a78d6; --series-2:#eb6834; --grid:#e6e5df; --ref:#9b9a92;
-  --good:#1d7a33; --bad:#b3261e; --warn:#8a5a00; --accent:#2a78d6;
-}
-@media (prefers-color-scheme: dark){
-  :root:where(:not([data-theme="light"])) .viz-root{
-    color-scheme:dark;
-    --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#34332f;
-    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#99988f;
-    --series-1:#3987e5; --series-2:#d95926; --grid:#2c2c29; --ref:#77766f;
-    --good:#5cc47a; --bad:#ff8a80; --warn:#e0b04a; --accent:#3987e5;
-  }
-}
-:root[data-theme="dark"] .viz-root{
-  color-scheme:dark;
-  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#34332f;
-  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#99988f;
-  --series-1:#3987e5; --series-2:#d95926; --grid:#2c2c29; --ref:#77766f;
-  --good:#5cc47a; --bad:#ff8a80; --warn:#e0b04a; --accent:#3987e5;
+:root{
+  --blue:#1565c0; --s1:#4285f4; --s2:#f4a340; --ink:#202124; --ink-2:#5f6368; --line:#dadce0; --soft:#f1f3f4;
+  --good:#188038; --bad:#d93025; --warn:#b06000;
 }
 *{box-sizing:border-box}
-body{margin:0}
-.viz-root{background:var(--surface-0);color:var(--text-primary);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
-.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
-header h1{font-family:"Space Grotesk",Inter,sans-serif;font-size:30px;line-height:1.2;margin:0 0 6px}
-header p{margin:0;color:var(--text-secondary)}
-.meta{font-size:13px;color:var(--text-muted);margin-top:6px}
-nav{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}
-nav a{font-size:13px;color:var(--text-secondary);text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:4px 10px;background:var(--surface-1)}
-nav a:hover{color:var(--text-primary);border-color:var(--text-muted)}
-section{margin-top:28px}
-h2{font-family:"Space Grotesk",Inter,sans-serif;font-size:21px;margin:0 0 4px}
-.lede{color:var(--text-secondary);margin:0 0 14px;max-width:860px}
-.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px}
-.grid{display:grid;gap:12px}
-.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
-.tile .lab{font-size:13px;color:var(--text-secondary)}
-.tile .val{font-family:"Space Grotesk",Inter,sans-serif;font-size:30px;font-weight:650;letter-spacing:-.01em;margin:4px 0 2px;font-variant-numeric:tabular-nums}
-.tile .sub{font-size:12.5px;color:var(--text-muted)}
-.tag{display:inline-block;font-size:11.5px;border-radius:6px;padding:1px 7px;border:1px solid var(--border);color:var(--text-secondary);white-space:nowrap}
-.tag.src{border-color:transparent;background:var(--surface-2)}
-.tag.hyp{border-style:dashed}
-.verdict{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
-.verdict .big{font-size:22px;font-weight:700}
-.checks{list-style:none;margin:8px 0 0;padding:0}
-.checks li{display:flex;gap:8px;padding:5px 0;border-top:1px solid var(--grid);font-size:14px}
-.checks li:first-child{border-top:0}
-.ok{color:var(--good);font-weight:700}.ko{color:var(--bad);font-weight:700}.na{color:var(--warn);font-weight:700}
-.chart{width:100%}
-.chart svg{display:block;width:100%;height:auto;overflow:visible}
-.axis text,.lbl{fill:var(--text-secondary);font-size:12px}
-.lbl.strong{fill:var(--text-primary)}
-.gridline{stroke:var(--grid)}
-.refline{stroke:var(--ref);stroke-dasharray:4 3}
-.legend{display:flex;gap:14px;font-size:13px;color:var(--text-secondary);margin:2px 0 8px;flex-wrap:wrap}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+body{margin:0;background:#fff;color:var(--ink);font:14px/1.45 Arial,Helvetica,sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:16px}
+
+/* bandeau */
+.band{background:var(--blue);color:#fff;border-radius:4px;padding:14px 20px;display:grid;grid-template-columns:minmax(220px,1.1fr) repeat(2,minmax(150px,.7fr));gap:16px;align-items:center}
+.band h1{margin:0;font-size:26px;line-height:1.15;font-weight:700}
+.f{background:#fff;color:var(--ink);border-radius:4px;padding:4px 12px;display:flex;align-items:center;gap:8px;height:44px}
+.f span{color:var(--ink-2);font-size:13px;white-space:nowrap}
+.f select{flex:1;min-width:0;border:0;background:transparent;font:inherit;color:var(--ink);height:100%;cursor:pointer}
+.band .date{grid-column:1/-1;text-align:right;font-size:12px;margin-top:-8px}
+.tabs{display:flex;gap:4px;margin:14px 0 4px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{border:0;background:none;font:inherit;font-size:14px;color:var(--ink-2);padding:10px 16px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected=true]{color:var(--blue);border-bottom-color:var(--blue);font-weight:700}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* cartes KPI */
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
+.card{border:1px solid var(--line);border-radius:4px;padding:14px 12px;text-align:center}
+.card .t{font-size:16px}
+.card .v{font-size:38px;font-weight:700;line-height:1.15;margin:2px 0}
+.card .d{font-size:15px}
+.d.good{color:var(--good)}.d.bad{color:var(--bad)}.d.flat{color:var(--ink-2)}
+.d i{display:inline-block;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;margin-right:6px;vertical-align:1px}
+.d.up i{border-bottom:8px solid currentColor}.d.down i{border-top:8px solid currentColor}
+
+/* blocs */
+.row{display:grid;gap:16px;margin-top:16px}
+.r2{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.r2e{grid-template-columns:repeat(2,minmax(0,1fr))}
+.box{border:1px solid var(--line);border-radius:4px;padding:14px 16px;min-width:0}
+.box h2{margin:0 0 10px;font-size:16px;font-weight:700;text-align:center;text-transform:uppercase}
+.legend{display:flex;gap:16px;justify-content:center;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.legend i{display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:3px}
+.legend i.sq{width:10px;height:10px;border-radius:2px;vertical-align:-1px}
+.chart svg{display:block;max-width:100%;height:auto;overflow:visible}
+.axis text{fill:var(--ink-2);font-size:12px}
+.lbl{fill:var(--ink);font-size:12px}
+.gridline{stroke:var(--soft)}
+.refline{stroke:var(--ink-2);stroke-dasharray:4 4}
+.refnote{fill:var(--ink-2);font-size:11px}
+.muted{color:var(--ink-2)}
+
+/* tableaux */
 table{border-collapse:collapse;width:100%;font-size:13.5px}
-th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
-th{color:var(--text-secondary);font-weight:600;font-size:12.5px}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-.tablewrap{overflow-x:auto}
-.sim{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:16px}
-@media (max-width:760px){.sim{grid-template-columns:1fr}}
-.ctl{margin-bottom:12px}
-.ctl label{display:flex;justify-content:space-between;font-size:13.5px;gap:8px}
-.ctl label b{font-variant-numeric:tabular-nums}
-.ctl input[type=range]{width:100%;accent-color:var(--accent)}
-.ctl .note{font-size:11.5px;color:var(--text-muted);margin-top:2px}
-select,button{font:inherit}
-select{background:var(--surface-1);color:var(--text-primary);border:1px solid var(--border);border-radius:8px;padding:5px 8px}
-button.primary{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:9px 16px;font-weight:600;cursor:pointer}
-button.primary:disabled{opacity:.55;cursor:default}
-button.ghost{background:transparent;color:var(--text-secondary);border:1px solid var(--border);border-radius:8px;padding:6px 12px;cursor:pointer}
-.ia{white-space:pre-wrap;line-height:1.6;min-height:60px}
-.muted{color:var(--text-muted)}
-.small{font-size:12.5px}
-#tip{position:fixed;pointer-events:none;background:var(--surface-1);color:var(--text-primary);border:1px solid var(--border);border-radius:8px;padding:7px 9px;font-size:12.5px;box-shadow:0 4px 16px rgba(0,0,0,.12);opacity:0;transition:opacity .08s;max-width:260px;z-index:10}
+thead th{background:var(--blue);color:#fff;font-weight:700;text-align:center;padding:9px 8px;white-space:nowrap}
+thead th:first-child{text-align:left}
+td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:center;vertical-align:top}
+td:first-child{text-align:left}
+tbody tr:last-child td{border-bottom:0}
+.tw{overflow-x:auto}
+.neg{color:var(--bad)}.pos{color:var(--good)}
+
+/* page pilote */
+.sim{display:grid;grid-template-columns:minmax(250px,320px) minmax(0,1fr);gap:16px;margin-top:16px}
+.ctl{margin-bottom:14px}
+.ctl label{display:flex;justify-content:space-between;gap:8px;font-size:14px}
+.ctl label b{font-weight:700}
+.ctl .n{font-size:12px;color:var(--ink-2);margin-top:2px}
+input[type=range]{width:100%;accent-color:var(--blue)}
+button.ghost{background:#fff;color:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:8px 12px;font:inherit;cursor:pointer}
+button.ghost:hover{color:var(--ink);border-color:var(--ink-2)}
+
+/* page instructions */
+.ins{max-width:900px;margin:8px auto 0}
+.ins h2{font-size:18px;margin:28px 0 8px;color:var(--blue)}
+.ins p,.ins li{margin:0 0 6px}
+.ins ul{margin:0;padding-left:20px}
+.ins .box{margin-top:8px}
+
+#tip{position:fixed;pointer-events:none;background:#202124;color:#fff;border-radius:4px;padding:8px 10px;font-size:12.5px;opacity:0;transition:opacity .1s;max-width:260px;z-index:10}
 #tip b{display:block;margin-bottom:2px}
-footer{margin-top:36px;font-size:12.5px;color:var(--text-muted)}
-footer a{color:var(--text-secondary)}
+.page[hidden]{display:none}
+
+@media (max-width:900px){
+  .band{grid-template-columns:1fr}
+  .band .date{margin-top:0;text-align:left}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .r2,.r2e,.sim{grid-template-columns:1fr}
+  .card .v{font-size:30px}
+  .wrap{padding:10px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<div class="viz-root">
 <div class="wrap">
-<header>
-  <h1>LDLC en Espagne : Go ou No-Go ?</h1>
-  <p>Question du Comex : l'ouverture de magasins LDLC en Espagne, sur la téléphonie, est-elle réalisable et rentable ?</p>
-  <div class="meta" id="meta"></div>
+<header class="band">
+  <h1>Analyse LDLC Espagne<br>Téléphonie</h1>
+  <label class="f"><span>Famille</span><select id="fFamille" aria-label="Famille"><option>Tous</option><option>Apple</option><option>Android</option></select></label>
+  <label class="f"><span>Ville</span><select id="fVille" aria-label="Ville"></select></label>
+  <div class="date" id="date"></div>
 </header>
-<nav>
-  <a href="#verdict">Lecture</a><a href="#marche">Marché</a><a href="#prix">Prix</a><a href="#marge">Marge</a>
-  <a href="#concurrence">Concurrence et logistique</a><a href="#pilote">Magasin pilote</a>
-  <a href="#ia">Synthèse IA</a><a href="#kpis">KPIs et sources</a>
+<nav class="tabs" role="tablist" id="tabs">
+  <button role="tab" data-p="synthese" aria-selected="true">Synthèse</button>
+  <button role="tab" data-p="prix" aria-selected="false">Prix et marge</button>
+  <button role="tab" data-p="pilote" aria-selected="false">Magasin pilote</button>
+  <button role="tab" data-p="instructions" aria-selected="false">Instructions</button>
 </nav>
 
-<section id="verdict">
-  <div class="card verdict">
-    <div style="flex:1 1 320px">
-      <div class="lab small muted">Lecture des seuils fixés dans la fiche (section 19), à valider par l'équipe</div>
-      <div class="big" id="verdictText">…</div>
-      <ul class="checks" id="checks"></ul>
+<main>
+<section class="page" id="p-synthese">
+  <div class="cards" id="cards"></div>
+  <div class="row r2">
+    <div class="box">
+      <h2>Volume des ventes high-tech, base 100 en 2021</h2>
+      <div class="legend"><span><i style="background:var(--s1)"></i>Espagne</span><span><i style="background:var(--s2)"></i>France</span></div>
+      <div class="chart" id="chartMarche"></div>
+    </div>
+    <div class="box">
+      <h2>Top 5 écarts de prix</h2>
+      <div class="tw"><table id="tabTop"></table></div>
     </div>
   </div>
-  <div class="grid g4" style="margin-top:12px" id="tiles"></div>
+  <div class="row"><div class="box"><h2>Concurrence et logistique par ville</h2><div class="tw"><table id="tabVilles"></table></div></div></div>
 </section>
 
-<section id="marche">
-  <h2>Marché : le commerce high-tech espagnol croît deux fois plus vite</h2>
-  <p class="lede">Volume des ventes des magasins spécialisés en informatique et télécoms (Eurostat, NACE G474, corrigé des jours ouvrables), base 100 en 2021. Collecté automatiquement chaque semaine.</p>
-  <div class="card">
-    <div class="legend"><span><i style="background:var(--series-1)"></i>Espagne</span><span><i style="background:var(--series-2)"></i>France</span></div>
-    <div class="chart" id="chartMarche"></div>
-    <p class="small muted" id="marcheNote"></p>
-  </div>
-</section>
-
-<section id="prix">
-  <h2>Prix : l'Espagne est moins chère sur Android</h2>
-  <p class="lede">Indice = prix HT du concurrent espagnol / prix HT de LDLC France × 100, modèle par modèle (même marque, modèle, capacité, RAM). En dessous de 100, l'Espagne est moins chère.</p>
-  <div class="card">
-    <div class="legend"><span><i style="background:var(--series-1)"></i>Apple</span><span><i style="background:var(--series-2)"></i>Android</span><span class="muted">pointillé : parité (100)</span></div>
-    <div class="chart" id="chartIndice"></div>
-    <p class="small muted" id="prixNote"></p>
-  </div>
-</section>
-
-<section id="marge">
-  <h2>Marge : que reste-t-il si LDLC s'aligne ?</h2>
-  <p class="lede">Si LDLC vendait chaque modèle au prix du concurrent espagnol. Coût d'achat estimé = prix HT France × (1 − <span id="tauxMarge"></span>). <span class="tag hyp">hypothèse : marge brute du groupe appliquée à la téléphonie</span></p>
-  <div class="card">
-    <div class="legend"><span><i style="background:var(--series-1)"></i>Apple</span><span><i style="background:var(--series-2)"></i>Android</span><span class="muted">pointillé : marge normative 22 %</span></div>
-    <div class="chart" id="chartMarge"></div>
-  </div>
-</section>
-
-<section id="concurrence">
-  <h2>Concurrence et logistique par ville</h2>
-  <p class="lede">Points de vente téléphonie, électronique et informatique recensés dans OpenStreetMap, rapportés à la population de la commune. Distance routière depuis le hub LDLC le plus proche.</p>
-  <div class="grid g2">
-    <div class="card">
-      <div class="small muted" style="margin-bottom:6px">Points de vente pour 100 000 habitants</div>
-      <div class="chart" id="chartDensite"></div>
+<section class="page" id="p-prix" hidden>
+  <div class="row r2e">
+    <div class="box">
+      <h2>Indice de prix Espagne / France</h2>
+      <div class="legend"><span><i class="sq" style="background:var(--s1)"></i>Apple</span><span><i class="sq" style="background:var(--s2)"></i>Android</span></div>
+      <div class="chart" id="chartIndice"></div>
     </div>
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px">
-        <span class="small muted">Enseignes présentes</span>
-        <select id="villeConc" aria-label="Ville"></select>
-      </div>
-      <div class="tablewrap"><table id="tabEnseignes"></table></div>
-    </div>
-  </div>
-  <div class="card tablewrap" style="margin-top:12px"><table id="tabVilles"></table></div>
-</section>
-
-<section id="pilote">
-  <h2>Magasin pilote : quel chiffre d'affaires pour ne pas perdre d'argent ?</h2>
-  <p class="lede">On ne sait pas combien un magasin LDLC vendrait en Espagne. On calcule donc le CA minimum qui couvre le loyer et le personnel (point mort), puis la part du marché local de la téléphonie que ça représente. Faites varier les hypothèses.</p>
-  <div class="card sim">
-    <div id="controls"></div>
-    <div>
-      <div class="grid g4" id="simTiles"></div>
-      <div class="small muted" style="margin:14px 0 4px">CA au point mort selon le loyer (le point = vos réglages)</div>
-      <div class="chart" id="chartLoyer"></div>
-      <div class="tablewrap" style="margin-top:10px"><table id="tabPnl"></table></div>
+    <div class="box">
+      <h2>Marge si alignement</h2>
+      <div class="legend"><span><i class="sq" style="background:var(--s1)"></i>Apple</span><span><i class="sq" style="background:var(--s2)"></i>Android</span></div>
+      <div class="chart" id="chartMarge"></div>
     </div>
   </div>
 </section>
 
-<section id="ia">
-  <h2>Synthèse IA</h2>
-  <p class="lede">Claude lit les chiffres de ce dashboard, y compris vos réglages du magasin pilote, et rédige une synthèse Go/No-Go pour le Comex. Consigne : n'utiliser que ces chiffres et signaler les hypothèses.</p>
-  <div class="card">
-    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-      <button class="primary" id="btnIA">Générer la synthèse</button>
-      <button class="ghost" id="btnCopy" hidden>Copier</button>
-      <span class="small muted" id="iaStatus"></span>
+<section class="page" id="p-pilote" hidden>
+  <div class="cards" id="simCards"></div>
+  <div class="sim">
+    <div class="box"><h2>Hypothèses</h2><div id="controls"></div></div>
+    <div style="display:grid;gap:16px;align-content:start;min-width:0">
+      <div class="box"><h2>CA au point mort selon le loyer</h2><div class="chart" id="chartLoyer"></div></div>
+      <div class="box"><h2>Compte de résultat au point mort</h2><div class="tw"><table id="tabPnl"></table></div></div>
     </div>
-    <div class="ia" id="iaOut" style="margin-top:12px"></div>
   </div>
 </section>
 
-<section id="kpis">
-  <h2>Les 11 KPIs du cahier des charges</h2>
-  <div class="card tablewrap"><table id="tabKpis"></table></div>
-  <h2 style="margin-top:22px">Hypothèses et sources</h2>
-  <div class="card tablewrap"><table id="tabHyp"></table></div>
-  <div class="card tablewrap" style="margin-top:12px" id="journalWrap"><table id="tabJournal"></table></div>
+<section class="page ins" id="p-instructions" hidden>
+  <h2>Question</h2>
+  <p>Ouvrir des magasins LDLC en Espagne, sur la téléphonie, est-il réalisable et rentable ?</p>
+  <h2>Définitions</h2>
+  <ul>
+    <li><b>Indice de prix</b> : prix HT du concurrent espagnol / prix HT de LDLC France × 100. Sous 100, l'Espagne est moins chère. Modèles appariés par marque, modèle, capacité et RAM.</li>
+    <li><b>Marge si alignement</b> : (prix HT espagnol − coût d'achat estimé) / prix HT espagnol, avec coût d'achat = prix HT France × (1 − marge brute du groupe).</li>
+    <li><b>Point mort</b> : CA HT qui couvre le loyer et le personnel, soit charges fixes / (marge brute − autres charges variables).</li>
+    <li><b>Part de marché requise</b> : CA au point mort / marché téléphonie de la ville, au prorata de la population.</li>
+  </ul>
+  <h2>Seuils de décision</h2>
+  <ul><li>Indice de prix d'au moins 95.</li><li>Marge si alignement d'au moins 22 %.</li><li>Part de marché requise d'au plus 1 % (repère à discuter).</li></ul>
+  <h2>Limites</h2>
+  <ul id="limites"></ul>
+  <h2>Les 11 KPIs</h2>
+  <div class="box tw"><table id="tabKpis"></table></div>
+  <h2>Hypothèses et sources</h2>
+  <div class="box tw"><table id="tabHyp"></table></div>
+  <h2>Journal de collecte</h2>
+  <div class="box tw" id="journalWrap"><table id="tabJournal"></table></div>
+  <p class="muted" style="margin-top:20px">Code et données : github.com/Chab-algo/LDLC-data. Équipe : Georges Do Xuan, Thomas Lefevbre, Benjamin Chabani, Rubens Le Scao.</p>
 </section>
-
-<footer>
-  Équipe : Georges Do Xuan, Thomas Lefevbre, Benjamin Chabani, Rubens Le Scao. MSc Eugenia School.
-  Code et données : <a href="https://github.com/Chab-algo/LDLC-data">github.com/Chab-algo/LDLC-data</a>.
-  Les chiffres viennent de data/processed/ du dépôt, régénérés par la collecte hebdomadaire.
-</footer>
+</main>
 </div>
 <div id="tip" role="tooltip"></div>
-</div>
 
 <script>
 const DATA = /*__DATA__*/null;
@@ -215,128 +185,128 @@ const DATA = /*__DATA__*/null;
 /* ---------- utilitaires ---------- */
 const $ = s => document.querySelector(s);
 const NS = "http://www.w3.org/2000/svg";
-const fmt0 = n => n == null || isNaN(n) ? "—" : Math.round(n).toLocaleString("fr-FR");
-const fmt1 = n => n == null || isNaN(n) ? "—" : n.toLocaleString("fr-FR",{minimumFractionDigits:1,maximumFractionDigits:1});
-const pct = (n,d=1) => n == null || isNaN(n) ? "—" : (n*100).toLocaleString("fr-FR",{minimumFractionDigits:d,maximumFractionDigits:d}) + " %";
-const eur = n => n == null || isNaN(n) ? "—" : (Math.abs(n) >= 1e6 ? fmt1(n/1e6).replace(/,0$/,"") + " M€" : fmt0(n) + " €");
+const ND = "n.d.";
+const fmt0 = n => n == null || isNaN(n) ? ND : Math.round(n).toLocaleString("fr-FR");
+const fmt1 = n => n == null || isNaN(n) ? ND : n.toLocaleString("fr-FR",{minimumFractionDigits:1,maximumFractionDigits:1});
+const pct = (n,d=1) => n == null || isNaN(n) ? ND : (n*100).toLocaleString("fr-FR",{minimumFractionDigits:d,maximumFractionDigits:d}) + " %";
+const sgn = (n,s) => (n > 0 ? "+" : "") + s;
+const eur = n => n == null || isNaN(n) ? ND : (Math.abs(n) >= 1e6 ? fmt1(n/1e6).replace(/,0$/,"") + " M€" : Math.abs(n) >= 1e4 ? fmt0(n/1e3) + " k€" : fmt0(n) + " €");
 const el = (tag, attrs={}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
 const h = (tag, props={}, kids=[]) => { const e = document.createElement(tag); Object.assign(e, props); for (const k of [].concat(kids)) if (k!=null) e.append(k); return e; };
-const css = v => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(v).trim();
-const famColor = f => f === "Apple" ? "var(--series-1)" : "var(--series-2)";
+const famColor = f => f === "Apple" ? "var(--s1)" : "var(--s2)";
 const tip = $("#tip");
 function showTip(ev, html){ tip.innerHTML = html; tip.style.opacity = 1; const r = tip.getBoundingClientRect(); let x = ev.clientX + 14, y = ev.clientY + 14; if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - 14; if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
 function hideTip(){ tip.style.opacity = 0; }
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cls = n => n < 0 ? "neg" : n > 0 ? "pos" : "";
 
+/* ---------- données ---------- */
 const M = {};
 for (const r of DATA.marche) { (M[r.indicateur] ??= {}); (M[r.indicateur][r.pays] ??= {}); M[r.indicateur][r.pays][r.annee] = r; }
 const last = (ind, pays) => { const o = M[ind]?.[pays]; if (!o) return null; const y = Math.max(...Object.keys(o).map(Number)); return o[y]; };
 const HYP = Object.fromEntries(DATA.hypotheses.map(r => [r.parametre, r]));
 const SYN = Object.fromEntries(DATA.indice_synthese.map(r => [r.perimetre, r]));
-const margeRows = DATA.marge_si_alignement;
+const margeByModel = Object.fromEntries(DATA.marge_si_alignement.map(r => [r.modele, r.marge_si_alignement]));
 const avg = a => a.length ? a.reduce((s,x)=>s+x,0)/a.length : NaN;
-const margeFam = f => avg(margeRows.filter(r => r.famille === f).map(r => r.marge_si_alignement));
 const popES = last("population_1er_janvier","ES");
 const marcheTel = last("marche_telephonie","ES");
+const G474 = p => Object.values(M["eurostat_VOL_SLS_G474_I21_CA"]?.[p] ?? {}).map(r => ({annee:r.annee, v:r.valeur})).sort((a,b)=>a.annee-b.annee);
+function growth(p){ const s = G474(p); if (s.length < 2) return null; const a = s[s.length-2], b = s[s.length-1]; return {annee:b.annee, g:b.v/a.v-1}; }
 
-$("#meta").textContent = `Données générées le ${new Date(DATA.genere_le).toLocaleDateString("fr-FR")} · prix relevés le ${DATA.indice_prix.length ? "12/11/2026" : "—"} · Groupe LDLC, périmètre téléphonie`;
-$("#tauxMarge").textContent = pct(HYP.taux_marge_brute.valeur);
+/* ---------- filtres ---------- */
+const F = {famille:"Tous", ville:"Toutes"};
+const inFam = r => F.famille === "Tous" || r.famille === F.famille;
+const villeSim = () => F.ville !== "Toutes" ? F.ville : (DATA.densite.find(r => r.ville === "Barcelona") ? "Barcelona" : DATA.densite[0]?.ville);
+const idxF = () => SYN[F.famille === "Tous" ? "Tous modèles" : F.famille]?.indice;
+const margeF = () => avg(DATA.marge_si_alignement.filter(inFam).map(r => r.marge_si_alignement));
+
+/* ---------- cartes KPI ---------- */
+function card(t, v, d, dir, tone){
+  return h("div",{className:"card"},[h("div",{className:"t",textContent:t}),h("div",{className:"v",textContent:v}),
+    h("div",{className:"d " + tone + " " + dir},[dir==="flat" ? null : h("i"), d])]);
+}
+function drawCards(){
+  const ix = idxF(), mg = margeF(), gE = growth("ES"), gF = growth("FR"), r = calcSim();
+  const box = $("#cards"); box.innerHTML = "";
+  box.append(
+    card("Indice prix ES/FR", fmt1(ix), `${fmt1(ix-100)} % vs France`, ix < 100 ? "down" : "up", ix < 100 ? "bad" : "good"),
+    card(F.famille === "Tous" ? "Marge si alignement" : `Marge ${F.famille} si alignement`, pct(mg), `${fmt1((mg-0.22)*100)} pts vs seuil 22 %`, mg < 0.22 ? "down" : "up", mg < 0.22 ? "bad" : "good"),
+    card(`Croissance high-tech ${gE?.annee ?? ""}`, gE ? sgn(gE.g, pct(gE.g)) : ND, gE && gF ? `${sgn(gE.g-gF.g, fmt1((gE.g-gF.g)*100))} pts vs France` : "", gE && gF && gE.g >= gF.g ? "up" : "down", gE && gF && gE.g >= gF.g ? "good" : "bad"),
+    card(`CA point mort ${villeSim()}`, eur(r.ca), r.part != null ? `${pct(r.part,2)} du marché vs 1 % visé` : "", r.part != null && r.part > 0.01 ? "up" : "down", r.part != null && r.part > 0.01 ? "bad" : "good")
+  );
+}
 
 /* ---------- graphiques ---------- */
 function hbar(container, rows, {label, value, color, domain, ref, fmt, tipHtml, refLabel}){
   const box = $(container); box.innerHTML = "";
-  const W = Math.max(320, box.clientWidth || 600);
-  const lw = Math.min(210, W * 0.42), rh = 26, top = 8, bottom = 24, H = top + rows.length * rh + bottom, right = 44;
-  const svg = el("svg", {viewBox:`0 0 ${W} ${H}`, role:"img"}, box);
+  if (!rows.length){ box.innerHTML = '<p class="muted">Aucune donnée pour ce filtre.</p>'; return; }
+  const W = Math.max(300, box.clientWidth || 500);
+  const narrow = W < 520, lab0 = label;
+  if (narrow) label = r => lab0(r).replace(/ 5G/, "").replace(/ Go$/, "");
+  const lw = Math.min(W * 0.46, Math.max(...rows.map(r => label(r).length)) * 6.6 + 16), rh = 28, top = 24, bottom = 24, right = 44, H = top + rows.length * rh + bottom;
+  const svg = el("svg", {viewBox:`0 0 ${W} ${H}`, width:W, height:H, role:"img"}, box);
   const x = v => lw + (v - domain[0]) / (domain[1] - domain[0]) * (W - lw - right);
-  const ticks = []; const step = (domain[1]-domain[0]) / 4; for (let i=0;i<=4;i++) ticks.push(domain[0] + i*step);
+  const base = domain[0] < 0 ? 0 : domain[0];
+  const nt = narrow ? 2 : 4, step = (domain[1]-domain[0]) / nt;
   const g = el("g", {class:"axis"}, svg);
-  for (const t of ticks){ el("line",{x1:x(t),x2:x(t),y1:top,y2:H-bottom,class:"gridline"},g); const tx = el("text",{x:x(t),y:H-6,"text-anchor":"middle"},g); tx.textContent = fmt(t); }
+  for (let i=0;i<=nt;i++){ const t = domain[0] + i*step; el("line",{x1:x(t),x2:x(t),y1:top,y2:H-bottom,class:"gridline"},g); const tx = el("text",{x:x(t),y:H-6,"text-anchor":"middle"},g); tx.textContent = fmt(t); }
   rows.forEach((r,i) => {
-    const y = top + i*rh, v = value(r), x0 = x(Math.max(domain[0], Math.min(0, domain[1])) < x(domain[0]) ? domain[0] : (domain[0] < 0 ? 0 : domain[0]));
+    const y = top + i*rh, v = value(r), x0 = x(base), pos = v >= base;
     const t = el("text",{x:lw-8,y:y+rh/2+4,"text-anchor":"end",class:"lbl"},svg); t.textContent = label(r);
-    const xa = Math.min(x0, x(v)), wa = Math.max(2, Math.abs(x(v) - x0));
-    const bar = el("rect",{x:xa,y:y+5,width:wa,height:rh-10,rx:4,fill:color(r)},svg);
-    const vt = el("text",{x:v >= (domain[0]<0?0:domain[0]) ? x(v)+5 : x(v)-5,y:y+rh/2+4,"text-anchor":v >= (domain[0]<0?0:domain[0]) ? "start":"end",class:"lbl strong"},svg); vt.textContent = fmt(v);
+    el("rect",{x:Math.min(x0, x(v)),y:y+5,width:Math.max(2, Math.abs(x(v) - x0)),height:rh-10,fill:color(r)},svg);
+    const vt = el("text",{x:pos ? x(v)+6 : x0+6,y:y+rh/2+4,"text-anchor":"start",class:"lbl"},svg); vt.textContent = fmt(v);
     const hit = el("rect",{x:0,y:y,width:W,height:rh,fill:"transparent"},svg);
     hit.addEventListener("mousemove", ev => showTip(ev, tipHtml(r))); hit.addEventListener("mouseleave", hideTip);
   });
-  if (ref != null){ el("line",{x1:x(ref),x2:x(ref),y1:top-4,y2:H-bottom,class:"refline"},svg); }
-  if (domain[0] < 0) el("line",{x1:x(0),x2:x(0),y1:top-4,y2:H-bottom,stroke:css("--text-muted")},svg);
+  if (ref != null){ el("line",{x1:x(ref),x2:x(ref),y1:top-6,y2:H-bottom,class:"refline"},svg); if (refLabel){ const rt = el("text",{x:x(ref),y:top-10,"text-anchor":"middle",class:"refnote"},svg); rt.textContent = refLabel; } }
+  if (domain[0] < 0) el("line",{x1:x(0),x2:x(0),y1:top-6,y2:H-bottom,stroke:"#5f6368"},svg);
 }
-
-function drawIndice(){
-  const rows = [...DATA.indice_prix].sort((a,b) => a.indice_es_vs_fr - b.indice_es_vs_fr);
-  hbar("#chartIndice", rows, {
-    label: r => r.modele, value: r => r.indice_es_vs_fr, color: r => famColor(r.famille), domain:[0,120], ref:100, fmt: v => fmt0(v),
-    tipHtml: r => `<b>${esc(r.modele)}</b>LDLC France : ${fmt1(r.prix_ttc_ldlc_fr)} € TTC (${fmt1(r.prix_ht_ldlc_fr)} € HT)<br>${esc(r.concurrent_es)} : ${fmt1(r.prix_ttc_es)} € TTC (${fmt1(r.prix_ht_es)} € HT)<br>Indice : <b style="display:inline">${fmt1(r.indice_es_vs_fr)}</b>`
-  });
-  const conc = [...new Set(DATA.indice_prix.map(r => r.concurrent_es))].join(", ");
-  $("#prixNote").textContent = `${DATA.indice_prix.length} modèles appariés. Concurrent espagnol relevé : ${conc}. Une seule enseigne et un seul jour de relevé pour l'instant.`;
+function drawPrix(){
+  const rows = DATA.indice_prix.filter(inFam).sort((a,b) => a.indice_es_vs_fr - b.indice_es_vs_fr);
+  hbar("#chartIndice", rows, {label:r=>r.modele, value:r=>r.indice_es_vs_fr, color:r=>famColor(r.famille), domain:[0,120], ref:100, refLabel:"parité", fmt:v=>fmt0(v),
+    tipHtml:r=>`<b>${esc(r.modele)}</b>LDLC France : ${fmt1(r.prix_ttc_ldlc_fr)} € TTC<br>${esc(r.concurrent_es)} : ${fmt1(r.prix_ttc_es)} € TTC<br>Indice : ${fmt1(r.indice_es_vs_fr)}`});
+  const mr = DATA.marge_si_alignement.filter(inFam).sort((a,b) => a.marge_si_alignement - b.marge_si_alignement);
+  const vals = mr.map(r => r.marge_si_alignement), mn = Math.min(-0.2, ...vals), mx = Math.max(0.3, ...vals);
+  hbar("#chartMarge", mr, {label:r=>r.modele, value:r=>r.marge_si_alignement, color:r=>famColor(r.famille), domain:[Math.floor(mn*20)/20, Math.ceil(mx*20)/20], ref:0.22, refLabel:"seuil 22 %", fmt:v=>pct(v,0),
+    tipHtml:r=>`<b>${esc(r.modele)}</b>Prix HT espagnol : ${fmt1(r.prix_ht_es)} €<br>Coût d'achat estimé : ${fmt1(r.cout_achat_estime_ht)} €<br>Marge : ${pct(r.marge_si_alignement)}`});
 }
-function drawMarge(){
-  const rows = [...margeRows].sort((a,b) => a.marge_si_alignement - b.marge_si_alignement);
-  const mn = Math.min(-0.25, ...rows.map(r=>r.marge_si_alignement)), mx = Math.max(0.3, ...rows.map(r=>r.marge_si_alignement));
-  hbar("#chartMarge", rows, {
-    label: r => r.modele, value: r => r.marge_si_alignement, color: r => famColor(r.famille), domain:[-Math.max(0.3,Math.ceil(-mn*20)/20), Math.max(0.3,Math.ceil(mx*20)/20)], ref:0.22, fmt: v => pct(v,0),
-    tipHtml: r => `<b>${esc(r.modele)}</b>Prix HT espagnol : ${fmt1(r.prix_ht_es)} €<br>Coût d'achat estimé : ${fmt1(r.cout_achat_estime_ht)} €<br>Marge si alignement : <b style="display:inline">${pct(r.marge_si_alignement)}</b>`
-  });
-}
-
-/* ---------- marché (Eurostat G474) ---------- */
-const G474 = p => Object.values(M["eurostat_VOL_SLS_G474_I21_CA"]?.[p] ?? {}).map(r => ({annee:r.annee, v:r.valeur})).sort((a,b)=>a.annee-b.annee);
-function growth(p){ const s = G474(p); if (s.length < 2) return null; const a = s[s.length-2], b = s[s.length-1]; return {annee:b.annee, g:b.v/a.v-1}; }
 function drawMarche(){
   const box = $("#chartMarche"); box.innerHTML = "";
   const es = G474("ES").filter(r=>r.annee>=2021), fr = G474("FR").filter(r=>r.annee>=2021);
-  if (!es.length){ box.innerHTML = '<p class="muted small">Série Eurostat pas encore collectée.</p>'; return; }
-  const W = Math.max(300, box.clientWidth || 600), H = 230, L = 40, R = 70, T = 12, B = 26;
+  if (!es.length){ box.innerHTML = '<p class="muted">Série Eurostat pas encore collectée.</p>'; return; }
+  const W = Math.max(300, box.clientWidth || 600), H = 250, L = 36, R = 24, T = 20, B = 28;
   const yrs = [...new Set([...es,...fr].map(r=>r.annee))].sort();
-  const vals = [...es,...fr].map(r=>r.v), ymin = Math.floor(Math.min(90,...vals)/10)*10, ymax = Math.ceil(Math.max(...vals)/10)*10;
+  const vals = [...es,...fr].map(r=>r.v), ymin = Math.floor(Math.min(90,...vals)/10)*10, ymax = Math.ceil(Math.max(...vals)/10)*10 + 10;
   const x = a => L + (a - yrs[0]) / Math.max(1, yrs[yrs.length-1]-yrs[0]) * (W-L-R), y = v => T + (1-(v-ymin)/(ymax-ymin))*(H-T-B);
-  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img"},box), g = el("g",{class:"axis"},svg);
+  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:"img"},box), g = el("g",{class:"axis"},svg);
   for (let v = ymin; v <= ymax; v += Math.max(10, Math.round((ymax-ymin)/4/10)*10)){ el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"gridline"},g); const t = el("text",{x:L-6,y:y(v)+4,"text-anchor":"end"},g); t.textContent = v; }
-  for (const a of yrs){ const t = el("text",{x:x(a),y:H-6,"text-anchor":"middle"},g); t.textContent = a; }
-  for (const [ser, col, name] of [[es,"var(--series-1)","Espagne"],[fr,"var(--series-2)","France"]]){
-    el("path",{d:ser.map((r,i)=>(i?"L":"M")+x(r.annee)+","+y(r.v)).join(""),fill:"none",stroke:col,"stroke-width":2},svg);
-    for (const r of ser) el("circle",{cx:x(r.annee),cy:y(r.v),r:4,fill:col,stroke:css("--surface-1"),"stroke-width":2},svg);
-    const lr = ser[ser.length-1]; const t = el("text",{x:x(lr.annee)+8,y:y(lr.v)+4,class:"lbl strong"},svg); t.textContent = `${name} ${fmt1(lr.v)}`;
+  for (const a of yrs){ const t = el("text",{x:x(a),y:H-8,"text-anchor":"middle"},g); t.textContent = a; }
+  for (const [ser, col, dy] of [[fr,"var(--s2)",18],[es,"var(--s1)",-10]]){
+    el("path",{d:ser.map((r,i)=>(i?"L":"M")+x(r.annee)+","+y(r.v)).join(""),fill:"none",stroke:col,"stroke-width":2.5},svg);
+    for (const r of ser){ el("circle",{cx:x(r.annee),cy:y(r.v),r:3.5,fill:col},svg); if (ser === fr && es.find(e => e.annee === r.annee && e.v === r.v)) continue; const t = el("text",{x:x(r.annee),y:y(r.v)+dy,"text-anchor":"middle",class:"lbl",fill:col},svg); t.textContent = fmt1(r.v); }
   }
   const hit = el("rect",{x:L,y:T,width:W-L-R,height:H-T-B,fill:"transparent"},svg);
-  hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX-b.left)*W/b.width; const a = yrs.reduce((p,c)=>Math.abs(x(c)-lx)<Math.abs(x(p)-lx)?c:p); const e = es.find(r=>r.annee===a), f = fr.find(r=>r.annee===a); showTip(ev, `<b>${a}</b>Espagne : ${e?fmt1(e.v):"—"}<br>France : ${f?fmt1(f.v):"—"}`); });
+  hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX-b.left)*W/b.width; const a = yrs.reduce((p,c)=>Math.abs(x(c)-lx)<Math.abs(x(p)-lx)?c:p); const e = es.find(r=>r.annee===a), f = fr.find(r=>r.annee===a); showTip(ev, `<b>${a}</b>Espagne : ${e?fmt1(e.v):ND}<br>France : ${f?fmt1(f.v):ND}`); });
   hit.addEventListener("mouseleave", hideTip);
-  const ge = growth("ES"), gf = growth("FR");
-  $("#marcheNote").textContent = `De 2021 à ${es[es.length-1].annee} : Espagne ${fmt1(es[es.length-1].v-100)} points, France ${fmt1(fr[fr.length-1].v-100)} points. Le champ couvre tout le high-tech en magasin spécialisé, pas seulement la téléphonie. Source : Eurostat sts_trtu_a.`;
 }
 
-/* ---------- concurrence ---------- */
-function drawConcurrence(){
-  const rows = DATA.densite.filter(r => r.points_de_vente_pour_100k_hab != null).sort((a,b)=>b.points_de_vente_pour_100k_hab-a.points_de_vente_pour_100k_hab);
-  if (!rows.length){ $("#chartDensite").innerHTML = '<p class="muted small">Pas encore de données OpenStreetMap : la collecte automatique n\'a pas encore tourné ou a échoué (voir le journal en bas de page).</p>'; }
-  else {
-    const mx = Math.max(...rows.map(r=>r.points_de_vente_pour_100k_hab));
-    hbar("#chartDensite", rows, {label:r=>r.ville, value:r=>r.points_de_vente_pour_100k_hab, color:()=> "var(--series-1)", domain:[0, Math.ceil(mx/5)*5 || 5], fmt:v=>fmt1(v),
-      tipHtml: r => `<b>${esc(r.ville)}</b>${fmt0(r.nb_points_de_vente)} points de vente, dont ${fmt0(r.nb_grandes_enseignes)} de grandes enseignes<br>Population : ${fmt0(r.population)}`});
-  }
+/* ---------- tableaux de la synthèse ---------- */
+function drawTop(){
+  const t = $("#tabTop"); t.innerHTML = "";
+  t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Modèle"}),h("th",{textContent:"Indice"}),h("th",{textContent:"Marge"})])));
+  const tb = h("tbody"); t.append(tb);
+  const rows = DATA.indice_prix.filter(inFam).sort((a,b)=>a.indice_es_vs_fr-b.indice_es_vs_fr).slice(0,5);
+  for (const r of rows){ const m = margeByModel[r.modele]; tb.append(h("tr",{},[h("td",{textContent:r.modele}),h("td",{textContent:fmt1(r.indice_es_vs_fr)}),h("td",{className:cls(m < 0 ? -1 : 0),textContent:pct(m)})])); }
+}
+function drawVilles(){
   const t = $("#tabVilles"); t.innerHTML = "";
-  t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Ville"}),h("th",{textContent:"Région"}),h("th",{className:"num",textContent:"Population"}),h("th",{className:"num",textContent:"Points de vente"}),h("th",{className:"num",textContent:"Grandes enseignes"}),h("th",{className:"num",textContent:"Pour 100 000 hab."}),h("th",{textContent:"Hub le plus proche"}),h("th",{className:"num",textContent:"Route (km)"}),h("th",{className:"num",textContent:"Durée (h)"})])));
+  t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Ville"}),h("th",{textContent:"Population"}),h("th",{textContent:"Points de vente"}),h("th",{textContent:"Pour 100 000 hab."}),h("th",{textContent:"Hub le plus proche"}),h("th",{textContent:"Route (km)"})])));
   const tb = h("tbody"); t.append(tb);
-  for (const r of DATA.densite) tb.append(h("tr",{},[h("td",{textContent:r.ville}),h("td",{textContent:r.region}),h("td",{className:"num",textContent:fmt0(r.population)}),h("td",{className:"num",textContent:fmt0(r.nb_points_de_vente)}),h("td",{className:"num",textContent:fmt0(r.nb_grandes_enseignes)}),h("td",{className:"num",textContent:fmt1(r.points_de_vente_pour_100k_hab)}),h("td",{textContent:r.hub_le_plus_proche ?? "—"}),h("td",{className:"num",textContent:fmt0(r.distance_route_km)}),h("td",{className:"num",textContent:fmt1(r.duree_route_h)})]));
-  const sel = $("#villeConc"); sel.innerHTML = "";
-  const villes = [...new Set(DATA.densite.map(r=>r.ville))];
-  for (const v of villes) sel.append(h("option",{value:v,textContent:v}));
-  sel.onchange = drawEnseignes; drawEnseignes();
-}
-function drawEnseignes(){
-  const v = $("#villeConc").value, rows = DATA.concurrents.filter(r => r.ville === v);
-  const t = $("#tabEnseignes"); t.innerHTML = "";
-  if (!rows.length){ t.append(h("tbody",{},h("tr",{},h("td",{className:"muted",textContent:"Pas encore de données pour cette ville."})))); return; }
-  t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Enseigne"}),h("th",{textContent:"Type"}),h("th",{className:"num",textContent:"Points de vente"})])));
-  const tb = h("tbody"); t.append(tb);
-  for (const r of rows.slice(0,12)) tb.append(h("tr",{},[h("td",{textContent:r.enseigne}),h("td",{textContent:r.type}),h("td",{className:"num",textContent:fmt0(r.nb)})]));
+  const rows = DATA.densite.filter(r => F.ville === "Toutes" || r.ville === F.ville).sort((a,b)=>(b.population||0)-(a.population||0));
+  for (const r of rows) tb.append(h("tr",{},[h("td",{textContent:r.ville}),h("td",{textContent:fmt0(r.population)}),h("td",{textContent:fmt0(r.nb_points_de_vente)}),h("td",{textContent:fmt1(r.points_de_vente_pour_100k_hab)}),h("td",{textContent:r.hub_le_plus_proche ?? ND}),h("td",{textContent:fmt0(r.distance_route_km)})]));
 }
 
-/* ---------- simulateur ---------- */
+/* ---------- magasin pilote ---------- */
 const SIM = {
   surface_m2:{lab:"Surface",min:80,max:300,step:10,unit:"m²"},
   loyer_eur_m2_mois:{lab:"Loyer",min:10,max:300,step:5,unit:"€/m²/mois"},
@@ -347,188 +317,116 @@ const SIM = {
   autres_charges_pct_ca:{lab:"Autres charges variables",min:0,max:0.12,step:0.005,unit:"% du CA"},
 };
 const S = {}; for (const k in SIM) S[k] = Number(HYP[k].valeur);
-let villeSim = "Barcelona";
 function fmtParam(k,v){ const u = SIM[k].unit; return u.startsWith("%") ? pct(v,1) + u.slice(1) : fmt0(v) + " " + u; }
 function buildControls(){
   const c = $("#controls"); c.innerHTML = "";
-  const villes = DATA.densite.filter(r => r.population);
-  const sel = h("select",{id:"villeSim","aria-label":"Ville du magasin pilote"});
-  for (const r of (villes.length ? villes : [{ville:"Barcelona"}])) sel.append(h("option",{value:r.ville,textContent:r.ville,selected:r.ville===villeSim}));
-  sel.onchange = () => { villeSim = sel.value; updateSim(); };
-  c.append(h("div",{className:"ctl"},[h("label",{},[h("span",{textContent:"Ville du magasin pilote"})]), sel]));
   for (const k in SIM){
     const cfg = SIM[k], b = h("b",{textContent:fmtParam(k,S[k])});
     const inp = h("input",{type:"range",min:cfg.min,max:cfg.max,step:cfg.step,value:S[k]}); inp.setAttribute("aria-label", cfg.lab);
-    inp.oninput = () => { S[k] = Number(inp.value); b.textContent = fmtParam(k,S[k]); updateSim(); };
-    const st = HYP[k].statut;
-    const note = h("div",{className:"note"},[h("span",{className:"tag " + (st.startsWith("hypoth") ? "hyp":"src"),textContent:st})," départ : " + fmtParam(k, Number(HYP[k].valeur))]);
-    note.title = HYP[k].source;
-    c.append(h("div",{className:"ctl"},[h("label",{},[h("span",{textContent:cfg.lab}),b]),inp,note]));
+    inp.oninput = () => { S[k] = Number(inp.value); b.textContent = fmtParam(k,S[k]); updateSim(); drawCards(); };
+    c.append(h("div",{className:"ctl",title:HYP[k].source},[h("label",{},[h("span",{textContent:cfg.lab}),b]),inp,h("div",{className:"n",textContent:HYP[k].statut})]));
   }
-  c.append(h("button",{className:"ghost",textContent:"Revenir aux hypothèses de départ",onclick:()=>{for(const k in SIM) S[k]=Number(HYP[k].valeur); buildControls(); updateSim();}}));
+  c.append(h("button",{className:"ghost",textContent:"Réinitialiser",onclick:()=>{for(const k in SIM) S[k]=Number(HYP[k].valeur); buildControls(); updateSim(); drawCards();}}));
 }
 function calcSim(p = S){
   const loyer = p.surface_m2 * p.loyer_eur_m2_mois * 12;
   const personnel = p.etp * p.salaire_brut_annuel_eur * (1 + p.taux_charges_patronales);
   const fixes = loyer + personnel, contrib = p.taux_marge_brute - p.autres_charges_pct_ca;
   const ca = contrib > 0 ? fixes / contrib : NaN;
-  const popV = DATA.densite.find(r => r.ville === villeSim)?.population;
+  const popV = DATA.densite.find(r => r.ville === villeSim())?.population;
   const marcheVille = (marcheTel && popES && popV) ? marcheTel.valeur * 1e6 * popV / popES.valeur : null;
-  return {loyer, personnel, fixes, contrib, ca, marcheVille, part: marcheVille ? ca / marcheVille : null, popV};
+  return {loyer, personnel, fixes, contrib, ca, marcheVille, part: marcheVille ? ca / marcheVille : null};
 }
 function updateSim(){
   const r = calcSim();
-  const tiles = [
-    ["CA HT au point mort", eur(r.ca), "charges fixes / taux de contribution"],
-    ["Charges fixes par an", eur(r.fixes), `loyer ${eur(r.loyer)} + personnel ${eur(r.personnel)}`],
-    [`Marché téléphonie ${villeSim}`, r.marcheVille ? eur(r.marcheVille) : "—", r.marcheVille ? "au prorata de la population (calcul)" : "population pas encore collectée"],
-    ["Part de ce marché à capter", r.part != null ? pct(r.part,2) : "—", "pour atteindre le point mort"],
-  ];
-  const box = $("#simTiles"); box.innerHTML = "";
-  for (const [l,v,s] of tiles) box.append(h("div",{className:"card tile"},[h("div",{className:"lab",textContent:l}),h("div",{className:"val",textContent:v}),h("div",{className:"sub",textContent:s})]));
+  const box = $("#simCards"); box.innerHTML = "";
+  box.append(
+    card("CA point mort", eur(r.ca), `${eur(r.fixes)} de charges fixes`, "flat", "flat"),
+    card("Charges fixes", eur(r.fixes), `loyer ${eur(r.loyer)}`, "flat", "flat"),
+    card(`Marché ${villeSim()}`, r.marcheVille ? eur(r.marcheVille) : ND, "téléphonie, au prorata", "flat", "flat"),
+    card("Part de marché requise", r.part != null ? pct(r.part,2) : ND, r.part != null ? `${fmt1((r.part-0.01)*100)} pts vs 1 % visé` : "", r.part != null && r.part > 0.01 ? "up" : "down", r.part != null && r.part > 0.01 ? "bad" : "good")
+  );
   drawLoyerCurve();
   const t = $("#tabPnl"); t.innerHTML = "";
-  const rows = [["Loyer annuel", r.loyer, "surface × loyer × 12"],["Personnel (salaires + charges)", r.personnel, "ETP × salaire × (1 + charges)"],["Charges fixes", r.fixes, ""],["Taux de contribution", r.contrib, "marge brute − autres charges variables"],["CA HT au point mort", r.ca, ""]];
-  t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Poste"}),h("th",{className:"num",textContent:"Valeur"}),h("th",{textContent:"Calcul"})])));
+  t.append(h("thead",{},h("tr",{},[h("th",{textContent:"Poste"}),h("th",{textContent:"Valeur"})])));
   const tb = h("tbody"); t.append(tb);
-  for (const [a,v,c] of rows) tb.append(h("tr",{},[h("td",{textContent:a}),h("td",{className:"num",textContent:a.startsWith("Taux") ? pct(v) : eur(v)}),h("td",{className:"muted",textContent:c})]));
-  updateVerdict();
+  for (const [a,v] of [["Loyer annuel",r.loyer],["Personnel (salaires et charges)",r.personnel],["Charges fixes",r.fixes],["Taux de contribution",r.contrib],["CA HT au point mort",r.ca]])
+    tb.append(h("tr",{},[h("td",{textContent:a}),h("td",{textContent:a.startsWith("Taux") ? pct(v) : eur(v)})]));
 }
 function drawLoyerCurve(){
   const box = $("#chartLoyer"); box.innerHTML = "";
-  const W = Math.max(300, box.clientWidth || 600), H = 190, L = 56, R = 16, T = 10, B = 28;
+  const W = Math.max(300, box.clientWidth || 600), H = 220, L = 58, R = 16, T = 12, B = 30;
   const xs = []; for (let l = 10; l <= 300; l += 5) xs.push(l);
   const pts = xs.map(l => ({l, ca: calcSim({...S, loyer_eur_m2_mois:l}).ca}));
   const ymax = Math.max(...pts.map(p => p.ca).filter(isFinite)) * 1.08 || 1;
   const x = l => L + (l - 10) / 290 * (W - L - R), y = v => T + (1 - v / ymax) * (H - T - B);
-  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img"},box);
-  const g = el("g",{class:"axis"},svg);
+  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:"img"},box), g = el("g",{class:"axis"},svg);
   for (let i=0;i<=4;i++){ const v = ymax*i/4; el("line",{x1:L,x2:W-R,y1:y(v),y2:y(v),class:"gridline"},g); const t = el("text",{x:L-6,y:y(v)+4,"text-anchor":"end"},g); t.textContent = eur(v); }
   for (const l of [10,50,100,150,200,250,300]){ const t = el("text",{x:x(l),y:H-8,"text-anchor":"middle"},g); t.textContent = l; }
-  const tl = el("text",{x:W-R,y:H-8,"text-anchor":"end"},g); tl.textContent = "€/m²/mois";
-  if (pts.every(p => isFinite(p.ca))) el("path",{d:pts.map((p,i)=>(i?"L":"M")+x(p.l)+","+y(p.ca)).join(""),fill:"none",stroke:"var(--series-1)","stroke-width":2},svg);
+  if (pts.every(p => isFinite(p.ca))) el("path",{d:pts.map((p,i)=>(i?"L":"M")+x(p.l)+","+y(p.ca)).join(""),fill:"none",stroke:"var(--s1)","stroke-width":2.5},svg);
   const cur = calcSim();
-  if (isFinite(cur.ca)) el("circle",{cx:x(S.loyer_eur_m2_mois),cy:y(cur.ca),r:5,fill:"var(--series-1)",stroke:css("--surface-1"),"stroke-width":2},svg);
+  if (isFinite(cur.ca)) el("circle",{cx:x(S.loyer_eur_m2_mois),cy:y(cur.ca),r:5,fill:"var(--s1)",stroke:"#fff","stroke-width":2},svg);
   const hit = el("rect",{x:L,y:T,width:W-L-R,height:H-T-B,fill:"transparent"},svg);
-  hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX - b.left) * W / b.width; const l = Math.round(Math.max(10,Math.min(300,10 + (lx - L)/(W-L-R)*290))/5)*5; const c = calcSim({...S, loyer_eur_m2_mois:l}).ca; showTip(ev, `<b>Loyer ${l} €/m²/mois</b>CA au point mort : ${eur(c)}`); });
+  hit.addEventListener("mousemove", ev => { const b = svg.getBoundingClientRect(); const lx = (ev.clientX - b.left) * W / b.width; const l = Math.round(Math.max(10,Math.min(300,10 + (lx - L)/(W-L-R)*290))/5)*5; showTip(ev, `<b>Loyer ${l} €/m²/mois</b>CA au point mort : ${eur(calcSim({...S, loyer_eur_m2_mois:l}).ca)}`); });
   hit.addEventListener("mouseleave", hideTip);
 }
 
-/* ---------- lecture des seuils ---------- */
-function updateVerdict(){
-  const ia = SYN.Apple?.indice, iand = SYN.Android?.indice;
-  const ma = margeFam("Apple"), mand = margeFam("Android");
-  const r = calcSim();
-  const checks = [
-    {ok: iand >= 95 && ia >= 95, txt:`Prix dans les 5 % du concurrent : Apple ${fmt1(ia)}, Android ${fmt1(iand)} (seuil 95)`},
-    {ok: ma >= 0.22 && mand >= 0.22, txt:`Marge si alignement ≥ 22 % : Apple ${pct(ma)}, Android ${pct(mand)}`},
-    {ok: r.part == null ? null : r.part <= 0.01, txt: r.part == null ? "Part de marché nécessaire au point mort : population pas encore collectée" : `Part du marché téléphonie de ${villeSim} à capter au point mort : ${pct(r.part,2)} (repère fixé à 1 %, à discuter)`},
-  ];
-  const ul = $("#checks"); ul.innerHTML = "";
-  for (const c of checks) ul.append(h("li",{},[h("span",{className: c.ok == null ? "na" : c.ok ? "ok" : "ko", textContent: c.ok == null ? "?" : c.ok ? "✓" : "✗"}), h("span",{textContent:c.txt})]));
-  const nok = checks.filter(c => c.ok === false).length;
-  $("#verdictText").textContent = nok === 0 ? "Go conditionnel : les seuils sont tenus" : (iand < 80 && mand < 0) ? "No-Go magasins en l'état : LDLC ne peut pas s'aligner sur Android sans vendre à perte" : "Go conditionnel : des seuils ne sont pas tenus";
-}
-
-function drawTiles(){
-  const croisES = growth("ES"), croisFR = growth("FR");
-  const tiles = [
-    ["Indice de prix Espagne / France", fmt1(SYN["Tous modèles"]?.indice), `Apple ${fmt1(SYN.Apple?.indice)} · Android ${fmt1(SYN.Android?.indice)}`],
-    ["Marge Android si alignement", pct(margeFam("Android")), `Apple : ${pct(margeFam("Apple"))} · hypothèse de coût d'achat`],
-    ["Croissance du high-tech spécialisé " + (croisES?.annee ?? ""), croisES ? (croisES.g>0?"+":"") + pct(croisES.g) : "—", croisFR ? `France : ${croisFR.g>0?"+":""}${pct(croisFR.g)} · volume, Eurostat G474` : ""],
-    ["Marché téléphonie Espagne", marcheTel ? fmt1(marcheTel.valeur/1000) + " Md€" : "—", marcheTel ? `${marcheTel.annee}, ${marcheTel.statut}` : ""],
-  ];
-  const box = $("#tiles"); box.innerHTML = "";
-  for (const [l,v,s] of tiles) box.append(h("div",{className:"card tile"},[h("div",{className:"lab",textContent:l}),h("div",{className:"val",textContent:v}),h("div",{className:"sub",textContent:s})]));
-}
-
-/* ---------- tableaux KPIs et sources ---------- */
-function drawTables(){
-  const d = DATA.densite.filter(r=>r.points_de_vente_pour_100k_hab!=null);
-  const bcn = DATA.densite.find(r=>r.ville==="Barcelona");
+/* ---------- page instructions ---------- */
+const tagTone = st => /partiel|estim|proxy|simul|à refaire|à collecter|1 enseigne|en attente|hypoth/i.test(st) ? "var(--warn)" : "var(--good)";
+const sensMarge = (m, fam) => avg(DATA.indice_prix.filter(r => r.famille === fam).map(r => 1 - r.prix_ht_ldlc_fr * (1 - m) / r.prix_ht_es));
+function drawInstructions(){
+  $("#limites").innerHTML = "";
+  for (const l of ["Deux enseignes espagnoles relevées (PcComponentes, MediaMarkt), 11 modèles, relevés des 12 et 13/11 : pas d'historique. Amazon.es, Fnac et El Corte Inglés bloquent la lecture automatique.","Prix MediaMarkt lus sur les pages de liste (fiches produit bloquées) ; PcComponentes : deux Redmi vendus par un vendeur marketplace.",`Marge téléphonie de LDLC non publiée : marge brute du groupe utilisée (24,5 %). Estimation d'un distributeur sur smartphones : 10 à 20 %. À 15 %, marge si alignement : Apple ${pct(sensMarge(0.15,"Apple"))}, Android ${pct(sensMarge(0.15,"Android"))}.`,"Loyer : médiane de 3 annonces de centres commerciaux à Barcelone, échantillon très petit.","Concurrence : OpenStreetMap est incomplet.","KPI 11 : le taux d'éligibilité n'est pas mesuré sur les 391 références du catalogue LDLC."]) $("#limites").append(h("li",{textContent:l}));
+  const d = DATA.densite.filter(r=>r.points_de_vente_pour_100k_hab!=null), bcn = DATA.densite.find(r=>r.ville==="Barcelona"), ge = growth("ES"), gf = growth("FR");
   const kp = [
-    ["1","Croissance annuelle du secteur", (()=>{const e=growth("ES"),f=growth("FR"); return e ? `Magasins high-tech spécialisés (volume, ${e.annee}) : Espagne +${pct(e.g)}, France +${pct(f.g)}. Tous biens techniques : Espagne +2,4 %, France −1,6 % (2025)` : "Espagne +2,4 %, France −1,6 % (2025)";})(),"collecté (Eurostat) + sourcé"],
+    ["1","Croissance du secteur", ge ? `Espagne ${sgn(ge.g,pct(ge.g))}, France ${sgn(gf.g,pct(gf.g))} (${ge.annee}, volume, Eurostat G474)` : ND,"collecté"],
     ["2","Part de marché de LDLC en France","environ 1,4 % (tous biens techniques)","estimé"],
-    ["3","Part de marché d'un concurrent espagnol","MediaMarkt 21,5 % (exercice 2023-2024)","sourcé"],
-    ["4","Indice de prix Espagne / France",`${fmt1(SYN["Tous modèles"]?.indice)} (Apple ${fmt1(SYN.Apple?.indice)}, Android ${fmt1(SYN.Android?.indice)})`,"collecté, 1 enseigne"],
-    ["5","Marge brute post-taxe","si alignement : Apple " + pct(margeFam("Apple")) + ", Android " + pct(margeFam("Android")),"simulé"],
-    ["6","Densité concurrentielle", d.length ? `${d.length} villes, Barcelone : ${fmt1(bcn?.points_de_vente_pour_100k_hab)} pour 100 000 hab.` : "en attente de la collecte OSM", d.length ? "collecté (OSM)" : "à collecter"],
-    ["7","Coût moyen au m²", fmtParam("loyer_eur_m2_mois", Number(HYP.loyer_eur_m2_mois.valeur)) + " (proxy rue secondaire)","partiel"],
-    ["8","Distance aux hubs", bcn?.distance_route_km ? `Barcelone : ${fmt0(bcn.distance_route_km)} km par la route depuis ${bcn.hub_le_plus_proche}` : "en attente du calcul routier", bcn?.distance_route_km ? "collecté" : "à collecter"],
-    ["9","Taxes locales","TVA 21 % contre 20 %, canon digital " + fmt1(Number(HYP.canon_digital_eur_par_mobile.valeur)) + " € par mobile (à vérifier)","partiel"],
-    ["10","Pénétration de la téléphonie","29,9 % du marché espagnol (2024) ; parc Apple 31,35 %, Samsung 24,93 %, Xiaomi 22,22 %","sourcé"],
-    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % : ${fmt0(DATA.eligibilite[0].nb_smartphones_ldlc_es)} smartphones sur ${fmt0(DATA.eligibilite[0].nb_smartphones_ldlc_fr)} du catalogue français sont déjà en ligne sur ldlc.com/es-es (relevé du ${DATA.eligibilite[0].date_releve})` : "—","relevé, comparaison par marque"],
+    ["3","Part de marché du leader espagnol","MediaMarkt 21,5 % (2023-2024)","sourcé"],
+    ["4","Indice de prix Espagne / France",`${fmt1(SYN["Tous modèles"]?.indice)} (Apple ${fmt1(SYN.Apple?.indice)}, Android ${fmt1(SYN.Android?.indice)})`,"collecté, 2 enseignes"],
+    ["5","Marge post-taxe si alignement",`Apple ${pct(avg(DATA.marge_si_alignement.filter(r=>r.famille==="Apple").map(r=>r.marge_si_alignement)))}, Android ${pct(avg(DATA.marge_si_alignement.filter(r=>r.famille==="Android").map(r=>r.marge_si_alignement)))}`,"simulé"],
+    ["6","Densité concurrentielle", d.length ? `${d.length} villes, Barcelone ${fmt1(bcn?.points_de_vente_pour_100k_hab)} pour 100 000 hab.` : ND, d.length ? "collecté" : "à collecter"],
+    ["7","Coût au m²", fmtParam("loyer_eur_m2_mois", Number(HYP.loyer_eur_m2_mois.valeur)) + " (annonces)","partiel"],
+    ["8","Distance aux hubs", bcn?.distance_route_km ? `Barcelone ${fmt0(bcn.distance_route_km)} km depuis ${bcn.hub_le_plus_proche}` : ND, bcn?.distance_route_km ? "collecté" : "à collecter"],
+    ["9","Taxes locales","TVA 21 % contre 20 %, canon digital " + Number(HYP.canon_digital_eur_par_mobile.valeur).toLocaleString("fr-FR",{minimumFractionDigits:2}) + " € par mobile","partiel"],
+    ["10","Pénétration de la téléphonie","29,9 % du marché espagnol (2024)","sourcé"],
+    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles suivis sur ${fmt0(DATA.marche.find(r => r.indicateur === "catalogue_smartphones_ldlc")?.valeur)} références smartphones de LDLC (catalogue complet non analysé)` : ND,"à refaire"],
   ];
   const t = $("#tabKpis"); t.innerHTML = "";
   t.append(h("thead",{},h("tr",{},[h("th",{textContent:"#"}),h("th",{textContent:"KPI"}),h("th",{textContent:"Valeur"}),h("th",{textContent:"Statut"})])));
   const tb = h("tbody"); t.append(tb);
-  for (const r of kp) tb.append(h("tr",{},[h("td",{textContent:r[0]}),h("td",{textContent:r[1]}),h("td",{textContent:r[2]}),h("td",{},h("span",{className:"tag",textContent:r[3]}))]));
+  for (const r of kp) tb.append(h("tr",{},[h("td",{textContent:r[0]}),h("td",{textContent:r[1]}),h("td",{textContent:r[2]}),h("td",{style:"color:"+tagTone(r[3]),textContent:r[3]})]));
   const th = $("#tabHyp"); th.innerHTML = "";
-  th.append(h("thead",{},h("tr",{},[h("th",{textContent:"Paramètre"}),h("th",{className:"num",textContent:"Valeur"}),h("th",{textContent:"Statut"}),h("th",{textContent:"Source"})])));
+  th.append(h("thead",{},h("tr",{},[h("th",{textContent:"Paramètre"}),h("th",{textContent:"Valeur"}),h("th",{textContent:"Statut"}),h("th",{textContent:"Source"})])));
   const tb2 = h("tbody"); th.append(tb2);
-  for (const r of DATA.hypotheses) tb2.append(h("tr",{},[h("td",{textContent:r.parametre}),h("td",{className:"num",textContent:(r.unite==="taux" ? pct(Number(r.valeur)) : fmt1(Number(r.valeur)).replace(/,0$/,"") + " " + r.unite)}),h("td",{},h("span",{className:"tag " + (r.statut.startsWith("hypoth")?"hyp":"src"),textContent:r.statut})),h("td",{className:"small",textContent:r.source})]));
-  for (const r of DATA.marche.filter(r=>!String(r.source).startsWith("Eurostat"))) tb2.append(h("tr",{},[h("td",{textContent:`${r.indicateur} (${r.pays}, ${r.annee})`}),h("td",{className:"num",textContent:(r.unite==="taux" ? pct(Number(r.valeur)) : fmt0(Number(r.valeur)) + " " + r.unite)}),h("td",{},h("span",{className:"tag src",textContent:r.statut})),h("td",{className:"small",textContent:r.source})]));
+  for (const r of DATA.hypotheses) tb2.append(h("tr",{},[h("td",{textContent:r.parametre}),h("td",{textContent:r.unite==="taux" ? pct(Number(r.valeur)) : fmt1(Number(r.valeur)).replace(/,0$/,"") + " " + r.unite}),h("td",{style:"color:"+tagTone(r.statut),textContent:r.statut}),h("td",{textContent:r.source})]));
+  for (const r of DATA.marche.filter(r=>!String(r.source).startsWith("Eurostat"))) tb2.append(h("tr",{},[h("td",{textContent:`${r.indicateur} (${r.pays}, ${r.annee})`}),h("td",{textContent:r.unite==="taux" ? pct(Number(r.valeur)) : fmt0(Number(r.valeur)) + " " + r.unite}),h("td",{style:"color:"+tagTone(r.statut),textContent:r.statut}),h("td",{textContent:r.source})]));
   const tj = $("#tabJournal"); tj.innerHTML = "";
   if (!DATA.journal.length){ $("#journalWrap").hidden = true; return; }
   tj.append(h("thead",{},h("tr",{},[h("th",{textContent:"Collecte"}),h("th",{textContent:"Étape"}),h("th",{textContent:"Statut"}),h("th",{textContent:"Détail"})])));
   const tb3 = h("tbody"); tj.append(tb3);
-  for (const r of DATA.journal) tb3.append(h("tr",{},[h("td",{textContent:r.date}),h("td",{textContent:r.etape}),h("td",{textContent:r.statut}),h("td",{className:"small muted",textContent:r.detail ?? ""})]));
+  for (const r of DATA.journal) tb3.append(h("tr",{},[h("td",{textContent:r.date}),h("td",{textContent:r.etape}),h("td",{textContent:r.statut}),h("td",{textContent:r.detail ?? ""})]));
 }
 
-/* ---------- synthèse IA ---------- */
-let sampleFn = null, aborter = null;
-function contextIA(){
-  const r = calcSim();
-  return JSON.stringify({
-    eurostat_volume_ventes_magasins_hightech_G474_base100_2021: {Espagne: G474("ES").filter(r=>r.annee>=2021), France: G474("FR").filter(r=>r.annee>=2021)},
-    indice_prix_synthese: DATA.indice_synthese,
-    indice_par_modele: DATA.indice_prix.map(x => ({modele:x.modele, famille:x.famille, indice:x.indice_es_vs_fr, concurrent:x.concurrent_es})),
-    marge_si_alignement: margeRows.map(x => ({modele:x.modele, famille:x.famille, marge:x.marge_si_alignement})),
-    hypothese_cout_achat: `prix HT France x (1 - ${HYP.taux_marge_brute.valeur}), marge du groupe appliquée à la téléphonie`,
-    marche: DATA.marche.filter(m => !String(m.source).startsWith("Eurostat") || m.indicateur === "population_1er_janvier").map(m => ({indicateur:m.indicateur, pays:m.pays, annee:m.annee, valeur:m.valeur, unite:m.unite, statut:m.statut})),
-    concurrence_par_ville: DATA.densite,
-    magasin_pilote: {ville: villeSim, reglages: Object.fromEntries(Object.keys(SIM).map(k => [k, {valeur:S[k], statut_valeur_de_depart:HYP[k].statut}])), loyer_annuel:Math.round(r.loyer), personnel_annuel:Math.round(r.personnel), ca_point_mort_ht:Math.round(r.ca), marche_telephonie_ville:r.marcheVille && Math.round(r.marcheVille), part_marche_necessaire:r.part},
-    limites: ["une seule enseigne espagnole relevée (PcComponentes), 11 modèles, un jour", "marge téléphonie de LDLC non publiée", "loyer : proxy rue secondaire de Bilbao", "OpenStreetMap incomplet", "canon digital : montant 2017 à vérifier"],
-  });
+/* ---------- pages et rendu ---------- */
+let page = "synthese";
+function render(){
+  if (page === "synthese"){ drawCards(); drawMarche(); drawTop(); drawVilles(); }
+  else if (page === "prix") drawPrix();
+  else if (page === "pilote"){ updateSim(); }
 }
-async function genIA(){
-  if (!sampleFn) return;
-  const out = $("#iaOut"), st = $("#iaStatus"), btn = $("#btnIA");
-  aborter?.abort(); aborter = new AbortController();
-  btn.disabled = true; st.textContent = "Claude rédige…"; out.textContent = "";
-  const prompt = `Tu es analyste pour le comité exécutif du Groupe LDLC (125 magasins en France, CA 554,1 M€, marge brute 24,5 %, trésorerie 7,1 M€, dette nette 42,2 M€, magasins espagnols ouverts en 2018 et fermés en 2020).
-Question : ouvrir des magasins de téléphonie en Espagne est-il réalisable et rentable ?
-Rédige en français, sans tiret long et sans tiret en incise, 220 mots maximum, avec exactement ces quatre parties titrées :
-1. Constats (3 points chiffrés)
-2. Recommandation (Go, Go conditionnel ou No-Go, en une phrase, puis la condition principale)
-3. Ce qui fragilise l'analyse (2 limites)
-4. Prochaines données à collecter (2)
-Règles : utilise uniquement les chiffres du JSON ci-dessous. Quand un chiffre vient d'une hypothèse ou d'un calcul de l'équipe, dis-le. N'invente aucun chiffre ni aucune source.
-JSON :
-${contextIA()}`;
-  try{
-    const res = await sampleFn(prompt, {signal: aborter.signal, modelTier:"default", cache:false, onText: ({text}) => { out.textContent = text; }});
-    out.textContent = res.text; st.textContent = `Générée le ${new Date().toLocaleString("fr-FR")} avec les réglages actuels.` + (res.truncated ? " Réponse tronquée." : "");
-    $("#btnCopy").hidden = false;
-  } catch(e){
-    if (e?.code === "not_granted"){ st.textContent = "Accès à Claude refusé pour cette page."; }
-    else if (e?.code === "rate_limited"){ st.textContent = "Trop de demandes, réessayez dans un moment."; }
-    else if (e?.name !== "AbortError"){ st.textContent = "La génération a échoué : " + (e?.message || e); if (e?.text) out.textContent = e.text; }
-  } finally { btn.disabled = false; }
+function show(p){
+  page = p;
+  document.querySelectorAll(".page").forEach(s => s.hidden = s.id !== "p-" + p);
+  document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.p === p));
+  render();
 }
-$("#btnIA").onclick = genIA;
-$("#btnCopy").onclick = async () => { try { await navigator.clipboard.writeText($("#iaOut").textContent); $("#iaStatus").textContent = "Copié."; } catch { $("#iaStatus").textContent = "Copie refusée par le navigateur."; } };
-$("#btnIA").disabled = true; $("#iaStatus").textContent = "Connexion à Claude…";
-(async () => {
-  try { sampleFn = window.claude?.use ? await window.claude.use("sample") : null; } catch { sampleFn = null; }
-  if (sampleFn){ $("#btnIA").disabled = false; $("#iaStatus").textContent = ""; }
-  else { $("#btnIA").hidden = true; $("#iaStatus").textContent = "La synthèse IA fonctionne dans la version publiée sur claude.ai. Hors de claude.ai, lancez src/ai/synthese.py (API Claude)."; }
-})();
-
-/* ---------- rendu ---------- */
-function renderAll(){ drawTiles(); drawMarche(); drawIndice(); drawMarge(); drawConcurrence(); buildControls(); updateSim(); drawTables(); }
-renderAll();
-let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { drawMarche(); drawIndice(); drawMarge(); drawConcurrence(); drawLoyerCurve(); }, 150); });
+$("#tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.dataset.p); });
+$("#fFamille").onchange = e => { F.famille = e.target.value; render(); };
+$("#fVille").onchange = e => { F.ville = e.target.value; render(); };
+$("#fVille").append(h("option",{textContent:"Toutes"}), ...DATA.densite.map(r => h("option",{value:r.ville,textContent:r.ville})));
+$("#date").textContent = `Données du ${new Date(DATA.genere_le).toLocaleDateString("fr-FR")}`;
+buildControls(); drawInstructions(); show("synthese");
+let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 150); });
 </script>
 </body>
 </html>
