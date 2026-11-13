@@ -227,13 +227,23 @@ def build() -> duckdb.DuckDBPyConnection:
         GROUP BY ALL ORDER BY z.ville, nb DESC
     """)
     con.execute("""
-        CREATE VIEW v_eligibilite_catalogue AS
+        CREATE VIEW v_eligibilite_echantillon AS
         SELECT count(*) AS nb_modeles_ldlc_suivis,
                count(*) FILTER (WHERE produit_id IN (SELECT produit_id FROM fact_prix WHERE pays='ES'))
-                 AS nb_vendus_en_espagne,
-               round(100.0 * count(*) FILTER (WHERE produit_id IN (SELECT produit_id FROM fact_prix WHERE pays='ES'))
-                 / count(*), 1) AS pct_eligible
+                 AS nb_vendus_en_espagne
         FROM dim_produit
+    """)
+    cat = pd.read_csv(CONFIG / "catalogue_ldlc.csv")
+    con.register("cat_df", cat)
+    con.execute("CREATE TABLE fact_catalogue AS SELECT * FROM cat_df")
+    con.execute("""
+        CREATE VIEW v_eligibilite_catalogue AS
+        SELECT max(date_releve) AS date_releve,
+               sum(nb_smartphones_ldlc_fr) AS nb_smartphones_ldlc_fr,
+               sum(nb_smartphones_ldlc_es) AS nb_smartphones_ldlc_es,
+               round(100.0 * sum(nb_smartphones_ldlc_es) / sum(nb_smartphones_ldlc_fr), 1) AS pct_eligible,
+               'nombre de smartphones (écran tactile) en ligne sur ldlc.com/es-es rapporté à ldlc.com, par marque' AS methode
+        FROM fact_catalogue
     """)
 
     for v in ("v_indice_prix", "v_indice_synthese", "v_densite_concurrentielle",

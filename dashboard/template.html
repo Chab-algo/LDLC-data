@@ -457,7 +457,7 @@ function drawTables(){
     ["8","Distance aux hubs", bcn?.distance_route_km ? `Barcelone : ${fmt0(bcn.distance_route_km)} km par la route depuis ${bcn.hub_le_plus_proche}` : "en attente du calcul routier", bcn?.distance_route_km ? "collecté" : "à collecter"],
     ["9","Taxes locales","TVA 21 % contre 20 %, canon digital " + fmt1(Number(HYP.canon_digital_eur_par_mobile.valeur)) + " € par mobile (à vérifier)","partiel"],
     ["10","Pénétration de la téléphonie","29,9 % du marché espagnol (2024) ; parc Apple 31,35 %, Samsung 24,93 %, Xiaomi 22,22 %","sourcé"],
-    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % sur ${DATA.eligibilite[0].nb_modeles_ldlc_suivis} modèles suivis (biaisé : choisis parce que vendus dans les deux pays)` : "—","à refaire sur tout le catalogue"],
+    ["11","% du catalogue éligible", DATA.eligibilite[0] ? `${fmt1(DATA.eligibilite[0].pct_eligible)} % : ${fmt0(DATA.eligibilite[0].nb_smartphones_ldlc_es)} smartphones sur ${fmt0(DATA.eligibilite[0].nb_smartphones_ldlc_fr)} du catalogue français sont déjà en ligne sur ldlc.com/es-es (relevé du ${DATA.eligibilite[0].date_releve})` : "—","relevé, comparaison par marque"],
   ];
   const t = $("#tabKpis"); t.innerHTML = "";
   t.append(h("thead",{},h("tr",{},[h("th",{textContent:"#"}),h("th",{textContent:"KPI"}),h("th",{textContent:"Valeur"}),h("th",{textContent:"Statut"})])));
