@@ -72,6 +72,21 @@ Périmètre retenu : **la téléphonie (smartphones)**. Pays cible : **l'Espagne
 | `fact_concurrence_zone` | une ville x une enseigne x un type de commerce | `nb_points_de_vente` |
 | `fact_magasin_sim` | un poste du compte de résultat simulé | `valeur`, `calcul` |
 
+Définitions des termes métier :
+
+| Terme | Définition |
+|---|---|
+| Chiffre d'affaires (CA) | ventes facturées, hors taxes |
+| Marge brute | CA moins coût d'achat des produits vendus |
+| Marge brute post-taxe | marge recalculée après TVA locale et canon digital, au prix du marché espagnol |
+| Indice de prix relatif | moyenne de (prix HT Espagne / prix HT LDLC France) x 100 sur les modèles appariés |
+| Point mort | CA à partir duquel la marge couvre les charges fixes (loyer, personnel) |
+| Taux de contribution | marge brute moins charges variables, en % du CA |
+| Densité concurrentielle | points de vente concurrents pour 100 000 habitants. Zone = la commune (zone de chalandise par temps de trajet : à faire) |
+| Canon digital | redevance espagnole pour copie privée, incluse dans le prix des appareils numériques |
+| ETP | équivalent temps plein |
+| Exercice LDLC | d'avril à mars |
+
 Règles de gestion :
 - Les prix sont comparés **hors taxes** (TTC / (1 + TVA)) pour neutraliser l'écart de TVA (20 % contre 21 %).
 - Deux prix sont appariés s'ils portent sur la même marque, le même modèle, la même capacité et la même RAM.
@@ -116,6 +131,10 @@ Répartition des rôles (proposée, à valider par l'équipe) :
 | Georges Do Xuan | analyse : KPIs, compte de résultat simulé | `src/analysis/`, `config/hypotheses_pnl.csv` |
 | Rubens Le Scao | restitution : dashboard, synthèse IA, slides Comex | `src/ai/`, dashboard, slides |
 
+Méthodologie de travail : une branche Git par membre, fusion dans `main` après relecture par un autre membre.
+Chaque donnée entre par un script (`src/collect/`) ou par un fichier de `config/` avec sa source et son statut.
+La collecte tourne seule chaque lundi (GitHub Actions) ; le dashboard est régénéré à chaque passage.
+
 | Étape | Statut |
 |---|---|
 | Choix de l'entreprise, du pays, du périmètre | fait |
@@ -127,6 +146,17 @@ Répartition des rôles (proposée, à valider par l'équipe) :
 | Scraping du catalogue téléphonie complet de LDLC (KPI 11) | à faire |
 | Dashboard et synthèse IA | en cours |
 | Slides Comex | à faire |
+
+### Next steps (recommandations post-étude)
+
+Recommandation provisoire : **pas de magasins en 2027**, renforcer la vente en ligne vers l'Espagne depuis les hubs français.
+Conditions pour repasser en Go : prix Android à moins de 5 % des concurrents, marge post-taxe d'au moins 22 %,
+loyer en centre commercial confirmé. Données à obtenir avant de revoir la décision en 2028 :
+1. coûts d'achat réels de LDLC en téléphonie (donnée interne) ;
+2. prix d'une deuxième enseigne espagnole (MediaMarkt) ;
+3. catalogue téléphonie complet de LDLC (KPI 11) ;
+4. loyers en centre commercial et en périphérie de Barcelone ;
+5. effectif et CA moyen d'un magasin LDLC.
 
 ## 5. Stack technique
 
