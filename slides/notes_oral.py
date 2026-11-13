@@ -1,8 +1,11 @@
-"""Ajoute à chaque slide du deck l'orateur, son temps et son texte (dans les notes).
+"""Ajoute à chaque slide du deck le prénom de l'orateur (en bas à gauche) et, dans les notes, son temps et son texte.
 Usage : node slides/build_deck.js && python slides/notes_oral.py
 """
 from pathlib import Path
 from pptx import Presentation
+from pptx.dml.color import RGBColor
+from pptx.util import Inches, Pt
+from pptx.enum.text import MSO_AUTO_SIZE, PP_ALIGN
 
 DECK = Path(__file__).with_name("LDLC_Espagne_Comex.pptx")
 
@@ -27,5 +30,17 @@ for slide, (qui, temps, texte) in zip(p.slides, ORAL):
     tf = slide.notes_slide.notes_text_frame
     ancien = tf.text.split("\n\nRepères : ", 1)[-1] if "ORATEUR" in tf.text else tf.text
     tf.text = f"ORATEUR : {qui} ({temps})\n\n{texte}\n\nRepères : {ancien}"
+    for sh in [sh for sh in slide.shapes if sh.name == "Orateur"]:
+        sh._element.getparent().remove(sh._element)
+    box = slide.shapes.add_textbox(Inches(0.5), Inches(5.2), Inches(3), Inches(0.25))
+    box.name = "Orateur"
+    tfb = box.text_frame
+    tfb.margin_left = tfb.margin_right = tfb.margin_top = tfb.margin_bottom = 0
+    tfb.word_wrap = True
+    tfb.auto_size = MSO_AUTO_SIZE.NONE
+    tfb.paragraphs[0].alignment = PP_ALIGN.LEFT
+    run = tfb.paragraphs[0].add_run()
+    run.text = f"Présenté par {qui}"
+    run.font.size = Pt(10); run.font.name = "Arial"; run.font.color.rgb = RGBColor(0x5F, 0x63, 0x68)
 p.save(DECK)
 print("notes ajoutées à", len(ORAL), "slides")
