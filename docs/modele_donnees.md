@@ -1,4 +1,4 @@
-# Modèle de données (Thomas Lefevbre)
+# Modèle de données (Thomas Lefebvre)
 
 Base DuckDB `data/ldlc_espagne.duckdb`, construite par `src/transform/build_star.py`.
 
@@ -10,10 +10,20 @@ erDiagram
   dim_date ||--o{ fact_prix : date_id
   dim_zone ||--o{ fact_point_de_vente : zone_id
   dim_enseigne ||--o{ fact_point_de_vente : enseigne_id
+  dim_zone ||--o{ fact_concurrence_zone : zone_id
+  dim_enseigne ||--o{ fact_concurrence_zone : enseigne_id
   dim_hub ||--o{ dim_zone : hub_le_plus_proche
   dim_pays ||--o{ fact_marche : pays
   dim_zone ||--o{ fact_magasin_sim : ville
+  fact_catalogue {
+    date date_releve
+    string marque
+    int nb_smartphones_ldlc_fr
+    int nb_smartphones_ldlc_es
+  }
 ```
+
+`fact_catalogue` est une table d'appoint sans dimension : elle est agrégée par marque et sert uniquement au taux d'éligibilité du catalogue.
 
 ## Grain de chaque table de faits
 
