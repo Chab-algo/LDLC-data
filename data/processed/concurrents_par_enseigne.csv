@@ -1,59 +1,59 @@
 ville,enseigne,type,nb
-Barcelona,Indépendant ou non identifié,independant,173.0
-Barcelona,MediaMarkt,specialiste,5.0
+Barcelona,Indépendant ou non identifié,independant,174.0
 Barcelona,Fnac,specialiste,5.0
+Barcelona,MediaMarkt,specialiste,5.0
 Barcelona,Samsung,marque,2.0
 Barcelona,Apple,marque,2.0
 Barcelona,Phone House,operateur_revendeur,2.0
-Barcelona,PcComponentes,specialiste,1.0
 Barcelona,Orange,operateur,1.0
+Barcelona,PcComponentes,specialiste,1.0
 Bilbao,Indépendant ou non identifié,independant,57.0
 Bilbao,Phone House,operateur_revendeur,2.0
-Bilbao,Vodafone,operateur,1.0
 Bilbao,MediaMarkt,specialiste,1.0
+Bilbao,Vodafone,operateur,1.0
 Bilbao,Fnac,specialiste,1.0
 Girona,Indépendant ou non identifié,independant,56.0
-Girona,Movistar,operateur,2.0
 Girona,Yoigo,operateur,2.0
-Girona,Orange,operateur,1.0
+Girona,Movistar,operateur,2.0
 Girona,Phone House,operateur_revendeur,1.0
+Girona,Orange,operateur,1.0
 Girona,MediaMarkt,specialiste,1.0
 Lleida,Indépendant ou non identifié,independant,46.0
-Lleida,MediaMarkt,specialiste,1.0
 Lleida,Yoigo,operateur,1.0
-Madrid,Indépendant ou non identifié,independant,291.0
+Lleida,MediaMarkt,specialiste,1.0
+Madrid,Indépendant ou non identifié,independant,292.0
 Madrid,MediaMarkt,specialiste,8.0
 Madrid,Orange,operateur,5.0
 Madrid,Movistar,operateur,4.0
 Madrid,Samsung,marque,4.0
-Madrid,Phone House,operateur_revendeur,3.0
 Madrid,Vodafone,operateur,3.0
+Madrid,Phone House,operateur_revendeur,3.0
 Madrid,Fnac,specialiste,2.0
 Madrid,Apple,marque,2.0
+Madrid,El Corte Inglés,generaliste,1.0
 Madrid,PcComponentes,specialiste,1.0
 Madrid,Xiaomi,marque,1.0
-Madrid,El Corte Inglés,generaliste,1.0
 Malaga,Indépendant ou non identifié,independant,30.0
 Malaga,MediaMarkt,specialiste,2.0
 Malaga,Vodafone,operateur,1.0
-Malaga,Movistar,operateur,1.0
-Malaga,Phone House,operateur_revendeur,1.0
-Malaga,Worten,specialiste,1.0
 Malaga,Orange,operateur,1.0
-Sevilla,Indépendant ou non identifié,independant,64.0
+Malaga,Worten,specialiste,1.0
+Malaga,Phone House,operateur_revendeur,1.0
+Malaga,Movistar,operateur,1.0
+Sevilla,Indépendant ou non identifié,independant,65.0
 Sevilla,Phone House,operateur_revendeur,2.0
 Sevilla,Yoigo,operateur,1.0
 Tarragona,Indépendant ou non identifié,independant,38.0
 Tarragona,Movistar,operateur,2.0
-Tarragona,MediaMarkt,specialiste,1.0
-Tarragona,Orange,operateur,1.0
 Tarragona,Yoigo,operateur,1.0
+Tarragona,Orange,operateur,1.0
+Tarragona,MediaMarkt,specialiste,1.0
 Valencia,Indépendant ou non identifié,independant,65.0
 Valencia,Phone House,operateur_revendeur,2.0
 Valencia,MediaMarkt,specialiste,2.0
 Valencia,Apple,marque,1.0
 Zaragoza,Indépendant ou non identifié,independant,97.0
 Zaragoza,Fnac,specialiste,2.0
-Zaragoza,MediaMarkt,specialiste,1.0
 Zaragoza,Phone House,operateur_revendeur,1.0
 Zaragoza,Apple,marque,1.0
+Zaragoza,MediaMarkt,specialiste,1.0
